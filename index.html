@@ -9,64 +9,142 @@
   </head>
   <body>
     <div class="container">
-      <header class="header"></header>
+      <div class="skip-nav">
+        <a href="">본문</a>
+      </div>
+      <!-- Header -->
+      <header class="header">
+        <h1 class="header__logo">
+          <a href="#">
+            <img src="#" alt="melon" />
+          </a>
+        </h1>
+
+        <!-- main form -->
+        <form action="" class="header__search-form">
+          <fieldset>
+            <legend>검색폼</legend>
+            <label for="" class="header__search-label sr-only"></label>
+            <input type="text" class="header__search__input" />
+            <a href="#" role="button" class="header__search__button"></a>
+          </fieldset>
+        </form>
+
+        <!-- rising-group -->
+        <div class="header__rising__group">
+          <span></span>
+          <ul class="header__rising__list">
+            <li class="header__rising__item">
+              <a href="#" class="header__rising__info"></a>
+              <span class="header__rising__number"></span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- header-nav -->
+        <nav class="header__nav">
+          <ul class="header__nav__list">
+            <li class="header__nav_item">
+              <a href="#" class="heaer__nav__link">1</a>
+            </li>
+            <li class="header__nav_item">
+              <a href="#" class="heaer__nav__link">2</a>
+            </li>
+            <li class="header__nav_item">
+              <a href="#" class="heaer__nav__link">3</a>
+            </li>
+            <li class="header__nav_item">
+              <a href="#" class="heaer__nav__link">4</a>
+            </li>
+            <li class="header__nav_item">
+              <a href="#" class="heaer__nav__link">5</a>
+            </li>
+            <li class="header__nav_item">
+              <a href="#" class="heaer__nav__link">6</a>
+            </li>
+            <li class="header__nav_item">
+              <a href="#" class="heaer__nav__link">7</a>
+            </li>
+            <li class="header__nav_item">
+              <a href="#" class="heaer__nav__link">8</a>
+            </li>
+            <li class="header__nav_item">
+              <a href="#" class="heaer__nav__link">9</a>
+            </li>
+            <li class="header__nav_item">
+              <a href="#" class="heaer__nav__link">10</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__ad__image">
+          <picture>선택사항</picture>
+        </div>
+      </header>
+
       <!-- 메인 -->
-      <main class="home__main">
-        <!-- 최신 앨범 -->
-        <section class="new-album">
-          <!-- 헤드라인 -->
-          <div class="new-album__headline" aria-label="new-album 헤드라인 영역">
-            <h2 class="new-album__title">최신 앨범</h2>
-            <ul
-              class="new-album__category-list"
-              aria-label="new-album 카테고리"
-            >
-              <li class="new-album__category-item"><a href="#">전체</a></li>
-              <li class="new-album__category-item"><a href="#">가요</a></li>
-              <li class="new-album__category-item"><a href="#">pop</a></li>
+      <section class="home__new__section">
+        <section class="home__new">
+          <h2 class="home__new">타이틀</h2>
+          <div class="home__new__tab">
+            <div class="home__new__button__group">
+              <button class="home__new__button--all">1</button>
+              <button class="home__new__button--kpop">2</button>
+              <button class="home__new__button--pop">3</button>
+            </div>
+            <div class="home__new__control">
+              <span class="home__new__control__page">1</span>
+              <button class="home__new__control--prev">1</button>
+              <button class="home__new__control--next">1</button>
+            </div>
+          </div>
+          <div class="home__album">
+            <ul>
+              <li>여기는 임시 입니다</li>
             </ul>
           </div>
-
-          <!-- 앨범리스트  -->
-          <!-- 총 9페이지의 앨범리스트 영역 전체 (우선 한 페이지만 마크업) -->
-          <ul class="new-album__area">
-            <!-- 1페이지 앨범리스트 영역 (사진은 회의 후 추가) -->
-            <li class="new-album__page-no1">
-              <ul class="new-album__page-no1__list">
-                <li class="new-album__page-no1__itme">
-                  <a href="#">사진</a>
-                </li>
-                <li class="new-album__page-no1__itme">
-                  <a href="#">사진</a>
-                </li>
-                <li class="new-album__page-no1__itme">
-                  <a href="#">사진</a>
-                </li>
-                <li class="new-album__page-no1__itme">
-                  <a href="#">사진</a>
-                </li>
-                <li class="new-album__page-no1__itme">
-                  <a href="#">사진</a>
-                </li>
-                <li class="new-album__page-no1__itme">
-                  <a href="#">사진</a>
-                </li>
-              </ul>
-            </li>
-            <!-- 1페이지 끝 -->
-          </ul>
-          <!-- 앨범리스트 end -->
-
-          <!-- 앨범 리스트 위치 넘버 & 페이지 이동 버튼 -->
-          <!-- 포지션으로 위로 올릴예정 -->
-          <!-- 디테일한 마크업은 해당 기능 사용 여부에 따라 추가 우선 틀만잡음 -->
-          <div class="new-album__button__area">
-            <div class="new-album__album-number-box"></div>
-            <div class="new-album__button-box"></div>
-          </div>
         </section>
-        <!-- 앨범리스트 end -->
-      </main>
+      </section>
+
+      <section class="home__hot__section">
+        <h2 class="home__hot__section__title sr-only">
+          인기 컨텐츠와 멜론차트 영역입니다.
+        </h2>
+
+        <!-- 인기있어요 영역 -->
+        <div class="home__hot__hot-issue">
+          <!-- 인기있어요 title -->
+          <h3 class="home__hot__hot-issue__title">
+            <span class="home__hot__hot-issue__title-text">인기 있어요</span>
+            <span class="home__hot__hot-issue__txt_intro"
+              >지금 이슈가 되는 아티스트의 인기 컨텐츠입니다.</span
+            >
+          </h3>
+          <!-- 컨텐츠 리스트 -->
+          <ul class="home__hot__hot-issue-list">
+            <li class="home__hot__hot-issue-list1">
+              <div class="home__hot__hot-issue-video-area">
+                <a class="home__hot__hot-issue-video-link">
+                  <img
+                    src="./img/hotIssueThumbnail.jpg"
+                    alt="핫이슈 비디오 썸네일"
+                    class="home__hot__hot-issue-video-Thumbnail"
+                  />
+                  <span class="home__hot__hot-issue-video-tex-area">
+                    멜론TV <strong>아이유, 유희열이 안내하는</strong> <br />
+                    세상의 모든 TOP100 (FULL ver.)
+                  </span>
+                  <span class="home__hot__hot-issue-video-views"
+                    >조회 3,699
+                  </span>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- 멜론차트 -->
+        <div class="home__hot__section__melon-chart"></div>
+      </section>
+
       <footer class="footer"></footer>
     </div>
   </body>
