@@ -1,0 +1,12 @@
+.header {
+  width: 100%;
+  height: 100px;
+  background: coral;
+
+  @include tab {
+    background: yellow;
+  }
+  @include mobile {
+    background: red;
+  }
+}
