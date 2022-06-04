@@ -85,20 +85,4 @@ button {
   cursor: pointer;
 }
 
-.header {
-  width: 100%;
-  height: 100px;
-  background: coral;
-}
-@media (max-width: 1024px) {
-  .header {
-    background: yellow;
-  }
-}
-@media (max-width: 480px) {
-  .header {
-    background: red;
-  }
-}
-
 /*# sourceMappingURL=style.css.map */
