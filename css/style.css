@@ -1,3 +1,28 @@
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix") format("embedded-opentype"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff") format("woff"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 700;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix") format("embedded-opentype"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff") format("woff"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 300;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix") format("embedded-opentype"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff") format("woff"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf") format("truetype");
+}
+* {
+  font-family: "NanumBarunGothic", sans-serif;
+}
+
 .sr-only {
   overflow: hidden;
   position: absolute !important;
@@ -83,6 +108,233 @@ legend {
 
 button {
   cursor: pointer;
+}
+
+.container {
+  border-top: 3px solid #00cd3c;
+}
+
+.skip-nav {
+  display: none;
+}
+
+.notice-bar {
+  width: 100%;
+  border-bottom: 1px solid #dfe6e8;
+}
+.notice-bar__list {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 63.125rem;
+  color: #909090;
+  justify-content: flex-end;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.notice-bar__item:first-child a {
+  position: relative;
+}
+.notice-bar__item:first-child a::before {
+  content: "";
+  position: absolute;
+  background: url("../../assets/images/icon-ticket.svg");
+  width: 1.25rem;
+  height: 1.25rem;
+  left: -0.625rem;
+  top: 0;
+}
+.notice-bar__item:nth-child(2) a {
+  position: relative;
+}
+.notice-bar__item:nth-child(2) a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  border-left: 1px solid #dfe6e8;
+  width: 100%;
+  height: 0.875rem;
+  transform: translateX(-14px);
+}
+.notice-bar__item:last-child a {
+  padding-left: 0;
+}
+.notice-bar__item:nth-child(3) a {
+  position: relative;
+}
+.notice-bar__item:nth-child(3) a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  border-left: 1px solid #dfe6e8;
+  width: 100%;
+  height: 0.875rem;
+  transform: translateX(-14px);
+}
+.notice-bar__item:nth-child(4) a {
+  position: relative;
+}
+.notice-bar__item:nth-child(4) a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  border-left: 1px solid #dfe6e8;
+  width: 100%;
+  height: 0.875rem;
+  transform: translateX(-14px);
+}
+.notice-bar__link {
+  display: block;
+  padding: 0.375rem 0.875rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.notice-bar__link:hover {
+  color: #333333;
+}
+.notice-bar .order {
+  order: -1;
+  flex-grow: 1;
+  padding: 0;
+}
+
+.header {
+  margin-left: auto;
+  margin-right: auto;
+  width: 63.125rem;
+  display: flex;
+  height: 5.625rem;
+  margin-top: 10px;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+.header__search {
+  display: flex;
+  align-items: center;
+}
+.header__search__input {
+  width: 20rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  border: 2px solid #00cd3c;
+  border-radius: 1.875rem;
+  margin-left: 1.25rem;
+}
+.header__search__input::placeholder {
+  padding-left: 0.3125rem;
+  font-size: 0.75rem;
+}
+.header__search fieldset {
+  position: relative;
+}
+.header__search__button {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url("../../assets/images/icon-search.svg");
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header__rising__group {
+  display: flex;
+  align-items: center;
+  margin-left: 0.9375rem;
+  font-size: 0.75rem;
+  color: #333333;
+  position: relative;
+  width: 13.75rem;
+}
+.header__rising__text {
+  color: #fff;
+  background: #00cd3c;
+  float: left;
+  border-radius: 10px;
+  padding: 0.0625rem 0.375rem;
+  font-size: 0.6875rem;
+}
+.header__rising__list {
+  display: inline-block;
+  padding: 0.9375rem;
+  position: absolute;
+  top: 25%;
+  right: 0.75rem;
+  height: 1.875rem;
+  overflow: hidden;
+}
+.header__rising__list:hover {
+  overflow: visible;
+  height: fit-content;
+  border: 1px solid #b4b4b4;
+  background: #fff;
+}
+.header__rising__item {
+  margin-top: 0.625rem;
+}
+.header__rising__item:first-child {
+  margin-top: 0;
+}
+.header__rising__number {
+  margin-right: 0.625rem;
+}
+.header__rising__info {
+  margin-right: 1.25rem;
+}
+.header__rising__info::after {
+  content: "";
+  position: absolute;
+  width: 0.625rem;
+  height: 0.625rem;
+  background: green;
+  right: 0.625rem;
+}
+.header__ad__image {
+  flex-grow: 1;
+  background: url("../../assets/images/header-ad-image.png") no-repeat 100% 100%/90%;
+}
+.header__nav {
+  margin-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 1px solid #b4b4b4;
+}
+.header__nav__list {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: 63.125rem;
+  justify-content: space-between;
+  font-weight: 500;
+}
+.header__nav__list :first-child {
+  padding-left: 0;
+}
+.header__nav__list :last-child {
+  justify-content: flex-end;
+  width: 17.5rem;
+  text-align: end;
+}
+.header__nav__list :last-child a {
+  color: #909090;
+}
+.header__nav__item {
+  padding: 0.3125rem 0.625rem;
+}
+.header__nav__link:hover {
+  color: #00cd3c;
+}
+@media (max-width: 1023px) {
+  .header {
+    background: yellow;
+  }
+}
+@media (max-width: 479px) {
+  .header {
+    background: red;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
