@@ -4,82 +4,148 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>WaterMelon</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./assets/images/favicon.ico"
+      id="favicon"
+    />
   </head>
   <body>
     <div class="container">
       <div class="skip-nav">
         <a href="">본문</a>
       </div>
+
+      <!-- notice-bar -->
+      <div class="notice-bar">
+        <ul class="notice-bar__list">
+          <li class="notice-bar__item">
+            <a href="#" class="notice-bar__link">이용권구매</a>
+          </li>
+          <li class="notice-bar__item">
+            <a href="#" class="notice-bar__link">멜론라운지</a>
+          </li>
+          <li class="notice-bar__item">
+            <a href="#" class="notice-bar__link">이벤트</a>
+          </li>
+          <li class="notice-bar__item">
+            <a href="#" class="notice-bar__link">공지사항</a>
+          </li>
+          <li class="notice-bar__item order">
+            <a href="#" class="notice-bar__link">멜론 티켓</a>
+          </li>
+        </ul>
+      </div>
+
       <!-- Header -->
       <header class="header">
         <h1 class="header__logo">
           <a href="#">
-            <img src="#" alt="melon" />
+            <img src="./assets/images/melon-01.svg" alt="melon" />
           </a>
         </h1>
 
         <!-- main form -->
-        <form action="" class="header__search-form">
+        <form action="" class="header__search">
           <fieldset>
             <legend>검색폼</legend>
             <label for="" class="header__search-label sr-only"></label>
-            <input type="text" class="header__search__input" />
+            <input
+              type="text"
+              class="header__search__input"
+              placeholder="WSG워너비 12명의 첫 하모니 `어마어마해`"
+            />
             <a href="#" role="button" class="header__search__button"></a>
           </fieldset>
         </form>
 
         <!-- rising-group -->
         <div class="header__rising__group">
-          <span></span>
+          <span class="header__rising__text">급상승</span>
           <ul class="header__rising__list">
             <li class="header__rising__item">
-              <a href="#" class="header__rising__info"></a>
-              <span class="header__rising__number"></span>
+              <span class="header__rising__number">1</span>
+              <a href="#" class="header__rising__info">왜 오수재인가 OST</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">2</span>
+              <a href="#" class="header__rising__info">Post Malone</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">3</span>
+              <a href="#" class="header__rising__info">세븐틴</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">4</span>
+              <a href="#" class="header__rising__info">별똥별 OST</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">5</span>
+              <a href="#" class="header__rising__info">NCT DREAM</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">6</span>
+              <a href="#" class="header__rising__info">I Like You</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">7</span>
+              <a href="#" class="header__rising__info">혁오 (HYUKOH)</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">8</span>
+              <a href="#" class="header__rising__info">먼데이 키즈</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">9</span>
+              <a href="#" class="header__rising__info">출국</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">10</span>
+              <a href="#" class="header__rising__info">브라운아이드걸스</a>
             </li>
           </ul>
         </div>
-
-        <!-- header-nav -->
-        <nav class="header__nav">
-          <ul class="header__nav__list">
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">1</a>
-            </li>
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">2</a>
-            </li>
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">3</a>
-            </li>
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">4</a>
-            </li>
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">5</a>
-            </li>
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">6</a>
-            </li>
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">7</a>
-            </li>
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">8</a>
-            </li>
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">9</a>
-            </li>
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">10</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header__ad__image">
-          <picture>선택사항</picture>
-        </div>
+        <div class="header__ad__image"></div>
       </header>
+
+      <!-- header-nav -->
+      <nav class="header__nav">
+        <ul class="header__nav__list">
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">멜론차트</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">최신음악</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">장르음악</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">멜론DJ</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">멜론TV</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">스타포스트</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">매거진</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">뮤직어워드</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">어학</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">마이뮤직</a>
+          </li>
+        </ul>
+      </nav>
 
       <!-- 메인 -->
       <section class="home__new__section">

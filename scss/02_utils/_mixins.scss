@@ -138,3 +138,21 @@
   animation-direction: $direction;
   animation-fill-mode: $fillmode;
 }
+
+@mixin contentBorderLeft(
+  $c: "",
+  $pos: absolute,
+  $dp: block,
+  $bl: 1px solid $borderLightGray,
+  $w: 100%,
+  $h: rem(14px),
+  $t: translateX(-14px)
+) {
+  content: $c;
+  position: $pos;
+  display: $dp;
+  border-left: $bl;
+  width: $w;
+  height: $h;
+  transform: $t;
+}
