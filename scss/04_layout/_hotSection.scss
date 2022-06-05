@@ -1,2 +1,55 @@
-.home__hot__section {
+// hot-issue
+
+.home__hot__hot-issue__title {
+  display: flex;
+  align-items: center;
+
+  .home__hot__hot-issue__title-text {
+    font-size: rem(15px);
+    font-weight: 700;
+    color: $primary-header;
+  }
+
+  .home__hot__hot-issue__txt_intro {
+    padding-left: 8px;
+    font-size: rem(12px);
+    color: $secondary-font;
+  }
+}
+
+// hot-issue 인기컨텐츠
+
+.home__hot__hot-issue-list {
+  display: none;
+  padding-top: rem(16px);
+  &.is-active {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// 1페이지
+.home__hot__hot-issue-list.list1 {
+  .home__hot__hot-issue-upper-group {
+    display: flex;
+    align-items: start;
+
+    .home__hot__hot-issue-video-area {
+      position: relative;
+      width: rem(344px);
+
+      .home__hot__hot-issue-video-tex-area {
+        position: absolute;
+        width: 100%;
+        padding: 2px 0 2px 15px;
+        line-height: 1.6;
+        bottom: 0;
+        transform: translateY(-50%);
+        left: 0;
+        color: $white;
+        font-size: rem(12px);
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
 }

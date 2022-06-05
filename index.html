@@ -106,7 +106,7 @@
       </section>
 
       <section class="home__hot__section">
-        <h2 class="home__hot__section__title sr-only">
+        <h2 class="home__hot__title sr-only" tabindex="0">
           인기 컨텐츠와 멜론차트 영역입니다.
         </h2>
 
@@ -120,26 +120,325 @@
             >
           </h3>
           <!-- 컨텐츠 리스트 -->
-          <ul class="home__hot__hot-issue-list">
-            <li class="home__hot__hot-issue-list1">
-              <div class="home__hot__hot-issue-video-area">
-                <a class="home__hot__hot-issue-video-link">
-                  <img
-                    src="./img/hotIssueThumbnail.jpg"
-                    alt="핫이슈 비디오 썸네일"
-                    class="home__hot__hot-issue-video-Thumbnail"
-                  />
-                  <span class="home__hot__hot-issue-video-tex-area">
-                    멜론TV <strong>아이유, 유희열이 안내하는</strong> <br />
-                    세상의 모든 TOP100 (FULL ver.)
-                  </span>
-                  <span class="home__hot__hot-issue-video-views"
-                    >조회 3,699
-                  </span>
-                </a>
+          <ul class="home__hot__hot-issue-lists" aria-label="인기 컨텐츠">
+            <!-- 1페이지 -->
+            <li class="home__hot__hot-issue-list list1 is-active">
+              <div class="home__hot__hot-issue-upper-group">
+                <div class="home__hot__hot-issue-video-area">
+                  <a href="#" class="home__hot__hot-issue-video-link">
+                    <img
+                      src="/assets/images/hotIssueThumbnail.jpg"
+                      alt="핫이슈 비디오 썸네일"
+                      class="home__hot__hot-issue-video-Thumbnail"
+                    />
+                    <span class="home__hot__hot-issue-video-tex-area">
+                      멜론TV <strong>아이유, 유희열이 안내하는</strong> <br />
+                      세상의 모든 TOP100 (FULL ver.)
+                    </span>
+                    <span class="home__hot__hot-issue-video-views"
+                      >조회 3,699
+                    </span>
+                  </a>
+                </div>
+                <ul class="home__hot__news-list">
+                  <li class="home__hot__news-item">
+                    <a class="home__hot__news-item__thumbnail" href="#">
+                      <img
+                        src="/assets/images/dataLap.jpg"
+                        alt="데이터랩 댓글이벤트 썸네일"
+                      />
+                    </a>
+                    <div class="home__hot__news-item-info">
+                      <a href="#" class="home__hot__news-item-link">
+                        <em class="home__hot__news-item-title">
+                          멜론 데이터랩 댓글 이벤트 #7
+                        </em>
+                        <p class="home__hot__news-item-description">
+                          방탄소년단, 9년의 기록<br />#1,008만 6,000 #35억
+                          #113억
+                        </p>
+                      </a>
+                      <span class="home__hot__news-item-ctgry">멜론메거진</span>
+                      <span class="home__hot__news-item-views"
+                        >조회 51,611</span
+                      >
+                    </div>
+                  </li>
+                  <li class="home__hot__news-item">
+                    <a class="home__hot__news-item__thumbnail" href="#">
+                      <img
+                        src="/assets/images/playyou.jpg"
+                        alt="카카오 티비 플레이유 썸네일"
+                      />
+                    </a>
+                    <div class="home__hot__news-item-info">
+                      <a href="#" class="home__hot__news-item-link">
+                        <em class="home__hot__news-item-title">
+                          7회. 제7장 『 파티 (party) 』
+                        </em>
+                        <p class="home__hot__news-item-description">
+                          [미션] 친구와 음식을 나눠 먹고 명찰을 획득하라.
+                        </p>
+                      </a>
+                      <span class="home__hot__news-item-ctgry">멜론TV</span>
+                      <span class="home__hot__news-item-views">조회 7,772</span>
+                    </div>
+                  </li>
+                  <li class="home__hot__news-item">
+                    <a class="home__hot__news-item__thumbnail" href="#">
+                      <img
+                        src="/assets/images//honestDrinking.jpg"
+                        alt="예능 취중찐담 썸네일"
+                      />
+                    </a>
+                    <div class="home__hot__news-item-info">
+                      <a href="#" class="home__hot__news-item-link">
+                        <em class="home__hot__news-item-title">
+                          21회. 취중찐담 with 장도연
+                        </em>
+                        <p class="home__hot__news-item-description">
+                          신사(?) 경규와 최애 후배 장도연이 함께하는 취중찐담
+                        </p>
+                      </a>
+                      <span class="home__hot__news-item-ctgry">멜론TV</span>
+                      <span class="home__hot__news-item-views">조회 3,381</span>
+                    </div>
+                  </li>
+                </ul>
               </div>
+              <ul class="home__hot__magazine-list">
+                <li
+                  class="home__hot__magazine-itme"
+                  aria-label="멜론 매거진 백지영"
+                >
+                  <a href="#" class="home__hot__magazine-Thumbnail">
+                    <img
+                      src="./assets/images/baekJiYoung.jpg"
+                      alt="매거진 표지 모델 백지영"
+                    />
+                  </a>
+                  <a href="#" class="home__hot__magazine-description">
+                    <em class="home__hot__magazine-title">이별 발라드 장인</em>
+                    <span class="home__hot__magazine-txt">백지영 등판!</span>
+                  </a>
+                  <div class="home__hot__magazine-info">
+                    <span class="home__hot__magazine-ctgry">멜론메거진</span>
+                    <span class="home__hot__magazine-views">조회 35,589</span>
+                  </div>
+                </li>
+                <li
+                  class="home__hot__magazine-itme"
+                  aria-label="멜론 매거진 조유리"
+                >
+                  <a href="#" class="home__hot__magazine-Thumbnail">
+                    <img
+                      src="./assets/images/joyuri.jpg"
+                      alt="매거진 표지 모델  조유리"
+                    />
+                  </a>
+                  <a href="#" class="home__hot__magazine-description">
+                    <em class="home__hot__magazine-title"
+                      >싱그럽고 청량한 매력</em
+                    >
+                    <span class="home__hot__magazine-txt"
+                      >조유리 '러브 쉿!' MV 현장</span
+                    >
+                  </a>
+                  <div class="home__hot__magazine-info">
+                    <span class="home__hot__magazine-ctgry">멜론메거진</span>
+                    <span class="home__hot__magazine-views">조회 20,847</span>
+                  </div>
+                </li>
+                <li
+                  class="home__hot__magazine-itme"
+                  aria-label="멜론 매거진 ADORA"
+                >
+                  <a href="#" class="home__hot__magazine-Thumbnail">
+                    <img
+                      src="./assets/images/adora.jpg"
+                      alt="매거진 표지 모델 ADORA"
+                    />
+                  </a>
+                  <a href="#" class="home__hot__magazine-description">
+                    <em class="home__hot__magazine-title"
+                      >ADORA 'Trouble? TRAVEL!'</em
+                    >
+                    <span class="home__hot__magazine-txt"
+                      >MV & 자켓 촬영 현장</span
+                    >
+                  </a>
+                  <div class="home__hot__magazine-info">
+                    <span class="home__hot__magazine-ctgry">멜론메거진</span>
+                    <span class="home__hot__magazine-views">조회 643</span>
+                  </div>
+                </li>
+                <li
+                  class="home__hot__magazine-itme"
+                  aria-label="멜론 매거진 JAEMAN"
+                >
+                  <a href="#" class="home__hot__magazine-Thumbnail">
+                    <img
+                      src="./assets/images/jaeman.jpg"
+                      alt="매거진 표지 모델 JAEMAN"
+                    />
+                  </a>
+                  <a href="#" class="home__hot__magazine-description">
+                    <em class="home__hot__magazine-title">난 이상하지 않아!</em>
+                    <span class="home__hot__magazine-txt"
+                      >재만 (JAEMAN) 'stranger'</span
+                    >
+                  </a>
+                  <div class="home__hot__magazine-info">
+                    <span class="home__hot__magazine-ctgry">멜론메거진</span>
+                    <span class="home__hot__magazine-views">조회 632</span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <!-- 2페이지 -->
+            <li class="home__hot__hot-issue-list list2">
+              <ul class="home__hot__melon-tv-list">
+                <li
+                  class="home__hot__melon-tv-itme"
+                  aria-label="멜론 tv 백지영"
+                >
+                  <a href="#" class="home__hot__melon-tv-Thumbnail">
+                    <img
+                      src="./assets/images/melonTvBaek.jpg"
+                      alt="가수 백지영"
+                    />
+                  </a>
+                  <a href="#" class="home__hot__melon-tv-description">
+                    <em class="home__hot__melon-tv-title"
+                      >발라드 여왕 백지영 컴백</em
+                    >
+                    <span class="home__hot__melon-tv-txt"
+                      >신곡 '사랑 앞에서 난 바보가 돼'</span
+                    >
+                  </a>
+                  <div class="home__hot__melon-tv-info">
+                    <span class="home__hot__melon-tv-ctgry">멜론TV</span>
+                    <span class="home__hot__melon-tv-views">조회 1,473</span>
+                  </div>
+                </li>
+                <li class="home__hot__melon-tv-itme" aria-label="멜론 tv 빅톤">
+                  <a href="#" class="home__hot__melon-tv-Thumbnail">
+                    <img
+                      src="./assets/images/melonTvVicton.jpg"
+                      alt="가수 빅톤"
+                    />
+                  </a>
+                  <a href="#" class="home__hot__melon-tv-description">
+                    <em class="home__hot__melon-tv-title"
+                      >빅톤이 전하는 사랑의 속삭임</em
+                    >
+                    <span class="home__hot__melon-tv-txt"
+                      >타이틀곡 'Stupid O’clock' MV</span
+                    >
+                  </a>
+                  <div class="home__hot__melon-tv-info">
+                    <span class="home__hot__melon-tv-ctgry">멜론TV</span>
+                    <span class="home__hot__melon-tv-views">조회 1,183</span>
+                  </div>
+                </li>
+                <li
+                  class="home__hot__melon-tv-itme"
+                  aria-label="멜론 tv 문수진"
+                >
+                  <a href="#" class="home__hot__melon-tv-Thumbnail">
+                    <img
+                      src="./assets/images/melonTvMoon.jpg"
+                      alt="가수 문수진"
+                    />
+                  </a>
+                  <a href="#" class="home__hot__melon-tv-description">
+                    <em class="home__hot__melon-tv-title"
+                      >행운의 부적이 되기를!</em
+                    >
+                    <span class="home__hot__melon-tv-txt"
+                      >문수진 'Right Back'
+                    </span>
+                  </a>
+                  <div class="home__hot__melon-tv-info">
+                    <span class="home__hot__melon-tv-ctgry">멜론TV</span>
+                    <span class="home__hot__melon-tv-views">조회 1,180</span>
+                  </div>
+                </li>
+                <li
+                  class="home__hot__melon-tv-itme"
+                  aria-label="멜론 tv 조유리"
+                >
+                  <a href="#" class="home__hot__melon-tv-Thumbnail">
+                    <img
+                      src="./assets/images/melonTvyuri.jpg"
+                      alt="가수 조유리"
+                    />
+                  </a>
+                  <a href="#" class="home__hot__melon-tv-description">
+                    <em class="home__hot__melon-tv-title"
+                      >조유리 “신곡 '러브 쉿!</em
+                    >
+                    <span class="home__hot__melon-tv-txt"
+                      >경쾌한 이별 변주곡
+                    </span>
+                  </a>
+                  <div class="home__hot__melon-tv-info">
+                    <span class="home__hot__melon-tv-ctgry">멜론TV</span>
+                    <span class="home__hot__melon-tv-views">조회 4,279</span>
+                  </div>
+                </li>
+                <li class="home__hot__melon-tv-itme" aria-label="멜론 tv nct">
+                  <a href="#" class="home__hot__melon-tv-Thumbnail">
+                    <img src="./assets/images/melonTvNct.jpg" alt="가수 nct" />
+                  </a>
+                  <a href="#" class="home__hot__melon-tv-description">
+                    <em class="home__hot__melon-tv-title"
+                      >'NCT DREAM'만이 할 수 있는</em
+                    >
+                    <span class="home__hot__melon-tv-txt"
+                      >올드스쿨+청량 에너지
+                    </span>
+                  </a>
+                  <div class="home__hot__melon-tv-info">
+                    <span class="home__hot__melon-tv-ctgry">멜론TV</span>
+                    <span class="home__hot__melon-tv-views">조회 7,751</span>
+                  </div>
+                </li>
+                <li
+                  class="home__hot__melon-tv-itme"
+                  aria-label="멜론 tv 세븐틴"
+                >
+                  <a href="#" class="home__hot__melon-tv-Thumbnail">
+                    <img
+                      src="./assets/images/melonTvSeven.jpg"
+                      alt="가수 세븐틴"
+                    />
+                  </a>
+                  <a href="#" class="home__hot__melon-tv-description">
+                    <em class="home__hot__melon-tv-title"
+                      >컴백! SEVENTEEN(세븐틴)!</em
+                    >
+                    <span class="home__hot__melon-tv-txt"
+                      >‘HOT’ Official MV
+                    </span>
+                  </a>
+                  <div class="home__hot__melon-tv-info">
+                    <span class="home__hot__melon-tv-ctgry">멜론TV</span>
+                    <span class="home__hot__melon-tv-views">조회 21,559</span>
+                  </div>
+                </li>
+              </ul>
             </li>
           </ul>
+
+          <!-- list 이동 버튼 -->
+          <div class="home__hot__hot-issue-button-area">
+            <span class="home__hot__hot-issue-page-num">1/2</span>
+            <div class="home__hot__hot-issue-button-box">
+              <button class="btn home__hot__hot-issue-prev"></button>
+              <button class="btn home__hot__hot-issue-next"></button>
+            </div>
+          </div>
         </div>
         <!-- 멜론차트 -->
         <div class="home__hot__section__melon-chart"></div>

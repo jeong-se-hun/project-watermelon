@@ -53,6 +53,7 @@ ol {
 
 img {
   vertical-align: middle;
+  max-width: 100%;
 }
 
 a {
@@ -83,6 +84,51 @@ legend {
 
 button {
   cursor: pointer;
+}
+
+.home__hot__hot-issue__title {
+  display: flex;
+  align-items: center;
+}
+.home__hot__hot-issue__title .home__hot__hot-issue__title-text {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.home__hot__hot-issue__title .home__hot__hot-issue__txt_intro {
+  padding-left: 8px;
+  font-size: 0.75rem;
+  color: #888888;
+}
+
+.home__hot__hot-issue-list {
+  display: none;
+  padding-top: 1rem;
+}
+.home__hot__hot-issue-list.is-active {
+  display: flex;
+  flex-direction: column;
+}
+
+.home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group {
+  display: flex;
+  align-items: start;
+}
+.home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__hot-issue-video-area {
+  position: relative;
+  width: 21.5rem;
+}
+.home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__hot-issue-video-area .home__hot__hot-issue-video-tex-area {
+  position: absolute;
+  width: 100%;
+  padding: 2px 0 2px 15px;
+  line-height: 1.6;
+  bottom: 0;
+  transform: translateY(-50%);
+  left: 0;
+  color: #fff;
+  font-size: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=style.css.map */
