@@ -345,14 +345,6 @@ button {
   padding-top: 1.125rem;
   padding-bottom: 1.125rem;
 }
-  height: 10.625rem;
-  padding-top: 1.125rem;
-  padding-bottom: 1.125rem;
-}
-.footer__box {
-  width: 63.125rem;
-  margin: 0 auto;
-}
 .footer__group {
   margin: 0 auto;
 }
@@ -419,20 +411,11 @@ button {
   .footer__service__list {
     width: 100%;
   }
-  text-align: start;
-  padding-left: 10px;
-  font-size: 0.75rem;
-  margin-top: 1.625rem;
-  color: #1a1a1a;
-  width: 63.125rem;
 }
 @media (max-width: 479px) {
   .footer__service__list {
     width: 100%;
   }
-}
-.footer__service__item {
-  display: inline-block;
 }
 .footer__service__item-link:hover {
   padding-bottom: 1px;
@@ -475,14 +458,6 @@ button {
 .footer__company__info__item {
   padding-bottom: 8px;
   white-space: nowrap;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  font-size: 11px;
-}
-.footer__company__info__item {
-  padding-bottom: 8px;
 }
 .footer__company__info__item:not(:last-child)::after {
   content: "";
@@ -512,12 +487,6 @@ button {
 }
 .footer__company__contact__item {
   white-space: nowrap;
-}
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  font-size: 11px;
 }
 .footer__company__contact__item:not(:last-child)::after {
   content: "";
@@ -618,6 +587,227 @@ button {
 .login__footer__copyright {
   font-size: 0.6875rem;
   color: #969696;
+}
+
+.genre {
+  padding-top: 1.8125rem;
+}
+.genre__kpop {
+  font-size: 1.625rem;
+  margin: 0 auto;
+  width: 63.125rem;
+  padding-bottom: 10px;
+}
+.genre__sub__list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 63.125rem;
+  height: 3.125rem;
+  margin: 0 auto;
+  border-top: 1px solid #dfe6e8;
+}
+.genre__sub__list > .is-active {
+  border-right: 1px solid #dfe6e8;
+  background: #fff;
+  border-bottom: none;
+  color: #00cd3c;
+  font-weight: 500;
+}
+.genre__sub__item {
+  width: 7.890625rem;
+  height: 3rem;
+  text-align: center;
+  padding-top: 0.8125rem;
+  padding-bottom: 0.8125rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  border-bottom: 1px solid #dfe6e8;
+  background: #f8f8f8;
+}
+.genre__sub__item:hover {
+  text-decoration: underline;
+}
+.genre .new {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 1010px;
+  margin: 32px auto 0;
+}
+.genre .new__album__list {
+  width: 42.25rem;
+  height: 13.5625rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.genre .new__album__item {
+  background: pink;
+  position: relative;
+}
+.genre .new__album__item-img > img {
+  width: 13.5625rem;
+  height: 13.5625rem;
+}
+.genre .new__album__item-group {
+  position: absolute;
+  bottom: 0.625rem;
+  left: 0.625rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  color: #f8f8f8;
+}
+.genre .new__album__item-title {
+  margin-bottom: 0.4375rem;
+  font-size: 1rem;
+}
+.genre .new__album__item-link {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  display: inline-block;
+  width: 2.25rem;
+  height: 2.6875rem;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat 87% 0%;
+}
+.genre .new__album__item-title--link:hover {
+  text-decoration: underline;
+}
+.genre .new__album__item-singer {
+  font-size: 0.8125rem;
+}
+.genre .new__album__item-opacity {
+  width: 13.5625rem;
+  height: 3.75rem;
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0.625rem;
+  left: 0.625rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.genre .new__album-header {
+  font-size: 1.25rem;
+  margin-bottom: 0.625rem;
+  color: #333333;
+}
+.genre .new__palylist-group {
+  position: relative;
+}
+.genre .new__playlist-header {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #333333;
+}
+.genre .new__playlist-img {
+  width: 19.9375rem;
+  height: 13.5625rem;
+  overflow: hidden;
+}
+.genre .new__playlist-opacity {
+  width: 20.0625rem;
+  height: 13.5625rem;
+  background: rgba(0, 0, 0, 0.4);
+  bottom: 0.625rem;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+.genre .new__playlist {
+  position: relative;
+}
+.genre .new__playlist__links-dj {
+  position: absolute;
+  top: 1.25rem;
+  left: 0.9375rem;
+  font-weight: 400;
+  color: #f8f8f8;
+}
+.genre .new__playlist__links-dj-name:hover {
+  border-bottom: 2px solid #f8f8f8;
+}
+.genre .new__playlist__links-dj-em {
+  color: #00cd3c;
+  margin-right: 0.25rem;
+}
+.genre .new__playlist__links-title {
+  position: absolute;
+  left: 0.9375rem;
+  top: 8.125rem;
+  color: #f8f8f8;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.genre .new__playlist__links-title:hover {
+  text-decoration: underline;
+}
+.genre .new__playlist__links-hash1 {
+  position: absolute;
+  bottom: 0.625rem;
+  left: 0.9375rem;
+  color: #f8f8f8;
+  border: 1px solid #f8f8f8;
+  border-radius: 0.9375rem;
+  width: 3.125rem;
+  height: 1.75rem;
+  padding: 7px 9px;
+  font-size: 0.75rem;
+}
+.genre .new__playlist__links-hash1:hover {
+  color: #b4b4b4;
+  border: 1px solid #b4b4b4;
+}
+.genre .new__playlist__links-hash2 {
+  position: absolute;
+  bottom: 0.625rem;
+  left: 4.375rem;
+  color: #f8f8f8;
+  border: 1px solid #f8f8f8;
+  border-radius: 0.9375rem;
+  width: 3.125rem;
+  height: 1.75rem;
+  padding: 7px 9px;
+  font-size: 0.75rem;
+}
+.genre .new__playlist__links-hash2:hover {
+  color: #b4b4b4;
+  border: 1px solid #b4b4b4;
+}
+
+.music__category__list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 63.125rem;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.music__category__list > .is-active {
+  border-bottom: none;
+  background: #fff;
+}
+.music__category__item {
+  width: 20%;
+  height: 3rem;
+  text-align: center;
+  padding: 14px 4px;
+  border: 1px solid #dfe6e8;
+  background: #f8f8f8;
+}
+.music__category__item:nth-child(2n) {
+  border-right: none;
+  border-left: none;
 }
 
 /*# sourceMappingURL=style.css.map */
