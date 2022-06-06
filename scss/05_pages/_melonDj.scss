@@ -1,0 +1,820 @@
+// Header
+.dj__wrapper {
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: $accent-background;
+    border-bottom: 1px solid $borderLightGray;
+  }
+}
+
+.header__nav {
+  &__item:nth-child(4) {
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      border-bottom: 2px solid $primary-logo-color;
+      transform: translateY(15px);
+    }
+  }
+}
+
+.header__nav__item {
+  position: relative;
+  .header__dj {
+    &__list {
+      position: absolute;
+      display: flex;
+      top: rem(58px);
+      left: rem(-200px);
+      width: 380px;
+      justify-content: space-around;
+    }
+    &__item {
+      color: $secondary-font;
+      font-size: rem(14px);
+
+      &:first-child {
+        color: $primary-color;
+      }
+
+      :hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+// Today section
+.main__wrapper {
+  margin-top: rem(30px);
+}
+
+.today-section {
+  width: rem(1010px);
+  @include autoMargin;
+
+  h3 {
+    margin-top: 20px;
+  }
+
+  &__form {
+    display: flex;
+
+    fieldset {
+      display: flex;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: rem(22px);
+    flex-grow: 1;
+  }
+
+  &__select {
+    width: rem(120px);
+    border: none;
+    border-bottom: 1px solid $borderDarkGray;
+    padding-left: rem(10px);
+    color: $primary-font;
+  }
+
+  &__input {
+    margin-left: rem(5px);
+    width: rem(300px);
+    border: none;
+    border-bottom: 1px solid $borderDarkGray;
+
+    background-image: url("../../assets/images/icon-search-gray.svg");
+    background-repeat: no-repeat;
+    background-size: rem(15px);
+    background-position: 98% 80%;
+
+    &::placeholder {
+      color: $borderGray;
+    }
+  }
+
+  &__button {
+    font-size: rem(14px);
+    @include paddingY(10px);
+    margin-left: rem(40px);
+    border: 1px solid $borderDarkGray;
+    border-radius: 30px;
+    width: 140px;
+    text-align: center;
+  }
+
+  // card-section
+  &__card {
+    &__list {
+      @include djCardList($g: rem(14px));
+      overflow: hidden;
+    }
+
+    &__item {
+      border: 1px solid $borderLightGray;
+    }
+
+    &__img {
+      @include djCardImg;
+    }
+
+    &__desc {
+      @include djCardDesc;
+      @include paddingX(20px);
+      @include paddingY(20px);
+    }
+
+    &__title {
+      @include djCardTitle;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__dj {
+      @include djCardDj;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__info {
+      margin-bottom: rem(10px);
+    }
+
+    &__like {
+      font-size: rem(12px);
+      color: $secondary-font;
+
+      &::before {
+        @include djCardLike;
+      }
+    }
+
+    &__hash {
+      @include djCardHash;
+      @include paddingX(10px);
+      @include paddingY(5px);
+
+      &:hover {
+        border: 1px solid $medium-gray;
+      }
+    }
+
+    &__profile {
+      @include djCardProfile;
+    }
+  }
+  .mark-dj::after {
+    @include djMark;
+    background: url("https://cdnimg.melon.co.kr/resource/image/web/common/ic_common_verify14.png");
+  }
+
+  .profile1 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/7/60/659951_46.jpg?tm=20220510100909")
+      100% / contain;
+  }
+
+  .profile2 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/509/58/50857097_46.jpg?tm=20220318115222")
+      100% / contain;
+  }
+  .profile3 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/356/95/35594080_46.jpg?tm=20211222034700")
+      100% / contain;
+  }
+  .profile4 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/502/63/50162126_46.jpg?tm=20220524120620")
+      100% / contain;
+  }
+  .profile5 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667293_46.jpg?tm=20220103031155")
+      100% / contain;
+  }
+  .profile6 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/601/77/60076424_46.jpg?tm=20220311042250")
+      100% / contain;
+  }
+  .profile7 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/2/53/152501_46.jpg?tm=20220517103825")
+      100% / contain;
+  }
+  .profile8 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/348/31/34730789_46.jpg?tm=20220127083334")
+      100% / contain;
+  }
+
+  .list-num {
+    @include djCardListNum;
+
+    &::before {
+      @include djCardListNumBefore;
+    }
+  }
+
+  .orange-dj {
+    color: $accent-orange;
+    font-size: rem(12px);
+  }
+
+  .green-dj {
+    color: $primary-logo-color;
+    font-size: rem(12px);
+  }
+}
+
+// recommend
+.recommend-wrapper {
+  background: $accent-background;
+  margin-top: rem(50px);
+  .recommend {
+    width: rem(1010px);
+    @include autoMargin;
+    display: flex;
+    @include paddingY(40px);
+    &__logo {
+      margin-left: rem(50px);
+      position: relative;
+    }
+
+    &__img {
+      border-radius: 50%;
+    }
+
+    &__pick {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &__right {
+      margin-left: rem(50px);
+      &__title {
+        margin-top: rem(15px);
+        font-size: rem(18px);
+        color: $primary-color;
+      }
+
+      &__desc {
+        margin-top: rem(10px);
+        font-size: rem(20px);
+        font-weight: 500;
+        color: $primary-font;
+      }
+
+      &__list {
+        display: flex;
+        margin-top: rem(30px);
+      }
+
+      &__link {
+        &__img {
+          width: rem(35px);
+          height: rem(35px);
+          border-radius: 50%;
+          margin-right: rem(10px);
+        }
+      }
+
+      &__dot {
+        margin-top: rem(30px);
+      }
+
+      &__five {
+        margin-top: rem(30px);
+        color: $primary-font;
+        font-weight: 300;
+        margin-left: rem(10px);
+
+        .five {
+          font-weight: 600;
+        }
+      }
+
+      &__button {
+        margin-top: rem(30px);
+        @include paddingX(18px);
+        @include paddingY(8px);
+        font-weight: 300;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        border-radius: rem(20px);
+        font-size: rem(14px);
+      }
+    }
+
+    &__people {
+      display: flex;
+      gap: rem(10px);
+      align-items: center;
+    }
+  }
+}
+
+.dj-list {
+  &__tag {
+    width: rem(1010px);
+    @include autoMargin;
+    display: flex;
+    @include paddingY(50px);
+
+    &__title {
+      font-size: rem(18px);
+    }
+
+    &__list {
+      display: flex;
+      margin-left: rem(80spx);
+    }
+
+    &__link {
+      @include paddingX(12px);
+      @include paddingY(8px);
+      border: 1px solid $borderDarkGray;
+      border-radius: rem(20px);
+      color: $medium-gray;
+      font-weight: 300;
+      font-size: rem(12px);
+      margin-right: rem(10px);
+
+      &:hover {
+        border: 1px solid $medium-gray;
+      }
+    }
+  }
+
+  // 힙합
+
+  &__hiphop {
+    width: rem(1010px);
+    @include autoMargin;
+    font-size: rem(18px);
+    font-weight: 400;
+
+    &__group {
+      width: rem(1010px);
+      @include autoMargin;
+      margin-top: rem(20px);
+    }
+
+    &__list {
+      @include djCardList;
+    }
+
+    &__item {
+      border: 1px solid $borderLightGray;
+    }
+
+    &__img {
+      @include djCardImg;
+    }
+
+    &__desc {
+      @include djCardDesc;
+      @include paddingX(20px);
+      @include paddingY(25px);
+    }
+
+    &__title {
+      @include djCardTitle;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__dj {
+      @include djCardDj;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__info {
+      margin-bottom: rem(10px);
+    }
+
+    &__like {
+      font-size: rem(12px);
+      color: $secondary-font;
+
+      &::before {
+        @include djCardLike;
+      }
+    }
+
+    &__hash {
+      @include djCardHash;
+      @include paddingX(10px);
+      @include paddingY(5px);
+
+      &:hover {
+        border: 1px solid $medium-gray;
+      }
+    }
+
+    &__profile {
+      @include djCardProfile;
+    }
+  }
+
+  .mark-dj::after {
+    @include djMark;
+    background: url("https://cdnimg.melon.co.kr/resource/image/web/common/ic_common_verify14.png");
+  }
+
+  .hiphop-profile1 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667306_46.jpg?tm=20220328092727")
+      100% / contain;
+  }
+
+  .hiphop-profile2 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/213/71/21270688_46.jpg?tm=20220429080116")
+      100% / contain;
+  }
+  .hiphop-profile3 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667293_46.jpg?tm=20220103031155")
+      100% / contain;
+  }
+  .hiphop-profile4 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/214/22/21321753_46.jpg?tm=20220603074831")
+      100% / contain;
+  }
+
+  .list-num {
+    @include djCardListNum;
+    &::before {
+      @include djCardListNumBefore;
+    }
+  }
+
+  .orange-dj {
+    color: $accent-orange;
+    font-size: rem(12px);
+  }
+
+  .green-dj {
+    color: $primary-logo-color;
+    font-size: rem(12px);
+  }
+
+  // ROCK
+
+  &__rock {
+    width: rem(1010px);
+    @include autoMargin;
+    font-size: rem(18px);
+    font-weight: 400;
+    margin-top: rem(40px);
+
+    &__group {
+      width: rem(1010px);
+      @include autoMargin;
+      margin-top: rem(20px);
+    }
+
+    &__list {
+      @include djCardList;
+    }
+
+    &__item {
+      border: 1px solid $borderLightGray;
+    }
+
+    &__img {
+      @include djCardImg;
+    }
+
+    &__desc {
+      @include djCardDesc;
+      @include paddingX(20px);
+      @include paddingY(25px);
+    }
+
+    &__title {
+      @include djCardTitle;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__dj {
+      @include djCardDj;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__info {
+      margin-bottom: rem(10px);
+    }
+
+    &__like {
+      font-size: rem(12px);
+      color: $secondary-font;
+
+      &::before {
+        @include djCardLike;
+      }
+    }
+
+    &__hash {
+      @include djCardHash;
+      @include paddingX(10px);
+      @include paddingY(5px);
+
+      &:hover {
+        border: 1px solid $medium-gray;
+      }
+    }
+
+    &__profile {
+      @include djCardProfile;
+    }
+  }
+
+  .mark-dj::after {
+    @include djMark;
+    background: url("https://cdnimg.melon.co.kr/resource/image/web/common/ic_common_verify14.png");
+  }
+
+  .rock-profile1 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667310_46.jpg?tm=20220216013257")
+      100% / contain;
+  }
+
+  .rock-profile2 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667310_46.jpg?tm=20220216013257")
+      100% / contain;
+  }
+  .rock-profile3 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667310_46.jpg?tm=20220216013257")
+      100% / contain;
+  }
+  .rock-profile4 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667310_46.jpg?tm=20220216013257")
+      100% / contain;
+  }
+
+  .list-num {
+    @include djCardListNum;
+    &::before {
+      @include djCardListNumBefore;
+    }
+  }
+
+  .orange-dj {
+    color: $accent-orange;
+    font-size: rem(12px);
+  }
+
+  .green-dj {
+    color: $primary-logo-color;
+    font-size: rem(12px);
+  }
+
+  // boring
+
+  &__boring {
+    width: rem(1010px);
+    @include autoMargin;
+    font-size: rem(18px);
+    font-weight: 400;
+    margin-top: rem(40px);
+
+    &__group {
+      width: rem(1010px);
+      @include autoMargin;
+      margin-top: rem(20px);
+    }
+
+    &__list {
+      @include djCardList;
+    }
+
+    &__item {
+      border: 1px solid $borderLightGray;
+    }
+
+    &__img {
+      @include djCardImg;
+    }
+
+    &__desc {
+      @include djCardDesc;
+      @include paddingX(20px);
+      @include paddingY(25px);
+    }
+
+    &__title {
+      @include djCardTitle;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__dj {
+      @include djCardDj;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__info {
+      margin-bottom: rem(10px);
+    }
+
+    &__like {
+      font-size: rem(12px);
+      color: $secondary-font;
+
+      &::before {
+        @include djCardLike;
+      }
+    }
+
+    &__hash {
+      @include djCardHash;
+      @include paddingX(10px);
+      @include paddingY(5px);
+
+      &:hover {
+        border: 1px solid $medium-gray;
+      }
+    }
+
+    &__profile {
+      @include djCardProfile;
+    }
+  }
+
+  .mark-dj::after {
+    @include djMark;
+    background: url("https://cdnimg.melon.co.kr/resource/image/web/common/ic_common_verify14.png");
+  }
+
+  .boring-profile1 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667325_46.jpg?tm=20211229032624")
+      100% / contain;
+  }
+
+  .boring-profile2 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/407/56/40655407_46.jpg?tm=20220426063431")
+      100% / contain;
+  }
+  .boring-profile3 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/208/94/20793038_46.jpg?tm=20220320104517")
+      100% / contain;
+  }
+  .boring-profile4 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/509/58/50857096_46.jpg?tm=20201104063751")
+      100% / contain;
+  }
+
+  .list-num {
+    @include djCardListNum;
+    &::before {
+      @include djCardListNumBefore;
+    }
+  }
+
+  .orange-dj {
+    color: $accent-orange;
+    font-size: rem(12px);
+  }
+
+  .green-dj {
+    color: $primary-logo-color;
+    font-size: rem(12px);
+  }
+
+  // summer
+  &__summer {
+    width: rem(1010px);
+    @include autoMargin;
+    font-size: rem(18px);
+    font-weight: 400;
+    margin-top: rem(40px);
+
+    &__group {
+      width: rem(1010px);
+      @include autoMargin;
+      margin-top: rem(20px);
+      margin-bottom: rem(130px);
+    }
+
+    &__list {
+      @include djCardList;
+    }
+
+    &__item {
+      border: 1px solid $borderLightGray;
+    }
+
+    &__img {
+      @include djCardImg;
+    }
+
+    &__desc {
+      @include djCardDesc;
+      @include paddingX(20px);
+      @include paddingY(25px);
+    }
+
+    &__title {
+      @include djCardTitle;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__dj {
+      @include djCardDj;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__info {
+      margin-bottom: rem(10px);
+    }
+
+    &__like {
+      font-size: rem(12px);
+      color: $secondary-font;
+
+      &::before {
+        @include djCardLike;
+      }
+    }
+
+    &__hash {
+      @include djCardHash;
+      @include paddingX(10px);
+      @include paddingY(5px);
+
+      &:hover {
+        border: 1px solid $medium-gray;
+      }
+    }
+
+    &__profile {
+      @include djCardProfile;
+    }
+  }
+
+  .mark-dj::after {
+    @include djMark;
+    background: url("https://cdnimg.melon.co.kr/resource/image/web/common/ic_common_verify14.png");
+  }
+
+  .summer-profile1 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/351/77/35076857_46.jpg?tm=20220524101826")
+      100% / contain;
+  }
+
+  .summer-profile2 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/208/94/20793038_46.jpg?tm=20220320104517")
+      100% / contain;
+  }
+  .summer-profile3 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/369/61/36860740_46.jpg?tm=20220528034934")
+      100% / contain;
+  }
+  .summer-profile4 {
+    background: url("https://cdnimg.melon.co.kr/svc/user_images/user/400/70/39969337_46.jpg?tm=20220325061206")
+      100% / contain;
+  }
+
+  .list-num {
+    @include djCardListNum;
+    &::before {
+      @include djCardListNumBefore;
+    }
+  }
+
+  .orange-dj {
+    color: $accent-orange;
+    font-size: rem(12px);
+  }
+
+  .green-dj {
+    color: $primary-logo-color;
+    font-size: rem(12px);
+  }
+}

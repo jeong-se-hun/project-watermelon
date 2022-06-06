@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>melon DJ</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../assets/images/favicon.ico"
+      id="favicon"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- Header Wrapper -->
+    <header class="dj__wrapper">
+      <!-- notice-bar -->
+      <div class="notice-bar">
+        <ul class="notice-bar__list">
+          <li class="notice-bar__item">
+            <a href="#" class="notice-bar__link">이용권구매</a>
+          </li>
+          <li class="notice-bar__item">
+            <a href="#" class="notice-bar__link">멜론라운지</a>
+          </li>
+          <li class="notice-bar__item">
+            <a href="#" class="notice-bar__link">이벤트</a>
+          </li>
+          <li class="notice-bar__item">
+            <a href="#" class="notice-bar__link">공지사항</a>
+          </li>
+          <li class="notice-bar__item order">
+            <a href="#" class="notice-bar__link">멜론 티켓</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Header -->
+      <div class="header">
+        <h1 class="header__logo">
+          <a href="#">
+            <img src="../assets/images/melon-01.svg" alt="melon" />
+          </a>
+        </h1>
+        <!-- main form -->
+        <form action="" class="header__search">
+          <fieldset>
+            <legend>검색폼</legend>
+            <label for="" class="header__search-label sr-only"></label>
+            <input
+              type="text"
+              class="header__search__input"
+              placeholder="WSG워너비 12명의 첫 하모니 `어마어마해`"
+            />
+            <a href="#" role="button" class="header__search__button"></a>
+          </fieldset>
+        </form>
+        <!-- rising-group -->
+        <div class="header__rising__group">
+          <span class="header__rising__text">급상승</span>
+          <ul class="header__rising__list">
+            <li class="header__rising__item">
+              <span class="header__rising__number">1</span>
+              <a href="#" class="header__rising__info">왜 오수재인가 OST</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">2</span>
+              <a href="#" class="header__rising__info">Post Malone</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">3</span>
+              <a href="#" class="header__rising__info">세븐틴</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">4</span>
+              <a href="#" class="header__rising__info">별똥별 OST</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">5</span>
+              <a href="#" class="header__rising__info">NCT DREAM</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">6</span>
+              <a href="#" class="header__rising__info">I Like You</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">7</span>
+              <a href="#" class="header__rising__info">혁오 (HYUKOH)</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">8</span>
+              <a href="#" class="header__rising__info">먼데이 키즈</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">9</span>
+              <a href="#" class="header__rising__info">출국</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">10</span>
+              <a href="#" class="header__rising__info">브라운아이드걸스</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header__ad__image"></div>
+      </div>
+      <!-- header-nav -->
+      <nav class="header__nav">
+        <ul class="header__nav__list">
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">멜론차트</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">최신음악</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">장르음악</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">멜론DJ</a>
+            <!-- DJ-Nav -->
+            <ul class="header__dj__list">
+              <li class="header__dj__item">
+                <a href="#" class="header__dj__link">투데이</a>
+              </li>
+              <li class="header__dj__item">
+                <a href="#" class="header__dj__link">전문가 선곡</a>
+              </li>
+              <li class="header__dj__item">
+                <a href="#" class="header__dj__link">#테마장르</a>
+              </li>
+              <li class="header__dj__item">
+                <a href="#" class="header__dj__link">파워DJ</a>
+              </li>
+              <li class="header__dj__item">
+                <a href="#" class="header__dj__link">인기</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">멜론TV</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">스타포스트</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">매거진</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">뮤직어워드</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">어학</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">마이뮤직</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main -->
+    <main class="main__wrapper">
+      <!-- 투데이 -->
+      <section class="today-section">
+        <form action="" class="today-section__form">
+          <h2 class="today-section__title">투데이</h2>
+          <fieldset>
+            <legend>태그검색</legend>
+            <select name="" id="" class="today-section__select">
+              <option value="" class="today-section__option">태그</option>
+              <option value="" class="today-section__option">
+                플레이리스트
+              </option>
+              <option value="" class="today-section__option">닉네임</option>
+            </select>
+            <input
+              type="text"
+              placeholder="# 원하는 태그를 입력해주세요."
+              class="today-section__input"
+            />
+          </fieldset>
+          <a href="#" class="today-section__button">DJ 신청하기</a>
+        </form>
+        <h3>6월 8일 오늘은 뭘 듣지?</h3>
+        <div class="today-section__radio">
+          <button class="today-section__radio1"></button>
+          <button class="today-section__radio2"></button>
+        </div>
+        <ul class="today-section__card__list">
+          <li class="today-section__card__item">
+            <a href="#">
+              <img
+                src="https://cdnimg.melon.co.kr/svc/user_images/plylst/2022/05/7/60/510082567_org.jpg?tm=20220526050224/melon/resize/x236/quality/80/optimize"
+                alt=""
+                class="today-section__card__img"
+              />
+            </a>
+            <div class="today-section__card__desc">
+              <a href="#" class="today-section__card__title"
+                >성수동 편집샵 재질의 감각적인 BGM</a
+              >
+              <span class="orange-dj">DJ</span>
+              <a href="#" class="today-section__card__dj mark-dj">Sweetmind</a>
+              <p class="today-section__card__info">
+                <a href="#" class="today-section__card__like">135</a
+                ><span class="list-num">30곡</span>
+              </p>
+              <a href="#" class="today-section__card__hash">#Pop</a>
+              <a href="#" class="today-section__card__hash">#편집샵</a>
+              <a href="#" class="today-section__card__profile profile1"></a>
+            </div>
+          </li>
+          <li class="today-section__card__item">
+            <a href="#">
+              <img
+                src="https://cdnimg.melon.co.kr/svc/images/melondj/special/imgUrl20220603113330727_org.jpg?tm=20220603125408/melon/resize/x236/quality/80/optimize"
+                alt=""
+                class="today-section__card__img"
+              />
+            </a>
+            <div class="today-section__card__desc">
+              <a href="#" class="today-section__card__title"
+                >지친 마음을 다시 일으키는 CCM</a
+              >
+              <span class="orange-dj">DJ</span>
+              <a href="#" class="today-section__card__dj mark-dj">CCM마스터</a>
+              <p class="today-section__card__info">
+                <a href="#" class="today-section__card__like">402</a
+                ><span class="list-num">23곡</span>
+              </p>
+              <a href="#" class="today-section__card__hash">#CCM</a>
+              <a href="#" class="today-section__card__hash">#찬양</a>
+              <a href="#" class="today-section__card__profile profile2"></a>
+            </div>
+          </li>
+          <li class="today-section__card__item">
+            <a href="#">
+              <img
+                src="https://cdnimg.melon.co.kr/svc/images/melondj/special/imgUrl20220603113450188_org.jpg?tm=20220531040631/melon/resize/x236/quality/80/optimize"
+                alt=""
+                class="today-section__card__img"
+              />
+            </a>
+            <div class="today-section__card__desc">
+              <a href="#" class="today-section__card__title"
+                >HIDDEN TRACKS '국내 ROCK'</a
+              >
+              <span class="orange-dj">DJ</span>
+              <a href="#" class="today-section__card__dj">Melon_히든트랙</a>
+              <p class="today-section__card__info">
+                <a href="#" class="today-section__card__like">971</a
+                ><span class="list-num">50곡</span>
+              </p>
+              <a href="#" class="today-section__card__hash">#록</a>
+              <a href="#" class="today-section__card__hash">#히든트랙</a>
+              <a href="#" class="today-section__card__profile profile3"></a>
+            </div>
+          </li>
+          <li class="today-section__card__item">
+            <a href="#">
+              <img
+                src="https://cdnimg.melon.co.kr/svc/images/melondj/special/imgUrl20220603113639404_org.jpg?tm=20220601070602/melon/resize/x236/quality/80/optimize"
+                alt=""
+                class="today-section__card__img"
+              />
+            </a>
+            <div class="today-section__card__desc">
+              <a href="#" class="today-section__card__title"
+                >새벽 산책, 주머니 속 R&B/힙합</a
+              >
+              <span class="green-dj">DJ</span>
+              <a href="#" class="today-section__card__dj">jji83</a>
+              <p class="today-section__card__info">
+                <a href="#" class="today-section__card__like">14</a
+                ><span class="list-num">39곡</span>
+              </p>
+              <a href="#" class="today-section__card__hash">#알앤비</a>
+              <a href="#" class="today-section__card__hash">#RnB</a>
+              <a href="#" class="today-section__card__profile profile4"></a>
+            </div>
+          </li>
+          <li class="today-section__card__item">
+            <a href="#">
+              <img
+                src="https://cdnimg.melon.co.kr/svc/images/melondj/playlist/imgUrl20190416053215768.jpg?tm=20220426015149/melon/resize/x236/quality/80/optimize"
+                alt=""
+                class="today-section__card__img"
+              />
+            </a>
+            <div class="today-section__card__desc">
+              <a href="#" class="today-section__card__title"
+                >구슬픈 멜로디가 마음을 적시는 퓨전 국악</a
+              >
+              <span class="orange-dj">DJ</span>
+              <a href="#" class="today-section__card__dj mark-dj"
+                >대중가요마스터</a
+              >
+              <p class="today-section__card__info">
+                <a href="#" class="today-section__card__like">385</a
+                ><span class="list-num">23곡</span>
+              </p>
+              <a href="#" class="today-section__card__hash">#퓨전국악</a>
+              <a href="#" class="today-section__card__hash">#슬픈</a>
+              <a href="#" class="today-section__card__profile profile5"></a>
+            </div>
+          </li>
+          <li class="today-section__card__item">
+            <a href="#">
+              <img
+                src="https://cdnimg.melon.co.kr/svc/images/melondj/special/imgUrl20220603114021714_org.jpg?tm=20220603125419/melon/resize/x236/quality/80/optimize"
+                alt=""
+                class="today-section__card__img"
+              />
+            </a>
+            <div class="today-section__card__desc">
+              <a href="#" class="today-section__card__title">
+                건반에 내린 빗방울과 악보에 젖은 RNB
+              </a>
+              <span class="green-dj">DJ</span>
+              <a href="#" class="today-section__card__dj">예섬s</a>
+              <p class="today-section__card__info">
+                <a href="#" class="today-section__card__like">24</a
+                ><span class="list-num">20곡</span>
+              </p>
+              <a href="#" class="today-section__card__hash">#비오는날</a>
+              <a href="#" class="today-section__card__hash">#RnB</a>
+              <a href="#" class="today-section__card__profile profile6"></a>
+            </div>
+          </li>
+          <li class="today-section__card__item">
+            <a href="#">
+              <img
+                src="https://cdnimg.melon.co.kr/svc/images/melondj/special/imgUrl20220603115410066_org.jpg?tm=20220602122306/melon/resize/x236/quality/80/optimize"
+                alt=""
+                class="today-section__card__img"
+              />
+            </a>
+            <div class="today-section__card__desc">
+              <a href="#" class="today-section__card__title">
+                청춘 미드 재질의 산뜻한 Alternative pop
+              </a>
+              <span class="orange-dj">DJ</span>
+              <a href="#" class="today-section__card__dj">공중정원.</a>
+              <p class="today-section__card__info">
+                <a href="#" class="today-section__card__like">77</a
+                ><span class="list-num">37곡</span>
+              </p>
+              <a href="#" class="today-section__card__hash">#청춘</a>
+              <a href="#" class="today-section__card__hash">#얼터너티브</a>
+              <a href="#" class="today-section__card__profile profile7"></a>
+            </div>
+          </li>
+          <li class="today-section__card__item">
+            <a href="#">
+              <img
+                src="https://cdnimg.melon.co.kr/svc/images/melondj/special/imgUrl20220603120442823_org.jpg?tm=20220525040956/melon/resize/x236/quality/80/optimize"
+                alt=""
+                class="today-section__card__img"
+              />
+            </a>
+            <div class="today-section__card__desc">
+              <a href="#" class="today-section__card__title">
+                핸드폰 벨소리 같아! 소확행 뉴에이지
+              </a>
+              <span class="orange-dj">DJ</span>
+              <a href="#" class="today-section__card__dj">안녕봄빛</a>
+              <p class="today-section__card__info">
+                <a href="#" class="today-section__card__like">48</a
+                ><span class="list-num">30곡</span>
+              </p>
+              <a href="#" class="today-section__card__hash">#벨소리</a>
+              <a href="#" class="today-section__card__hash">#멜로디</a>
+              <a href="#" class="today-section__card__profile profile8"></a>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="recommend-wrapper">
+        <div class="recommend">
+          <a href="#" class="recommend__logo">
+            <img
+              src="https://cdnimg.melon.co.kr/svc/images/melondj/melgunpick/imgUrl20220525012454765.jpg/melon/resize/x160/quality/100/optimize"
+              alt=""
+              class="recommend__img"
+            />
+            <img
+              src="https://cdnimg.melon.co.kr/resource/image/web/dj_4x/pick_song_icon.png"
+              alt=""
+              class="recommend__pick"
+            />
+          </a>
+          <div class="recommend__right">
+            <h3 class="recommend__right__title">PICK송 #161</h3>
+            <p class="recommend__right__desc">
+              상큼함 가득! 시원한 에이드 한 잔과 어울리는 음악을 알려주세요.
+            </p>
+            <div class="recommend__people">
+              <ul class="recommend__right__list">
+                <li class="recommend__right__item">
+                  <a href="#" class="recommend__right__link">
+                    <img
+                      src="https://cdnimg.melon.co.kr/svc/user_images/user/20/62/1961986_194.jpg?tm=20220604172737/melon/optimize/90/melon/resize/38/quality/100/optimize"
+                      alt=""
+                      class="recommend__right__link__img"
+                    />
+                  </a>
+                </li>
+                <li class="recommend__right__item">
+                  <a href="#" class="recommend__right__link">
+                    <img
+                      src="https://cdnimg.melon.co.kr/svc/user_images/user/548/94/54793360_194.jpg?tm=20220602130643/melon/optimize/90/melon/resize/38/quality/100/optimize"
+                      alt=""
+                      class="recommend__right__link__img"
+                    />
+                  </a>
+                </li>
+                <li class="recommend__right__item">
+                  <a href="#" class="recommend__right__link">
+                    <img
+                      src="https://cdnimg.melon.co.kr/svc/user_images/user/317/99/31698719_194.jpg?tm=20220508142406/melon/optimize/90/melon/resize/38/quality/100/optimize"
+                      alt=""
+                      class="recommend__right__link__img"
+                    />
+                  </a>
+                </li>
+                <li class="recommend__right__item">
+                  <a href="#" class="recommend__right__link">
+                    <img
+                      src="https://cdnimg.melon.co.kr/svc/user_images/user/527/82/52681867_194.jpg?tm=20220517145715/melon/optimize/90/melon/resize/38/quality/100/optimize"
+                      alt=""
+                      class="recommend__right__link__img"
+                    />
+                  </a>
+                </li>
+              </ul>
+              <img
+                src="https://cdnimg.melon.co.kr/resource/image/web/dj_4x/pick_song_icon02.png"
+                alt=""
+                class="recommend__right__dot"
+              />
+              <span class="recommend__right__five"
+                ><span class="five">5</span>명 참여중</span
+              >
+              <a href="#" class="recommend__right__button">참여하기</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dj-list">
+        <div class="dj-list__tag">
+          <span class="dj-list__tag__title">인기태그</span>
+          <ul class="dj-list__tag__list">
+            <li class="dj-list__tag__item">
+              <a href="#" class="dj-list__tag__link">#청량한</a>
+            </li>
+            <li class="dj-list__tag__item">
+              <a href="#" class="dj-list__tag__link">#해변</a>
+            </li>
+            <li class="dj-list__tag__item">
+              <a href="#" class="dj-list__tag__link">#발라드</a>
+            </li>
+            <li class="dj-list__tag__item">
+              <a href="#" class="dj-list__tag__link">#아련한</a>
+            </li>
+            <li class="dj-list__tag__item">
+              <a href="#" class="dj-list__tag__link">#여름</a>
+            </li>
+            <li class="dj-list__tag__item">
+              <a href="#" class="dj-list__tag__link">#클럽</a>
+            </li>
+            <li class="dj-list__tag__item">
+              <a href="#" class="dj-list__tag__link">#기타</a>
+            </li>
+            <li class="dj-list__tag__item">
+              <a href="#" class="dj-list__tag__link">#기분전환</a>
+            </li>
+            <li class="dj-list__tag__item">
+              <a href="#" class="dj-list__tag__link">#시티팝</a>
+            </li>
+            <li class="dj-list__tag__item">
+              <a href="#" class="dj-list__tag__link">#7080</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 힙합 -->
+        <p class="dj-list__hiphop">귀에 바로 꽃히는 힙합 음악들</p>
+
+        <div class="dj-list__hiphop__group">
+          <ul class="dj-list__hiphop__list">
+            <li class="dj-list__hiphop__item">
+              <a href="#">
+                <img
+                  src="https://cdnimg.melon.co.kr/svc/images/melondj/playlist/479036960_org.jpg?tm=20220421050316/melon/resize/x236/quality/80/optimize"
+                  alt=""
+                  class="dj-list__hiphop__img"
+                />
+              </a>
+              <div class="dj-list__hiphop__desc">
+                <a href="#" class="dj-list__hiphop__title"
+                  >힙하고 그루브 가득한 국내 알앤비</a
+                >
+                <span class="orange-dj">DJ</span>
+                <a href="#" class="dj-list__hiphop__dj mark-dj"
+                  >RNBSOUL마스터</a
+                >
+                <p class="dj-list__hiphop__info">
+                  <a href="#" class="dj-list__hiphop__like">200</a
+                  ><span class="list-num">25곡</span>
+                </p>
+                <a href="#" class="dj-list__hiphop__hash">#2020년대</a>
+                <a href="#" class="dj-list__hiphop__hash">#알앤비</a>
+                <a
+                  href="#"
+                  class="dj-list__hiphop__profile hiphop-profile1"
+                ></a>
+              </div>
+            </li>
+            <li class="dj-list__hiphop__item">
+              <a href="#">
+                <img
+                  src="https://cdnimg.melon.co.kr/svc/user_images/plylst/2022/05/213/71/509096645_org.jpg?tm=20220507125310/melon/resize/x236/quality/80/optimize"
+                  alt=""
+                  class="dj-list__hiphop__img"
+                />
+              </a>
+              <div class="dj-list__hiphop__desc">
+                <a href="#" class="dj-list__hiphop__title"
+                  >힙합에서 힙함을 빼면 시체지</a
+                >
+                <span class="green-dj">DJ</span>
+                <a href="#" class="dj-list__hiphop__dj">흥.부</a>
+                <p class="dj-list__hiphop__info">
+                  <a href="#" class="dj-list__hiphop__like">121</a
+                  ><span class="list-num">31곡</span>
+                </p>
+                <a href="#" class="dj-list__hiphop__hash">#트렌드</a>
+                <a href="#" class="dj-list__hiphop__hash">#힙</a>
+                <a
+                  href="#"
+                  class="dj-list__hiphop__profile hiphop-profile2"
+                ></a>
+              </div>
+            </li>
+            <li class="dj-list__hiphop__item">
+              <a href="#">
+                <img
+                  src="https://cdnimg.melon.co.kr/svc/images/melondj/playlist/imgUrl20201013051035546.jpg?tm=20220511012733/melon/resize/x236/quality/80/optimize"
+                  alt=""
+                  class="dj-list__hiphop__img"
+                />
+              </a>
+              <div class="dj-list__hiphop__desc">
+                <a href="#" class="dj-list__hiphop__title"
+                  >국악의 재해석, 이게 바로 조선의 힙!</a
+                >
+                <span class="orange-dj">DJ</span>
+                <a href="#" class="dj-list__hiphop__dj mark-dj"
+                  >대중가요마스터</a
+                >
+                <p class="dj-list__hiphop__info">
+                  <a href="#" class="dj-list__hiphop__like">285</a
+                  ><span class="list-num">25곡</span>
+                </p>
+                <a href="#" class="dj-list__hiphop__hash">#퓨전국악</a>
+                <a href="#" class="dj-list__hiphop__hash">#힙한</a>
+                <a
+                  href="#"
+                  class="dj-list__hiphop__profile hiphop-profile3"
+                ></a>
+              </div>
+            </li>
+            <li class="dj-list__hiphop__item">
+              <a href="#">
+                <img
+                  src="https://cdnimg.melon.co.kr/svc/user_images/plylst/2022/04/214/22/493327298_org.jpg?tm=20220420065246/melon/resize/x236/quality/80/optimize"
+                  alt=""
+                  class="dj-list__hiphop__img"
+                />
+              </a>
+              <div class="dj-list__hiphop__desc">
+                <a href="#" class="dj-list__hiphop__title"
+                  >무드등 ON, 느낌 충만한 R&B</a
+                >
+                <span class="orange-dj">DJ</span>
+                <a href="#" class="dj-list__hiphop__dj">celette</a>
+                <p class="dj-list__hiphop__info">
+                  <a href="#" class="dj-list__hiphop__like">85</a
+                  ><span class="list-num">58곡</span>
+                </p>
+                <a href="#" class="dj-list__hiphop__hash">#mood</a>
+                <a href="#" class="dj-list__hiphop__hash">#무드있고</a>
+                <a
+                  href="#"
+                  class="dj-list__hiphop__profile hiphop-profile4"
+                ></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ROCK -->
+        <p class="dj-list__rock">평범함은 거부한다! 얼터너티브 록의 세계로</p>
+
+        <div class="dj-list__rock__group">
+          <ul class="dj-list__rock__list">
+            <li class="dj-list__rock__item">
+              <a href="#">
+                <img
+                  src="https://cdnimg.melon.co.kr/svc/user_images/plylst/svc/images/melondj/playlist/377/68/435718869_org.jpg?tm=20220121062622/melon/resize/x236/quality/80/optimize"
+                  alt=""
+                  class="dj-list__rock__img"
+                />
+              </a>
+              <div class="dj-list__rock__desc">
+                <a href="#" class="dj-list__rock__title"
+                  >도시에서 피어난 록 무브먼트, 매드체스터 사운드</a
+                >
+                <span class="orange-dj">DJ</span>
+                <a href="#" class="dj-list__rock__dj mark-dj">ROCK마스터</a>
+                <p class="dj-list__rock__info">
+                  <a href="#" class="dj-list__rock__like">111</a
+                  ><span class="list-num">28곡</span>
+                </p>
+                <a href="#" class="dj-list__rock__hash">#락</a>
+                <a href="#" class="dj-list__rock__hash">#매드체스터</a>
+                <a href="#" class="dj-list__rock__profile rock-profile1"></a>
+              </div>
+            </li>
+            <li class="dj-list__rock__item">
+              <a href="#">
+                <img
+                  src="https://cdnimg.melon.co.kr/svc/images/melondj/playlist/437350215_org.jpg?tm=20220602063253/melon/resize/x236/quality/80/optimize"
+                  alt=""
+                  class="dj-list__rock__img"
+                />
+              </a>
+              <div class="dj-list__rock__desc">
+                <a href="#" class="dj-list__rock__title"
+                  >얼터너티브 록의 폭발! 1980년대 인디 밴드</a
+                >
+                <span class="orange-dj">DJ</span>
+                <a href="#" class="dj-list__rock__dj mark-dj">ROCK마스터</a>
+                <p class="dj-list__rock__info">
+                  <a href="#" class="dj-list__rock__like">47</a
+                  ><span class="list-num">20곡</span>
+                </p>
+                <a href="#" class="dj-list__rock__hash">#1980</a>
+                <a href="#" class="dj-list__rock__hash">#인디록</a>
+                <a href="#" class="dj-list__rock__profile rock-profile2"></a>
+              </div>
+            </li>
+            <li class="dj-list__rock__item">
+              <a href="#">
+                <img
+                  src="https://cdnimg.melon.co.kr/svc/images/melondj/special/imgUrl20220603020056357_org.jpg?tm=20210825061436/melon/resize/x236/quality/80/optimize"
+                  alt=""
+                  class="dj-list__rock__img"
+                />
+              </a>
+              <div class="dj-list__rock__desc">
+                <a href="#" class="dj-list__rock__title">
+                  실험적인 사운드의 신세계, 포스트록
+                </a>
+                <span class="orange-dj">DJ</span>
+                <a href="#" class="dj-list__rock__dj mark-dj">ROCK마스터</a>
+                <p class="dj-list__rock__info">
+                  <a href="#" class="dj-list__rock__like">116</a
+                  ><span class="list-num">23곡</span>
+                </p>
+                <a href="#" class="dj-list__rock__hash">#실험적</a>
+                <a href="#" class="dj-list__rock__hash">#몽환</a>
+                <a href="#" class="dj-list__rock__profile rock-profile3"></a>
+              </div>
+            </li>
+            <li class="dj-list__rock__item">
+              <a href="#">
+                <img
+                  src="https://cdnimg.melon.co.kr/svc/images/melondj/special/imgUrl20220603020514447_org.jpg?tm=20220603015241/melon/resize/x236/quality/80/optimize"
+                  alt=""
+                  class="dj-list__rock__img"
+                />
+              </a>
+              <div class="dj-list__rock__desc">
+                <a href="#" class="dj-list__rock__title">
+                  당신이 놓쳤을지 모를 그런지/얼터너티브 록 밴드
+                </a>
+                <span class="orange-dj">DJ</span>
+                <a href="#" class="dj-list__rock__dj mark-dj">ROCK마스터</a>
+                <p class="dj-list__rock__info">
+                  <a href="#" class="dj-list__rock__like">11</a
+                  ><span class="list-num">23곡</span>
+                </p>
+                <a href="#" class="dj-list__rock__hash">#록</a>
+                <a href="#" class="dj-list__rock__hash">#그런지</a>
+                <a href="#" class="dj-list__rock__profile rock-profile4"></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- boring -->
+        <p class="dj-list__boring">뒹굴뒹굴~ 이불 속은 극락이지!</p>
+
+        <div class="dj-list__boring__group">
+          <ul class="dj-list__boring__list">
+            <li class="dj-list__boring__item">
+              <a href="#">
+                <img
+                  src="https://cdnimg.melon.co.kr/svc/images/melondj/special/imgUrl20220603044439608_org.jpg?tm=20220308042722/melon/resize/x236/quality/80/optimize"
+                  alt=""
+                  class="dj-list__boring__img"
+                />
+              </a>
+              <div class="dj-list__boring__desc">
+                <a href="#" class="dj-list__boring__title">
+                  정주행 필수! 시간 순삭 웹툰 OST
+                </a>
+                <span class="orange-dj">DJ</span>
+                <a href="#" class="dj-list__boring__dj mark-dj">OST마스터</a>
+                <p class="dj-list__boring__info">
+                  <a href="#" class="dj-list__boring__like">465</a
+                  ><span class="list-num">36곡</span>
+                </p>
+                <a href="#" class="dj-list__boring__hash">#OST</a>
+                <a href="#" class="dj-list__boring__hash">#웹툰</a>
+                <a
+                  href="#"
+                  class="dj-list__boring__profile boring-profile1"
+                ></a>
+              </div>
+            </li>
+            <li class="dj-list__boring__item">
+              <a href="#">
+                <img
+                  src="https://cdnimg.melon.co.kr/svc/images/melondj/special/imgUrl20220603044457801_org.jpg?tm=20220422065359/melon/resize/x236/quality/80/optimize"
+                  alt=""
+                  class="dj-list__boring__img"
+                />
+              </a>
+              <div class="dj-list__boring__desc">
+                <a href="#" class="dj-list__boring__title">
+                  조용한 나만의 시간, 독서 BGM
+                </a>
+                <span class="orange-dj">DJ</span>
+                <a href="#" class="dj-list__boring__dj mark-dj"
+                  >뮤직테라피마스터</a
+                >
+                <p class="dj-list__boring__info">
+                  <a href="#" class="dj-list__boring__like">683</a
+                  ><span class="list-num">20곡</span>
+                </p>
+                <a href="#" class="dj-list__boring__hash">#독서</a>
+                <a href="#" class="dj-list__boring__hash">#집중</a>
+                <a
+                  href="#"
+                  class="dj-list__boring__profile boring-profile2"
+                ></a>
+              </div>
+            </li>
+            <li class="dj-list__boring__item">
+              <a href="#">
+                <img
+                  src="https://cdnimg.melon.co.kr/svc/images/melondj/special/imgUrl20220603044739832_org.jpg?tm=20220602010331/melon/resize/x236/quality/80/optimize"
+                  alt=""
+                  class="dj-list__boring__img"
+                />
+              </a>
+              <div class="dj-list__boring__desc">
+                <a href="#" class="dj-list__boring__title">
+                  빠져나올 수 없는 이불 속에서 듣는 노래
+                </a>
+                <span class="orange-dj">DJ</span>
+                <a href="#" class="dj-list__boring__dj">Hipster</a>
+                <p class="dj-list__boring__info">
+                  <a href="#" class="dj-list__boring__like">454</a
+                  ><span class="list-num">42곡</span>
+                </p>
+                <a href="#" class="dj-list__boring__hash">#포근한</a>
+                <a href="#" class="dj-list__boring__hash">#뒹굴</a>
+                <a
+                  href="#"
+                  class="dj-list__boring__profile boring-profile3"
+                ></a>
+              </div>
+            </li>
+            <li class="dj-list__boring__item">
+              <a href="#">
+                <img
+                  src="https://cdnimg.melon.co.kr/svc/images/melondj/special/imgUrl20220603044811908_org.jpg?tm=20220603040323/melon/resize/x236/quality/80/optimize"
+                  alt=""
+                  class="dj-list__boring__img"
+                />
+              </a>
+              <div class="dj-list__boring__desc">
+                <a href="#" class="dj-list__boring__title">
+                  귀에 쏙! 익숙한 애니메이션 삽입곡
+                </a>
+                <span class="orange-dj">DJ</span>
+                <a href="#" class="dj-list__boring__dj mark-dj">J-POP마스터</a>
+                <p class="dj-list__boring__info">
+                  <a href="#" class="dj-list__boring__like">278</a
+                  ><span class="list-num">20곡</span>
+                </p>
+                <a href="#" class="dj-list__boring__hash">#제이팝</a>
+                <a href="#" class="dj-list__boring__hash">#애니메이션</a>
+                <a
+                  href="#"
+                  class="dj-list__boring__profile boring-profile4"
+                ></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Summer -->
+        <p class="dj-list__summer">Hot Summer ☀ 여름준비</p>
+
+        <div class="dj-list__summer__group">
+          <ul class="dj-list__summer__list">
+            <li class="dj-list__summer__item">
+              <a href="#">
+                <img
+                  src="https://cdnimg.melon.co.kr/svc/user_images/plylst/2021/02/351/77/490394549_org.jpg?tm=20220604104540/melon/resize/x236/quality/80/optimize"
+                  alt=""
+                  class="dj-list__summer__img"
+                />
+              </a>
+              <div class="dj-list__summer__desc">
+                <a href="#" class="dj-list__summer__title">
+                  신나는 노래로 기분 UP! 스트레스 날려주는 흥폭발 여름 노래
+                </a>
+                <span class="orange-dj">DJ</span>
+                <a href="#" class="dj-list__summer__dj">foreven.</a>
+                <p class="dj-list__summer__info">
+                  <a href="#" class="dj-list__summer__like">3,287</a
+                  ><span class="list-num">90곡</span>
+                </p>
+                <a href="#" class="dj-list__summer__hash">#신나는노래</a>
+                <a href="#" class="dj-list__summer__hash">#기분전환</a>
+                <a
+                  href="#"
+                  class="dj-list__summer__profile summer-profile1"
+                ></a>
+              </div>
+            </li>
+            <li class="dj-list__summer__item">
+              <a href="#">
+                <img
+                  src="https://cdnimg.melon.co.kr/svc/user_images/plylst/2022/05/208/94/494498122_org.jpg?tm=20220603114327/melon/resize/x236/quality/80/optimize"
+                  alt=""
+                  class="dj-list__summer__img"
+                />
+              </a>
+              <div class="dj-list__summer__desc">
+                <a href="#" class="dj-list__summer__title">
+                  썸머 페스티벌에 온듯한 청량감 가득한 록
+                </a>
+                <span class="orange-dj">DJ</span>
+                <a href="#" class="dj-list__summer__dj">Hipster</a>
+                <p class="dj-list__summer__info">
+                  <a href="#" class="dj-list__summer__like">352</a
+                  ><span class="list-num">69곡</span>
+                </p>
+                <a href="#" class="dj-list__summer__hash">#청량</a>
+                <a href="#" class="dj-list__summer__hash">#락</a>
+                <a
+                  href="#"
+                  class="dj-list__summer__profile summer-profile2"
+                ></a>
+              </div>
+            </li>
+            <li class="dj-list__summer__item">
+              <a href="#">
+                <img
+                  src="https://cdnimg.melon.co.kr/svc/user_images/plylst/2022/05/369/61/509439196_org.jpg?tm=20220605075640/melon/resize/x236/quality/80/optimize"
+                  alt=""
+                  class="dj-list__summer__img"
+                />
+              </a>
+              <div class="dj-list__summer__desc">
+                <a href="#" class="dj-list__summer__title">
+                  신나는 여름 노래에 90-00년대 레트로 감성 한 스푼
+                </a>
+                <span class="orange-dj">DJ</span>
+                <a href="#" class="dj-list__summer__dj">melle</a>
+                <p class="dj-list__summer__info">
+                  <a href="#" class="dj-list__summer__like">739</a
+                  ><span class="list-num">73곡</span>
+                </p>
+                <a href="#" class="dj-list__summer__hash">#추억</a>
+                <a href="#" class="dj-list__summer__hash">#설레는</a>
+                <a
+                  href="#"
+                  class="dj-list__summer__profile summer-profile3"
+                ></a>
+              </div>
+            </li>
+            <li class="dj-list__summer__item">
+              <a href="#">
+                <img
+                  src="https://cdnimg.melon.co.kr/svc/user_images/plylst/2022/05/400/70/509621533_org.png?tm=20220515110430/melon/resize/x236/quality/80/optimize"
+                  alt=""
+                  class="dj-list__summer__img"
+                />
+              </a>
+              <div class="dj-list__summer__desc">
+                <a href="#" class="dj-list__summer__title">
+                  여름밤, 불어오는 선선한 바람과 함께 듣기 좋은 팝
+                </a>
+                <span class="orange-dj">DJ</span>
+                <a href="#" class="dj-list__summer__dj">D달닻J</a>
+                <p class="dj-list__summer__info">
+                  <a href="#" class="dj-list__summer__like">215</a
+                  ><span class="list-num">23곡</span>
+                </p>
+                <a href="#" class="dj-list__summer__hash">#팝</a>
+                <a href="#" class="dj-list__summer__hash">#밤</a>
+                <a
+                  href="#"
+                  class="dj-list__summer__profile summer-profile4"
+                ></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__group">
+        <div class="footer__extra">
+          <ul class="footer__extra__list">
+            <li class="footer__extra__item">
+              <a href="" class="footer__extra__item-link">멜론6.0둘러보기</a>
+            </li>
+            <li class="footer__extra__item">
+              <a href="/" class="footer__extra__item-link">멜론스튜디오</a>
+            </li>
+            <li class="footer__extra__item">
+              <a href="/" class="footer__extra__item-link">Windows플레이어</a>
+            </li>
+            <li class="footer__extra__item">
+              <a href="/" class="footer__extra__item-link">iPad</a>
+            </li>
+            <li class="footer__extra__item">
+              <a href="/" class="footer__extra__item-link">고객센터</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__box">
+          <ul class="footer__service__list">
+            <li class="footer__service__item">
+              <a href="/" class="footer__service__item-link">이용약관</a>
+            </li>
+            <li class="footer__service__item">
+              <a href="/" class="footer__service__item-link"
+                >위치기반서비스 이용약관</a
+              >
+            </li>
+            <li class="footer__service__item">
+              <a href="/" class="footer__service__item-link"
+                >개인정보처리방침</a
+              >
+            </li>
+            <li class="footer__service__item">
+              <a href="/" class="footer__service__item-link">청소년보호정책</a>
+            </li>
+            <li class="footer__service__item">
+              <a href="/" class="footer__service__item-link"
+                >제휴/프로모션문의</a
+              >
+            </li>
+            <li class="footer__service__item">
+              <a href="/" class="footer__service__item-link"
+                >이메일주소무단수집거부</a
+              >
+            </li>
+            <li class="footer__service__item">
+              <a href="/" class="footer__service__item-link">파트너센터</a>
+            </li>
+          </ul>
+          <div class="footer__company">
+            <ul class="footer__company__info__list">
+              <li class="footer__company__info__item">
+                (주)카카오엔터테인먼트 경기도 성남시 분당구 판교역로 221
+              </li>
+              <li class="footer__company__info__item">
+                대표이사<span aria-hidden="true">:</span>이진수,김성수
+              </li>
+              <li class="footer__company__info__item">
+                사업자등록번호<span aria-hidden="true">:</span>220-88-02594
+              </li>
+              <li class="footer__company__info__item">
+                통신판매업신고번호<span aria-hidden="true">:</span
+                >2018-성남분당B-0004 사업자정보확인
+              </li>
+            </ul>
+            <ul class="footer__company__contact">
+              <li class="footer__company__contact__item">
+                문의전화<span aria-hidden="true">:</span>1566-7727(평일
+                09:00-18:00, 유료)
+              </li>
+              <li class="footer__company__contact__item">
+                이메일<span aria-hidden="true">:</span>melone_info@kakaoent.com
+              </li>
+              <li class="footer__company__contact__item">
+                호스팅서비스사업자<span aria-hidden="true">:</span
+                >(주)카카오엔터테인먼트
+              </li>
+              <li class="footer__company__contact__item">
+                ⓒKakao Entertainment Corp.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
