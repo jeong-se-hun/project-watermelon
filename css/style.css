@@ -312,12 +312,12 @@ button {
 .header__nav__list :first-child {
   padding-left: 0;
 }
-.header__nav__list :last-child {
+.header__nav__list :nth-child(10) {
   justify-content: flex-end;
   width: 17.5rem;
   text-align: end;
 }
-.header__nav__list :last-child a {
+.header__nav__list :nth-child(10) a {
   color: #909090;
 }
 .header__nav__item {
@@ -559,6 +559,449 @@ button {
 .login__footer__copyright {
   font-size: 0.6875rem;
   color: #969696;
+}
+
+.header-wrapper::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2.8125rem;
+  background: #f8f8f8;
+  border-bottom: 1px solid #dfe6e8;
+}
+
+.is-active .header__nav__link::after {
+  content: "";
+  display: block;
+  height: 0.25rem;
+  transform: translateY(15px);
+  background: #00cd3c;
+}
+
+.header__nav__item {
+  position: relative;
+}
+.header__nav__item .header__nav__list__detail {
+  position: absolute;
+  top: 2.5rem;
+  left: -0.625rem;
+  width: 68.75rem;
+  height: 2.8125rem;
+}
+.header__nav__item .header__nav__list__detail__chart-finder {
+  background: transparent;
+  outline: none;
+  border: none;
+  font-size: 13px;
+  color: #767676;
+}
+.header__nav__item .header__nav__list__detail .header__nav__item__detail {
+  display: inline-block;
+  padding: 0.6875rem 0.75rem 0;
+  margin: 0.625rem;
+  font-size: 0.875rem;
+  color: #1a1a1a;
+}
+.header__nav__item .header__nav__list__detail .header__nav__item__detail:nth-child(6) {
+  position: absolute;
+  right: 4.375rem;
+  padding-top: 0.25rem;
+}
+
+.chart__main {
+  max-width: 63.125rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2.5rem;
+}
+.chart__main__title-wrapper {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.chart__main__title-wrapper .chart__main__title {
+  display: inline-block;
+  font-size: 1.625rem;
+}
+.chart__main__title-wrapper .chart__main__modal__open-button {
+  position: absolute;
+  top: 0.125rem;
+  left: 6.875rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: transparent;
+  border: none;
+}
+.chart__main__title-wrapper .chart__main__modal {
+  display: none;
+  width: 45.9375rem;
+  height: 4.875rem;
+  position: absolute;
+  background-color: #ff4e78;
+  top: 0.125rem;
+  left: 6.875rem;
+  padding: 0.625rem 2.625rem 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+.chart__main__title-wrapper__close-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+.chart__main__time {
+  margin: 0.75rem 0 2rem;
+  height: 2.125rem;
+  font-size: 1.625rem;
+  text-align: center;
+}
+.chart__main__time time {
+  color: #575757;
+}
+.chart__main__time__modal {
+  display: inline-block;
+  position: relative;
+}
+.chart__main__time__modal__button {
+  background-color: transparent;
+  border: none;
+}
+.chart__main__time__modal__select {
+  display: none;
+  position: absolute;
+  top: 1.875rem;
+  left: 0;
+}
+.chart__main .chart__main__music-button__wrapper {
+  height: 1.875rem;
+  margin-bottom: 0.625rem;
+  position: relative;
+}
+.chart__main .chart__main__music-button__wrapper .refresh__wrapper {
+  position: absolute;
+  right: 0.625rem;
+  top: 0.3125rem;
+}
+.chart__main .chart__main__music-button__wrapper .refresh__button {
+  border: none;
+  background: transparent;
+  font-size: 0.8125rem;
+  color: #767676;
+}
+.chart__main .chart__main__music-button__wrapper .chart__main__music-button__list {
+  display: flex;
+}
+.chart__main .chart__main__music-button__wrapper .chart__main__music-button__item {
+  margin-right: 0.625rem;
+  white-space: nowrap;
+}
+.chart__main .chart__main__music-button__wrapper .chart__main__music-button__item button {
+  background: transparent;
+  border-radius: 0.875rem;
+  height: 1.75rem;
+  padding: 0 0.5625rem;
+  border: 1px solid #cccccc;
+  color: #909090;
+}
+.chart__main .chart__main__top100 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 5rem;
+}
+.chart__main .chart__main__top100__thead {
+  border-top: 1px solid #dfe6e8;
+  border-bottom: 1px solid #dfe6e8;
+  height: 3rem;
+  text-align: left;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  white-space: nowrap;
+  color: #606060;
+}
+.chart__main .chart__main__top100__tbody tr {
+  border-bottom: 1px solid #dfe6e8;
+  height: 5.3125rem;
+}
+.chart__main .chart__main__top100__tbody tr td[headers=rank] {
+  padding: 0 1.125rem 0 0.75rem;
+  text-align: center;
+}
+.chart__main .chart__main__top100__tbody tr td[headers=sing-album-cover] img {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+.chart__main .chart__main__top100__tbody .song__info__wrap {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.chart__main .chart__main__top100__tbody .song__info__title {
+  display: inline-block;
+  width: 80%;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 0.25rem;
+}
+.chart__main .chart__main__top100__tbody .song__info__singer {
+  font-size: 0.75rem;
+  color: #969696;
+}
+.chart__main .chart__main__top100__tbody .song__album__title {
+  display: inline-block;
+  width: 80%;
+  font-size: 0.875rem;
+  color: #969696;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.chart__main .chart__main__top100__tbody .song__info__title:hover, .chart__main .chart__main__top100__tbody .song__info__singer:hover, .chart__main .chart__main__top100__tbody .song__album__title:hover {
+  text-decoration: underline;
+}
+.chart__main .chart__main__top100__tbody .sing__like__button {
+  min-width: 4.125rem;
+  height: 1.5rem;
+  text-align: start;
+}
+.chart__main .chart__main__top100__tbody .sing__like__button .like-count {
+  font-size: 0.75rem;
+  color: #888888;
+  vertical-align: 0.125rem;
+}
+.chart__main .chart__main__top100__tbody .sing_listen__button {
+  width: 1.625rem;
+  height: 1.875rem;
+}
+.chart__main .chart__main__top100__tbody .sing__list-add__button {
+  width: 1.625rem;
+  height: 2rem;
+}
+.chart__main .chart__main__top100__tbody .sing__download__button {
+  width: 1.9375rem;
+  height: 1.9375rem;
+}
+.chart__main .chart__main__top100__tbody .sing__mv__button {
+  width: 1.875rem;
+  height: 2rem;
+}
+.chart__main .chart__main__top100__tbody .sing__like__button, .chart__main .chart__main__top100__tbody .sing__listen__button, .chart__main .chart__main__top100__tbody .sing__list-add__button, .chart__main .chart__main__top100__tbody .sing__download__button, .chart__main .chart__main__top100__tbody .sing__mv__button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.font-green {
+  color: #00cd3c;
+}
+
+#check {
+  width: 1%;
+}
+
+#rank {
+  width: 6%;
+  padding: 0 1.125rem 0 0.75rem;
+  text-align: center;
+}
+
+#rank-change {
+  width: 5%;
+}
+
+#sing-album-cover {
+  width: 7%;
+}
+
+#sing-info-link {
+  width: 4%;
+}
+
+#sing-info {
+  width: 22%;
+}
+
+#sing-album {
+  width: 17%;
+}
+
+#sing-like {
+  width: 14%;
+  transform: translateX(10px);
+}
+
+#sing-listen {
+  width: 6%;
+}
+
+#sing-list-add {
+  width: 6%;
+}
+
+#sing-download {
+  width: 6%;
+}
+
+#sing-mv {
+  width: 6%;
+}
+
+.question-icon {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -458px -31px;
+}
+
+.search-icon {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.1875rem;
+  margin-right: 0.125rem;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -499px -30px;
+  transform: translateY(6px);
+}
+
+.down-icon {
+  display: inline-block;
+  width: 1rem;
+  height: 0.6875rem;
+  margin-left: 0.125rem;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -283px -68px;
+}
+
+.refresh-icon {
+  display: inline-block;
+  width: 1.0625rem;
+  height: 1.0625rem;
+  margin-left: 0.375rem;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -425px -30px;
+  transform: translateY(4px);
+}
+
+.suffle-icon {
+  display: inline-block;
+  width: 0.8125rem;
+  height: 0.6875rem;
+  margin-right: 0.25rem;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -203px 0px;
+  transform: translateY(1px);
+}
+
+.play-icon {
+  display: inline-block;
+  width: 0.6875rem;
+  height: 0.8125rem;
+  margin-right: 0.25rem;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat 0px 0px;
+  transform: translateY(2px);
+}
+
+.add-icon {
+  display: inline-block;
+  width: 0.6875rem;
+  height: 0.8125rem;
+  margin-right: 0.25rem;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -17px 0px;
+  transform: translateY(2px);
+}
+
+.download-icon {
+  display: inline-block;
+  width: 0.9375rem;
+  height: 0.8125rem;
+  margin-right: 0.25rem;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -34px 0px;
+  transform: translateY(2px);
+}
+
+.gift-icon {
+  display: inline-block;
+  width: 0.8125rem;
+  height: 0.8125rem;
+  margin-right: 0.25rem;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -56px 0px;
+  transform: translateY(2px);
+}
+
+.rank-nochange-icon {
+  display: inline-block;
+  width: 0.875rem;
+  height: 0.5rem;
+  background: url(../../assets/images/bullet_icons_sprite.png) no-repeat 0px -17px;
+}
+
+.rank-up-icon {
+  display: inline-block;
+  width: 0.5625rem;
+  height: 0.375rem;
+  background: url(../../assets/images/bullet_icons_sprite.png) no-repeat -150px -130px;
+  transform: translateY(-2px);
+  margin-right: 0.0625rem;
+}
+
+.rank-up-num {
+  font-size: 0.9375rem;
+  color: rgb(240, 120, 10);
+}
+
+.rank-down-icon {
+  display: inline-block;
+  width: 0.5625rem;
+  height: 0.375rem;
+  background: url(../../assets/images/bullet_icons_sprite.png) no-repeat -160px -130px;
+  transform: translateY(-2px);
+  margin-right: 1px;
+}
+
+.rank-down-num {
+  font-size: 0.9375rem;
+  color: rgb(140, 190, 250);
+}
+
+.info-icon {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.9375rem;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -286px -30px;
+  transform: translateX(4px);
+}
+
+.like-icon {
+  display: inline-block;
+  width: 0.875rem;
+  height: 0.75rem;
+  background: url(../../assets/images/bullet_icons_sprite.png) no-repeat -69px -14px;
+  margin-right: 4px;
+}
+
+.chart-play-icon {
+  display: inline-block;
+  width: 1rem;
+  height: 1.75rem;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat 0px -28px;
+}
+
+.chart-add-icon {
+  display: inline-block;
+  width: 1.1875rem;
+  height: 1.75rem;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -45px -27px;
+}
+
+.chart-download-icon {
+  display: inline-block;
+  width: 1.3125rem;
+  height: 1.625rem;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -98px -30px;
+}
+
+.chart-mv-icon {
+  display: inline-block;
+  width: 1.875rem;
+  height: 1.75rem;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -152px -26px;
 }
 
 /*# sourceMappingURL=style.css.map */
