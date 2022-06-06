@@ -339,6 +339,10 @@ button {
   font-family: monospace;
   border-top: 1px solid #b4b4b4;
   background: #f8f8f8;
+  height: auto;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
+}
   height: 10.625rem;
   padding-top: 1.125rem;
   padding-bottom: 1.125rem;
@@ -399,6 +403,20 @@ button {
   }
 }
 .footer__service__list {
+  width: 63.125rem;
+  display: flex;
+  flex-flow: row wrap;
+  padding-left: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #1a1a1a;
+  font-size: 0.75rem;
+  margin-top: 1.625rem;
+}
+@media (max-width: 1023px) {
+  .footer__service__list {
+    width: 100%;
+  }
   text-align: start;
   padding-left: 10px;
   font-size: 0.75rem;
@@ -435,6 +453,26 @@ button {
   margin-left: 0.625rem;
 }
 .footer__company__info__list {
+  font-size: 11px;
+  width: 63.125rem;
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 1023px) {
+  .footer__company__info__list {
+    width: 100%;
+  }
+}
+@media (max-width: 479px) {
+  .footer__company__info__list {
+    width: 100%;
+  }
+}
+.footer__company__info__item {
+  padding-bottom: 8px;
+  white-space: nowrap;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -452,6 +490,27 @@ button {
   margin: 0 5px 0 5px;
 }
 .footer__company__contact {
+  font-size: 11px;
+  width: 63.125rem;
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 11px;
+}
+@media (max-width: 1023px) {
+  .footer__company__contact {
+    width: 100%;
+  }
+}
+@media (max-width: 479px) {
+  .footer__company__contact {
+    width: 100%;
+  }
+}
+.footer__company__contact__item {
+  white-space: nowrap;
+}
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
