@@ -161,9 +161,9 @@
   &__list {
     @include flexbox;
     border: 1px solid $borderLightGray;
-    // transition: all 0.7s;
+    transition: all 0.5s;
     position: relative;
-    left: 0;
+    // left: 0;
   }
 }
 
