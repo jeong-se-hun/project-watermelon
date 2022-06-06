@@ -504,7 +504,6 @@ button {
   align-items: stretch;
   border: 1px solid #dfe6e8;
   position: relative;
-  left: 0;
 }
 
 /* 로그인 & 광고 영역 */
@@ -555,7 +554,6 @@ button {
   justify-content: space-between;
   width: 63.125rem;
   margin: 32px auto 49px;
-  align-items: center;
 }
 .home__hot__section .home__hot__hot-issue {
   position: relative;
@@ -841,7 +839,7 @@ button {
   margin-top: 0.3125rem;
   border: 1px solid #cccccc;
   border-top: none;
-  padding-bottom: 2.1875rem;
+  padding-bottom: 1.75rem;
 }
 .home__hot__melon-chart__tab-box {
   display: flex;
@@ -947,6 +945,9 @@ button {
   overflow: hidden;
   white-space: nowrap;
 }
+.home__hot__melon-chart__item__ranking-info__description .home__hot__melon-chart__songTitle:hover {
+  text-decoration: underline;
+}
 .home__hot__melon-chart__item__ranking-info__description .home__hot__melon-chart__singer {
   display: block;
   width: 4.625rem;
@@ -954,6 +955,9 @@ button {
   overflow: hidden;
   white-space: nowrap;
   color: #888888;
+}
+.home__hot__melon-chart__item__ranking-info__description .home__hot__melon-chart__singer:hover {
+  text-decoration: underline;
 }
 .home__hot__melon-chart__item:nth-child(-n+3) .rank {
   color: #7cb710;
@@ -985,18 +989,19 @@ button {
   padding-left: 0.375rem;
 }
 .home__hot__melon-chart .home__hot__melon-chart__list-area.artist .home__hot__melon-chart__item.is-active .home__hot__melon-chart__item__ranking-info__description {
-  width: 7.5rem;
+  width: 7.125rem;
 }
 .home__hot__melon-chart .home__hot__melon-chart__list-area.artist .home__hot__melon-chart__item.is-active .home__hot__melon-chart__singer {
   font-weight: 700;
 }
 .home__hot__melon-chart .home__hot__melon-chart__list-area.artist .home__hot__melon-chart__item__ranking-info {
+  position: relative;
   justify-content: flex-start;
   padding-left: 0.75rem;
   align-items: center;
 }
 .home__hot__melon-chart .home__hot__melon-chart__list-area.artist .home__hot__melon-chart__item__ranking-info__description {
-  width: 10.625rem;
+  width: 10.3125rem;
   flex-direction: row;
   align-items: center;
 }
@@ -1004,6 +1009,8 @@ button {
   color: #1a1a1a;
 }
 .home__hot__melon-chart .home__hot__melon-chart__list-area.artist .home__hot__melon-chart__item .home__hot__melon-chart__favorites {
+  position: absolute;
+  right: 1.5625rem;
   display: block;
   width: 1.3125rem;
   height: 1.3125rem;

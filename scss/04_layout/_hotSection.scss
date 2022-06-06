@@ -5,7 +5,6 @@
   justify-content: space-between;
   width: rem(1010px);
   margin: 32px auto 49px;
-  align-items: center;
 
   .home__hot__hot-issue {
     position: relative;
@@ -352,7 +351,7 @@
     margin-top: rem(5px);
     border: 1px solid $borderGray;
     border-top: none;
-    padding-bottom: rem(35px);
+    padding-bottom: rem(28px);
   }
 
   &__tab-box {
@@ -479,6 +478,10 @@
           text-overflow: ellipsis;
           overflow: hidden;
           white-space: nowrap;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
         .home__hot__melon-chart__singer {
           display: block;
@@ -487,6 +490,10 @@
           overflow: hidden;
           white-space: nowrap;
           color: $secondary-font;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -535,7 +542,7 @@
           padding-left: rem(6px);
 
           &__description {
-            width: rem(120px);
+            width: rem(114px);
           }
         }
         .home__hot__melon-chart__singer {
@@ -544,12 +551,13 @@
       }
 
       &__ranking-info {
+        position: relative;
         justify-content: flex-start;
         padding-left: rem(12px);
         align-items: center;
 
         &__description {
-          width: rem(170px);
+          width: rem(165px);
           flex-direction: row;
           align-items: center;
         }
@@ -559,6 +567,8 @@
         color: #1a1a1a;
       }
       .home__hot__melon-chart__favorites {
+        position: absolute;
+        right: rem(25px);
         display: block;
         width: rem(21px);
         height: rem(21px);
