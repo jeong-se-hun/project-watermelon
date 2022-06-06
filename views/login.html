@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login Page</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../assets/images/favicon.ico"
+      id="favicon"
+    />
+  </head>
+  <body>
+    <h2 class="sr-only">로그인 페이지</h2>
+    <header class="login__header">
+      <div class="login__header__logo__wrapper">
+        <a href="../index.html">
+          <svg
+            id="logo"
+            xmlns="http://www.w3.org/2000/svg"
+            width="128"
+            height="34.25"
+            viewBox="0 0 128 34.25"
+            class="login__header__svg"
+          >
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #00cd3c;
+                }
+              </style>
+            </defs>
+            <path
+              class="cls-1"
+              d="M15.5,28.31a4,4,0,0,0,3.39-1.67L25,15V31.18A3.16,3.16,0,0,0,28.06,34,3.34,3.34,0,0,0,32,31.18V4.24a3.23,3.23,0,0,0-2.5-3.18,4.64,4.64,0,0,0-4.5,1L16,19.28,7,2.06a4.63,4.63,0,0,0-4.5-1A3.24,3.24,0,0,0,0,4.24V31.18S.34,34,3,34H3C5.66,34,6,31.18,6,31.18V15l6.11,11.65A4,4,0,0,0,15.5,28.31Z"
+            />
+            <path
+              class="cls-1"
+              d="M59.82,21C61,9.8,38.76,3.55,37.75,23c0,0,0,10,11,11.2,0,0,7.53.84,10-4.35.91-1.47-2.33-4.92-4.5-3.44-3.67,3.44-9.76,1.45-9.88-2.41H57.23A3.53,3.53,0,0,0,59.82,21Zm-7.61-2H44.77c.63-4.09,7.74-5.05,8.12,0Z"
+            />
+            <path class="cls-1" d="M72,4a3,3,0,1,0-6,0V31a3,3,0,1,0,6,0Z" />
+            <path
+              class="cls-1"
+              d="M94.6,11.42C79,5,69.75,27.28,84.29,32.91,100,39,109.21,17.42,94.6,11.42ZM89.76,28c-8,.27-7.82-12,0-12C97,16,97,27.73,89.76,28Z"
+            />
+            <circle class="cls-1" cx="99.5" cy="4.5" r="4.5" />
+            <path
+              class="cls-1"
+              d="M118.08,16.67c4.09,0,3.92,4.84,3.92,4.84v9.54s.33,2.95,3.1,2.95h-.24c2.81,0,3.14-2.95,3.14-2.95V20.63c0-2.46-.2-4.56-1.82-6.64a9.19,9.19,0,0,0-4.83-3.18c-5.32-1.47-8.06,2-8.06,2A3.09,3.09,0,0,0,109.65,11,3.2,3.2,0,0,0,107,14.49V31.05s.33,2.95,3.14,2.95h.76c2.78,0,3.1-2.95,3.1-2.95V21.51S114,16.67,118.08,16.67Z"
+            />
+          </svg>
+        </a>
+      </div>
+    </header>
+    <main class="login__main">
+      <form class="login__form">
+        <div class="login__form__input">
+          <input type="text" placeholder="아이디" /
+          class="login__form__input__id">
+          <input
+            type="password"
+            placeholder="비밀번호"
+            class="login__form__input__pw"
+          />
+        </div>
+        <div class="login__form__help">
+          <div class="login__form__help__checkbox">
+            <input type="checkbox" id="id-save" />
+            <label for="id-save"
+              ><span class=""></span><span>아이디 저장</span>
+            </label>
+          </div>
+          <div class="login__form__help__find">
+            <a href="/">아이디 찾기</a>
+            <span aria-hidden="true">|</span>
+            <a href="/">비밀번호 찾기</a>
+          </div>
+        </div>
+        <div class="login__form__btn">
+          <button class="login__form__btn__button">로그인</button>
+        </div>
+      </form>
+    </main>
+    <footer class="login__footer">
+      <div class="login__footer__wrapper">
+        <ul class="login__footer__info">
+          <li><a href="/">이용약관</a></li>
+          <li>
+            <a href="/"
+              ><span aria-hidden="true">|</span
+              ><strong>위치기반서비스 이용약관</strong
+              ><span aria-hidden="true">|</span></a
+            >
+          </li>
+          <li>
+            <a href="/"><strong>개인정보처리방침</strong></a>
+          </li>
+        </ul>
+        <!-- address 대신 ul li span -->
+        <address class="login__footer__tel">
+          문의전화: 1566-7727 (평일 09:00-18:00,유료)
+        </address>
+        <!-- 카피라이트 p a -->
+        <small class="login__footer__copyright">
+          <a href="https://kakaoent.com/">&copy; Kakao Entertainment Corp.</a>
+        </small>
+      </div>
+    </footer>
+  </body>
+</html>

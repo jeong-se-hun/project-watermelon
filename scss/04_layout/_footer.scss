@@ -3,12 +3,10 @@
   font-family: monospace;
   border-top: 1px solid $borderDarkGray;
   background: $accent-background;
-  height: rem(170px);
+  //   height: rem(170px);
+  height: auto;
   // 내용 영역
-  &__box {
-    width: rem(1010px);
-    margin: 0 auto;
-  }
+
   @include paddingY($paddingY: 18px);
   &__group {
     margin: 0 auto;
@@ -53,38 +51,45 @@
     }
   }
   // address 영역
-  &__service__list {
-    text-align: start;
-    padding-left: 10px;
-    font-size: rem(12px);
-    margin-top: rem(26px);
-    color: $primary-header;
-    width: rem(1010px);
-    @include mobile {
-      width: 100%;
+  &__service {
+    &__list {
+      width: rem(1010px);
+      display: flex;
+      flex-flow: row wrap;
+      padding-left: 10px;
+      @include autoMargin;
+      @include tab {
+        width: 100%;
+      }
+      @include mobile {
+        width: 100%;
+      }
+      color: $primary-header;
+      font-size: rem(12px);
+      margin-top: rem(26px);
     }
-  }
-  &__service__item {
-    display: inline-block;
-  }
-  &__service__item-link {
-    &:hover {
-      padding-bottom: 1px;
-      border-bottom: 1px solid black;
+    &__item {
+      //   display: inline-block;
     }
-  }
+    &__item-link {
+      &:hover {
+        padding-bottom: 1px;
+        border-bottom: 1px solid black;
+      }
+    }
 
-  &__service__item:not(:last-child)::after {
-    content: "";
-    width: 0.5px;
-    height: auto;
-    border: 0.5px solid $borderLightGray;
-    margin: 0 5px 0 5px;
-  }
+    &__item:not(:last-child)::after {
+      content: "";
+      width: 0.5px;
+      height: auto;
+      border: 0.5px solid $borderLightGray;
+      margin: 0 5px 0 5px;
+    }
 
-  &__service__item:nth-child(2) {
-    color: $black;
-    font-weight: 900;
+    &__item:nth-child(2) {
+      color: $black;
+      font-weight: 900;
+    }
   }
 
   &__company {
@@ -92,11 +97,21 @@
     color: $medium-gray;
     margin-left: rem(10px);
     &__info__list {
-      @include flexbox;
       font-size: 11px;
+      width: rem(1010px);
+      display: flex;
+      flex-flow: row wrap;
+      @include autoMargin;
+      @include tab {
+        width: 100%;
+      }
+      @include mobile {
+        width: 100%;
+      }
     }
     &__info__item {
       padding-bottom: 8px;
+      white-space: nowrap;
     }
 
     &__info__item:not(:last-child)::after {
@@ -108,8 +123,22 @@
     }
 
     &__contact {
-      @include flexbox;
       font-size: 11px;
+      width: rem(1010px);
+      display: flex;
+      flex-flow: row wrap;
+      @include autoMargin;
+      @include tab {
+        width: 100%;
+      }
+      @include mobile {
+        width: 100%;
+      }
+      //   @include flexbox;
+      font-size: 11px;
+      &__item {
+        white-space: nowrap;
+      }
       &__item:not(:last-child)::after {
         content: "";
         width: 0.5px;

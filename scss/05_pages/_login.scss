@@ -1,0 +1,105 @@
+.login__header,
+.login__main,
+.login__footer {
+  width: rem(550px);
+  @include autoMargin;
+}
+
+//헤더 영역
+
+.login__header {
+  text-align: center;
+  &__logo__wrapper {
+    width: rem(206px);
+    height: rem(56px);
+    margin: rem(68px) auto rem(42px);
+  }
+
+  &__svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// 메인 영역
+
+.login__form {
+  width: rem(390px);
+  @include autoMargin;
+  padding: rem(29px) 0 rem(23px);
+
+  // 로그인 폼 인풋 영역
+
+  &__input {
+    @include flexbox(column, center, center, nowrap);
+    border: 1px solid $borderGray;
+
+    &__id,
+    &__pw {
+      width: 100%;
+      height: rem(49px);
+      @include paddingX(11px);
+      border: none;
+      border: 1px solid $borderLightGray;
+    }
+
+    &__id {
+      border-bottom: 1px solid $borderLightGray;
+    }
+  }
+
+  // 로그인 폼 아이디 저장 & 아이디,비밀번호 찾기 영역
+
+  &__help {
+    @include flexbox($justify: space-between);
+    padding: rem(20px) 0 rem(26px);
+    font-size: rem(12px);
+    color: $medium-gray;
+  }
+
+  // 로그인 폼 버튼 영역
+
+  &__btn {
+    &__button {
+      width: 100%;
+      height: rem(60px);
+      background-color: $primary-logo-color;
+      color: $white;
+      border: none;
+      font-size: rem(18px);
+    }
+  }
+}
+
+// 푸터 영역
+
+.login__footer {
+  margin-top: rem(42px);
+
+  &__wrapper {
+    width: rem(390px);
+    height: rem(104px);
+    @include autoMargin;
+    @include flexbox(column, space-between, center, nowrap);
+  }
+
+  &__info li {
+    display: inline-block;
+    font-size: rem(13px);
+    color: #767676;
+
+    span {
+      margin: 0 rem(8px);
+    }
+  }
+
+  &__tel {
+    font-size: rem(12px);
+    color: $medium-gray;
+  }
+
+  &__copyright {
+    font-size: rem(11px);
+    color: #969696;
+  }
+}
