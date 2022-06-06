@@ -1,0 +1,514 @@
+// 헤더 이단 네비게이션
+
+.header-wrapper::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: rem(45px);
+  background: $accent-background;
+  border-bottom: 1px solid $borderLightGray;
+}
+
+.is-active .header__nav__link::after {
+  content: '';
+  display: block;
+  height: rem(4px);
+  transform: translateY(15px);
+  background: $primary-logo-color;
+}
+
+.header__nav__item {
+  position: relative;
+
+  .header__nav__list__detail {
+    position: absolute;
+    top: rem(40px);
+    left: rem(-10px);
+    width: rem(1100px);
+    height: rem(45px);
+
+    &__chart-finder {
+      background: transparent;
+      outline: none;
+      border: none;
+      font-size: 13px;
+      color: #767676;
+    }
+
+    .header__nav__item__detail {
+      display: inline-block;
+      padding: rem(11px) rem(12px) 0;
+      margin: rem(10px);
+      font-size: rem(14px);
+      color: #1a1a1a;
+
+      &:nth-child(6) {
+        position: absolute;
+        right: rem(70px);
+        padding-top: rem(4px);
+      }
+    }
+  }
+}
+
+// 메인 영역
+
+.chart__main {
+  max-width: rem(1010px);
+  @include autoMargin;
+  padding-top: rem(40px);
+
+  // 차트 탑100 부분 및 모달창
+  &__title-wrapper {
+    position: relative;
+    margin-bottom: rem(8px);
+
+    .chart__main__title {
+      display: inline-block;
+      font-size: rem(26px);
+    }
+
+    .chart__main__modal__open-button {
+      position: absolute;
+      top: rem(2px);
+      left: rem(110px);
+      width: rem(24px);
+      height: rem(24px);
+      background: transparent;
+      border: none;
+    }
+
+    .chart__main__modal {
+      display: none;
+      width: rem(735px);
+      height: rem(78px);
+      position: absolute;
+      background-color: $accent-red;
+      top: rem(2px);
+      left: rem(110px);
+      padding: rem(10px) rem(42px) rem(8px) rem(16px);
+      font-size: rem(12px);
+    }
+
+    &__close-button {
+      position: absolute;
+      top: rem(8px);
+      right: rem(8px);
+    }
+  }
+
+  // 시간 영역 및 모달창
+
+  &__time {
+    margin: rem(12px) 0 rem(32px);
+    height: rem(34px);
+    font-size: rem(26px);
+    text-align: center;
+
+    time {
+      color: #575757;
+    }
+
+    &__modal {
+      display: inline-block;
+      position: relative;
+
+      &__button {
+        background-color: transparent;
+        border: none;
+      }
+
+      &__select {
+        display: none;
+        position: absolute;
+        top: rem(30px);
+        left: 0;
+      }
+    }
+  }
+
+  //  플레이 및 저장 버튼, 새로고침 버튼 영역
+  .chart__main__music-button__wrapper {
+    height: rem(30px);
+    margin-bottom: rem(10px);
+    position: relative;
+
+    .refresh__wrapper {
+      position: absolute;
+      right: rem(10px);
+      top: rem(5px);
+    }
+
+    .refresh__button {
+      border: none;
+      background: transparent;
+      font-size: rem(13px);
+      color: #767676;
+    }
+
+    .chart__main__music-button__list {
+      display: flex;
+    }
+
+    .chart__main__music-button__item {
+      margin-right: rem(10px);
+      white-space: nowrap;
+
+      & button {
+        background: transparent;
+        border-radius: rem(14px);
+        height: rem(28px);
+        padding: 0 rem(9px);
+        border: 1px solid $borderGray;
+        color: $light-gray;
+      }
+    }
+  }
+
+  // 탑100 차트 영역
+  .chart__main__top100 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: rem(80px);
+
+    &__thead {
+      border-top: 1px solid $borderLightGray;
+      border-bottom: 1px solid $borderLightGray;
+      height: rem(48px);
+      text-align: left;
+      font-size: rem(13px);
+      font-weight: 400;
+      white-space: nowrap;
+      color: #606060;
+    }
+
+    &__tbody {
+      tr {
+        border-bottom: 1px solid $borderLightGray;
+        height: rem(85px);
+
+        td[headers='rank'] {
+          padding: 0 rem(18px) 0 rem(12px);
+          text-align: center;
+        }
+
+        td[headers='sing-album-cover'] img {
+          width: rem(60px);
+          height: rem(60px);
+        }
+      }
+
+      .song {
+        &__info {
+          &__wrap {
+            display: flex;
+            flex-flow: column nowrap;
+          }
+
+          &__title {
+            display: inline-block;
+            width: 80%;
+            font-size: rem(14px);
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-bottom: rem(4px);
+          }
+
+          &__singer {
+            font-size: rem(12px);
+            color: #969696;
+          }
+        }
+
+        &__album__title {
+          display: inline-block;
+          width: 80%;
+          font-size: rem(14px);
+          color: #969696;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+
+        &__info__title:hover,
+        &__info__singer:hover,
+        &__album__title:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .sing {
+        &__like__button {
+          min-width: rem(66px);
+          height: rem(24px);
+          text-align: start;
+
+          .like-count {
+            font-size: rem(12px);
+            color: #888888;
+            vertical-align: rem(2px);
+          }
+        }
+
+        &_listen__button {
+          width: rem(26px);
+          height: rem(30px);
+        }
+        &__list-add__button {
+          width: rem(26px);
+          height: rem(32px);
+        }
+        &__download__button {
+          width: rem(31px);
+          height: rem(31px);
+        }
+        &__mv__button {
+          width: rem(30px);
+          height: rem(32px);
+        }
+
+        &__like__button,
+        &__listen__button,
+        &__list-add__button,
+        &__download__button,
+        &__mv__button {
+          @include removeBtnStyle;
+        }
+      }
+    }
+  }
+}
+
+// 공통 영역으로 빼도 될만한 것
+
+.font-green {
+  color: $primary-logo-color;
+}
+
+// 데스크탑 기준 레이아웃 퍼센트
+#check {
+  width: 1%;
+}
+
+#rank {
+  width: 6%;
+  padding: 0 rem(18px) 0 rem(12px);
+  text-align: center;
+}
+
+#rank-change {
+  width: 5%;
+}
+
+#sing-album-cover {
+  width: 7%;
+}
+
+#sing-info-link {
+  width: 4%;
+}
+
+#sing-info {
+  width: 22%;
+}
+
+#sing-album {
+  width: 17%;
+}
+
+#sing-like {
+  width: 14%;
+  transform: translateX(10px);
+}
+
+#sing-listen {
+  width: 6%;
+}
+
+#sing-list-add {
+  width: 6%;
+}
+
+#sing-download {
+  width: 6%;
+}
+
+#sing-mv {
+  width: 6%;
+}
+
+// 아이콘 관련
+
+// 물음표 아이콘
+.question-icon {
+  display: inline-block;
+  width: rem(24px);
+  height: rem(24px);
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -458px -31px;
+}
+
+//검색 아이콘
+.search-icon {
+  display: inline-block;
+  width: rem(20px);
+  height: rem(19px);
+  margin-right: rem(2px);
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -499px -30px;
+  transform: translateY(6px);
+}
+
+// 아랫방향 아이콘 (작대기없음)
+.down-icon {
+  display: inline-block;
+  width: rem(16px);
+  height: rem(11px);
+  margin-left: rem(2px);
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -283px -68px;
+}
+
+// 새로고침 아이콘
+.refresh-icon {
+  display: inline-block;
+  width: rem(17px);
+  height: rem(17px);
+  margin-left: rem(6px);
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -425px -30px;
+  transform: translateY(4px);
+}
+
+// 셔플 아이콘
+.suffle-icon {
+  display: inline-block;
+  width: rem(13px);
+  height: rem(11px);
+  margin-right: rem(4px);
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -203px 0px;
+  transform: translateY(1px);
+}
+
+// 재생 아이콘
+.play-icon {
+  display: inline-block;
+  width: rem(11px);
+  height: rem(13px);
+  margin-right: rem(4px);
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat 0px 0px;
+  transform: translateY(2px);
+}
+
+// + 아이콘
+.add-icon {
+  display: inline-block;
+  width: rem(11px);
+  height: rem(13px);
+  margin-right: rem(4px);
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -17px 0px;
+  transform: translateY(2px);
+}
+
+// 다운로드 아이콘
+.download-icon {
+  display: inline-block;
+  width: rem(15px);
+  height: rem(13px);
+  margin-right: rem(4px);
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -34px 0px;
+  transform: translateY(2px);
+}
+
+// 선물 아이콘
+.gift-icon {
+  display: inline-block;
+  width: rem(13px);
+  height: rem(13px);
+  margin-right: rem(4px);
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -56px 0px;
+  transform: translateY(2px);
+}
+
+// 순위 변동없음 아이콘
+.rank-nochange-icon {
+  display: inline-block;
+  width: rem(14px);
+  height: rem(8px);
+  background: url(../../assets/images/bullet_icons_sprite.png) no-repeat 0px -17px;
+}
+
+.rank-up-icon {
+  display: inline-block;
+  width: rem(9px);
+  height: rem(6px);
+  background: url(../../assets/images/bullet_icons_sprite.png) no-repeat -150px -130px;
+  transform: translateY(-2px);
+  margin-right: rem(1px);
+}
+
+.rank-up-num {
+  font-size: rem(15px);
+  color: rgb(240, 120, 10);
+}
+
+.rank-down-icon {
+  display: inline-block;
+  width: rem(9px);
+  height: rem(6px);
+  background: url(../../assets/images/bullet_icons_sprite.png) no-repeat -160px -130px;
+  transform: translateY(-2px);
+  margin-right: 1px;
+}
+
+.rank-down-num {
+  font-size: rem(15px);
+  color: rgb(140, 190, 250);
+}
+
+// 리스트 아이콘(문서처럼 생김)
+.info-icon {
+  display: inline-block;
+  width: rem(12px);
+  height: rem(15px);
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -286px -30px;
+  transform: translateX(4px);
+}
+
+// 빈 하트 아이콘
+.like-icon {
+  display: inline-block;
+  width: rem(14px);
+  height: rem(12px);
+  background: url(../../assets/images/bullet_icons_sprite.png) no-repeat -69px -14px;
+  margin-right: 4px;
+}
+
+// 재생 아이콘 큰 버전
+.chart-play-icon {
+  display: inline-block;
+  width: rem(16px);
+  height: rem(28px);
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat 0px -28px;
+}
+
+// + 버전 아이콘 큰 버전
+.chart-add-icon {
+  display: inline-block;
+  width: rem(19px);
+  height: rem(28px);
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -45px -27px;
+}
+
+// 다운로드 아이콘 큰 버전
+.chart-download-icon {
+  display: inline-block;
+  width: rem(21px);
+  height: rem(26px);
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -98px -30px;
+}
+
+// 뮤비 아이콘 큰 버전
+.chart-mv-icon {
+  display: inline-block;
+  width: rem(30px);
+  height: rem(28px);
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -152px -26px;
+}
