@@ -3,7 +3,8 @@
 .home__hot__section {
   display: flex;
   justify-content: space-between;
-  width: rem(1010px);
+  align-items: start;
+  max-width: rem(1010px);
   margin: 32px auto 49px;
 
   .home__hot__hot-issue {
@@ -351,7 +352,7 @@
     margin-top: rem(5px);
     border: 1px solid $borderGray;
     border-top: none;
-    padding-bottom: rem(28px);
+    padding-bottom: rem(36px);
   }
 
   &__tab-box {
@@ -583,5 +584,33 @@
         }
       }
     }
+  }
+}
+
+// 미디어  쿼리
+
+// tab
+
+@include tab {
+  .home__hot__melon-chart {
+    display: none;
+  }
+  .home__hot__section .home__hot__hot-issue {
+    width: 100%;
+
+    .home__hot__hot-issue-list.is-active.list1 {
+      align-items: center;
+    }
+  }
+
+  .home__hot__section {
+    max-width: rem(704px);
+  }
+}
+
+// mobile
+@include mobile {
+  .home__hot__section {
+    display: none;
   }
 }

@@ -552,7 +552,8 @@ button {
 .home__hot__section {
   display: flex;
   justify-content: space-between;
-  width: 63.125rem;
+  align-items: start;
+  max-width: 63.125rem;
   margin: 32px auto 49px;
 }
 .home__hot__section .home__hot__hot-issue {
@@ -839,7 +840,7 @@ button {
   margin-top: 0.3125rem;
   border: 1px solid #cccccc;
   border-top: none;
-  padding-bottom: 1.75rem;
+  padding-bottom: 2.25rem;
 }
 .home__hot__melon-chart__tab-box {
   display: flex;
@@ -1023,6 +1024,25 @@ button {
   background-position: 0 -241px;
 }
 
+@media (max-width: 1023px) {
+  .home__hot__melon-chart {
+    display: none;
+  }
+  .home__hot__section .home__hot__hot-issue {
+    width: 100%;
+  }
+  .home__hot__section .home__hot__hot-issue .home__hot__hot-issue-list.is-active.list1 {
+    align-items: center;
+  }
+  .home__hot__section {
+    max-width: 44rem;
+  }
+}
+@media (max-width: 479px) {
+  .home__hot__section {
+    display: none;
+  }
+}
 .footer {
   font-family: monospace;
   border-top: 1px solid #b4b4b4;
