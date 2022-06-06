@@ -1,0 +1,218 @@
+.genre {
+  padding-top: rem(29px);
+  &__kpop {
+    font-size: rem(26px);
+    margin: 0 auto;
+    width: rem(1010px);
+    padding-bottom: 10px;
+  }
+  &__sub {
+    &__list {
+      @include flexbox;
+      width: rem(1010px);
+      height: rem(50px);
+      margin: 0 auto;
+      border-top: 1px solid $borderLightGray;
+
+      & > .is-active {
+        border-right: 1px solid $borderLightGray;
+        background: $white;
+        border-bottom: none;
+        color: $primary-logo-color;
+        font-weight: 500;
+      }
+    }
+    &__item {
+      width: rem(126.25px);
+      height: rem(48px);
+      text-align: center;
+      @include paddingY($paddingY: 13px);
+      @include paddingX($paddingX: 4px);
+      border-bottom: 1px solid $borderLightGray;
+      background: $accent-background;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .new {
+    @include flexbox($justify: space-between);
+    width: 1010px;
+    margin: 32px auto 0;
+    // 최신앨범
+    &__album {
+      &__list {
+        width: rem(676px);
+        height: rem(217px);
+        @include flexbox($justify: space-between);
+      }
+      &__item {
+        background: pink;
+        position: relative;
+      }
+      &__item-img > img {
+        width: rem(217px);
+        height: rem(217px);
+      }
+      &__item-group {
+        position: absolute;
+        bottom: rem(10px);
+        left: rem(10px);
+        @include flexbox($direction: column);
+        color: $accent-background;
+      }
+      &__item-title {
+        margin-bottom: rem(7px);
+        font-size: rem(16px);
+      }
+      &__item-link {
+        position: absolute;
+        top: rem(20px);
+        right: rem(20px);
+        display: inline-block;
+        width: rem(36px);
+        height: rem(43px);
+        background: url(../../assets/images/button_icons_sprite2.png) no-repeat
+          87% 0%;
+      }
+      &__item-title--link {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      &__item-singer {
+        font-size: rem(13px);
+      }
+      &__item-opacity {
+        width: rem(217px);
+        height: rem(60px);
+        background: rgba(0, 0, 0, 0.5);
+        bottom: rem(10px);
+        left: rem(10px);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        @include flexbox($direction: column);
+      }
+    }
+    &__album-header {
+      font-size: rem(20px);
+      margin-bottom: rem(10px);
+      color: $primary-font;
+    }
+
+    // 오늘의 추천음악
+    &__palylist-group {
+      position: relative;
+    }
+    &__playlist-header {
+      font-size: rem(20px);
+      margin-bottom: 10px;
+      color: $primary-font;
+    }
+    &__playlist-img {
+      width: rem(319px);
+      height: rem(217px);
+      overflow: hidden;
+    }
+    &__playlist-opacity {
+      width: rem(321px);
+      height: rem(217px);
+      background: rgba(0, 0, 0, 0.4);
+      bottom: rem(10px);
+      left: 0;
+      bottom: 0;
+      position: absolute;
+    }
+
+    &__playlist {
+      position: relative;
+      &__links-dj {
+        position: absolute;
+        top: rem(20px);
+        left: rem(15px);
+        font-weight: 400;
+        color: $accent-background;
+      }
+      &__links-dj-name {
+        &:hover {
+          border-bottom: 2px solid $accent-background;
+        }
+      }
+      &__links-dj-em {
+        color: #00cd3c;
+        margin-right: rem(4px);
+      }
+      &__links-title {
+        position: absolute;
+        left: rem(15px);
+        top: rem(130px);
+        color: $accent-background;
+        font-size: rem(16px);
+        font-weight: 400;
+        // hover시 밑줄 수정해야함
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      &__links-hash1 {
+        position: absolute;
+        bottom: rem(10px);
+        left: rem(15px);
+        color: $accent-background;
+        border: 1px solid $accent-background;
+        border-radius: rem(15px);
+        width: rem(50px);
+        height: rem(28px);
+        padding: 7px 9px;
+        font-size: rem(12px);
+        &:hover {
+          color: $borderDarkGray;
+          border: 1px solid $borderDarkGray;
+        }
+      }
+      &__links-hash2 {
+        position: absolute;
+        bottom: rem(10px);
+        left: rem(70px);
+        color: $accent-background;
+        border: 1px solid $accent-background;
+        border-radius: rem(15px);
+        width: rem(50px);
+        height: rem(28px);
+        padding: 7px 9px;
+        font-size: rem(12px);
+        &:hover {
+          color: $borderDarkGray;
+          border: 1px solid $borderDarkGray;
+        }
+      }
+    }
+  }
+}
+
+.music__category {
+  &__list {
+    @include flexbox;
+    width: rem(1010px);
+    margin: 0 auto;
+    margin-top: 50px;
+    & > .is-active {
+      border-bottom: none;
+      background: $white;
+    }
+  }
+  &__item {
+    width: 20%;
+    height: rem(48px);
+    text-align: center;
+    padding: 14px 4px;
+    border: 1px solid $borderLightGray;
+    background: $accent-background;
+    &:nth-child(2n) {
+      border-right: none;
+      border-left: none;
+    }
+  }
+}

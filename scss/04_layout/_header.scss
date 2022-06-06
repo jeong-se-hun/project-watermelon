@@ -20,9 +20,9 @@
     &:first-child a {
       position: relative;
       &::before {
-        content: "";
+        content: '';
         position: absolute;
-        background: url("../../assets/images/icon-ticket.svg");
+        background: url('../../assets/images/icon-ticket.svg');
         width: rem(20px);
         height: rem(20px);
         left: rem(-10px);
@@ -110,7 +110,7 @@
       position: absolute;
       width: rem(24px);
       height: rem(24px);
-      background: url("../../assets/images/icon-search.svg");
+      background: url('../../assets/images/icon-search.svg');
       right: rem(20px);
       top: 50%;
       transform: translateY(-50%);
@@ -170,7 +170,7 @@
     &__info {
       margin-right: rem(20px);
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         width: rem(10px);
         height: rem(10px);
@@ -182,8 +182,7 @@
 
   &__ad__image {
     flex-grow: 1;
-    background: url("../../assets/images/header-ad-image.png") no-repeat 100%
-      100% / 90%;
+    background: url('../../assets/images/header-ad-image.png') no-repeat 100% 100% / 90%;
   }
 
   &__nav {
