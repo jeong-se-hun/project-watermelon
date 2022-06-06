@@ -1,0 +1,209 @@
+.home__new__section {
+  width: rem(1010px);
+  @include paddingY(30px);
+  @include autoMargin;
+  color: $white;
+  display: flow-root;
+}
+
+/* 최신음악 영역 */
+.home__new {
+  float: left;
+  &__wrap {
+    width: 474px;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__tab {
+    @include flexbox($justify: space-between);
+    margin-bottom: 5px;
+  }
+
+  &__title a {
+    font-size: 15px;
+    font-weight: 700;
+    color: #000;
+  }
+
+  &__inner {
+    @include flexbox;
+    position: relative;
+    left: 0;
+    transition: all 0.7s;
+  }
+
+  &__list {
+    width: 474px;
+    height: 315px;
+    @include flexbox($wrap: wrap);
+    gap: 3px;
+  }
+
+  &__item {
+    width: 156px;
+    height: 156px;
+    position: relative;
+
+    &--wrap {
+      cursor: pointer;
+      &:hover .home__new__item--detail,
+      &:focus .home__new__item--detail {
+        opacity: 1;
+      }
+
+      &:hover + .singer,
+      &:focus + .singer {
+        display: none;
+      }
+    }
+
+    & a:not(:nth-child(4)):hover {
+      text-decoration: underline;
+    }
+
+    &--thumb img {
+      width: 100%;
+      height: 100%;
+      @include pos;
+      top: 0;
+      left: 0;
+    }
+
+    /* 마우스오버 레이어 */
+    &--detail {
+      width: 100%;
+      height: 100%;
+      @include pos;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      font-size: 12px;
+      transition: all 0.3s;
+      opacity: 0;
+
+      & a {
+        display: block;
+      }
+
+      & > a:first-child {
+        margin-top: 50px;
+        margin-bottom: 5px;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.slide-btn {
+  color: #000;
+}
+
+.singer {
+  width: 100%;
+  height: 30px;
+  @include pos;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  font-size: 12px;
+  line-height: 2.5;
+}
+
+.play-button a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #00cd3c;
+  @include pos;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1;
+  @include flexbox($justify: center, $items: center);
+}
+
+/* 아티스트 영역 */
+.home__artist {
+  margin-left: 8px;
+  width: 236px;
+  float: left;
+
+  &__wrap {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__control {
+    float: right;
+    margin-bottom: 5px;
+
+    &__indicator {
+      @include removeBtnStyle;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border: 1px solid $borderDarkGray;
+      border-radius: 50%;
+
+      &:hover {
+        border: 1px solid $medium-gray;
+      }
+    }
+  }
+
+  &__inner {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__list {
+    @include flexbox;
+    border: 1px solid $borderLightGray;
+    // transition: all 0.7s;
+    position: relative;
+    left: 0;
+  }
+}
+
+/* 로그인 & 광고 영역 */
+.home__login {
+  float: left;
+  width: 280px;
+  margin-left: 8px;
+  margin-top: 27px;
+
+  &--login {
+    @include paddingX(17px);
+    @include paddingY(25px);
+    background: $accent-background;
+    border: 1px solid $borderLightGray;
+    color: $secondary-font;
+    margin-bottom: 8px;
+  }
+}
+
+.login-top {
+  @include flexbox($justify: space-between);
+  font-size: rem(11px);
+  margin-bottom: 10px;
+
+  & > a:hover {
+    text-decoration: underline;
+  }
+}
+
+.login-button {
+  display: block;
+  width: 100%;
+  line-height: 42px;
+  background-color: $primary-logo-color;
+  color: $white;
+  text-align: center;
+  font-size: rem(14px);
+
+  &:hover {
+    background-color: $primary-color;
+  }
+}

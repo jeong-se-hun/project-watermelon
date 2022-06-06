@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "NanumBarunGothic";
   font-style: normal;
@@ -337,6 +338,219 @@ button {
   }
 }
 
+.home__new__section {
+  width: 63.125rem;
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  display: flow-root;
+}
+
+/* 최신음악 영역 */
+.home__new {
+  float: left;
+}
+.home__new__wrap {
+  width: 474px;
+  height: 100%;
+  overflow: hidden;
+}
+.home__new__tab {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 5px;
+}
+.home__new__title a {
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+}
+.home__new__inner {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  position: relative;
+  left: 0;
+  transition: all 0.7s;
+}
+.home__new__list {
+  width: 474px;
+  height: 315px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 3px;
+}
+.home__new__item {
+  width: 156px;
+  height: 156px;
+  position: relative;
+  /* 마우스오버 레이어 */
+}
+.home__new__item--wrap {
+  cursor: pointer;
+}
+.home__new__item--wrap:hover .home__new__item--detail, .home__new__item--wrap:focus .home__new__item--detail {
+  opacity: 1;
+}
+.home__new__item--wrap:hover + .singer, .home__new__item--wrap:focus + .singer {
+  display: none;
+}
+.home__new__item a:not(:nth-child(4)):hover {
+  text-decoration: underline;
+}
+.home__new__item--thumb img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.home__new__item--detail {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  font-size: 12px;
+  transition: all 0.3s;
+  opacity: 0;
+}
+.home__new__item--detail a {
+  display: block;
+}
+.home__new__item--detail > a:first-child {
+  margin-top: 50px;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.slide-btn {
+  color: #000;
+}
+
+.singer {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  font-size: 12px;
+  line-height: 2.5;
+}
+
+.play-button a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #00cd3c;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 아티스트 영역 */
+.home__artist {
+  margin-left: 8px;
+  width: 236px;
+  float: left;
+}
+.home__artist__wrap {
+  width: 100%;
+  height: 100%;
+}
+.home__artist__control {
+  float: right;
+  margin-bottom: 5px;
+}
+.home__artist__control__indicator {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #b4b4b4;
+  border-radius: 50%;
+}
+.home__artist__control__indicator:hover {
+  border: 1px solid #666666;
+}
+.home__artist__inner {
+  width: 100%;
+  overflow: hidden;
+}
+.home__artist__list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  border: 1px solid #dfe6e8;
+  position: relative;
+  left: 0;
+}
+
+/* 로그인 & 광고 영역 */
+.home__login {
+  float: left;
+  width: 280px;
+  margin-left: 8px;
+  margin-top: 27px;
+}
+.home__login--login {
+  padding-left: 1.0625rem;
+  padding-right: 1.0625rem;
+  padding-top: 1.5625rem;
+  padding-bottom: 1.5625rem;
+  background: #f8f8f8;
+  border: 1px solid #dfe6e8;
+  color: #888888;
+  margin-bottom: 8px;
+}
+
+.login-top {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  font-size: 0.6875rem;
+  margin-bottom: 10px;
+}
+.login-top > a:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  display: block;
+  width: 100%;
+  line-height: 42px;
+  background-color: #00cd3c;
+  color: #fff;
+  text-align: center;
+  font-size: 0.875rem;
+}
+.login-button:hover {
+  background-color: #01b925;
+}
+
 .footer {
   font-family: monospace;
   border-top: 1px solid #b4b4b4;
@@ -344,14 +558,6 @@ button {
   height: auto;
   padding-top: 1.125rem;
   padding-bottom: 1.125rem;
-}
-  height: 10.625rem;
-  padding-top: 1.125rem;
-  padding-bottom: 1.125rem;
-}
-.footer__box {
-  width: 63.125rem;
-  margin: 0 auto;
 }
 .footer__group {
   margin: 0 auto;
@@ -419,20 +625,11 @@ button {
   .footer__service__list {
     width: 100%;
   }
-  text-align: start;
-  padding-left: 10px;
-  font-size: 0.75rem;
-  margin-top: 1.625rem;
-  color: #1a1a1a;
-  width: 63.125rem;
 }
 @media (max-width: 479px) {
   .footer__service__list {
     width: 100%;
   }
-}
-.footer__service__item {
-  display: inline-block;
 }
 .footer__service__item-link:hover {
   padding-bottom: 1px;
@@ -475,14 +672,6 @@ button {
 .footer__company__info__item {
   padding-bottom: 8px;
   white-space: nowrap;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  font-size: 11px;
-}
-.footer__company__info__item {
-  padding-bottom: 8px;
 }
 .footer__company__info__item:not(:last-child)::after {
   content: "";
@@ -512,12 +701,6 @@ button {
 }
 .footer__company__contact__item {
   white-space: nowrap;
-}
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  font-size: 11px;
 }
 .footer__company__contact__item:not(:last-child)::after {
   content: "";
