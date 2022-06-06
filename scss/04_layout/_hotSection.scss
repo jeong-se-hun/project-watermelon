@@ -1,0 +1,578 @@
+// hot-issue
+
+.home__hot__section {
+  display: flex;
+  justify-content: space-between;
+  width: rem(1010px);
+  margin: 32px auto 49px;
+  align-items: center;
+
+  .home__hot__hot-issue {
+    position: relative;
+    width: rem(704px);
+    flex-shrink: 0;
+  }
+}
+
+.home__hot__hot-issue__title {
+  display: flex;
+  align-items: center;
+
+  .home__hot__hot-issue__title-text {
+    font-size: rem(15px);
+    font-weight: 700;
+    color: $primary-header;
+  }
+
+  .home__hot__hot-issue__txt_intro {
+    padding-left: rem(8px);
+    font-size: rem(12px);
+    color: $secondary-font;
+  }
+}
+
+// hot-issue 인기컨텐츠
+
+.home__hot__hot-issue-list {
+  display: none;
+  padding-top: rem(16px);
+  border-top: 1px solid $borderLightGray;
+  margin-top: rem(5px);
+  &.is-active {
+    display: flex;
+
+    &.list1 {
+      flex-direction: column;
+    }
+  }
+}
+
+// 1페이지
+.home__hot__hot-issue-list.list1 {
+  .home__hot__hot-issue-upper-group {
+    display: flex;
+
+    // hot-issue-video-area
+    .home__hot__hot-issue-video-area {
+      width: rem(344px);
+      flex-shrink: 0;
+
+      .home__hot__hot-issue-video-link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .home__hot__hot-issue-video-tex-area {
+        position: absolute;
+        width: 100%;
+        padding: 2px 0 2px 15px;
+        line-height: 1.6;
+        bottom: 0;
+        left: 0;
+        color: $white;
+        font-size: rem(12px);
+        background-color: rgba(0, 0, 0, 0.7);
+
+        strong {
+          font-size: rem(14px);
+          border-left: 1px solid #fff;
+          padding-left: 8px;
+          margin-left: 5px;
+        }
+      }
+      .home__hot__hot-issue-video-views {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: $secondary-color;
+        font-size: rem(12px);
+        font-weight: 100;
+        color: $white;
+        padding: 3px 5px 1px;
+        margin: 10px 10px 0 0;
+        border-radius: 2px;
+      }
+    }
+
+    // home__hot__news-list
+    .home__hot__news-list {
+      display: flex;
+      flex-direction: column;
+      width: rem(360px);
+      padding-left: rem(16px);
+      justify-content: space-between;
+
+      .home__hot__news-item {
+        display: flex;
+        align-items: center;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        .home__hot__news-item__thumbnail {
+          width: rem(116px);
+          height: rem(73px);
+          flex-shrink: 0;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .home__hot__news-item-info {
+          padding-left: 12px;
+          .home__hot__news-item-link {
+            &:hover {
+              text-decoration: underline;
+            }
+
+            .home__hot__news-item-title {
+              font-weight: bold;
+              font-size: rem(12px);
+            }
+
+            .home__hot__news-item-description {
+              font-size: rem(12px);
+              margin-top: 2px;
+              line-height: 1.4;
+              color: $secondary-font;
+            }
+          }
+
+          .home__hot__news-item-ctgry {
+            font-size: rem(11px);
+            color: $secondary-color;
+
+            cursor: pointer;
+            padding-right: 2px;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          .home__hot__news-item-views {
+            font-size: rem(11px);
+            color: $secondary-font;
+            padding-left: 5px;
+            border-left: 1px solid $borderGray;
+          }
+        }
+      }
+    }
+  }
+
+  // magazine-list
+  .home__hot__magazine-list {
+    display: flex;
+    padding-top: rem(16px);
+
+    .home__hot__magazine-itme {
+      width: rem(164px);
+      margin-left: rem(16px);
+      flex-shrink: 0;
+      &:first-child {
+        margin-left: 0;
+      }
+
+      .home__hot__magazine-description {
+        &:hover {
+          text-decoration: underline;
+        }
+
+        .home__hot__magazine-title {
+          display: block;
+          font-size: rem(12px);
+          font-weight: 700;
+          margin-top: 8px;
+        }
+        .home__hot__magazine-txt {
+          display: block;
+          margin-top: 2px;
+          font-size: rem(12px);
+          font-weight: 400;
+          margin-top: 4px;
+          color: $secondary-font;
+        }
+      }
+      .home__hot__magazine-info {
+        margin-top: 4px;
+        font-size: rem(11px);
+
+        .home__hot__magazine-ctgry {
+          color: $secondary-color;
+          padding-right: 2px;
+        }
+        .home__hot__magazine-views {
+          padding-left: 5px;
+          border-left: 1px solid $borderGray;
+          color: $secondary-font;
+        }
+      }
+    }
+  }
+}
+
+// 2페이지
+
+.home__hot__melon-tv-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  .home__hot__melon-tv-itme {
+    margin-left: rem(16px);
+    flex-shrink: 0;
+
+    &:first-child,
+    &:nth-child(4) {
+      margin-left: 0;
+    }
+
+    &:nth-child(n + 4) {
+      margin-top: 16px;
+    }
+
+    .home__hot__melon-tv-Thumbnail {
+      display: block;
+      width: rem(223px);
+      height: 148px;
+
+      img {
+        height: 100%;
+      }
+    }
+    .home__hot__melon-tv-description {
+      &:hover {
+        text-decoration: underline;
+      }
+
+      .home__hot__melon-tv-title {
+        display: block;
+        font-size: rem(12px);
+        font-weight: 700;
+        margin-top: 8px;
+      }
+      .home__hot__melon-tv-txt {
+        display: block;
+        margin-top: 2px;
+        font-size: rem(12px);
+        font-weight: 400;
+        margin-top: 4px;
+        color: $secondary-font;
+      }
+    }
+    .home__hot__melon-tv-info {
+      margin-top: 4px;
+      font-size: rem(11px);
+
+      .home__hot__melon-tv-ctgry {
+        color: $secondary-color;
+        padding-right: 2px;
+      }
+      .home__hot__melon-tv-views {
+        padding-left: 5px;
+        border-left: 1px solid $borderGray;
+        color: $secondary-font;
+      }
+    }
+  }
+}
+
+// hot-issue 인기컨텐츠 버튼
+
+.home__hot__hot-issue-button-area {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  font-size: rem(12px);
+  color: $secondary-font;
+
+  .home__hot__hot-issue-page-num-current-page {
+    color: $primary-header;
+  }
+}
+
+.home__hot__hot-issue-button-box {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  button {
+    appearance: none;
+    border: 0;
+    width: 20px;
+    height: 17px;
+    background: url(/assets/images/bg_btn.png) no-repeat;
+
+    &.home__hot__hot-issue-prev {
+      background-position: left -202px;
+    }
+    &.home__hot__hot-issue-next {
+      background-position: right -220px;
+    }
+  }
+}
+
+////////////////////////
+
+// 멜론 차트
+
+.home__hot__melon-chart {
+  flex-shrink: 0;
+  width: rem(280px);
+
+  &__headline {
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+      font-size: rem(15px);
+      font-weight: 700;
+      color: $black;
+    }
+
+    &__time {
+      font-size: rem(12px);
+      color: $secondary-font;
+    }
+  }
+
+  &__group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: rem(5px);
+    border: 1px solid $borderGray;
+    border-top: none;
+    padding-bottom: rem(35px);
+  }
+
+  &__tab-box {
+    display: flex;
+
+    &__tab:nth-child(3) {
+      border-right: none;
+    }
+
+    &__tab {
+      appearance: none;
+      -moz-appearance: none; /* Firefox */
+      -webkit-appearance: none; /* Safari and Chrome */
+
+      border-top: 1px solid $borderGray;
+      border-right: 1px solid $borderGray;
+      border-left: none;
+      border-bottom: 1px solid $borderGray;
+      background-color: $white;
+      font-weight: 700;
+      flex-grow: 1;
+      padding: rem(6px) 0;
+      color: $secondary-font;
+
+      &.is-active {
+        border-top: 2px solid $secondary-color;
+        color: $secondary-color;
+      }
+    }
+  }
+
+  // 멜론 차트 리스트
+
+  &__list-area {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+
+  // top 100
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 0;
+    border-bottom: 1px solid #e9edef;
+
+    // item is-active 추가시 적용될 스타일
+    &.is-active .home__hot__melon-chart__item__ranking-info__thumbnail {
+      display: block;
+    }
+
+    &.is-active .home__hot__melon-chart__item__ranking-info__description {
+      flex-direction: column;
+      margin-left: rem(9px);
+    }
+
+    &.is-active .home__hot__melon-chart__singer {
+      margin-top: rem(3px);
+    }
+
+    &.is-active .rank {
+      font-size: rem(22px);
+    }
+    &.is-active .changesRankings {
+      transform: translateY(-4px);
+    }
+
+    &__ranking {
+      width: rem(71px);
+      font-weight: 700;
+      color: $secondary-font;
+      padding-left: rem(20px);
+      font-size: rem(14px);
+
+      .rank {
+        font-style: italic;
+      }
+
+      .changesRankings {
+        position: relative;
+        display: inline-block;
+        font-size: rem(10px);
+        padding-left: rem(16px);
+        transform: translateY(-2px);
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: rem(5px);
+          height: rem(2px);
+          background-color: $secondary-font;
+          position: relative;
+          left: rem(-6px);
+          top: rem(-2px);
+        }
+      }
+    }
+
+    &__ranking-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      width: rem(207px);
+
+      &__thumbnail {
+        display: none;
+        width: rem(48px);
+        flex-shrink: 0;
+      }
+
+      &__description {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+
+        .home__hot__melon-chart__songTitle {
+          display: block;
+          width: rem(120px);
+          padding-right: rem(20px);
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        .home__hot__melon-chart__singer {
+          display: block;
+          width: rem(74px);
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          color: $secondary-font;
+        }
+      }
+    }
+  }
+
+  // 차트 1~3 위 랭킹 색상 변경
+  &__item:nth-child(-n + 3) .rank {
+    color: $secondary-color;
+  }
+  // 차트 짝수 배경생
+  &__item:nth-child(even) {
+    background-color: $accent-background;
+  }
+  // 10위 랭킹 숫자 padding left 감소
+
+  &__item:nth-child(10) .home__hot__melon-chart__item__ranking {
+    padding-left: rem(12px);
+  }
+  // 다보기
+  &__more {
+    position: absolute;
+    bottom: rem(12px);
+    right: rem(10px);
+    display: block;
+    font-size: rem(12px);
+    width: rem(42px);
+    height: rem(12px);
+    font-weight: 100;
+    background-image: url(/assets/images/moreArrow.png);
+    background-repeat: no-repeat;
+    background-size: 28%;
+    background-position: right center;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // artist
+  .home__hot__melon-chart__list-area.artist {
+    //
+    .home__hot__melon-chart__item {
+      // 아이템 is-active 시
+      &.is-active {
+        .home__hot__melon-chart__item__ranking-info {
+          padding-left: rem(6px);
+
+          &__description {
+            width: rem(120px);
+          }
+        }
+        .home__hot__melon-chart__singer {
+          font-weight: 700;
+        }
+      }
+
+      &__ranking-info {
+        justify-content: flex-start;
+        padding-left: rem(12px);
+        align-items: center;
+
+        &__description {
+          width: rem(170px);
+          flex-direction: row;
+          align-items: center;
+        }
+      }
+
+      .home__hot__melon-chart__singer {
+        color: #1a1a1a;
+      }
+      .home__hot__melon-chart__favorites {
+        display: block;
+        width: rem(21px);
+        height: rem(21px);
+        background: url(/assets/images/melonChartIcon.png) no-repeat 0 -220px;
+
+        &:hover {
+          background-position: -21px -220px;
+        }
+
+        &.is-active {
+          background-position: 0 -241px;
+        }
+      }
+    }
+  }
+}
