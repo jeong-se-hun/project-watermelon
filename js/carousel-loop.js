@@ -6,14 +6,13 @@ const carouselLoop = () => {
   const $artistList = get(".home__artist__list");
   const $artistItems = document.querySelectorAll(".home__artist__item");
 
-  // const borderWidth = 1;
   const size = $artistWrap.clientWidth;
   const slideSpeed = 1000;
   const startNum = 0;
   let slideCount = $artistItems.length;
 
+  let currentIdx = 0;
   let prevIdx = 0;
-  let count = 1;
 
   makeClone();
 
@@ -24,7 +23,7 @@ const carouselLoop = () => {
       $artistList.append(cloneSlide);
     }
     for (let i = slideCount - 1; i >= 0; i--) {
-      let cloneSlide = slideItems[i].cloneNode(true);
+      let cloneSlide = $artistItems[i].cloneNode(true);
       cloneSlide.classList.add("clone");
       $artistList.prepend(cloneSlide);
     }
@@ -32,8 +31,8 @@ const carouselLoop = () => {
     updateWidth();
     setPosition();
     setTimeout(function () {
-      innerSlide.style.left = "0px";
-      innerSlide.style.transition = "0.5s ease-out";
+      $artistList.style.left = "0px";
+      $artistList.style.transition = "0.5s ease-out";
     }, 100);
   }
 
@@ -59,20 +58,22 @@ const carouselLoop = () => {
     $artistList.style.transform = "translateX(" + -size * slideCount + "px)";
   }
 
-  function moveSlide(num) {
-    innerSlide.style.left = -num * size + "px";
-    currentIdx = num;
-    // console.log(currentIdx, slideCount);
+  let count = 0;
+  function moveSlide(count) {
+    $artistList.style.left = -count * size + "px";
+    count++;
+    currentIdx = count;
+    console.log(count, currentIdx, slideCount);
 
     // loop
-    if (currentIdx == slideCount || -currentIdx == slideCount) {
-      setTimeout(function () {
-        innerSlide.style.transition = "none";
-        innerSlide.style.left = "0px";
-        currentIdx = 0;
+    if (currentIdx === slideCount || -currentIdx === slideCount) {
+      setTimeout(() => {
+        $artistList.style.transition = "none";
+        $artistList.style.left = "0px";
+        count = 0;
       }, 500);
-      setTimeout(function () {
-        innerSlide.style.transition = "0.5s ease-out";
+      setTimeout(() => {
+        $artistList.style.transition = "0.5s ease-out";
       }, 600);
     }
   }
@@ -113,7 +114,8 @@ const carouselLoop = () => {
   // );
 
   setInterval(() => {
-    moveSlide();
+    moveSlide(count);
+
     // loopSlide();
   }, 2000);
 };
