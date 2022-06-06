@@ -596,7 +596,6 @@ button {
 }
 .home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__hot-issue-video-area {
   width: 21.5rem;
-  flex-shrink: 0;
 }
 .home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__hot-issue-video-area .home__hot__hot-issue-video-link {
   display: block;

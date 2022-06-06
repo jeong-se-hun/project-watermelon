@@ -1,7 +1,7 @@
 // 헤더 이단 네비게이션
 
 .header-wrapper::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: rem(45px);
@@ -10,7 +10,7 @@
 }
 
 .is-active .header__nav__link::after {
-  content: '';
+  content: "";
   display: block;
   height: rem(4px);
   transform: translateY(15px);
@@ -187,12 +187,12 @@
         border-bottom: 1px solid $borderLightGray;
         height: rem(85px);
 
-        td[headers='rank'] {
+        td[headers="rank"] {
           padding: 0 rem(18px) 0 rem(12px);
           text-align: center;
         }
 
-        td[headers='sing-album-cover'] img {
+        td[headers="sing-album-cover"] img {
           width: rem(60px);
           height: rem(60px);
         }
@@ -383,7 +383,8 @@
   width: rem(13px);
   height: rem(11px);
   margin-right: rem(4px);
-  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -203px 0px;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -203px
+    0px;
   transform: translateY(1px);
 }
 
@@ -393,7 +394,8 @@
   width: rem(11px);
   height: rem(13px);
   margin-right: rem(4px);
-  background: url(../../assets/images/button_icons_sprite2.png) no-repeat 0px 0px;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat 0px
+    0px;
   transform: translateY(2px);
 }
 
