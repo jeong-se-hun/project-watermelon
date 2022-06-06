@@ -343,14 +343,6 @@ button {
   padding-top: 1.125rem;
   padding-bottom: 1.125rem;
 }
-  height: 10.625rem;
-  padding-top: 1.125rem;
-  padding-bottom: 1.125rem;
-}
-.footer__box {
-  width: 63.125rem;
-  margin: 0 auto;
-}
 .footer__group {
   margin: 0 auto;
 }
@@ -417,20 +409,11 @@ button {
   .footer__service__list {
     width: 100%;
   }
-  text-align: start;
-  padding-left: 10px;
-  font-size: 0.75rem;
-  margin-top: 1.625rem;
-  color: #1a1a1a;
-  width: 63.125rem;
 }
 @media (max-width: 479px) {
   .footer__service__list {
     width: 100%;
   }
-}
-.footer__service__item {
-  display: inline-block;
 }
 .footer__service__item-link:hover {
   padding-bottom: 1px;
@@ -473,14 +456,6 @@ button {
 .footer__company__info__item {
   padding-bottom: 8px;
   white-space: nowrap;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  font-size: 11px;
-}
-.footer__company__info__item {
-  padding-bottom: 8px;
 }
 .footer__company__info__item:not(:last-child)::after {
   content: "";
@@ -510,12 +485,6 @@ button {
 }
 .footer__company__contact__item {
   white-space: nowrap;
-}
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  font-size: 11px;
 }
 .footer__company__contact__item:not(:last-child)::after {
   content: "";
