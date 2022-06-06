@@ -1304,7 +1304,7 @@ button {
   border-bottom: 1px solid #dfe6e8;
 }
 
-.header__nav__item:nth-child(4)::after {
+.header__nav__item:nth-child(4).is-selected::after {
   content: "";
   display: block;
   width: 100%;
@@ -1342,9 +1342,16 @@ button {
   width: 63.125rem;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+}
+@media (max-width: 1023px) {
+  .today-section {
+    width: 90%;
+  }
 }
 .today-section h3 {
-  margin-top: 20px;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 .today-section__form {
   display: flex;
@@ -1377,6 +1384,11 @@ button {
 .today-section__input::placeholder {
   color: #cccccc;
 }
+@media (max-width: 1023px) {
+  .today-section__input {
+    width: 100%;
+  }
+}
 .today-section__button {
   font-size: 0.875rem;
   padding-top: 0.625rem;
@@ -1387,10 +1399,19 @@ button {
   width: 140px;
   text-align: center;
 }
+.today-section__card__wrap {
+  position: relative;
+  width: 100%;
+  height: 425px;
+  overflow: hidden;
+}
 .today-section__card__list {
   display: flex;
   gap: 0.875rem;
-  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
 }
 .today-section__card__item {
   border: 1px solid #dfe6e8;
@@ -1411,10 +1432,12 @@ button {
   display: block;
   font-size: 0.875rem;
   color: #333333;
-  margin-bottom: 0.625rem;
-  height: 3.75rem;
+  margin-bottom: 0;
+  height: auto;
   width: 12.5rem;
   line-height: 1.25rem;
+  min-height: 36px;
+  margin-bottom: 2.125rem;
 }
 .today-section__card__title:hover {
   text-decoration: underline;
@@ -1423,6 +1446,7 @@ button {
   font-size: 0.75rem;
   color: #333333;
   position: relative;
+  margin-top: 20px;
 }
 .today-section__card__dj:hover {
   text-decoration: underline;
@@ -1540,9 +1564,20 @@ button {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
+@media (max-width: 1023px) {
+  .recommend-wrapper .recommend {
+    text-align: center;
+    width: 100%;
+  }
+}
 .recommend-wrapper .recommend__logo {
   margin-left: 3.125rem;
   position: relative;
+}
+@media (max-width: 1023px) {
+  .recommend-wrapper .recommend__logo {
+    display: none;
+  }
 }
 .recommend-wrapper .recommend__img {
   border-radius: 50%;
@@ -1554,6 +1589,17 @@ button {
 }
 .recommend-wrapper .recommend__right {
   margin-left: 3.125rem;
+}
+@media (max-width: 1023px) {
+  .recommend-wrapper .recommend__right {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 1023px) {
+  .recommend-wrapper .recommend__right {
+    text-align: center;
+  }
 }
 .recommend-wrapper .recommend__right__title {
   margin-top: 0.9375rem;
@@ -1605,6 +1651,11 @@ button {
   gap: 0.625rem;
   align-items: center;
 }
+@media (max-width: 1023px) {
+  .recommend-wrapper .recommend__people {
+    justify-content: center;
+  }
+}
 
 .dj-list__tag {
   width: 63.125rem;
@@ -1636,6 +1687,24 @@ button {
 .dj-list__tag__link:hover {
   border: 1px solid #666666;
 }
+@media (max-width: 1023px) {
+  .dj-list__tag {
+    width: 100%;
+  }
+  .dj-list__tag__title {
+    margin-top: 1.25rem;
+    margin-right: 0.625rem;
+    padding-left: 1.25rem;
+    white-space: nowrap;
+  }
+  .dj-list__tag__list {
+    margin-left: 0;
+    flex-wrap: wrap;
+  }
+  .dj-list__tag__item {
+    margin-top: 1.25rem;
+  }
+}
 .dj-list__hiphop {
   width: 63.125rem;
   margin-left: auto;
@@ -1643,22 +1712,50 @@ button {
   font-size: 1.125rem;
   font-weight: 400;
 }
+@media (max-width: 1023px) {
+  .dj-list__hiphop {
+    padding-left: 1.25rem;
+  }
+}
 .dj-list__hiphop__group {
   width: 63.125rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.25rem;
 }
+@media (max-width: 1023px) {
+  .dj-list__hiphop__group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem;
+  }
+}
 .dj-list__hiphop__list {
   display: flex;
   gap: 1.25rem;
 }
+@media (max-width: 1023px) {
+  .dj-list__hiphop__list {
+    flex-flow: wrap;
+  }
+}
 .dj-list__hiphop__item {
   border: 1px solid #dfe6e8;
+}
+@media (max-width: 1023px) {
+  .dj-list__hiphop__item {
+    width: calc(50% - 0.625rem);
+  }
 }
 .dj-list__hiphop__img {
   width: 100%;
   height: 15rem;
+}
+@media (max-width: 1023px) {
+  .dj-list__hiphop__img {
+    height: auto;
+  }
 }
 .dj-list__hiphop__desc {
   border-top: 1px solid #dfe6e8;
@@ -1667,6 +1764,11 @@ button {
   padding-right: 1.25rem;
   padding-top: 1.5625rem;
   padding-bottom: 1.5625rem;
+}
+@media (max-width: 1023px) {
+  .dj-list__hiphop__desc {
+    text-align: center;
+  }
 }
 .dj-list__hiphop__title {
   display: block;
@@ -1680,6 +1782,12 @@ button {
 .dj-list__hiphop__title:hover {
   text-decoration: underline;
 }
+@media (max-width: 1023px) {
+  .dj-list__hiphop__title {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
 .dj-list__hiphop__dj {
   font-size: 0.75rem;
   color: #333333;
@@ -1687,6 +1795,11 @@ button {
 }
 .dj-list__hiphop__dj:hover {
   text-decoration: underline;
+}
+@media (max-width: 1023px) {
+  .dj-list__hiphop__dj {
+    font-size: 0.875rem;
+  }
 }
 .dj-list__hiphop__info {
   margin-bottom: 0.625rem;
@@ -1784,22 +1897,50 @@ button {
   font-weight: 400;
   margin-top: 2.5rem;
 }
+@media (max-width: 1023px) {
+  .dj-list__rock {
+    padding-left: 1.25rem;
+  }
+}
 .dj-list__rock__group {
   width: 63.125rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.25rem;
 }
+@media (max-width: 1023px) {
+  .dj-list__rock__group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem;
+  }
+}
 .dj-list__rock__list {
   display: flex;
   gap: 1.25rem;
 }
+@media (max-width: 1023px) {
+  .dj-list__rock__list {
+    flex-flow: wrap;
+  }
+}
 .dj-list__rock__item {
   border: 1px solid #dfe6e8;
+}
+@media (max-width: 1023px) {
+  .dj-list__rock__item {
+    width: calc(50% - 0.625rem);
+  }
 }
 .dj-list__rock__img {
   width: 100%;
   height: 15rem;
+}
+@media (max-width: 1023px) {
+  .dj-list__rock__img {
+    height: auto;
+  }
 }
 .dj-list__rock__desc {
   border-top: 1px solid #dfe6e8;
@@ -1808,6 +1949,11 @@ button {
   padding-right: 1.25rem;
   padding-top: 1.5625rem;
   padding-bottom: 1.5625rem;
+}
+@media (max-width: 1023px) {
+  .dj-list__rock__desc {
+    text-align: center;
+  }
 }
 .dj-list__rock__title {
   display: block;
@@ -1821,6 +1967,12 @@ button {
 .dj-list__rock__title:hover {
   text-decoration: underline;
 }
+@media (max-width: 1023px) {
+  .dj-list__rock__title {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
 .dj-list__rock__dj {
   font-size: 0.75rem;
   color: #333333;
@@ -1828,6 +1980,11 @@ button {
 }
 .dj-list__rock__dj:hover {
   text-decoration: underline;
+}
+@media (max-width: 1023px) {
+  .dj-list__rock__dj {
+    font-size: 0.875rem;
+  }
 }
 .dj-list__rock__info {
   margin-bottom: 0.625rem;
@@ -1925,22 +2082,50 @@ button {
   font-weight: 400;
   margin-top: 2.5rem;
 }
+@media (max-width: 1023px) {
+  .dj-list__boring {
+    padding-left: 1.25rem;
+  }
+}
 .dj-list__boring__group {
   width: 63.125rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.25rem;
 }
+@media (max-width: 1023px) {
+  .dj-list__boring__group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem;
+  }
+}
 .dj-list__boring__list {
   display: flex;
   gap: 1.25rem;
 }
+@media (max-width: 1023px) {
+  .dj-list__boring__list {
+    flex-flow: wrap;
+  }
+}
 .dj-list__boring__item {
   border: 1px solid #dfe6e8;
+}
+@media (max-width: 1023px) {
+  .dj-list__boring__item {
+    width: calc(50% - 0.625rem);
+  }
 }
 .dj-list__boring__img {
   width: 100%;
   height: 15rem;
+}
+@media (max-width: 1023px) {
+  .dj-list__boring__img {
+    height: auto;
+  }
 }
 .dj-list__boring__desc {
   border-top: 1px solid #dfe6e8;
@@ -1949,6 +2134,11 @@ button {
   padding-right: 1.25rem;
   padding-top: 1.5625rem;
   padding-bottom: 1.5625rem;
+}
+@media (max-width: 1023px) {
+  .dj-list__boring__desc {
+    text-align: center;
+  }
 }
 .dj-list__boring__title {
   display: block;
@@ -1962,6 +2152,12 @@ button {
 .dj-list__boring__title:hover {
   text-decoration: underline;
 }
+@media (max-width: 1023px) {
+  .dj-list__boring__title {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
 .dj-list__boring__dj {
   font-size: 0.75rem;
   color: #333333;
@@ -1969,6 +2165,11 @@ button {
 }
 .dj-list__boring__dj:hover {
   text-decoration: underline;
+}
+@media (max-width: 1023px) {
+  .dj-list__boring__dj {
+    font-size: 0.875rem;
+  }
 }
 .dj-list__boring__info {
   margin-bottom: 0.625rem;
@@ -2066,6 +2267,11 @@ button {
   font-weight: 400;
   margin-top: 2.5rem;
 }
+@media (max-width: 1023px) {
+  .dj-list__summer {
+    padding-left: 1.25rem;
+  }
+}
 .dj-list__summer__group {
   width: 63.125rem;
   margin-left: auto;
@@ -2073,16 +2279,39 @@ button {
   margin-top: 1.25rem;
   margin-bottom: 8.125rem;
 }
+@media (max-width: 1023px) {
+  .dj-list__summer__group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem;
+  }
+}
 .dj-list__summer__list {
   display: flex;
   gap: 1.25rem;
 }
+@media (max-width: 1023px) {
+  .dj-list__summer__list {
+    flex-flow: wrap;
+  }
+}
 .dj-list__summer__item {
   border: 1px solid #dfe6e8;
+}
+@media (max-width: 1023px) {
+  .dj-list__summer__item {
+    width: calc(50% - 0.625rem);
+  }
 }
 .dj-list__summer__img {
   width: 100%;
   height: 15rem;
+}
+@media (max-width: 1023px) {
+  .dj-list__summer__img {
+    height: auto;
+  }
 }
 .dj-list__summer__desc {
   border-top: 1px solid #dfe6e8;
@@ -2091,6 +2320,11 @@ button {
   padding-right: 1.25rem;
   padding-top: 1.5625rem;
   padding-bottom: 1.5625rem;
+}
+@media (max-width: 1023px) {
+  .dj-list__summer__desc {
+    text-align: center;
+  }
 }
 .dj-list__summer__title {
   display: block;
@@ -2104,6 +2338,12 @@ button {
 .dj-list__summer__title:hover {
   text-decoration: underline;
 }
+@media (max-width: 1023px) {
+  .dj-list__summer__title {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
 .dj-list__summer__dj {
   font-size: 0.75rem;
   color: #333333;
@@ -2111,6 +2351,11 @@ button {
 }
 .dj-list__summer__dj:hover {
   text-decoration: underline;
+}
+@media (max-width: 1023px) {
+  .dj-list__summer__dj {
+    font-size: 0.875rem;
+  }
 }
 .dj-list__summer__info {
   margin-bottom: 0.625rem;
