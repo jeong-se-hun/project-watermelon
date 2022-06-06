@@ -1,0 +1,236 @@
+.container {
+  border-top: 3px solid $primary-logo-color;
+}
+
+.skip-nav {
+  display: none;
+}
+
+.notice-bar {
+  width: 100%;
+  border-bottom: 1px solid $borderLightGray;
+
+  &__list {
+    display: flex;
+    @include autoMargin;
+    width: rem(1010px);
+    color: $light-gray;
+    justify-content: flex-end;
+    @include paddingY(4px);
+  }
+
+  &__item {
+    &:first-child a {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        background: url("../../assets/images/icon-ticket.svg");
+        width: rem(20px);
+        height: rem(20px);
+        left: rem(-10px);
+        top: 0;
+      }
+    }
+
+    &:nth-child(2) a {
+      position: relative;
+      &::before {
+        @include contentBorderLeft;
+      }
+    }
+    &:last-child a {
+      padding-left: 0;
+    }
+
+    &:nth-child(3) a {
+      position: relative;
+      &::before {
+        @include contentBorderLeft;
+      }
+    }
+
+    &:nth-child(4) a {
+      position: relative;
+      &::before {
+        @include contentBorderLeft;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: rem(6px) rem(14px);
+    font-size: rem(12px);
+    font-weight: 400;
+
+    &:hover {
+      color: $primary-font;
+    }
+  }
+
+  .order {
+    order: -1;
+    flex-grow: 1;
+    padding: 0;
+  }
+}
+// Header
+.header {
+  @include autoMargin;
+  width: rem(1010px);
+  display: flex;
+  height: rem(90px);
+  margin-top: 10px;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    &__input {
+      width: rem(320px);
+      @include paddingY(10px);
+      @include paddingX(20px);
+      border: 2px solid $primary-logo-color;
+      border-radius: rem(30px);
+      margin-left: rem(20px);
+
+      &::placeholder {
+        padding-left: rem(5px);
+        font-size: rem(12px);
+      }
+    }
+
+    fieldset {
+      position: relative;
+    }
+
+    &__button {
+      position: absolute;
+      width: rem(24px);
+      height: rem(24px);
+      background: url("../../assets/images/icon-search.svg");
+      right: rem(20px);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__rising {
+    &__group {
+      display: flex;
+      align-items: center;
+      margin-left: rem(15px);
+      font-size: rem(12px);
+      color: $primary-font;
+      position: relative;
+      width: rem(220px);
+    }
+    &__text {
+      color: $white;
+      background: $primary-logo-color;
+      float: left;
+      border-radius: 10px;
+      padding: rem(1px) rem(6px);
+      font-size: rem(11);
+    }
+
+    &__list {
+      display: inline-block;
+      padding: rem(15px);
+      position: absolute;
+      top: 25%;
+      right: rem(12px);
+      height: rem(30px);
+      overflow: hidden;
+      // 감추기
+
+      &:hover {
+        overflow: visible;
+        height: fit-content;
+        border: 1px solid $borderDarkGray;
+        background: $white;
+      }
+    }
+
+    &__item {
+      margin-top: rem(10px);
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &__number {
+      margin-right: rem(10px);
+    }
+
+    &__info {
+      margin-right: rem(20px);
+      &::after {
+        content: "";
+        position: absolute;
+        width: rem(10px);
+        height: rem(10px);
+        background: green;
+        right: rem(10px);
+      }
+    }
+  }
+
+  &__ad__image {
+    flex-grow: 1;
+    background: url("../../assets/images/header-ad-image.png") no-repeat 100%
+      100% / 90%;
+  }
+
+  &__nav {
+    margin-top: rem(10px);
+    padding-bottom: rem(10px);
+    border-bottom: 1px solid $borderDarkGray;
+    &__list {
+      @include autoMargin;
+
+      display: flex;
+      width: rem(1010px);
+      justify-content: space-between;
+      font-weight: 500;
+
+      :first-child {
+        padding-left: 0;
+      }
+
+      :last-child {
+        justify-content: flex-end;
+        width: rem(280px);
+        text-align: end;
+
+        a {
+          color: $light-gray;
+        }
+      }
+    }
+
+    &__item {
+      padding: rem(5px) rem(10px);
+    }
+
+    &__link {
+      &:hover {
+        color: $primary-logo-color;
+      }
+    }
+  }
+
+  @include tab {
+    background: yellow;
+  }
+
+  @include mobile {
+    background: red;
+  }
+}

@@ -4,82 +4,148 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>WaterMelon</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./assets/images/favicon.ico"
+      id="favicon"
+    />
   </head>
   <body>
     <div class="container">
       <div class="skip-nav">
         <a href="">본문</a>
       </div>
+
+      <!-- notice-bar -->
+      <div class="notice-bar">
+        <ul class="notice-bar__list">
+          <li class="notice-bar__item">
+            <a href="#" class="notice-bar__link">이용권구매</a>
+          </li>
+          <li class="notice-bar__item">
+            <a href="#" class="notice-bar__link">멜론라운지</a>
+          </li>
+          <li class="notice-bar__item">
+            <a href="#" class="notice-bar__link">이벤트</a>
+          </li>
+          <li class="notice-bar__item">
+            <a href="#" class="notice-bar__link">공지사항</a>
+          </li>
+          <li class="notice-bar__item order">
+            <a href="#" class="notice-bar__link">멜론 티켓</a>
+          </li>
+        </ul>
+      </div>
+
       <!-- Header -->
       <header class="header">
         <h1 class="header__logo">
           <a href="#">
-            <img src="#" alt="melon" />
+            <img src="./assets/images/melon-01.svg" alt="melon" />
           </a>
         </h1>
 
         <!-- main form -->
-        <form action="" class="header__search-form">
+        <form action="" class="header__search">
           <fieldset>
             <legend>검색폼</legend>
             <label for="" class="header__search-label sr-only"></label>
-            <input type="text" class="header__search__input" />
+            <input
+              type="text"
+              class="header__search__input"
+              placeholder="WSG워너비 12명의 첫 하모니 `어마어마해`"
+            />
             <a href="#" role="button" class="header__search__button"></a>
           </fieldset>
         </form>
 
         <!-- rising-group -->
         <div class="header__rising__group">
-          <span></span>
+          <span class="header__rising__text">급상승</span>
           <ul class="header__rising__list">
             <li class="header__rising__item">
-              <a href="#" class="header__rising__info"></a>
-              <span class="header__rising__number"></span>
+              <span class="header__rising__number">1</span>
+              <a href="#" class="header__rising__info">왜 오수재인가 OST</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">2</span>
+              <a href="#" class="header__rising__info">Post Malone</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">3</span>
+              <a href="#" class="header__rising__info">세븐틴</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">4</span>
+              <a href="#" class="header__rising__info">별똥별 OST</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">5</span>
+              <a href="#" class="header__rising__info">NCT DREAM</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">6</span>
+              <a href="#" class="header__rising__info">I Like You</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">7</span>
+              <a href="#" class="header__rising__info">혁오 (HYUKOH)</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">8</span>
+              <a href="#" class="header__rising__info">먼데이 키즈</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">9</span>
+              <a href="#" class="header__rising__info">출국</a>
+            </li>
+            <li class="header__rising__item">
+              <span class="header__rising__number">10</span>
+              <a href="#" class="header__rising__info">브라운아이드걸스</a>
             </li>
           </ul>
         </div>
-
-        <!-- header-nav -->
-        <nav class="header__nav">
-          <ul class="header__nav__list">
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">1</a>
-            </li>
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">2</a>
-            </li>
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">3</a>
-            </li>
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">4</a>
-            </li>
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">5</a>
-            </li>
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">6</a>
-            </li>
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">7</a>
-            </li>
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">8</a>
-            </li>
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">9</a>
-            </li>
-            <li class="header__nav_item">
-              <a href="#" class="heaer__nav__link">10</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header__ad__image">
-          <picture>선택사항</picture>
-        </div>
+        <div class="header__ad__image"></div>
       </header>
+
+      <!-- header-nav -->
+      <nav class="header__nav">
+        <ul class="header__nav__list">
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">멜론차트</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">최신음악</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">장르음악</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">멜론DJ</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">멜론TV</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">스타포스트</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">매거진</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">뮤직어워드</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">어학</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="#" class="header__nav__link">마이뮤직</a>
+          </li>
+        </ul>
+      </nav>
 
       <!-- 메인 -->
       <section class="home__new__section">
@@ -122,10 +188,17 @@
           <!-- 컨텐츠 리스트 -->
           <ul class="home__hot__hot-issue-lists" aria-label="인기 컨텐츠">
             <!-- 1페이지 -->
-            <li class="home__hot__hot-issue-list list1 is-active">
+            <li
+              class="home__hot__hot-issue-list list1 is-active"
+              aria-label="인기 컨텐츠 1 페이지"
+            >
               <div class="home__hot__hot-issue-upper-group">
                 <div class="home__hot__hot-issue-video-area">
-                  <a href="#" class="home__hot__hot-issue-video-link">
+                  <a
+                    href="#"
+                    class="home__hot__hot-issue-video-link"
+                    aria-label="아이유, 유희열이 안내하는 top 100 "
+                  >
                     <img
                       src="/assets/images/hotIssueThumbnail.jpg"
                       alt="핫이슈 비디오 썸네일"
@@ -136,12 +209,15 @@
                       세상의 모든 TOP100 (FULL ver.)
                     </span>
                     <span class="home__hot__hot-issue-video-views"
-                      >조회 3,699
+                      >조회 4,008
                     </span>
                   </a>
                 </div>
                 <ul class="home__hot__news-list">
-                  <li class="home__hot__news-item">
+                  <li
+                    class="home__hot__news-item"
+                    aria-label="인기 뉴스 소식입니다."
+                  >
                     <a class="home__hot__news-item__thumbnail" href="#">
                       <img
                         src="/assets/images/dataLap.jpg"
@@ -433,18 +509,844 @@
 
           <!-- list 이동 버튼 -->
           <div class="home__hot__hot-issue-button-area">
-            <span class="home__hot__hot-issue-page-num">1/2</span>
-            <div class="home__hot__hot-issue-button-box">
-              <button class="btn home__hot__hot-issue-prev"></button>
-              <button class="btn home__hot__hot-issue-next"></button>
+            <span class="home__hot__hot-issue-page-num"
+              ><span class="home__hot__hot-issue-page-num-current-page">1</span
+              >/2</span
+            >
+            <div
+              class="home__hot__hot-issue-button-box"
+              role="group"
+              aria-label="인기 컨텐츠 전환 버튼입니다."
+            >
+              <button
+                type="button"
+                class="btn home__hot__hot-issue-prev"
+                aria-label="이전 "
+              ></button>
+              <button
+                type="button"
+                class="btn home__hot__hot-issue-next"
+                aria-label="다음 "
+              ></button>
             </div>
           </div>
         </div>
         <!-- 멜론차트 -->
-        <div class="home__hot__section__melon-chart"></div>
+        <div class="home__hot__melon-chart">
+          <div class="home__hot__melon-chart__headline">
+            <h3 class="home__hot__melon-chart__headline__title" tabindex="0">
+              멜론 차트
+            </h3>
+            <span class="home__hot__melon-chart__headline__time" tabindex="0"
+              >2022.06.05 기준
+            </span>
+          </div>
+
+          <div class="home__hot__melon-chart__group">
+            <div class="home__hot__melon-chart__tab-box">
+              <button
+                class="home__hot__melon-chart__tab-box__tab top is-active"
+              >
+                TOP100
+              </button>
+              <button class="home__hot__melon-chart__tab-box__tab pop">
+                POP
+              </button>
+              <button class="home__hot__melon-chart__tab-box__tab artist">
+                아티스트
+              </button>
+            </div>
+
+            <ul class="home__hot__melon-chart__lists">
+              <!-- top 100 -->
+              <li class="home__hot__melon-chart__list-area top is-active">
+                <ul class="home__hot__melon-chart__list">
+                  <li
+                    class="home__hot__melon-chart__item is-active"
+                    tabindex="0"
+                    aria-label="1위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">1</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="싸이 앨범 뎃뎃 이미지"
+                      >
+                        <img
+                          src="./assets/images/melonChart1.jpg"
+                          alt="that that 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle"
+                          >That That (prod. & feat. SUGA of BTS)</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >싸이 (PSY)</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="home__hot__melon-chart__item"
+                    tabindex="0"
+                    aria-label="2위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">2</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="(여자)아이들 앨범 TOMBOY 이미지"
+                      >
+                        <img
+                          src="./assets/images/melonChart2.jpg"
+                          alt="TOMBOY 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle"
+                          >TOMBOY</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >(여자)아이들</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="home__hot__melon-chart__item"
+                    tabindex="0"
+                    aria-label="3위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">3</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="IVE (아이브) 앨범 LOVE DIVE 이미지"
+                      >
+                        <img
+                          src="./assets/images/melonChart3.jpg"
+                          alt="IVE (아이브) 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle"
+                          >LOVE DIVE</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >IVE (아이브)</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="home__hot__melon-chart__item"
+                    tabindex="0"
+                    aria-label="4위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">4</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="멜로망스 앨범 사랑인가 봐 이미지"
+                      >
+                        <img
+                          src="./assets/images/melonChart4.jpg"
+                          alt="멜로망스 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle"
+                          >사랑인가 봐</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >멜로망스</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="home__hot__melon-chart__item"
+                    tabindex="0"
+                    aria-label="5위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">5</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="BIGBANG (빅뱅) 앨범 봄여름가을겨울 (Still Life) 이미지"
+                      >
+                        <img
+                          src="./assets/images/melonChart5.jpg"
+                          alt="BIGBANG (빅뱅) 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle"
+                          >봄여름가을겨울 (Still Life)</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >BIGBANG (빅뱅)</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="home__hot__melon-chart__item"
+                    tabindex="0"
+                    aria-label="6위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">6</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="BIG Naughty (서동현) 앨범 정이라고 하자 (Feat. 10CM) 이미지"
+                      >
+                        <img
+                          src="./assets/images/melonChart6.jpg"
+                          alt="BIG Naughty (서동현) 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle"
+                          >정이라고 하자 (Feat. 10CM)</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >BIG Naughty (서동현)</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="home__hot__melon-chart__item"
+                    tabindex="0"
+                    aria-label="7위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">7</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="경서 앨범 나의 X에게 이미지"
+                      >
+                        <img
+                          src="./assets/images/melonChart7.jpg"
+                          alt="경서 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle"
+                          >나의 X에게</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >경서</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="home__hot__melon-chart__item"
+                    tabindex="0"
+                    aria-label="8위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">8</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="BE'O (비오) 앨범 LOVE me 이미지"
+                      >
+                        <img
+                          src="./assets/images/melonChart8.jpg"
+                          alt="BE'O (비오) 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle"
+                          >LOVE me</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >BE'O (비오)</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="home__hot__melon-chart__item"
+                    tabindex="0"
+                    aria-label="9위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">9</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="LE SSERAFIM (르세라핌) 앨범 FEARLESS 이미지"
+                      >
+                        <img
+                          src="./assets/images/melonChart9.jpg"
+                          alt="LE SSERAFIM (르세라핌) 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle"
+                          >FEARLESS</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >LE SSERAFIM (르세라핌)</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="home__hot__melon-chart__item"
+                    tabindex="0"
+                    aria-label="10위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">10</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="Red Velvet (레드벨벳) 앨범 Feel My Rhythm 이미지"
+                      >
+                        <img
+                          src="./assets/images/melonChart10.jpg"
+                          alt="Red Velvet (레드벨벳) 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle"
+                          >Feel My Rhythm</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >Red Velvet (레드벨벳)</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- pop -->
+              <li class="home__hot__melon-chart__list-area pop">
+                <ul class="home__hot__melon-chart__list">
+                  <li
+                    class="home__hot__melon-chart__item is-active"
+                    tabindex="0"
+                    aria-label="1위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">1</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="The Kid LAROI 앨범 STAY 이미지"
+                      >
+                        <img
+                          src="./assets/images/popChart1.jpg"
+                          alt="STAY 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle"
+                          >STAY</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >The Kid LAROI</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="home__hot__melon-chart__item"
+                    tabindex="0"
+                    aria-label="2위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">2</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="Charlie Puth 앨범 That's Hilarious 이미지"
+                      >
+                        <img
+                          src="./assets/images/popChart2.jpg"
+                          alt="That's Hilarious 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle"
+                          >That's Hilarious</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >Charlie Puth</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="home__hot__melon-chart__item"
+                    tabindex="0"
+                    aria-label="3위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">3</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="Justin Bieber 앨범 Off My Face 이미지"
+                      >
+                        <img
+                          src="./assets/images/popChart3.jpg"
+                          alt="Off My Face 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle"
+                          >Off My Face</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >Justin Bieber</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="home__hot__melon-chart__item"
+                    tabindex="0"
+                    aria-label="4위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">4</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="Ed Sheeran 앨범 Bad Habits 이미지"
+                      >
+                        <img
+                          src="./assets/images/popChart4.jpg"
+                          alt="Bad Habits 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle"
+                          >Bad Habits</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >Ed Sheeran</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="home__hot__melon-chart__item"
+                    tabindex="0"
+                    aria-label="5위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">5</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="GAYLE 앨범 abcdefu 이미지"
+                      >
+                        <img
+                          src="./assets/images/popChart5.jpg"
+                          alt="abcdefu 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle">
+                          abcdefu</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >GAYLE</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="home__hot__melon-chart__item"
+                    tabindex="0"
+                    aria-label="6위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">6</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="Coldplay, 방탄소년단 앨범 My Universe 이미지"
+                      >
+                        <img
+                          src="./assets/images/popChart6.jpg"
+                          alt="My Universe 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle">
+                          My Universe</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >Coldplay, 방탄소년단</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="home__hot__melon-chart__item"
+                    tabindex="0"
+                    aria-label="7위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">7</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="Mina Okabe 앨범 Every Second 이미지"
+                      >
+                        <img
+                          src="./assets/images/popChart7.jpg"
+                          alt="Every Second 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle">
+                          Every Second</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >Mina Okabe</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="home__hot__melon-chart__item"
+                    tabindex="0"
+                    aria-label="8위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">8</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="Kelly Clarkson 앨범 Stronger (What Doesn't Kill You) 이미지"
+                      >
+                        <img
+                          src="./assets/images/popChart8.jpg"
+                          alt="Stronger (What Doesn't Kill You) 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle">
+                          Stronger (What Doesn't Kill You)</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >Kelly Clarkson</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="home__hot__melon-chart__item"
+                    tabindex="0"
+                    aria-label="9위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">9</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="Anne-Marie 앨범 2002 이미지"
+                      >
+                        <img
+                          src="./assets/images/popChart9.jpg"
+                          alt="2002 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle">
+                          2002</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >Anne-Marie</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="home__hot__melon-chart__item"
+                    tabindex="0"
+                    aria-label="10위곡"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">10</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="Peder Elias 앨범 Loving You Girl (Feat. Hkeem) 이미지"
+                      >
+                        <img
+                          src="./assets/images/popChart10.jpg"
+                          alt="Loving You Girl (Feat. Hkeem) 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__songTitle">
+                          Loving You Girl (Feat. Hkeem)</a
+                        >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >Peder Elias</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- artist -->
+              <li class="home__hot__melon-chart__list-area artist">
+                <ul class="home__hot__melon-chart__list">
+                  <li
+                    class="home__hot__melon-chart__item is-active"
+                    tabindex="0"
+                    aria-label="아티스트 랭킹 1위"
+                  >
+                    <span class="home__hot__melon-chart__item__ranking">
+                      <span class="rank">1</span>
+                      <span class="changesRankings">0</span>
+                    </span>
+                    <div class="home__hot__melon-chart__item__ranking-info">
+                      <a
+                        class="home__hot__melon-chart__item__ranking-info__thumbnail"
+                        href="#"
+                        aria-label="아이유 이미지"
+                      >
+                        <img
+                          src="./assets/images/popChart1.jpg"
+                          alt="STAY 앨범"
+                        />
+                      </a>
+                      <div
+                        class="home__hot__melon-chart__item__ranking-info__description"
+                      >
+                        <a href="#" class="home__hot__melon-chart__singer"
+                          >아이유</a
+                        >
+                        <a
+                          href="#"
+                          aria-label="아티스트 즐겨찾기 버튼입니다."
+                          class="home__hot__melon-chart__favorites"
+                        ></a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <a class="home__hot__melon-chart__more" href="#">더보기 </a>
+          </div>
+        </div>
       </section>
 
-      <footer class="footer"></footer>
+      <!-- footer -->
+      <footer class="footer">
+        <div class="footer__group">
+          <div class="footer__extra">
+            <ul class="footer__extra__list">
+              <li class="footer__extra__item">
+                <a href="" class="footer__extra__item-link">멜론6.0둘러보기</a>
+              </li>
+              <li class="footer__extra__item">
+                <a href="/" class="footer__extra__item-link">멜론스튜디오</a>
+              </li>
+              <li class="footer__extra__item">
+                <a href="/" class="footer__extra__item-link">Windows플레이어</a>
+              </li>
+              <li class="footer__extra__item">
+                <a href="/" class="footer__extra__item-link">iPad</a>
+              </li>
+              <li class="footer__extra__item">
+                <a href="/" class="footer__extra__item-link">고객센터</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__box">
+            <ul class="footer__service__list">
+              <li class="footer__service__item">
+                <a href="/" class="footer__service__item-link">이용약관</a>
+              </li>
+              <li class="footer__service__item">
+                <a href="/" class="footer__service__item-link"
+                  >위치기반서비스 이용약관</a
+                >
+              </li>
+              <li class="footer__service__item">
+                <a href="/" class="footer__service__item-link"
+                  >개인정보처리방침</a
+                >
+              </li>
+              <li class="footer__service__item">
+                <a href="/" class="footer__service__item-link"
+                  >청소년보호정책</a
+                >
+              </li>
+              <li class="footer__service__item">
+                <a href="/" class="footer__service__item-link"
+                  >제휴/프로모션문의</a
+                >
+              </li>
+              <li class="footer__service__item">
+                <a href="/" class="footer__service__item-link"
+                  >이메일주소무단수집거부</a
+                >
+              </li>
+              <li class="footer__service__item">
+                <a href="/" class="footer__service__item-link">파트너센터</a>
+              </li>
+            </ul>
+            <div class="footer__company">
+              <ul class="footer__company__info__list">
+                <li class="footer__company__info__item">
+                  (주)카카오엔터테인먼트 경기도 성남시 분당구 판교역로 221
+                </li>
+                <li class="footer__company__info__item">
+                  대표이사<span aria-hidden="true">:</span>이진수,김성수
+                </li>
+                <li class="footer__company__info__item">
+                  사업자등록번호<span aria-hidden="true">:</span>220-88-02594
+                </li>
+                <li class="footer__company__info__item">
+                  통신판매업신고번호<span aria-hidden="true">:</span
+                  >2018-성남분당B-0004 사업자정보확인
+                </li>
+              </ul>
+              <ul class="footer__company__contact">
+                <li class="footer__company__contact__item">
+                  문의전화<span aria-hidden="true">:</span>1566-7727(평일
+                  09:00-18:00, 유료)
+                </li>
+                <li class="footer__company__contact__item">
+                  이메일<span aria-hidden="true">:</span
+                  >melone_info@kakaoent.com
+                </li>
+                <li class="footer__company__contact__item">
+                  호스팅서비스사업자<span aria-hidden="true">:</span
+                  >(주)카카오엔터테인먼트
+                </li>
+                <li class="footer__company__contact__item">
+                  ⓒKakao Entertainment Corp.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
