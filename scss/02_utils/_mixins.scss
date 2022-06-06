@@ -156,3 +156,151 @@
   height: $h;
   transform: $t;
 }
+
+// dj card style
+@mixin djCardList($d: flex, $g: rem(20px)) {
+  display: $d;
+  gap: $g;
+}
+
+@mixin djCardImg($w: 100%, $h: rem(240px)) {
+  width: $w;
+  height: $h;
+}
+
+@mixin djCardDesc($bt: 1px solid $borderLightGray, $pos: relative) {
+  border-top: $bt;
+  position: $pos;
+}
+
+@mixin djCardDj($fz: rem(12px), $c: $primary-font, $pos: relative) {
+  font-size: $fz;
+  color: $c;
+  position: $pos;
+}
+
+@mixin djCardTitle(
+  $dp: block,
+  $fz: rem(14px),
+  $c: $primary-font,
+  $mb: rem(10px),
+  $h: rem(60px),
+  $w: rem(200px),
+  $lh: rem(20px)
+) {
+  display: $dp;
+  font-size: $fz;
+  color: $c;
+  margin-bottom: $mb;
+  height: $h;
+  width: $w;
+  line-height: $lh;
+}
+
+@mixin djCardLike(
+  $c: "",
+  $dp: inline-block,
+  $bg:
+    url("https://cdnimg.melon.co.kr/resource/image/web/common/bullet_icons_sprite_20201112.png")
+    no-repeat -69px -14px,
+  $w: rem(14px),
+  $h: rem(12px),
+  $mr: rem(7px),
+  $va: text-top
+) {
+  content: "";
+  display: $dp;
+  background: $bg;
+  width: $w;
+  height: $h;
+  margin-right: $mr;
+  vertical-align: $va;
+}
+
+@mixin djCardHash(
+  $dp: inline-block,
+  $fz: rem(12px),
+  $c: $secondary-font,
+  $b: 1px solid $borderDarkGray,
+  $bdrd: rem(15px),
+  $mr: rem(5px)
+) {
+  display: $dp;
+  font-size: $fz;
+  color: $c;
+  border: $b;
+  border-radius: $bdrd;
+  margin-right: $mr;
+}
+
+@mixin djCardProfile(
+  $dp: block,
+  $w: rem(45px),
+  $h: rem(45px),
+  $bdrd: 50%,
+  $b: 1px solid $borderLightGray,
+  $pos: absolute,
+  $t: rem(-25px),
+  $r: rem(20px)
+) {
+  display: $dp;
+  width: $w;
+  height: $h;
+  border-radius: $bdrd;
+  border: $b;
+  position: $pos;
+  top: $t;
+  right: $r;
+}
+
+@mixin djCardListNum(
+  $fz: rem(12px),
+  $c: $secondary-font,
+  $pos: relative,
+  $ml: rem(12px)
+) {
+  font-size: $fz;
+  color: $c;
+  position: $pos;
+  margin-left: $ml;
+}
+
+@mixin djCardListNumBefore(
+  $cont: "",
+  $dp: block,
+  $bl: 1px solid $secondary-font,
+  $h: rem(10px),
+  $mr: rem(10px),
+  $r: rem(20px),
+  $t: rem(2px),
+  $pos: absolute
+) {
+  content: $cont;
+  display: $dp;
+  border-left: $bl;
+  height: $h;
+  margin-right: $mr;
+  right: $r;
+  top: $t;
+  position: $pos;
+}
+
+@mixin djMark(
+  $c: "",
+  $dp: inline-block,
+  $w: rem(15px),
+  $h: rem(15px),
+  $pos: absolute,
+  $r: rem(-20px),
+  $t: 50%,
+  $trans: translateY(-50%)
+) {
+  content: $c;
+  display: $dp;
+  width: $w;
+  height: $h;
+  position: $pos;
+  right: $r;
+  top: $t;
+  transform: $trans;
+}
