@@ -326,7 +326,7 @@ button {
 .header__nav__link:hover {
   color: #00cd3c;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .header {
     background: yellow;
   }
@@ -558,7 +558,7 @@ button {
   margin: 32px auto 49px;
   flex-flow: row nowrap;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .home__hot__section {
     max-width: 44rem;
     padding: 0 0.9375rem;
@@ -627,7 +627,7 @@ button {
   padding-left: 8px;
   margin-left: 5px;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__hot-issue-video-area .home__hot__hot-issue-video-tex-area strong {
     font-size: 0.75rem;
   }
@@ -651,7 +651,7 @@ button {
   padding-left: 1rem;
   justify-content: space-between;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list {
     width: 100%;
     justify-content: space-around;
@@ -687,7 +687,7 @@ button {
   font-weight: bold;
   font-size: 0.75rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list .home__hot__news-item .home__hot__news-item-info .home__hot__news-item-link .home__hot__news-item-title {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -704,7 +704,7 @@ button {
   line-height: 1.4;
   color: #888888;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list .home__hot__news-item .home__hot__news-item-info .home__hot__news-item-link .home__hot__news-item-description {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -725,7 +725,7 @@ button {
 .home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list .home__hot__news-item .home__hot__news-item-info .home__hot__news-item-ctgry:hover {
   text-decoration: underline;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list .home__hot__news-item .home__hot__news-item-info .home__hot__news-item-c-v-wrap {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -750,7 +750,7 @@ button {
   width: 10.25rem;
   margin-left: 1rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .home__hot__hot-issue-list.list1 .home__hot__magazine-list .home__hot__magazine-itme {
     width: 100%;
     max-width: 10.25rem;
@@ -815,7 +815,7 @@ button {
   display: flex;
   flex-wrap: wrap;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .home__hot__melon-tv-list {
     justify-content: space-around;
   }
@@ -823,7 +823,7 @@ button {
 .home__hot__melon-tv-list .home__hot__melon-tv-itme {
   margin-left: 1rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .home__hot__melon-tv-list .home__hot__melon-tv-itme {
     width: 100%;
     max-width: 13.125rem;
@@ -841,7 +841,7 @@ button {
 .home__hot__melon-tv-list .home__hot__melon-tv-itme:nth-child(n+4) {
   margin-top: 16px;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .home__hot__melon-tv-list .home__hot__melon-tv-itme:nth-child(n+4) {
     margin-top: 5px;
   }
@@ -851,7 +851,7 @@ button {
   width: 13.9375rem;
   height: 9.25rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .home__hot__melon-tv-list .home__hot__melon-tv-itme .home__hot__melon-tv-Thumbnail {
     width: 100%;
     max-width: 12.5rem;
@@ -926,7 +926,7 @@ button {
 .home__hot__melon-chart {
   width: 17.5rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .home__hot__melon-chart {
     display: none;
   }
@@ -1174,7 +1174,7 @@ button {
     margin-right: 0.4375rem;
   }
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .footer__extra__item {
     margin-right: 0.75rem;
   }
@@ -1188,7 +1188,7 @@ button {
 .footer__extra__item-link:hover {
   color: #333333;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .footer__extra__item-link {
     font-size: 0.9375rem;
   }
@@ -1209,7 +1209,7 @@ button {
   font-size: 0.75rem;
   margin-top: 1.625rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .footer__service__list {
     width: 100%;
   }
@@ -1247,7 +1247,7 @@ button {
   margin-left: auto;
   margin-right: auto;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .footer__company__info__list {
     width: 100%;
   }
@@ -1277,7 +1277,7 @@ button {
   margin-right: auto;
   font-size: 11px;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .footer__company__contact {
     width: 100%;
   }
@@ -1440,7 +1440,7 @@ button {
   margin-right: auto;
   position: relative;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .today-section {
     width: 90%;
   }
@@ -1480,7 +1480,7 @@ button {
 .today-section__input::placeholder {
   color: #cccccc;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .today-section__input {
     width: 100%;
   }
@@ -1660,7 +1660,7 @@ button {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .recommend-wrapper .recommend {
     text-align: center;
     width: 100%;
@@ -1670,7 +1670,7 @@ button {
   margin-left: 3.125rem;
   position: relative;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .recommend-wrapper .recommend__logo {
     display: none;
   }
@@ -1686,13 +1686,13 @@ button {
 .recommend-wrapper .recommend__right {
   margin-left: 3.125rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .recommend-wrapper .recommend__right {
     margin-left: auto;
     margin-right: auto;
   }
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .recommend-wrapper .recommend__right {
     text-align: center;
   }
@@ -1747,7 +1747,7 @@ button {
   gap: 0.625rem;
   align-items: center;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .recommend-wrapper .recommend__people {
     justify-content: center;
   }
@@ -1783,7 +1783,7 @@ button {
 .dj-list__tag__link:hover {
   border: 1px solid #666666;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__tag {
     width: 100%;
   }
@@ -1808,7 +1808,7 @@ button {
   font-size: 1.125rem;
   font-weight: 400;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__hiphop {
     padding-left: 1.25rem;
   }
@@ -1819,7 +1819,7 @@ button {
   margin-right: auto;
   margin-top: 1.25rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__hiphop__group {
     width: 100%;
     display: flex;
@@ -1831,7 +1831,7 @@ button {
   display: flex;
   gap: 1.25rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__hiphop__list {
     flex-flow: wrap;
   }
@@ -1839,7 +1839,7 @@ button {
 .dj-list__hiphop__item {
   border: 1px solid #dfe6e8;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__hiphop__item {
     width: calc(50% - 0.625rem);
   }
@@ -1848,7 +1848,7 @@ button {
   width: 100%;
   height: 15rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__hiphop__img {
     height: auto;
   }
@@ -1861,7 +1861,7 @@ button {
   padding-top: 1.5625rem;
   padding-bottom: 1.5625rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__hiphop__desc {
     text-align: center;
   }
@@ -1878,7 +1878,7 @@ button {
 .dj-list__hiphop__title:hover {
   text-decoration: underline;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__hiphop__title {
     width: 100%;
     font-size: 1rem;
@@ -1892,7 +1892,7 @@ button {
 .dj-list__hiphop__dj:hover {
   text-decoration: underline;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__hiphop__dj {
     font-size: 0.875rem;
   }
@@ -1993,7 +1993,7 @@ button {
   font-weight: 400;
   margin-top: 2.5rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__rock {
     padding-left: 1.25rem;
   }
@@ -2004,7 +2004,7 @@ button {
   margin-right: auto;
   margin-top: 1.25rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__rock__group {
     width: 100%;
     display: flex;
@@ -2016,7 +2016,7 @@ button {
   display: flex;
   gap: 1.25rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__rock__list {
     flex-flow: wrap;
   }
@@ -2024,7 +2024,7 @@ button {
 .dj-list__rock__item {
   border: 1px solid #dfe6e8;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__rock__item {
     width: calc(50% - 0.625rem);
   }
@@ -2033,7 +2033,7 @@ button {
   width: 100%;
   height: 15rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__rock__img {
     height: auto;
   }
@@ -2046,7 +2046,7 @@ button {
   padding-top: 1.5625rem;
   padding-bottom: 1.5625rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__rock__desc {
     text-align: center;
   }
@@ -2063,7 +2063,7 @@ button {
 .dj-list__rock__title:hover {
   text-decoration: underline;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__rock__title {
     width: 100%;
     font-size: 1rem;
@@ -2077,7 +2077,7 @@ button {
 .dj-list__rock__dj:hover {
   text-decoration: underline;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__rock__dj {
     font-size: 0.875rem;
   }
@@ -2178,7 +2178,7 @@ button {
   font-weight: 400;
   margin-top: 2.5rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__boring {
     padding-left: 1.25rem;
   }
@@ -2189,7 +2189,7 @@ button {
   margin-right: auto;
   margin-top: 1.25rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__boring__group {
     width: 100%;
     display: flex;
@@ -2201,7 +2201,7 @@ button {
   display: flex;
   gap: 1.25rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__boring__list {
     flex-flow: wrap;
   }
@@ -2209,7 +2209,7 @@ button {
 .dj-list__boring__item {
   border: 1px solid #dfe6e8;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__boring__item {
     width: calc(50% - 0.625rem);
   }
@@ -2218,7 +2218,7 @@ button {
   width: 100%;
   height: 15rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__boring__img {
     height: auto;
   }
@@ -2231,7 +2231,7 @@ button {
   padding-top: 1.5625rem;
   padding-bottom: 1.5625rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__boring__desc {
     text-align: center;
   }
@@ -2248,7 +2248,7 @@ button {
 .dj-list__boring__title:hover {
   text-decoration: underline;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__boring__title {
     width: 100%;
     font-size: 1rem;
@@ -2262,7 +2262,7 @@ button {
 .dj-list__boring__dj:hover {
   text-decoration: underline;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__boring__dj {
     font-size: 0.875rem;
   }
@@ -2363,7 +2363,7 @@ button {
   font-weight: 400;
   margin-top: 2.5rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__summer {
     padding-left: 1.25rem;
   }
@@ -2375,7 +2375,7 @@ button {
   margin-top: 1.25rem;
   margin-bottom: 8.125rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__summer__group {
     width: 100%;
     display: flex;
@@ -2387,7 +2387,7 @@ button {
   display: flex;
   gap: 1.25rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__summer__list {
     flex-flow: wrap;
   }
@@ -2395,7 +2395,7 @@ button {
 .dj-list__summer__item {
   border: 1px solid #dfe6e8;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__summer__item {
     width: calc(50% - 0.625rem);
   }
@@ -2404,7 +2404,7 @@ button {
   width: 100%;
   height: 15rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__summer__img {
     height: auto;
   }
@@ -2417,7 +2417,7 @@ button {
   padding-top: 1.5625rem;
   padding-bottom: 1.5625rem;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__summer__desc {
     text-align: center;
   }
@@ -2434,7 +2434,7 @@ button {
 .dj-list__summer__title:hover {
   text-decoration: underline;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__summer__title {
     width: 100%;
     font-size: 1rem;
@@ -2448,7 +2448,7 @@ button {
 .dj-list__summer__dj:hover {
   text-decoration: underline;
 }
-@media (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__summer__dj {
     font-size: 0.875rem;
   }
@@ -2815,6 +2815,7 @@ button {
   margin-left: auto;
   margin-right: auto;
   padding-top: 2.5rem;
+  width: 100%;
 }
 .chart__main__title-wrapper {
   position: relative;
@@ -2922,13 +2923,25 @@ button {
   border-bottom: 1px solid #dfe6e8;
   height: 5.3125rem;
 }
+@media (max-width: 479px) {
+  .chart__main .chart__main__top100__tbody tr {
+    height: 3.75rem;
+  }
+}
 .chart__main .chart__main__top100__tbody tr td[headers=rank] {
-  padding: 0 1.125rem 0 0.75rem;
   text-align: center;
 }
 .chart__main .chart__main__top100__tbody tr td[headers=sing-album-cover] img {
-  width: 3.75rem;
-  height: 3.75rem;
+  min-width: 60px;
+  height: 60px;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+}
+@media (max-width: 479px) {
+  .chart__main .chart__main__top100__tbody tr td[headers=sing-album-cover] img {
+    min-width: 40px;
+    height: 40px;
+  }
 }
 .chart__main .chart__main__top100__tbody .song__info__wrap {
   display: flex;
@@ -2936,7 +2949,7 @@ button {
 }
 .chart__main .chart__main__top100__tbody .song__info__title {
   display: inline-block;
-  width: 80%;
+  width: 90%;
   font-size: 0.875rem;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -3004,7 +3017,6 @@ button {
 
 #rank {
   width: 6%;
-  padding: 0 1.125rem 0 0.75rem;
   text-align: center;
 }
 
@@ -3030,7 +3042,6 @@ button {
 
 #sing-like {
   width: 14%;
-  transform: translateX(10px);
 }
 
 #sing-listen {
@@ -3049,6 +3060,153 @@ button {
   width: 6%;
 }
 
+@media (min-width: 480px) and (max-width: 1023px) {
+  .chart__main__music-button__wrapper {
+    display: none;
+  }
+  .chart__main__top100 {
+    width: 100%;
+  }
+  .chart__main__top100__thead tr {
+    height: 48px;
+  }
+  .chart__main__top100__thead tr, .chart__main__top100__tbody tr {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #check,
+td[headers=check] {
+    display: none;
+  }
+  #rank,
+td[headers=rank] {
+    width: 3%;
+    min-width: 20px;
+  }
+  #rank-change,
+td[headers=rank-change] {
+    width: 6%;
+    text-align: center;
+  }
+  #sing-album-cover,
+td[headers=sing-album-cover] {
+    width: 70px;
+    order: -1;
+  }
+  #sing-info-link,
+td[headers=sing-info-link] {
+    display: none;
+  }
+  #sing-info,
+td[headers=sing-info] {
+    width: 30%;
+  }
+  #sing-album,
+td[headers=sing-album] {
+    width: 19%;
+  }
+  #sing-like,
+td[headers=sing-like] {
+    width: 14%;
+  }
+  #sing-listen,
+td[headers=sing-listen] {
+    width: 8%;
+    text-align: center;
+  }
+  #sing-list-add,
+td[headers=sing-list-add] {
+    display: none;
+  }
+  #sing-download,
+td[headers=sing-download] {
+    display: none;
+  }
+  #sing-mv,
+td[headers=sing-mv] {
+    display: none;
+  }
+}
+@media (max-width: 479px) {
+  .chart__main__title-wrapper,
+.chart__main__time,
+.chart__main__music-button__wrapper,
+.chart__main__top100__thead {
+    display: none;
+  }
+  .chart__main__top100__tbody tr {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-width: 330px;
+  }
+  #check,
+td[headers=check] {
+    display: none;
+  }
+  #rank,
+td[headers=rank] {
+    width: 20px;
+    padding: 0;
+    text-align: center;
+  }
+  #rank-change,
+td[headers=rank-change] {
+    display: inline-block;
+    width: 3%;
+    text-align: center;
+  }
+  #rank-change .rank-up-num,
+#rank-change .rank-down-num,
+td[headers=rank-change] .rank-up-num,
+td[headers=rank-change] .rank-down-num {
+    display: none;
+  }
+  #sing-album-cover,
+td[headers=sing-album-cover] {
+    width: 40px;
+    margin-right: 10px;
+    order: -1;
+  }
+  #sing-info-link,
+td[headers=sing-info-link] {
+    display: none;
+  }
+  #sing-info,
+td[headers=sing-info] {
+    width: 60%;
+    padding-left: 10px;
+  }
+  #sing-album,
+td[headers=sing-album] {
+    display: none;
+  }
+  #sing-like,
+td[headers=sing-like] {
+    display: none;
+  }
+  #sing-listen,
+td[headers=sing-listen] {
+    width: 9%;
+  }
+  #sing-list-add,
+td[headers=sing-list-add] {
+    display: none;
+  }
+  #sing-download,
+td[headers=sing-download] {
+    display: none;
+  }
+  #sing-mv,
+td[headers=sing-mv] {
+    display: none;
+  }
+}
 .question-icon {
   display: inline-block;
   width: 1.5rem;
@@ -3167,7 +3325,6 @@ button {
   width: 0.75rem;
   height: 0.9375rem;
   background: url(../../assets/images/button_icons_sprite2.png) no-repeat -286px -30px;
-  transform: translateX(4px);
 }
 
 .like-icon {
