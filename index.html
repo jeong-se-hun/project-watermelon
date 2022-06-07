@@ -12,6 +12,9 @@
       href="./assets/images/favicon.ico"
       id="favicon"
     />
+    <script src="./js/carousel-btnControl.js" defer></script>
+    <script src="./js/carousel-loop.js" defer></script>
+    <script src="./js/header-risingLoop.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -63,50 +66,52 @@
         </form>
 
         <!-- rising-group -->
+        <span class="header__rising__text">급상승</span>
         <div class="header__rising__group">
-          <span class="header__rising__text">급상승</span>
-          <ul class="header__rising__list">
-            <li class="header__rising__item">
-              <span class="header__rising__number">1</span>
-              <a href="#" class="header__rising__info">왜 오수재인가 OST</a>
-            </li>
-            <li class="header__rising__item">
-              <span class="header__rising__number">2</span>
-              <a href="#" class="header__rising__info">Post Malone</a>
-            </li>
-            <li class="header__rising__item">
-              <span class="header__rising__number">3</span>
-              <a href="#" class="header__rising__info">세븐틴</a>
-            </li>
-            <li class="header__rising__item">
-              <span class="header__rising__number">4</span>
-              <a href="#" class="header__rising__info">별똥별 OST</a>
-            </li>
-            <li class="header__rising__item">
-              <span class="header__rising__number">5</span>
-              <a href="#" class="header__rising__info">NCT DREAM</a>
-            </li>
-            <li class="header__rising__item">
-              <span class="header__rising__number">6</span>
-              <a href="#" class="header__rising__info">I Like You</a>
-            </li>
-            <li class="header__rising__item">
-              <span class="header__rising__number">7</span>
-              <a href="#" class="header__rising__info">혁오 (HYUKOH)</a>
-            </li>
-            <li class="header__rising__item">
-              <span class="header__rising__number">8</span>
-              <a href="#" class="header__rising__info">먼데이 키즈</a>
-            </li>
-            <li class="header__rising__item">
-              <span class="header__rising__number">9</span>
-              <a href="#" class="header__rising__info">출국</a>
-            </li>
-            <li class="header__rising__item">
-              <span class="header__rising__number">10</span>
-              <a href="#" class="header__rising__info">브라운아이드걸스</a>
-            </li>
-          </ul>
+          <div class="header__rising__wrap">
+            <ul class="header__rising__list">
+              <li class="header__rising__item">
+                <span class="header__rising__number">1.</span>
+                <a href="#" class="header__rising__info">왜 오수재인가 OST</a>
+              </li>
+              <li class="header__rising__item">
+                <span class="header__rising__number">2.</span>
+                <a href="#" class="header__rising__info">Post Malone</a>
+              </li>
+              <li class="header__rising__item">
+                <span class="header__rising__number">3.</span>
+                <a href="#" class="header__rising__info">세븐틴</a>
+              </li>
+              <li class="header__rising__item">
+                <span class="header__rising__number">4.</span>
+                <a href="#" class="header__rising__info">별똥별 OST</a>
+              </li>
+              <li class="header__rising__item">
+                <span class="header__rising__number">5.</span>
+                <a href="#" class="header__rising__info">NCT DREAM</a>
+              </li>
+              <li class="header__rising__item">
+                <span class="header__rising__number">6.</span>
+                <a href="#" class="header__rising__info">I Like You</a>
+              </li>
+              <li class="header__rising__item">
+                <span class="header__rising__number">7.</span>
+                <a href="#" class="header__rising__info">혁오 (HYUKOH)</a>
+              </li>
+              <li class="header__rising__item">
+                <span class="header__rising__number">8.</span>
+                <a href="#" class="header__rising__info">먼데이 키즈</a>
+              </li>
+              <li class="header__rising__item">
+                <span class="header__rising__number">9.</span>
+                <a href="#" class="header__rising__info">출국</a>
+              </li>
+              <li class="header__rising__item">
+                <span class="header__rising__number">10.</span>
+                <a href="#" class="header__rising__info">브라운아이드걸스</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="header__ad__image"></div>
       </header>
@@ -153,32 +158,32 @@
         <section class="home__new">
           <div class="home__new__wrap">
             <div class="home__new__tab">
-              <h2 class="home__new__title"><a href="/">최신앨범</a></h2>
+              <h2 class="home__new__title"><a href="/">최신 앨범</a></h2>
               <div class="home__new__button-group">
                 <button type="button" class="home__new__button--all">
                   전체
                 </button>
                 <button type="button" class="home__new__button--kpop">
-                  KPOP
+                  가요
                 </button>
                 <button type="button" class="home__new__button--pop">
                   POP
                 </button>
               </div>
               <div class="home__new__control">
-                <span class="home__new__page-number"></span>
-                <button
-                  type="button"
-                  class="slide-btn home__new__control--prev"
-                >
-                  prev
-                </button>
-                <button
-                  type="button"
-                  class="slide-btn home__new__control--next"
-                >
-                  next
-                </button>
+                <span class="home__new__page-number">1</span>/9
+                <div class="home__new__control__button-box">
+                  <button
+                    type="button"
+                    class="slide-btn home__new__control--prev"
+                    aria-label="이전"
+                  ></button>
+                  <button
+                    type="button"
+                    class="slide-btn home__new__control--next"
+                    aria-label="다음"
+                  ></button>
+                </div>
               </div>
             </div>
             <div class="home__new__inner">
@@ -189,7 +194,7 @@
                     <div class="home__new__item--wrap">
                       <div class="home__new__item--thumb">
                         <img
-                          src="./assets/images/carousel/wsg워너비.jpeg"
+                          src="/assets/images/carousel/slide1-item1.jpeg"
                           alt=""
                         />
                       </div>
@@ -201,19 +206,12 @@
                           >WDG워너비</a
                         >
                         <span class="play-button">
-                          <a href="" aria-label="음악 재생하기"
-                            ><img src="./images/icon-search.svg" alt=""
-                          /></a>
+                          <a href="" aria-label="음악 재생하기"></a>
                         </span>
                       </div>
                     </div>
                     <span class="singer">
-                      <a
-                        href="/"
-                        title="WSG워너비 - 페이지이동"
-                        aria-hidden="true"
-                        >WSG워너비</a
-                      >
+                      <a href="/" aria-hidden="true">WSG워너비</a>
                     </span>
                   </li>
                   <!-- slide1 item2 -->
@@ -221,7 +219,7 @@
                     <div class="home__new__item--wrap">
                       <div class="home__new__item--thumb">
                         <img
-                          src="./assets/images/carousel/wsg워너비.jpeg"
+                          src="/assets/images/carousel/slide1-item2.jpeg"
                           alt=""
                         />
                       </div>
@@ -233,19 +231,12 @@
                           >WDG워너비</a
                         >
                         <span class="play-button">
-                          <a href="" aria-label="음악 재생하기"
-                            ><img src="./images/icon-search.svg" alt=""
-                          /></a>
+                          <a href="" aria-label="음악 재생하기"></a>
                         </span>
                       </div>
                     </div>
                     <span class="singer">
-                      <a
-                        href="/"
-                        title="WSG워너비 - 페이지이동"
-                        aria-hidden="true"
-                        >WSG워너비</a
-                      >
+                      <a href="/" aria-hidden="true">WSG워너비</a>
                     </span>
                   </li>
                   <!-- slide1 item3 -->
@@ -253,7 +244,7 @@
                     <div class="home__new__item--wrap">
                       <div class="home__new__item--thumb">
                         <img
-                          src="./assets/images/carousel/wsg워너비.jpeg"
+                          src="/assets/images/carousel/slide1-item1.jpeg"
                           alt=""
                         />
                       </div>
@@ -265,19 +256,12 @@
                           >WDG워너비</a
                         >
                         <span class="play-button">
-                          <a href="" aria-label="음악 재생하기"
-                            ><img src="./images/icon-search.svg" alt=""
-                          /></a>
+                          <a href="" aria-label="음악 재생하기"></a>
                         </span>
                       </div>
                     </div>
                     <span class="singer">
-                      <a
-                        href="/"
-                        title="WSG워너비 - 페이지이동"
-                        aria-hidden="true"
-                        >WSG워너비</a
-                      >
+                      <a href="/" aria-hidden="true">WSG워너비</a>
                     </span>
                   </li>
                   <!-- slide1 item4 -->
@@ -285,7 +269,7 @@
                     <div class="home__new__item--wrap">
                       <div class="home__new__item--thumb">
                         <img
-                          src="./assets/images/carousel/wsg워너비.jpeg"
+                          src="/assets/images/carousel/slide1-item2.jpeg"
                           alt=""
                         />
                       </div>
@@ -297,19 +281,12 @@
                           >WDG워너비</a
                         >
                         <span class="play-button">
-                          <a href="" aria-label="음악 재생하기"
-                            ><img src="./images/icon-search.svg" alt=""
-                          /></a>
+                          <a href="" aria-label="음악 재생하기"></a>
                         </span>
                       </div>
                     </div>
                     <span class="singer">
-                      <a
-                        href="/"
-                        title="WSG워너비 - 페이지이동"
-                        aria-hidden="true"
-                        >WSG워너비</a
-                      >
+                      <a href="/" aria-hidden="true">WSG워너비</a>
                     </span>
                   </li>
                   <!-- slide1 item5 -->
@@ -317,7 +294,7 @@
                     <div class="home__new__item--wrap">
                       <div class="home__new__item--thumb">
                         <img
-                          src="./assets/images/carousel/wsg워너비.jpeg"
+                          src="/assets/images/carousel/artist01.jpeg"
                           alt=""
                         />
                       </div>
@@ -329,19 +306,12 @@
                           >WDG워너비</a
                         >
                         <span class="play-button">
-                          <a href="" aria-label="음악 재생하기"
-                            ><img src="./images/icon-search.svg" alt=""
-                          /></a>
+                          <a href="" aria-label="음악 재생하기"></a>
                         </span>
                       </div>
                     </div>
                     <span class="singer">
-                      <a
-                        href="/"
-                        title="WSG워너비 - 페이지이동"
-                        aria-hidden="true"
-                        >WSG워너비</a
-                      >
+                      <a href="/" aria-hidden="true">WSG워너비</a>
                     </span>
                   </li>
                   <!-- slide1 item6 -->
@@ -349,7 +319,7 @@
                     <div class="home__new__item--wrap">
                       <div class="home__new__item--thumb">
                         <img
-                          src="./assets/images/carousel/wsg워너비.jpeg"
+                          src="/assets/images/carousel/artist07.jpeg"
                           alt=""
                         />
                       </div>
@@ -361,9 +331,7 @@
                           >WDG워너비</a
                         >
                         <span class="play-button">
-                          <a href="" aria-label="음악 재생하기"
-                            ><img src="./images/icon-search.svg" alt=""
-                          /></a>
+                          <a href="" aria-label="음악 재생하기"></a>
                         </span>
                       </div>
                     </div>
@@ -397,9 +365,7 @@
                           >WDG워너비</a
                         >
                         <span class="play-button">
-                          <a href="" aria-label="음악 재생하기"
-                            ><img src="./images/icon-search.svg" alt=""
-                          /></a>
+                          <a href="" aria-label="음악 재생하기"></a>
                         </span>
                       </div>
                     </div>
@@ -429,9 +395,7 @@
                           >WDG워너비</a
                         >
                         <span class="play-button">
-                          <a href="" aria-label="음악 재생하기"
-                            ><img src="./images/icon-search.svg" alt=""
-                          /></a>
+                          <a href="" aria-label="음악 재생하기"></a>
                         </span>
                       </div>
                     </div>
@@ -461,9 +425,7 @@
                           >WDG워너비</a
                         >
                         <span class="play-button">
-                          <a href="" aria-label="음악 재생하기"
-                            ><img src="./images/icon-search.svg" alt=""
-                          /></a>
+                          <a href="" aria-label="음악 재생하기"></a>
                         </span>
                       </div>
                     </div>
@@ -493,9 +455,7 @@
                           >WDG워너비</a
                         >
                         <span class="play-button">
-                          <a href="" aria-label="음악 재생하기"
-                            ><img src="./images/icon-search.svg" alt=""
-                          /></a>
+                          <a href="" aria-label="음악 재생하기"></a>
                         </span>
                       </div>
                     </div>
@@ -525,9 +485,7 @@
                           >WDG워너비</a
                         >
                         <span class="play-button">
-                          <a href="" aria-label="음악 재생하기"
-                            ><img src="./images/icon-search.svg" alt=""
-                          /></a>
+                          <a href="" aria-label="음악 재생하기"></a>
                         </span>
                       </div>
                     </div>
@@ -557,9 +515,7 @@
                           >WDG워너비</a
                         >
                         <span class="play-button">
-                          <a href="" aria-label="음악 재생하기"
-                            ><img src="./images/icon-search.svg" alt=""
-                          /></a>
+                          <a href="" aria-label="음악 재생하기"></a>
                         </span>
                       </div>
                     </div>
@@ -593,9 +549,7 @@
                           >WDG워너비</a
                         >
                         <span class="play-button">
-                          <a href="" aria-label="음악 재생하기"
-                            ><img src="./images/icon-search.svg" alt=""
-                          /></a>
+                          <a href="" aria-label="음악 재생하기"></a>
                         </span>
                       </div>
                     </div>
@@ -625,9 +579,7 @@
                           >WDG워너비</a
                         >
                         <span class="play-button">
-                          <a href="" aria-label="음악 재생하기"
-                            ><img src="./images/icon-search.svg" alt=""
-                          /></a>
+                          <a href="" aria-label="음악 재생하기"></a>
                         </span>
                       </div>
                     </div>
@@ -657,9 +609,7 @@
                           >WDG워너비</a
                         >
                         <span class="play-button">
-                          <a href="" aria-label="음악 재생하기"
-                            ><img src="./images/icon-search.svg" alt=""
-                          /></a>
+                          <a href="" aria-label="음악 재생하기"></a>
                         </span>
                       </div>
                     </div>
@@ -689,9 +639,7 @@
                           >WDG워너비</a
                         >
                         <span class="play-button">
-                          <a href="" aria-label="음악 재생하기"
-                            ><img src="./images/icon-search.svg" alt=""
-                          /></a>
+                          <a href="" aria-label="음악 재생하기"></a>
                         </span>
                       </div>
                     </div>
@@ -721,9 +669,7 @@
                           >WDG워너비</a
                         >
                         <span class="play-button">
-                          <a href="" aria-label="음악 재생하기"
-                            ><img src="./images/icon-search.svg" alt=""
-                          /></a>
+                          <a href="" aria-label="음악 재생하기"></a>
                         </span>
                       </div>
                     </div>
@@ -753,9 +699,7 @@
                           >WDG워너비</a
                         >
                         <span class="play-button">
-                          <a href="" aria-label="음악 재생하기"
-                            ><img src="./images/icon-search.svg" alt=""
-                          /></a>
+                          <a href="" aria-label="음악 재생하기"></a>
                         </span>
                       </div>
                     </div>
@@ -781,70 +725,93 @@
               <button
                 type="button"
                 class="home__artist__control__indicator"
-                title="1번째 아티스트 상세보기"
                 data-btn_idx="1"
               ></button>
               <button
                 type="button"
                 class="home__artist__control__indicator"
-                title="2번째 아티스트 상세보기"
                 data-btn_idx="2"
               ></button>
               <button
                 type="button"
                 class="home__artist__control__indicator"
-                title="3번째 아티스트 상세보기"
                 data-btn_idx="3"
               ></button>
               <button
                 type="button"
                 class="home__artist__control__indicator"
-                title="4번째 아티스트 상세보기"
                 data-btn_idx="4"
               ></button>
               <button
                 type="button"
                 class="home__artist__control__indicator"
-                title="5번째 아티스트 상세보기"
                 data-btn_idx="5"
               ></button>
-              <button type="button" class="button-pause">일시정지</button>
+              <button
+                type="button"
+                class="home__artist__control__indicator"
+                data-btn_idx="6"
+              ></button>
+              <button
+                type="button"
+                class="home__artist__control__indicator"
+                data-btn_idx="7"
+              ></button>
+              <button
+                type="button"
+                class="button-pause"
+                aria-label="일시정지"
+              ></button>
             </div>
             <div class="home__artist__inner">
               <div class="home__artist__list">
                 <div class="home__artist__item">
-                  <a href="/" title="홍대광"
+                  <a href="/"
                     ><img
                       src="./assets/images/carousel/artist01.jpeg"
-                      alt="홍대광 싱글1 너는 별 앨범소개 바로가기"
+                      alt="손동운 뉴앨범 Happy birthday 앨범소개 바로가기"
                   /></a>
                 </div>
                 <div class="home__artist__item">
-                  <a href="/" title="소향"
+                  <a href="/"
                     ><img
                       src="./assets/images/carousel/artist02.jpeg"
-                      alt="소향 왜 오수재인가 OST Part.1 앨범소개 바로가기"
+                      alt="이지영(빅마마) 싱글 기대도돼요 앨범소개 바로가기"
                   /></a>
                 </div>
                 <div class="home__artist__item">
-                  <a href="/" title="김재환"
+                  <a href="/"
                     ><img
                       src="./assets/images/carousel/artist03.jpeg"
                       alt="김재환 싱글 달팽이 앨범소개 바로가기"
                   /></a>
                 </div>
                 <div class="home__artist__item">
-                  <a href="/" title="최낙타"
+                  <a href="/"
                     ><img
                       src="./assets/images/carousel/artist04.jpeg"
-                      alt="최낙타 싱글 HERB 앨범소개 바로가기"
+                      alt="오곤 싱글 그럴거야 앨범소개 바로가기"
                   /></a>
                 </div>
                 <div class="home__artist__item">
-                  <a href="/" title="김준휘"
+                  <a href="/"
                     ><img
                       src="./assets/images/carousel/artist05.jpeg"
                       alt="김준휘 새 앨범 11시59분 앨범소개 바로가기"
+                  /></a>
+                </div>
+                <div class="home__artist__item">
+                  <a href="/"
+                    ><img
+                      src="./assets/images/carousel/artist06.jpeg"
+                      alt="APR project 싱글 BOYHOOD I S#1 앨범소개 바로가기"
+                  /></a>
+                </div>
+                <div class="home__artist__item">
+                  <a href="/"
+                    ><img
+                      src="./assets/images/carousel/artist07.jpeg"
+                      alt="윤원 싱글 나는너야 앨범소개 바로가기"
                   /></a>
                 </div>
               </div>
@@ -2050,8 +2017,5 @@
         </div>
       </footer>
     </div>
-
-    <script src="./js/carousel-btnControl.js"></script>
-    <script src="./js/carousel-loop.js"></script>
   </body>
 </html>

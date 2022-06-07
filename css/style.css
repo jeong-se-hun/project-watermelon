@@ -239,49 +239,57 @@ button {
   top: 50%;
   transform: translateY(-50%);
 }
-.header__rising__group {
-  display: flex;
-  align-items: center;
-  margin-left: 0.9375rem;
-  font-size: 0.75rem;
-  color: #333333;
-  position: relative;
-  width: 13.75rem;
-}
 .header__rising__text {
   color: #fff;
   background: #00cd3c;
-  float: left;
   border-radius: 10px;
   padding: 0.0625rem 0.375rem;
   font-size: 0.6875rem;
+  margin: 2.25rem 0 0 0.625rem;
+  height: 20px;
+  line-height: 1.7;
+}
+.header__rising__group {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #333333;
+  position: relative;
+  width: 10.9375rem;
+  height: 25px;
+  margin-top: 28px;
+  overflow: hidden;
+}
+.header__rising__group:hover {
+  overflow: visible;
+  background: #fff;
+  padding-top: 0;
+  z-index: 1;
+  border: 1px solid #b4b4b4;
+  height: 265px;
+}
+.header__rising__wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 265px;
+  overflow: hidden;
 }
 .header__rising__list {
   display: inline-block;
-  padding: 0.9375rem;
   position: absolute;
-  top: 25%;
-  right: 0.75rem;
-  height: 1.875rem;
-  overflow: hidden;
-}
-.header__rising__list:hover {
-  overflow: visible;
-  height: fit-content;
-  border: 1px solid #b4b4b4;
-  background: #fff;
-  z-index: 1;
+  top: 0;
+  right: 0;
 }
 .header__rising__item {
-  margin-top: 0.625rem;
-}
-.header__rising__item:first-child {
-  margin-top: 0;
+  margin: 0.75rem;
 }
 .header__rising__number {
   margin-right: 0.625rem;
 }
 .header__rising__info {
+  display: inline-block;
   margin-right: 1.25rem;
 }
 .header__rising__info::after {
@@ -291,6 +299,9 @@ button {
   height: 0.625rem;
   background: green;
   right: 0.625rem;
+}
+.header__rising__info:hover {
+  text-decoration: underline;
 }
 .header__ad__image {
   flex-grow: 1;
@@ -340,7 +351,6 @@ button {
 .home__new__section {
   width: 63.125rem;
   padding-top: 1.875rem;
-  padding-bottom: 1.875rem;
   margin-left: auto;
   margin-right: auto;
   color: #fff;
@@ -363,10 +373,83 @@ button {
   align-items: stretch;
   margin-bottom: 5px;
 }
+.home__new__title {
+  font-family: "NanumBarunGothic", sans-serif;
+  flex-grow: 1;
+}
 .home__new__title a {
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 500;
   color: #000;
+  position: relative;
+}
+.home__new__title a::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid #909090;
+  border-right: 1px solid #909090;
+  display: inline-block;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 5px;
+  right: -8px;
+}
+.home__new__button-group {
+  margin-right: 30px;
+}
+.home__new__button-group [type=button] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: #909090;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-left: -2px;
+  padding-left: 0.375rem;
+  padding-right: 0.375rem;
+  position: relative;
+}
+.home__new__button-group [type=button]:nth-child(1) {
+  color: #1a1a1a;
+}
+.home__new__button-group [type=button]:nth-child(1)::after, .home__new__button-group [type=button]:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: 0px;
+  width: 1px;
+  height: 0.6875rem;
+  background: #909090;
+}
+.home__new__control {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  color: #888888;
+  font-size: 0.75rem;
+}
+.home__new__control__button-box {
+  transform: translateY(1px);
+  margin-left: 5px;
+}
+.home__new__control__button-box button {
+  appearance: none;
+  border: 0;
+  width: 20px;
+  height: 17px;
+  background: url(/assets/images/bg_btn.png) no-repeat;
+}
+.home__new__control__button-box button:nth-child(1) {
+  background-position: 0px -202px;
+  margin-right: -5px;
+}
+.home__new__control__button-box button:nth-child(2) {
+  background-position: right -220px;
 }
 .home__new__inner {
   display: flex;
@@ -375,7 +458,7 @@ button {
   align-items: stretch;
   position: relative;
   left: 0;
-  transition: all 0.7s;
+  transition: all 0.8s cubic-bezier(0.33, 1, 0.68, 1);
 }
 .home__new__list {
   width: 474px;
@@ -406,7 +489,6 @@ button {
 }
 .home__new__item--thumb img {
   width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -420,7 +502,7 @@ button {
   background-color: rgba(0, 0, 0, 0.7);
   text-align: center;
   font-size: 12px;
-  transition: all 0.3s;
+  transition: all 0.4s;
   opacity: 0;
 }
 .home__new__item--detail a {
@@ -451,12 +533,11 @@ button {
   display: block;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  border: 2px solid #00cd3c;
   position: absolute;
   right: 10px;
   bottom: 10px;
   z-index: 1;
+  background: url("/assets/images/bg_btn.png") no-repeat 0px 200px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -490,8 +571,18 @@ button {
   border: 1px solid #b4b4b4;
   border-radius: 50%;
 }
-.home__artist__control__indicator:hover {
-  border: 1px solid #666666;
+.home__artist__control .button-pause {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/images/bg_btn.png") no-repeat left -171px;
+  transform: translateY(3px);
+  margin-left: 5px;
 }
 .home__artist__inner {
   width: 100%;
@@ -503,7 +594,6 @@ button {
   justify-content: flex-start;
   align-items: stretch;
   border: 1px solid #dfe6e8;
-  transition: all 0.5s;
   position: relative;
 }
 
