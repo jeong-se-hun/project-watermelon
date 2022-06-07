@@ -13,8 +13,6 @@ const melonListPop = get(".home__hot__melon-chart__list-area.pop");
 const melonListArtist = get(".home__hot__melon-chart__list-area.artist");
 const favorites = getAll(".home__hot__melon-chart__favorites");
 
-console.log(favorites);
-
 // prevButton 이벤트
 prevButton.addEventListener("click", (e) => {
   e.preventDefault();
