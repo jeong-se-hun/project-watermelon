@@ -41,7 +41,9 @@
         </ul>
         <div class="new">
           <div class="new__album">
-            <h3 class="new__album-header">최신앨범</h3>
+            <h3 class="new__album-header">
+              최신앨범<span class="new__album-header-more"> 더보기 </span>
+            </h3>
             <ul class="new__album__list">
               <!-- start of card item 1 -->
               <li class="new__album__item">
@@ -134,36 +136,39 @@
 
           <div class="new__playlist">
             <h3 class="new__playlist-header">오늘의 추천 음악</h3>
-            <div class="new__playlist__group">
-              <a href="/" class="new__playlist-link-group">
-                <div class="new__playlist-img">
-                  <img
-                    src="../assets/images/genre-img7.png"
-                    alt="추천 플레이리스트"
-                  />
+            <div class="new__palylist-wrapper">
+              <div class="new__playlist__group">
+                <a href="/" class="new__playlist-link-group">
+                  <div class="new__playlist-img">
+                    <img
+                      src="../assets/images/genre-img7.png"
+                      alt="추천 플레이리스트"
+                    />
+                  </div>
+                  <p class="new__playlist-context-des">
+                    멜론의 최근 인기곡과 지금 떠오르는 곡, 발견하고 싶은 곡을
+                    담은 플레이리스트 “더 발라드(The Ballad)”. 멜론 리스너
+                    여러분들에게 꼭 들려주고 싶은 곡을 엄선하여 소개해 드립니다.
+                    놓치면 안되는 이 곡들을 즐겁게 감상해주세요 ◡̈
+                    <br />※ 업데이트 요일: 금요일
+                  </p>
+                  <div class="new__playlist-opacity"></div>
+                </a>
+              </div>
+              <div class="new__playlist__links">
+                <a href="" class="new__playlist__links-dj"
+                  ><span class="new__playlist__links-dj-em">DJ</span
+                  ><span class="new__playlist__links-dj-name"
+                    >밍구의플리</span
+                  ></a
+                >
+                <a href="" class="new__playlist__links-title"
+                  >너를 처음 만난 그때처럼 두근거리는 사랑 이야기 플리</a
+                >
+                <div class="new__playlist__links__hash-group">
+                  <a href="/" class="new__playlist__links-hash1">#사랑</a>
+                  <a href="/" class="new__playlist__links-hash2">#설렘</a>
                 </div>
-                <p class="new__playlist-context-des">
-                  멜론의 최근 인기곡과 지금 떠오르는 곡, 발견하고 싶은 곡을 담은
-                  플레이리스트 “더 발라드(The Ballad)”. 멜론 리스너 여러분들에게
-                  꼭 들려주고 싶은 곡을 엄선하여 소개해 드립니다. 놓치면 안되는
-                  이 곡들을 즐겁게 감상해주세요 ◡̈
-                  <br />※ 업데이트 요일: 금요일
-                </p>
-                <div class="new__playlist-opacity"></div>
-              </a>
-            </div>
-            <div class="new__playlist__links">
-              <a href="" class="new__playlist__links-dj"
-                ><span class="new__playlist__links-dj-em">DJ</span
-                ><span class="new__playlist__links-dj-name">밍구의플리</span></a
-              >
-              <a href="" class="new__playlist__links-title"
-                >너를 처음 만난 그때처럼 두근거리는 사랑 이야기 플리</a
-              >
-
-              <div class="new__playlist__links__hash-group">
-                <a href="/" class="new__playlist__links-hash1">#사랑</a>
-                <a href="/" class="new__playlist__links-hash2">#설렘</a>
               </div>
             </div>
           </div>
@@ -177,7 +182,7 @@
             <a href="/" class="genre__sub__item-link">최신곡</a>
           </li>
           <li class="music__category__item">
-            <a href="/" class="music__category__item-link">최신앨범</a>
+            <a href="/" class="music__category__item-link">최신앨범></a>
           </li>
           <li class="music__category__item">
             <a href="/" class="music__category__item-link">스테디셀러</a>

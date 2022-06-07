@@ -57,15 +57,20 @@
         }
         @include mobile {
           width: 100%;
-          &__list:last-child {
-            display: none;
-          }
         }
       }
       &__item {
         position: relative;
         @include tab {
           width: 33.3%;
+          @include marginY(10px);
+          margin-left: 10px;
+        }
+        @include mobile {
+          &:nth-child(3) {
+            display: none;
+          }
+          width: 50%;
         }
       }
       &__item-img > img {
@@ -74,7 +79,7 @@
         @include tab {
           width: 100%;
           height: auto;
-          padding: 10px;
+          // padding: 10px;
         }
       }
       &__item-group {
@@ -86,8 +91,15 @@
         width: 100%;
         @include tab {
           position: absolute;
-          left: 10%;
-          bottom: 10%;
+          left: 0;
+          bottom: 0;
+          width: 80%;
+          padding: 13px;
+        }
+        @include mobile {
+          padding: 14px;
+          left: 0;
+          bottom: 0;
         }
       }
       &__item-title {
@@ -95,6 +107,7 @@
         font-size: rem(16px);
         @include tab {
           font-size: rem(20px);
+          width: 80%;
         }
         display: block;
         width: 90%;
@@ -134,9 +147,9 @@
         @include flexbox($direction: column);
         @include tab {
           height: rem(80px);
-          left: 10px;
-          bottom: 10px;
-          width: calc(100% - 20px);
+          width: 100%;
+          left: 0;
+          bottom: 0;
         }
       }
     }
@@ -146,6 +159,13 @@
       color: $primary-font;
       @include tab {
         margin-left: 10px;
+      }
+    }
+    &__album-header-more {
+      display: inline-block;
+      @include mobile {
+        display: block;
+        color: black;
       }
     }
 
@@ -163,6 +183,7 @@
 
     &__palylist__group {
       position: relative;
+      width: 100%;
     }
     &__playlist-header {
       font-size: rem(20px);
@@ -185,6 +206,9 @@
       & > img {
         @include tab {
           width: 64%;
+          @include mobile {
+            width: 100%;
+          }
         }
       }
     }
@@ -206,6 +230,9 @@
         -webkit-box-orient: vertical;
         color: $light-gray;
       }
+      @include mobile {
+        display: none;
+      }
     }
 
     &__playlist-opacity {
@@ -221,13 +248,21 @@
         top: 0;
         width: 64%;
         height: 100%;
-
         margin: 0 10px;
+      }
+      @include mobile {
+        width: 100%;
       }
     }
 
     &__playlist {
       position: relative;
+      @include tab {
+        margin-top: 10px;
+      }
+      @include mobile {
+        margin-top: 10px;
+      }
       &__links {
         @include tab {
           position: absolute;
@@ -239,13 +274,18 @@
       }
       &__links-dj {
         position: absolute;
-        top: rem(55px);
+        top: rem(25px);
         left: rem(15px);
         font-weight: 400;
         color: $accent-background;
         @include tab {
-          top: 50px;
+          top: 30px;
           left: 5%;
+        }
+        @include mobile {
+          left: 10px;
+          top: 0;
+          padding: 13px;
         }
       }
       &__links-dj-name {
@@ -259,23 +299,22 @@
       }
       &__links-title {
         position: absolute;
-        top: rem(165px);
+        top: rem(135px);
         color: $accent-background;
         font-size: rem(16px);
         font-weight: 400;
         margin: 0 8px;
-
         &:hover {
           text-decoration: underline;
         }
         @include tab {
           padding-right: 15px;
           display: block;
-          top: rem(40px);
+          // top: rem(40px);
           color: $medium-gray;
           display: inline-block;
           left: 67%;
-          top: 50px;
+          top: 10px;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: normal;
@@ -285,12 +324,33 @@
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
         }
+        @include mobile {
+          position: absolute;
+          top: 150px;
+          left: 10%;
+          color: $accent-background;
+          font-size: rem(13px);
+          font-weight: 300;
+          margin: 0 10px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: normal;
+          line-height: 1.7;
+          word-wrap: break-word;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+        }
       }
       &__links__hash-group {
         @include tab {
           position: absolute;
-          top: 260px;
+          top: 220px;
           left: 66%;
+        }
+        @include mobile {
+          left: 8%;
+          top: 215px;
         }
       }
       &__links-hash1 {
@@ -314,6 +374,15 @@
           &:hover {
             color: $medium-gray;
             border: 1px solid $medium-gray;
+          }
+        }
+        @include mobile {
+          color: $light-gray;
+          border: 1px solid $light-gray;
+          &:hover {
+            color: $medium-gray;
+            border: 1px solid $medium-gray;
+            // background: pink;
           }
         }
       }
@@ -345,27 +414,29 @@
   }
 }
 
-.music__category {
-  &__list {
-    @include flexbox;
-    width: rem(1010px);
-    margin: 0 auto;
-    margin-top: 50px;
-    & > .is-active {
-      border-bottom: none;
-      background: $white;
+.music {
+  &__category {
+    &__list {
+      @include flexbox;
+      width: rem(1010px);
+      margin: 0 auto;
+      margin-top: 50px;
+      & > .is-active {
+        border-bottom: none;
+        background: $white;
+      }
     }
-  }
-  &__item {
-    width: 20%;
-    height: rem(48px);
-    text-align: center;
-    padding: 14px 4px;
-    border: 1px solid $borderLightGray;
-    background: $accent-background;
-    &:nth-child(2n) {
-      border-right: none;
-      border-left: none;
+    &__item {
+      width: 20%;
+      height: rem(48px);
+      text-align: center;
+      padding: 14px 4px;
+      border: 1px solid $borderLightGray;
+      background: $accent-background;
+      &:nth-child(2n) {
+        border-right: none;
+        border-left: none;
+      }
     }
   }
 }
