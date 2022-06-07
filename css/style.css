@@ -139,16 +139,39 @@ button {
   }
 }
 .notice-bar__item {
-  padding: 0 0.625rem;
+  padding: 0 0.75rem;
   border-left: 1px solid #dfe6e8;
 }
-.notice-bar__item:first-child {
-  border-left: none;
+@media (min-width: 480px) and (max-width: 1023px) {
+  .notice-bar__item {
+    padding: 0 0.5rem;
+  }
 }
-.notice-bar__item:first-child a {
+.notice-bar__item.login {
+  display: none;
+  margin-right: 1rem;
+  color: #00cd3c;
+  font-weight: 700;
+  border-left: none;
+  border-right: 1px solid #dfe6e8;
+  padding-left: 0;
+}
+.notice-bar__item.login .notice-bar__link:hover {
+  font-weight: 700;
+  color: inherit;
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .notice-bar__item.login {
+    display: block;
+  }
+}
+.notice-bar__item:nth-child(2), .notice-bar__item:last-child {
+  border-left-width: 0;
+}
+.notice-bar__item:nth-child(2) a {
   position: relative;
 }
-.notice-bar__item:first-child a::before {
+.notice-bar__item:nth-child(2) a::before {
   content: "";
   position: absolute;
   background: url("../../assets/images/icon-ticket.svg");
@@ -159,22 +182,27 @@ button {
   transform: translateY(-50%);
   background-size: cover;
 }
-.notice-bar__item a {
-  display: block;
-  width: 100%;
+@media (min-width: 480px) and (max-width: 1023px) {
+  .notice-bar__item:nth-child(5) {
+    padding-right: 0;
+  }
 }
 .notice-bar__link {
-  display: block;
   font-size: 0.75rem;
   font-weight: 400;
 }
 .notice-bar__link:hover {
   color: #333333;
+  font-weight: 700;
 }
 .notice-bar .order {
   order: -1;
   flex-grow: 1;
   padding: 0;
+  font-weight: 700;
+}
+.notice-bar .order a:hover {
+  color: #01b925;
 }
 
 .header {
