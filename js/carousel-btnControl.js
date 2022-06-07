@@ -10,9 +10,12 @@ const $prevBtn = get(".home__new__control--prev");
 const $nextBtn = get(".home__new__control--next");
 const $innerSlide = get(".home__new__inner");
 const $slideItems = document.querySelectorAll(".home__new__slide");
+const $controller = get(".home__new__control");
+const $number = get(".home__new__page-number");
 
 const size = $slideItems[0].clientWidth;
 let currentIdx = 0;
+let pageNum = $number.innerText;
 let slideCount = $slideItems.length;
 
 const pages = {
@@ -41,5 +44,15 @@ const moveTo = (index) => {
 $allBtn.addEventListener("click", () => moveTo(pages.all));
 $kpopBtn.addEventListener("click", () => moveTo(pages.kpop));
 $popBtn.addEventListener("click", () => moveTo(pages.pop));
-$nextBtn.addEventListener("click", () => moveSlide(currentIdx + 1, "end"));
-$prevBtn.addEventListener("click", () => moveSlide(currentIdx - 1, "start"));
+$nextBtn.addEventListener("click", () => {
+  moveSlide(currentIdx + 1, "end");
+  pageNum++;
+  if (pageNum > 9) return;
+  $number.innerText = pageNum;
+});
+$prevBtn.addEventListener("click", () => {
+  moveSlide(currentIdx - 1, "start");
+  pageNum--;
+  if (pageNum < 1) return;
+  $number.innerText = pageNum;
+});

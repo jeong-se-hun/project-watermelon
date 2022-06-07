@@ -9,7 +9,7 @@ slider.addEventListener("mousedown", (e) => {
   pressed = true;
   startx = e.clientX - innerSlider.offsetLeft;
 
-  console.log(e.clientX, innerSlider.offsetLeft);
+  // console.log(e.clientX, innerSlider.offsetLeft);
   slider.style.cursor = "grabbing"; // 커서모양 변환 -> 잡은모양
 });
 
