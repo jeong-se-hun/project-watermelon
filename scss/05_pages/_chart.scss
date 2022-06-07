@@ -1,7 +1,12 @@
+.container-chart {
+  position: relative;
+  height: 100%;
+}
+
 // 헤더 이단 네비게이션
 
 .header-wrapper::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: rem(45px);
@@ -10,7 +15,7 @@
 }
 
 .is-active .header__nav__link::after {
-  content: '';
+  content: "";
   display: block;
   height: rem(4px);
   transform: translateY(15px);
@@ -187,12 +192,12 @@
         border-bottom: 1px solid $borderLightGray;
         height: rem(85px);
 
-        td[headers='rank'] {
+        td[headers="rank"] {
           padding: 0 rem(18px) 0 rem(12px);
           text-align: center;
         }
 
-        td[headers='sing-album-cover'] img {
+        td[headers="sing-album-cover"] img {
           width: rem(60px);
           height: rem(60px);
         }
@@ -383,7 +388,8 @@
   width: rem(13px);
   height: rem(11px);
   margin-right: rem(4px);
-  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -203px 0px;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -203px
+    0px;
   transform: translateY(1px);
 }
 
@@ -393,7 +399,8 @@
   width: rem(11px);
   height: rem(13px);
   margin-right: rem(4px);
-  background: url(../../assets/images/button_icons_sprite2.png) no-repeat 0px 0px;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat 0px
+    0px;
   transform: translateY(2px);
 }
 
@@ -511,4 +518,163 @@
   width: rem(30px);
   height: rem(28px);
   background: url(../../assets/images/button_icons_sprite2.png) no-repeat -152px -26px;
+}
+
+.audio-bar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: $playerBackground;
+  @include paddingY(10px);
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    &:first-child {
+      flex-grow: 1.5;
+      padding-left: rem(30px);
+    }
+
+    &:nth-child(2) {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      gap: rem(15px);
+    }
+    &:nth-child(3) {
+      flex-grow: 1.5;
+      display: flex;
+    }
+    &:nth-child(4) {
+      flex-grow: 0.3;
+
+      @include tab {
+        flex-grow: 1;
+      }
+    }
+    &:nth-child(5) {
+      flex-grow: 1.5;
+      display: flex;
+
+      @include tab {
+        display: none;
+      }
+    }
+    &:nth-child(6) {
+      flex-grow: 1;
+      text-align: end;
+      margin-right: rem(10px);
+    }
+  }
+
+  &__icon {
+    width: rem(30px);
+    height: rem(30px);
+
+    @include tab {
+      width: rem(20px);
+      height: rem(20px);
+    }
+  }
+
+  &__playlist {
+    color: $secondary-font;
+    margin-left: rem(5px);
+    font-size: rem(14px);
+  }
+
+  &__album {
+    width: rem(40px);
+  }
+
+  &__title {
+    margin-left: rem(10px);
+    color: $white;
+    font-size: rem(14px);
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__control {
+    &-loop {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+    }
+
+    &-prev {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+    }
+
+    &-play {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+    }
+
+    &-next {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+    }
+
+    &-random {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+    }
+  }
+
+  &__lyrics {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+    @include autoMargin;
+  }
+
+  &__start-time {
+    margin-left: rem(30px);
+    color: $white;
+    font-size: rem(14px);
+  }
+
+  &__end-time {
+    margin-left: rem(30px);
+    color: $secondary-font;
+    font-size: rem(14px);
+  }
+}
+
+.slider {
+  width: 40%;
+  min-width: rem(120px);
+  height: rem(2px);
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+  border-radius: 25px;
+  box-shadow: 2px 8px 13px -3px rgba(116, 114, 114, 0.75);
+  margin-bottom: rem(10px);
+}
+
+.slider::-webkit-slider-thumb {
+  cursor: pointer;
+  appearance: none;
+  height: rem(10px);
+  width: rem(10px);
+  background: $white;
+  border-radius: 50%;
+  border: 1px solid $borderDarkGray;
+  box-shadow: 2px 8px 13px -3px rgba(116, 114, 114, 0.75);
 }
