@@ -62,6 +62,7 @@
   max-width: rem(1010px);
   @include autoMargin;
   padding-top: rem(40px);
+  width: 100%;
 
   // 차트 탑100 부분 및 모달창
   &__title-wrapper {
@@ -191,15 +192,23 @@
       tr {
         border-bottom: 1px solid $borderLightGray;
         height: rem(85px);
+        @include mobile {
+          height: rem(60px);
+        }
 
         td[headers="rank"] {
-          padding: 0 rem(18px) 0 rem(12px);
+          // padding: 0 rem(18px) 0 rem(12px);
           text-align: center;
         }
 
         td[headers="sing-album-cover"] img {
-          width: rem(60px);
-          height: rem(60px);
+          min-width: 60px;
+          height: 60px;
+          @include marginX(10px);
+          @include mobile {
+            min-width: 40px;
+            height: 40px;
+          }
         }
       }
 
@@ -212,7 +221,7 @@
 
           &__title {
             display: inline-block;
-            width: 80%;
+            width: 90%;
             font-size: rem(14px);
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -292,13 +301,13 @@
 }
 
 // 데스크탑 기준 레이아웃 퍼센트
+
 #check {
   width: 1%;
 }
 
 #rank {
   width: 6%;
-  padding: 0 rem(18px) 0 rem(12px);
   text-align: center;
 }
 
@@ -324,7 +333,6 @@
 
 #sing-like {
   width: 14%;
-  transform: translateX(10px);
 }
 
 #sing-listen {
@@ -341,6 +349,181 @@
 
 #sing-mv {
   width: 6%;
+}
+
+//태블릿
+
+@include tab {
+  .chart__main__music-button__wrapper {
+    display: none;
+  }
+
+  .chart__main__top100 {
+    width: 100%;
+
+    &__thead tr {
+      height: 48px;
+    }
+
+    &__thead tr,
+    &__tbody tr {
+      position: relative;
+      @include flexbox(row, space-between, center, wrap);
+    }
+  }
+
+  #check,
+  td[headers="check"] {
+    display: none;
+  }
+
+  #rank,
+  td[headers="rank"] {
+    width: 3%;
+    min-width: 20px;
+  }
+
+  #rank-change,
+  td[headers="rank-change"] {
+    width: 6%;
+    text-align: center;
+  }
+
+  #sing-album-cover,
+  td[headers="sing-album-cover"] {
+    width: 70px;
+    order: -1;
+  }
+
+  #sing-info-link,
+  td[headers="sing-info-link"] {
+    display: none;
+  }
+
+  #sing-info,
+  td[headers="sing-info"] {
+    width: 30%;
+  }
+
+  #sing-album,
+  td[headers="sing-album"] {
+    width: 19%;
+  }
+
+  #sing-like,
+  td[headers="sing-like"] {
+    width: 14%;
+  }
+
+  #sing-listen,
+  td[headers="sing-listen"] {
+    width: 8%;
+    text-align: center;
+  }
+
+  #sing-list-add,
+  td[headers="sing-list-add"] {
+    display: none;
+  }
+
+  #sing-download,
+  td[headers="sing-download"] {
+    display: none;
+  }
+
+  #sing-mv,
+  td[headers="sing-mv"] {
+    display: none;
+  }
+}
+
+// 모바일
+
+@include mobile {
+  .chart__main__title-wrapper,
+  .chart__main__time,
+  .chart__main__music-button__wrapper,
+  .chart__main__top100__thead {
+    display: none;
+  }
+
+  .chart__main__top100__tbody tr {
+    @include flexbox(row, space-between, center, wrap);
+    position: relative;
+    min-width: 330px;
+  }
+
+  #check,
+  td[headers="check"] {
+    display: none;
+  }
+
+  #rank,
+  td[headers="rank"] {
+    width: 20px;
+    padding: 0;
+    text-align: center;
+  }
+
+  #rank-change,
+  td[headers="rank-change"] {
+    display: inline-block;
+    width: 3%;
+    text-align: center;
+
+    .rank-up-num,
+    .rank-down-num {
+      display: none;
+    }
+  }
+
+  #sing-album-cover,
+  td[headers="sing-album-cover"] {
+    width: 40px;
+    margin-right: 10px;
+    order: -1;
+  }
+
+  #sing-info-link,
+  td[headers="sing-info-link"] {
+    display: none;
+  }
+
+  #sing-info,
+  td[headers="sing-info"] {
+    width: 60%;
+    padding-left: 10px;
+  }
+
+  #sing-album,
+  td[headers="sing-album"] {
+    display: none;
+  }
+
+  #sing-like,
+  td[headers="sing-like"] {
+    display: none;
+  }
+
+  #sing-listen,
+  td[headers="sing-listen"] {
+    width: 9%;
+  }
+
+  #sing-list-add,
+  td[headers="sing-list-add"] {
+    display: none;
+  }
+
+  #sing-download,
+  td[headers="sing-download"] {
+    display: none;
+  }
+
+  #sing-mv,
+  td[headers="sing-mv"] {
+    display: none;
+  }
 }
 
 // 아이콘 관련
@@ -442,6 +625,8 @@
   background: url(../../assets/images/bullet_icons_sprite.png) no-repeat 0px -17px;
 }
 
+// 순위 Up
+
 .rank-up-icon {
   display: inline-block;
   width: rem(9px);
@@ -455,6 +640,8 @@
   font-size: rem(15px);
   color: rgb(240, 120, 10);
 }
+
+// 순위 Down
 
 .rank-down-icon {
   display: inline-block;
@@ -476,7 +663,6 @@
   width: rem(12px);
   height: rem(15px);
   background: url(../../assets/images/button_icons_sprite2.png) no-repeat -286px -30px;
-  transform: translateX(4px);
 }
 
 // 빈 하트 아이콘

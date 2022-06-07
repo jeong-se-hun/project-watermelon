@@ -3,14 +3,19 @@
 .home__hot__section {
   display: flex;
   justify-content: space-between;
-  width: rem(1010px);
+  align-items: flex-start;
+  max-width: rem(1010px);
   margin: 32px auto 49px;
-  align-items: center;
+  flex-flow: row nowrap;
+
+  @include tab {
+    max-width: rem(734px);
+    padding: 0 rem(15px);
+  }
 
   .home__hot__hot-issue {
     position: relative;
     width: rem(704px);
-    flex-shrink: 0;
   }
 }
 
@@ -52,20 +57,20 @@
   .home__hot__hot-issue-upper-group {
     display: flex;
 
+    @include tab {
+      // align-items: center;
+    }
+
     // hot-issue-video-area
     .home__hot__hot-issue-video-area {
-      width: rem(344px);
-      flex-shrink: 0;
+      min-width: rem(200px);
+      height: 100%;
 
       .home__hot__hot-issue-video-link {
         display: block;
         width: 100%;
         height: 100%;
         position: relative;
-
-        img {
-          height: 100%;
-        }
       }
 
       .home__hot__hot-issue-video-tex-area {
@@ -84,6 +89,10 @@
           border-left: 1px solid #fff;
           padding-left: 8px;
           margin-left: 5px;
+
+          @include tab {
+            font-size: rem(12px);
+          }
         }
       }
       .home__hot__hot-issue-video-views {
@@ -108,6 +117,14 @@
       padding-left: rem(16px);
       justify-content: space-between;
 
+      @include tab {
+        width: 100%;
+        justify-content: space-around;
+        .home__hot__news-item:nth-child(3) {
+          display: none;
+        }
+      }
+
       .home__hot__news-item {
         display: flex;
         align-items: center;
@@ -120,6 +137,7 @@
           width: rem(116px);
           height: rem(73px);
           flex-shrink: 0;
+
           img {
             width: 100%;
             height: 100%;
@@ -127,7 +145,10 @@
         }
 
         .home__hot__news-item-info {
+          display: block;
+
           padding-left: 12px;
+
           .home__hot__news-item-link {
             &:hover {
               text-decoration: underline;
@@ -136,6 +157,15 @@
             .home__hot__news-item-title {
               font-weight: bold;
               font-size: rem(12px);
+              @include tab {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: normal;
+                word-wrap: break-word;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+              }
             }
 
             .home__hot__news-item-description {
@@ -143,18 +173,40 @@
               margin-top: 2px;
               line-height: 1.4;
               color: $secondary-font;
+
+              @include tab {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: normal;
+                word-wrap: break-word;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+              }
             }
           }
 
           .home__hot__news-item-ctgry {
             font-size: rem(11px);
             color: $secondary-color;
-
+            flex-shrink: 0;
             cursor: pointer;
             padding-right: 2px;
 
             &:hover {
               text-decoration: underline;
+            }
+          }
+
+          @include tab {
+            .home__hot__news-item-c-v-wrap {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: normal;
+              word-wrap: break-word;
+              display: -webkit-box;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
             }
           }
 
@@ -177,7 +229,12 @@
     .home__hot__magazine-itme {
       width: rem(164px);
       margin-left: rem(16px);
-      flex-shrink: 0;
+
+      @include tab {
+        width: 100%;
+        max-width: rem(164px);
+      }
+
       &:first-child {
         margin-left: 0;
       }
@@ -192,6 +249,13 @@
           font-size: rem(12px);
           font-weight: 700;
           margin-top: 8px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: normal;
+          word-wrap: break-word;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
         }
         .home__hot__magazine-txt {
           display: block;
@@ -200,11 +264,26 @@
           font-weight: 400;
           margin-top: 4px;
           color: $secondary-font;
+
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: normal;
+          word-wrap: break-word;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
         }
       }
       .home__hot__magazine-info {
         margin-top: 4px;
         font-size: rem(11px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        word-wrap: break-word;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
 
         .home__hot__magazine-ctgry {
           color: $secondary-color;
@@ -224,12 +303,26 @@
 
 .home__hot__melon-tv-list {
   display: flex;
-
   flex-wrap: wrap;
+
+  @include tab {
+    justify-content: space-around;
+  }
 
   .home__hot__melon-tv-itme {
     margin-left: rem(16px);
-    flex-shrink: 0;
+
+    @include tab {
+      width: 100%;
+      max-width: rem(210px);
+
+      margin: 0;
+      margin-top: rem(5px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
 
     &:first-child,
     &:nth-child(4) {
@@ -238,12 +331,20 @@
 
     &:nth-child(n + 4) {
       margin-top: 16px;
+      @include tab {
+        margin-top: 5px;
+      }
     }
 
     .home__hot__melon-tv-Thumbnail {
       display: block;
       width: rem(223px);
-      height: 148px;
+      height: rem(148px);
+
+      @include tab {
+        width: 100%;
+        max-width: rem(200px);
+      }
 
       img {
         height: 100%;
@@ -327,8 +428,12 @@
 // 멜론 차트
 
 .home__hot__melon-chart {
-  flex-shrink: 0;
+  // flex-shrink: 0;
   width: rem(280px);
+
+  @include tab {
+    display: none;
+  }
 
   &__headline {
     display: flex;
@@ -353,7 +458,7 @@
     margin-top: rem(5px);
     border: 1px solid $borderGray;
     border-top: none;
-    padding-bottom: rem(35px);
+    padding-bottom: rem(36px);
   }
 
   &__tab-box {
@@ -465,7 +570,7 @@
       &__thumbnail {
         display: none;
         width: rem(48px);
-        flex-shrink: 0;
+        // flex-shrink: 0;
       }
 
       &__description {
@@ -480,6 +585,10 @@
           text-overflow: ellipsis;
           overflow: hidden;
           white-space: nowrap;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
         .home__hot__melon-chart__singer {
           display: block;
@@ -488,6 +597,10 @@
           overflow: hidden;
           white-space: nowrap;
           color: $secondary-font;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -536,7 +649,7 @@
           padding-left: rem(6px);
 
           &__description {
-            width: rem(120px);
+            width: rem(114px);
           }
         }
         .home__hot__melon-chart__singer {
@@ -545,12 +658,13 @@
       }
 
       &__ranking-info {
+        position: relative;
         justify-content: flex-start;
         padding-left: rem(12px);
         align-items: center;
 
         &__description {
-          width: rem(170px);
+          width: rem(165px);
           flex-direction: row;
           align-items: center;
         }
@@ -560,6 +674,8 @@
         color: #1a1a1a;
       }
       .home__hot__melon-chart__favorites {
+        position: absolute;
+        right: rem(25px);
         display: block;
         width: rem(21px);
         height: rem(21px);
@@ -574,5 +690,14 @@
         }
       }
     }
+  }
+}
+
+// 미디어  쿼리
+
+// mobile
+@include mobile {
+  .home__hot__section {
+    display: none;
   }
 }
