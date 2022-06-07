@@ -9,14 +9,26 @@
 
   &__list {
     display: flex;
+    align-items: center;
     @include autoMargin;
-    width: rem(1010px);
+    max-width: rem(1010px);
     color: $light-gray;
     justify-content: flex-end;
-    @include paddingY(4px);
+    @include paddingY(10px);
+
+    @include tab {
+      max-width: rem(734px);
+      padding: rem(10px) rem(15px);
+    }
   }
 
   &__item {
+    padding: 0 rem(10px);
+    border-left: 1px solid $borderLightGray;
+
+    &:first-child {
+      border-left: none;
+    }
     &:first-child a {
       position: relative;
       &::before {
@@ -25,39 +37,22 @@
         background: url("../../assets/images/icon-ticket.svg");
         width: rem(20px);
         height: rem(20px);
-        left: rem(-10px);
-        top: 0;
+        left: rem(-20px);
+        top: 50%;
+        transform: translateY(-50%);
+        background-size: cover;
       }
     }
 
-    &:nth-child(2) a {
-      position: relative;
-      &::before {
-        @include contentBorderLeft;
-      }
-    }
-    &:last-child a {
-      padding-left: 0;
-    }
-
-    &:nth-child(3) a {
-      position: relative;
-      &::before {
-        @include contentBorderLeft;
-      }
-    }
-
-    &:nth-child(4) a {
-      position: relative;
-      &::before {
-        @include contentBorderLeft;
-      }
+    a {
+      display: block;
+      width: 100%;
     }
   }
 
   &__link {
     display: block;
-    padding: rem(6px) rem(14px);
+    // padding: rem(6px) rem(14px);
     font-size: rem(12px);
     font-weight: 400;
 
@@ -75,14 +70,23 @@
 // Header
 .header {
   @include autoMargin;
-  width: rem(1010px);
+  max-width: rem(1010px);
   display: flex;
   height: rem(90px);
-  margin-top: 10px;
+  padding: 0 rem(45px);
+  margin-top: rem(10px);
+
+  @include tab {
+  }
+  justify-content: center;
 
   &__logo {
     display: flex;
     align-items: center;
+
+    @include tab {
+      min-width: rem(110px);
+    }
   }
 
   &__search {
@@ -95,6 +99,12 @@
       border: 2px solid $primary-logo-color;
       border-radius: rem(30px);
       margin-left: rem(20px);
+      margin-top: rem(5px);
+
+      @include tab {
+        width: rem(290px);
+        margin-left: rem(40px);
+      }
 
       &::placeholder {
         padding-left: rem(5px);
@@ -108,16 +118,37 @@
 
     &__button {
       position: absolute;
-      width: rem(24px);
-      height: rem(24px);
+      width: rem(20px);
+      height: rem(20px);
       background: url("../../assets/images/icon-search.svg");
       right: rem(20px);
       top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(-48%);
+      background-size: cover;
+
+      @include tab {
+        width: rem(16px);
+        height: rem(16px);
+        transform: translateY(-32%);
+        right: rem(16px);
+      }
     }
   }
 
   &__rising {
+    &__group {
+      display: flex;
+      align-items: center;
+      margin-left: rem(15px);
+      font-size: rem(12px);
+      color: $primary-font;
+      position: relative;
+      width: rem(220px);
+
+      @include tab {
+        display: none;
+      }
+    }
     &__text {
       color: $white;
       background: $primary-logo-color;
@@ -197,6 +228,10 @@
     flex-grow: 1;
     background: url("../../assets/images/header-ad-image.png") no-repeat 100%
       100% / 90%;
+
+    @include tab {
+      display: none;
+    }
   }
 
   &__nav {
@@ -207,9 +242,15 @@
       @include autoMargin;
 
       display: flex;
-      width: rem(1010px);
+      max-width: rem(1010px);
       justify-content: space-between;
       font-weight: 500;
+
+      @include tab {
+        max-width: rem(734px);
+        padding: 0 rem(15px);
+        font-size: clamp(0.7rem, 1.4vw, 1rem);
+      }
 
       :first-child {
         padding-left: 0;
@@ -220,17 +261,35 @@
         width: rem(280px);
         text-align: end;
 
+        @include tab {
+          width: initial;
+
+          a {
+            color: inherit;
+          }
+        }
         a {
           color: $light-gray;
+
+          @include tab {
+            color: inherit;
+          }
         }
       }
     }
 
     &__item {
       padding: rem(5px) rem(10px);
+
+      @include tab {
+        padding: rem(5px) 0;
+      }
     }
 
     &__link {
+      text-overflow: ellipsis;
+      overflow: auto;
+      white-space: nowrap;
       &:hover {
         color: $primary-logo-color;
       }
@@ -238,7 +297,7 @@
   }
 
   @include tab {
-    background: yellow;
+    // background: yellow;
   }
 
   @include mobile {

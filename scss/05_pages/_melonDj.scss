@@ -11,7 +11,7 @@
 }
 
 .header__nav {
-  &__item:nth-child(4) {
+  &__item:nth-child(4).is-selected {
     &::after {
       content: "";
       display: block;
@@ -262,9 +262,19 @@
     @include autoMargin;
     display: flex;
     @include paddingY(40px);
+
+    @include tab {
+      text-align: center;
+      width: 100%;
+    }
+
     &__logo {
       margin-left: rem(50px);
       position: relative;
+
+      @include tab {
+        display: none;
+      }
     }
 
     &__img {
@@ -279,6 +289,15 @@
 
     &__right {
       margin-left: rem(50px);
+
+      @include tab {
+        @include autoMargin;
+      }
+
+      @include tab {
+        text-align: center;
+      }
+
       &__title {
         margin-top: rem(15px);
         font-size: rem(18px);
@@ -290,6 +309,9 @@
         font-size: rem(20px);
         font-weight: 500;
         color: $primary-font;
+
+        @include tab {
+        }
       }
 
       &__list {
@@ -337,6 +359,10 @@
       display: flex;
       gap: rem(10px);
       align-items: center;
+
+      @include tab {
+        justify-content: center;
+      }
     }
   }
 }
@@ -371,6 +397,27 @@
         border: 1px solid $medium-gray;
       }
     }
+
+    @include tab {
+      width: 100%;
+
+      &__title {
+        margin-top: rem(20px);
+        margin-right: rem(10px);
+        padding-left: rem(20px);
+        white-space: nowrap;
+      }
+
+      &__list {
+        margin-left: 0;
+        flex-wrap: wrap;
+      }
+      &__item {
+        margin-top: rem(20px);
+      }
+      &__link {
+      }
+    }
   }
 
   // 힙합
@@ -381,28 +428,55 @@
     font-size: rem(18px);
     font-weight: 400;
 
+    @include tab {
+      padding-left: rem(20px);
+    }
+
     &__group {
       width: rem(1010px);
       @include autoMargin;
       margin-top: rem(20px);
+
+      @include tab {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: rem(20px);
+      }
     }
 
     &__list {
       @include djCardList;
+
+      @include tab {
+        flex-flow: wrap;
+      }
     }
 
     &__item {
       border: 1px solid $borderLightGray;
+
+      @include tab {
+        width: calc(50% - rem(10px));
+      }
     }
 
     &__img {
       @include djCardImg;
+
+      @include tab {
+        height: auto;
+      }
     }
 
     &__desc {
       @include djCardDesc;
       @include paddingX(20px);
       @include paddingY(25px);
+
+      @include tab {
+        text-align: center;
+      }
     }
 
     &__title {
@@ -411,6 +485,11 @@
       &:hover {
         text-decoration: underline;
       }
+
+      @include tab {
+        width: 100%;
+        font-size: rem(16px);
+      }
     }
 
     &__dj {
@@ -418,6 +497,10 @@
 
       &:hover {
         text-decoration: underline;
+      }
+
+      @include tab {
+        font-size: rem(14px);
       }
     }
 
@@ -498,28 +581,55 @@
     font-weight: 400;
     margin-top: rem(40px);
 
+    @include tab {
+      padding-left: rem(20px);
+    }
+
     &__group {
       width: rem(1010px);
       @include autoMargin;
       margin-top: rem(20px);
+
+      @include tab {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: rem(20px);
+      }
     }
 
     &__list {
       @include djCardList;
+
+      @include tab {
+        flex-flow: wrap;
+      }
     }
 
     &__item {
       border: 1px solid $borderLightGray;
+
+      @include tab {
+        width: calc(50% - rem(10px));
+      }
     }
 
     &__img {
       @include djCardImg;
+
+      @include tab {
+        height: auto;
+      }
     }
 
     &__desc {
       @include djCardDesc;
       @include paddingX(20px);
       @include paddingY(25px);
+
+      @include tab {
+        text-align: center;
+      }
     }
 
     &__title {
@@ -528,6 +638,11 @@
       &:hover {
         text-decoration: underline;
       }
+
+      @include tab {
+        width: 100%;
+        font-size: rem(16px);
+      }
     }
 
     &__dj {
@@ -535,6 +650,10 @@
 
       &:hover {
         text-decoration: underline;
+      }
+
+      @include tab {
+        font-size: rem(14px);
       }
     }
 
@@ -615,28 +734,55 @@
     font-weight: 400;
     margin-top: rem(40px);
 
+    @include tab {
+      padding-left: rem(20px);
+    }
+
     &__group {
       width: rem(1010px);
       @include autoMargin;
       margin-top: rem(20px);
+
+      @include tab {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: rem(20px);
+      }
     }
 
     &__list {
       @include djCardList;
+
+      @include tab {
+        flex-flow: wrap;
+      }
     }
 
     &__item {
       border: 1px solid $borderLightGray;
+
+      @include tab {
+        width: calc(50% - rem(10px));
+      }
     }
 
     &__img {
       @include djCardImg;
+
+      @include tab {
+        height: auto;
+      }
     }
 
     &__desc {
       @include djCardDesc;
       @include paddingX(20px);
       @include paddingY(25px);
+
+      @include tab {
+        text-align: center;
+      }
     }
 
     &__title {
@@ -645,6 +791,11 @@
       &:hover {
         text-decoration: underline;
       }
+
+      @include tab {
+        width: 100%;
+        font-size: rem(16px);
+      }
     }
 
     &__dj {
@@ -652,6 +803,10 @@
 
       &:hover {
         text-decoration: underline;
+      }
+
+      @include tab {
+        font-size: rem(14px);
       }
     }
 
@@ -731,29 +886,56 @@
     font-weight: 400;
     margin-top: rem(40px);
 
+    @include tab {
+      padding-left: rem(20px);
+    }
+
     &__group {
       width: rem(1010px);
       @include autoMargin;
       margin-top: rem(20px);
       margin-bottom: rem(130px);
+
+      @include tab {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: rem(20px);
+      }
     }
 
     &__list {
       @include djCardList;
+
+      @include tab {
+        flex-flow: wrap;
+      }
     }
 
     &__item {
       border: 1px solid $borderLightGray;
+
+      @include tab {
+        width: calc(50% - rem(10px));
+      }
     }
 
     &__img {
       @include djCardImg;
+
+      @include tab {
+        height: auto;
+      }
     }
 
     &__desc {
       @include djCardDesc;
       @include paddingX(20px);
       @include paddingY(25px);
+
+      @include tab {
+        text-align: center;
+      }
     }
 
     &__title {
@@ -762,6 +944,11 @@
       &:hover {
         text-decoration: underline;
       }
+
+      @include tab {
+        width: 100%;
+        font-size: rem(16px);
+      }
     }
 
     &__dj {
@@ -769,6 +956,10 @@
 
       &:hover {
         text-decoration: underline;
+      }
+
+      @include tab {
+        font-size: rem(14px);
       }
     }
 
