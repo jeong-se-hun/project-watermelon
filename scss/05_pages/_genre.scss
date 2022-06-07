@@ -13,7 +13,6 @@
       height: rem(50px);
       margin: 0 auto;
       border-top: 1px solid $borderLightGray;
-
       & > .is-active {
         border-right: 1px solid $borderLightGray;
         background: $white;
@@ -41,19 +40,42 @@
     width: 1010px;
     margin: 32px auto 0;
     // 최신앨범
+    @include tab {
+      @include flexbox($direction: column);
+      width: 100%;
+    }
+    @include mobile {
+      @include flexbox($direction: column);
+      width: 100%;
+    }
     &__album {
       &__list {
-        width: rem(676px);
-        height: rem(217px);
+        width: 671px;
         @include flexbox($justify: space-between);
+        @include tab {
+          width: 100%;
+        }
+        @include mobile {
+          width: 100%;
+          &__list:last-child {
+            display: none;
+          }
+        }
       }
       &__item {
-        background: pink;
         position: relative;
+        @include tab {
+          width: 33.3%;
+        }
       }
       &__item-img > img {
         width: rem(217px);
         height: rem(217px);
+        @include tab {
+          width: 100%;
+          height: auto;
+          padding: 10px;
+        }
       }
       &__item-group {
         position: absolute;
@@ -61,10 +83,21 @@
         left: rem(10px);
         @include flexbox($direction: column);
         color: $accent-background;
+        width: 100%;
+        @include tab {
+          position: absolute;
+          left: 10%;
+          bottom: 10%;
+        }
       }
       &__item-title {
         margin-bottom: rem(7px);
         font-size: rem(16px);
+        @include tab {
+          font-size: rem(20px);
+        }
+        display: block;
+        width: 90%;
       }
       &__item-link {
         position: absolute;
@@ -76,6 +109,7 @@
         background: url(../../assets/images/button_icons_sprite2.png) no-repeat
           87% 0%;
       }
+
       &__item-title--link {
         &:hover {
           text-decoration: underline;
@@ -83,6 +117,10 @@
       }
       &__item-singer {
         font-size: rem(13px);
+        width: 90%;
+        @include tab {
+          font-size: rem(16px);
+        }
       }
       &__item-opacity {
         width: rem(217px);
@@ -94,28 +132,82 @@
         left: 0;
         bottom: 0;
         @include flexbox($direction: column);
+        @include tab {
+          height: rem(80px);
+          left: 10px;
+          bottom: 10px;
+          width: calc(100% - 20px);
+        }
       }
     }
     &__album-header {
       font-size: rem(20px);
       margin-bottom: rem(10px);
       color: $primary-font;
+      @include tab {
+        margin-left: 10px;
+      }
     }
 
     // 오늘의 추천음악
-    &__palylist-group {
+    &__palylist-wrapper {
+      position: relative;
+    }
+    &__playlist-link-group {
+      @include tab {
+        position: relative;
+        width: 1010px;
+        min-width: 66.6%;
+      }
+    }
+
+    &__palylist__group {
       position: relative;
     }
     &__playlist-header {
       font-size: rem(20px);
       margin-bottom: 10px;
       color: $primary-font;
+      @include tab {
+        margin-left: 10px;
+        margin-top: 10px;
+      }
     }
     &__playlist-img {
       width: rem(319px);
-      height: rem(217px);
+      max-height: rem(217px);
       overflow: hidden;
+      @include tab {
+        width: 100%;
+        margin: 0 10px;
+        overflow: hidden;
+      }
+      & > img {
+        @include tab {
+          width: 64%;
+        }
+      }
     }
+    &__playlist-context-des {
+      display: none;
+      @include tab {
+        position: absolute;
+        font-size: rem(14px);
+        width: 30%;
+        top: 75px;
+        right: 2%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        line-height: 1.7;
+        word-wrap: break-word;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        color: $light-gray;
+      }
+    }
+
     &__playlist-opacity {
       width: rem(321px);
       height: rem(217px);
@@ -124,16 +216,37 @@
       left: 0;
       bottom: 0;
       position: absolute;
+      @include tab {
+        position: absolute;
+        top: 0;
+        width: 64%;
+        height: 100%;
+
+        margin: 0 10px;
+      }
     }
 
     &__playlist {
       position: relative;
+      &__links {
+        @include tab {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 100%;
+          margin: 0 5px;
+        }
+      }
       &__links-dj {
         position: absolute;
-        top: rem(20px);
+        top: rem(55px);
         left: rem(15px);
         font-weight: 400;
         color: $accent-background;
+        @include tab {
+          top: 50px;
+          left: 5%;
+        }
       }
       &__links-dj-name {
         &:hover {
@@ -146,14 +259,38 @@
       }
       &__links-title {
         position: absolute;
-        left: rem(15px);
-        top: rem(130px);
+        top: rem(165px);
         color: $accent-background;
         font-size: rem(16px);
         font-weight: 400;
-        // hover시 밑줄 수정해야함
+        margin: 0 8px;
+
         &:hover {
           text-decoration: underline;
+        }
+        @include tab {
+          padding-right: 15px;
+          display: block;
+          top: rem(40px);
+          color: $medium-gray;
+          display: inline-block;
+          left: 67%;
+          top: 50px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: normal;
+          line-height: 1.7;
+          word-wrap: break-word;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+      }
+      &__links__hash-group {
+        @include tab {
+          position: absolute;
+          top: 260px;
+          left: 66%;
         }
       }
       &__links-hash1 {
@@ -171,6 +308,14 @@
           color: $borderDarkGray;
           border: 1px solid $borderDarkGray;
         }
+        @include tab {
+          color: $light-gray;
+          border: 1px solid $light-gray;
+          &:hover {
+            color: $medium-gray;
+            border: 1px solid $medium-gray;
+          }
+        }
       }
       &__links-hash2 {
         position: absolute;
@@ -186,6 +331,14 @@
         &:hover {
           color: $borderDarkGray;
           border: 1px solid $borderDarkGray;
+        }
+        @include tab {
+          color: $light-gray;
+          border: 1px solid $light-gray;
+          &:hover {
+            color: $medium-gray;
+            border: 1px solid $medium-gray;
+          }
         }
       }
     }
