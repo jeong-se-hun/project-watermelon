@@ -520,7 +520,7 @@
       &__close {
         @include removeBtnStyle;
         width: rem(50px);
-        float: right;
+        // float: right;
         margin-right: rem(5px);
         height: rem(50px);
         opacity: 0.8;
