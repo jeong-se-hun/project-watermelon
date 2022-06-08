@@ -41,11 +41,31 @@
     height: 100%;
     overflow: hidden;
 
+    .new__section__more {
+      display: none;
+    }
+
     @include tab {
       width: 100%;
     }
     @include mobile {
       width: 100%;
+      .new__section__more {
+        display: block;
+        width: 40%;
+        height: rem(28px);
+        line-height: rem(28px);
+        border-radius: rem(30px);
+        text-align: center;
+        margin: rem(30px) auto 0;
+        border: 1px solid $secondary-font;
+        color: $secondary-font;
+
+        &:hover {
+          color: $primary-font;
+          border-color: $primary-font;
+        }
+      }
     }
   }
 

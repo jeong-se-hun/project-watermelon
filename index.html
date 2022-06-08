@@ -24,11 +24,12 @@
         <a href="">본문</a>
       </div>
 
+      <!-- 공통 헤더 -->
       <!-- notice-bar -->
       <div class="notice-bar">
         <ul class="notice-bar__list">
           <li class="notice-bar__item login">
-            <a href="#" class="notice-bar__link">로그인</a>
+            <a href="/views/login.html" class="notice-bar__link">로그인</a>
           </li>
 
           <li class="notice-bar__item">
@@ -53,8 +54,8 @@
       <!-- Header -->
       <header class="header">
         <h1 class="header__logo">
-          <a href="#">
-            <img src="./assets/images/melon-01.svg" alt="melon" />
+          <a href="/index.html">
+            <img src="/assets/images/melon-01.svg" alt="melon" />
           </a>
         </h1>
 
@@ -136,16 +137,16 @@
               <span class="mobile-nav__btn button--burgerBarBottom"></span>
             </button>
             <a href="" class="mobile-nav__ticket">
-              <img src="./assets/images/mobileTickt.png" alt="이용권 아이콘"
+              <img src="/assets/images/mobileTickt.png" alt="이용권 아이콘"
             /></a>
           </li>
           <li class="mobile-nav__list__item center">
             <h1 class="mobile-nav__logo">
-              <a href="#">
-                <img src="./assets/images/melon-01.svg" alt="melon" />
+              <a href="/index.html">
+                <img src="/assets/images/melon-01.svg" alt="melon" />
               </a>
             </h1>
-          </li class="mobile-nav__list__item center">
+          </li>
           <li class="mobile-nav__list__item right">
             <a href="#" aria-label="검색페이지 이동"></a>
           </li>
@@ -156,8 +157,14 @@
       <!-- side menu -->
       <div class="slide">
         <div class="slide__header">
-          <img class="slide__header__profile" src="assets/images/artist1.jpg" alt="">
-          <span class="slide__header__text">로그인하세요</span>
+          <img
+            class="slide__header__profile"
+            src="/assets/images/artist1.jpg"
+            alt=""
+          />
+          <a href="/views/login.html" class="slide__header__text"
+            >로그인하세요</a
+          >
           <button class="slide__header__close"></button>
         </div>
 
@@ -186,14 +193,11 @@
         </ul>
       </div>
 
-      <!-- side menu -->
-
-
       <!-- header-nav -->
       <nav class="header__nav">
         <ul class="header__nav__list">
           <li class="header__nav__item mobileHome">
-            <a href="#" class="header__nav__link">홈</a>
+            <a href="/index.html" class="header__nav__link">홈</a>
           </li>
           <li class="header__nav__item">
             <a href="/views/chart.html" class="header__nav__link">멜론차트</a>
@@ -202,10 +206,10 @@
             <a href="#" class="header__nav__link">최신음악</a>
           </li>
           <li class="header__nav__item">
-            <a href="views/genre.html" class="header__nav__link">장르음악</a>
+            <a href="/views/genre.html" class="header__nav__link">장르음악</a>
           </li>
           <li class="header__nav__item">
-            <a href="views/melonDj.html" class="header__nav__link">멜론DJ</a>
+            <a href="/views/melonDj.html" class="header__nav__link">멜론DJ</a>
           </li>
 
           <li class="header__nav__item">
@@ -228,7 +232,7 @@
           </li>
         </ul>
       </nav>
-
+      <!-- 공통 헤더 end-->
       <!-- 메인 -->
       <!-- 최신음악 -->
       <section class="home__new__section">
@@ -793,6 +797,7 @@
                   </ul>
                 </div>
               </div>
+              <a href="/" class="new__section__more">더보기</a>
             </div>
           </section>
           <!-- //최신음악 -->
@@ -906,7 +911,9 @@
               <p>멜론을 더 안전하게 이용하세요</p>
               <a href="/">회원가입</a>
             </div>
-            <a href="/" role="button" class="login-button">로그인</a>
+            <a href="/views/login.html" role="button" class="login-button"
+              >로그인</a
+            >
           </div>
           <div class="home__login--ad">
             <a href="/" aria-label="소각소각 단독 콘서트 멜론티켓 예매하기"></a>
