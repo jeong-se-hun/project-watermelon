@@ -38,11 +38,14 @@ const risingLoop = () => {
 
   // 기존 첫번째 이미지 위치로 포지션 이동
   const setPosition = () => {
-    $risingList.style.transform = "translateY(" + -leadPosition + "px)";
+    $risingList.style.opacity = "1";
+    // $risingList.style.transform = "translateY(" + -leadPosition + "px)";
+    $risingList.style.top = "0px";
   };
 
   const moveSlide = () => {
     $risingList.style.top = -currentIdx * size + "px";
+    // $risingList.style.top = "" + -currentIdx * (30 / 780) * 100 + "%";
     currentIdx = currentIdx % slideCount;
     currentIdx++;
     // console.log(currentIdx, slideCount);
@@ -54,7 +57,7 @@ const risingLoop = () => {
         $risingList.style.top = "0px";
       }, 2500);
       setTimeout(() => {
-        $risingList.style.transition = "all 1.2s ease-out";
+        $risingList.style.transition = "all 1.2s linear";
       }, 2600);
     }
 
@@ -71,7 +74,7 @@ const risingLoop = () => {
       $risingList.style.top = -(currentIdx - 1) * size + "px";
     }
     setTimeout(() => {
-      $risingList.style.transition = "all 1.2s ease-out";
+      $risingList.style.transition = "all 1.2s linear";
     }, 300);
 
     loop = setInterval(() => {
@@ -90,7 +93,7 @@ const risingLoop = () => {
     loopStart("leave");
   });
 
-  makeClone($risingList, $risingItem);
+  // makeClone($risingList, $risingItem);
   updateHeight();
   setPosition();
 
@@ -98,7 +101,7 @@ const risingLoop = () => {
   setTimeout(() => {
     $risingList.style.transition = "none";
     // $risingList.style.top = -currentIdx * size + "px";
-    $risingList.style.transition = "all 1.2s ease-out";
+    $risingList.style.transition = "all 1.2s linear";
   }, 100);
 
   loopStart("init");

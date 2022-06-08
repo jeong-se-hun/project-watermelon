@@ -337,7 +337,7 @@ button {
   position: relative;
   width: 10.9375rem;
   height: 25px;
-  margin-top: 28px;
+  margin-top: 33px;
   overflow: hidden;
 }
 @media (min-width: 480px) and (max-width: 1023px) {
@@ -371,6 +371,7 @@ button {
   position: absolute;
   top: 0;
   right: 0;
+  opacity: 0;
 }
 .header__rising__item {
   margin: 0.75rem;
@@ -650,9 +651,6 @@ button {
   padding-right: 0.375rem;
   position: relative;
 }
-.home__new__button-group [type=button]:nth-child(1) {
-  color: #1a1a1a;
-}
 .home__new__button-group [type=button]:nth-child(1)::after, .home__new__button-group [type=button]:nth-child(2)::after {
   content: "";
   position: absolute;
@@ -661,6 +659,9 @@ button {
   width: 1px;
   height: 0.6875rem;
   background: #909090;
+}
+.home__new__slide__button.on {
+  color: #1a1a1a;
 }
 .home__new__control {
   display: flex;
@@ -720,6 +721,13 @@ button {
 }
 .home__new__item--wrap:hover + .singer, .home__new__item--wrap:focus + .singer {
   display: none;
+}
+.home__new__item .singer {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  text-overflow: ellipsis;
+  overflow: auto;
+  white-space: nowrap;
 }
 .home__new__item a:not(:nth-child(4)):hover {
   text-decoration: underline;

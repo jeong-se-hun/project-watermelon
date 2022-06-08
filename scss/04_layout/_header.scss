@@ -220,7 +220,7 @@
       position: relative;
       width: rem(175px);
       height: 25px;
-      margin-top: 28px;
+      margin-top: 33px;
       overflow: hidden;
 
       @include tab {
@@ -255,7 +255,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      // background: #fff;
+      opacity: 0;
     }
 
     &__item {

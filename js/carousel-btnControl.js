@@ -3,6 +3,7 @@ const get = (target) => {
 };
 
 // get
+const $slideBtns = document.querySelectorAll(".home__new__slide__button");
 const $allBtn = get(".home__new__button--all");
 const $kpopBtn = get(".home__new__button--kpop");
 const $popBtn = get(".home__new__button--pop");
@@ -17,11 +18,12 @@ const size = $slideItems[0].clientWidth;
 let currentIdx = 0;
 let pageNum = $number.innerText;
 let slideCount = $slideItems.length;
+pageNum = Number(pageNum);
 
 const pages = {
-  all: 0,
-  kpop: 1,
-  pop: 2,
+  all: 1,
+  kpop: 2,
+  pop: 3,
 };
 
 // Function
@@ -36,23 +38,45 @@ const moveSlide = (num, role) => {
 
 const moveTo = (index) => {
   currentIdx = index;
-  moveSlide(index);
+  moveSlide(index - 1);
   $innerSlide.style.transition = "none";
 };
 
 // Event
-$allBtn.addEventListener("click", () => moveTo(pages.all));
-$kpopBtn.addEventListener("click", () => moveTo(pages.kpop));
-$popBtn.addEventListener("click", () => moveTo(pages.pop));
+$allBtn.addEventListener("click", (e) => {
+  $slideBtns.forEach((btn) => btn.classList.remove("on"));
+  e.target.classList.add("on");
+  $number.innerText = pages.all;
+  pageNum = pages.all;
+  moveTo(pages.all);
+});
+
+$kpopBtn.addEventListener("click", (e) => {
+  $slideBtns.forEach((btn) => btn.classList.remove("on"));
+  e.target.classList.add("on");
+  $number.innerText = pages.kpop;
+  pageNum = pages.kpop;
+  moveTo(pages.kpop);
+});
+
+$popBtn.addEventListener("click", (e) => {
+  $slideBtns.forEach((btn) => btn.classList.remove("on"));
+  e.target.classList.add("on");
+  $number.innerText = pages.pop;
+  pageNum = pages.pop;
+  moveTo(pages.pop);
+});
+
 $nextBtn.addEventListener("click", () => {
+  if (pageNum === 9) return;
   moveSlide(currentIdx + 1, "end");
   pageNum++;
-  if (pageNum > 9) return;
   $number.innerText = pageNum;
 });
+
 $prevBtn.addEventListener("click", () => {
+  if (pageNum === 1) return;
   moveSlide(currentIdx - 1, "start");
   pageNum--;
-  if (pageNum < 1) return;
   $number.innerText = pageNum;
 });
