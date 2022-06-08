@@ -197,11 +197,14 @@
         }
 
         td[headers="rank"] {
+          padding: 0 rem(18px) 0 rem(12px);
           // padding: 0 rem(18px) 0 rem(12px);
           text-align: center;
         }
 
         td[headers="sing-album-cover"] img {
+          width: rem(60px);
+          height: rem(60px);
           min-width: 60px;
           height: 60px;
           @include marginX(10px);
@@ -721,6 +724,15 @@
     &:first-child {
       flex-grow: 1.5;
       padding-left: rem(30px);
+
+      @include tab {
+        flex-grow: 1;
+        padding-left: rem(10px);
+      }
+
+      @include mobile {
+        padding-left: rem(2px);
+      }
     }
 
     &:nth-child(2) {
@@ -728,16 +740,38 @@
       display: flex;
       justify-content: center;
       gap: rem(15px);
+
+      @include tab {
+        flex-grow: 0;
+        justify-content: flex-start;
+        gap: rem(4px);
+      }
+
+      @include mobile {
+        gap: rem(2px);
+        margin-left: rem(2px);
+      }
     }
     &:nth-child(3) {
       flex-grow: 1.5;
       display: flex;
+
+      @include tab {
+        flex-grow: 0;
+        margin-left: rem(6px);
+      }
     }
+
     &:nth-child(4) {
       flex-grow: 0.3;
 
       @include tab {
-        flex-grow: 1;
+        flex-grow: 0;
+        margin-left: rem(10px);
+      }
+
+      @include mobile {
+        display: none;
       }
     }
     &:nth-child(5) {
@@ -747,11 +781,19 @@
       @include tab {
         display: none;
       }
+
+      @include mobile {
+        display: none;
+      }
     }
     &:nth-child(6) {
       flex-grow: 1;
       text-align: end;
       margin-right: rem(10px);
+
+      @include tab {
+        margin-left: rem(5px);
+      }
     }
   }
 
@@ -763,12 +805,21 @@
       width: rem(20px);
       height: rem(20px);
     }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__playlist {
     color: $secondary-font;
     margin-left: rem(5px);
     font-size: rem(14px);
+    white-space: nowrap;
+
+    @include tab {
+      margin-left: rem(0px);
+    }
   }
 
   &__album {
@@ -780,6 +831,10 @@
     color: $white;
     font-size: rem(14px);
 
+    @include tab {
+      display: none;
+    }
+
     @include mobile {
       display: none;
     }
@@ -787,6 +842,7 @@
 
   &__control {
     &-loop {
+      @include removeBtnStyle;
       display: inline-block;
       width: 30px;
       height: 30px;
@@ -795,6 +851,8 @@
 
     &-prev {
       display: inline-block;
+      @include removeBtnStyle;
+
       width: 30px;
       height: 30px;
       background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
@@ -802,6 +860,8 @@
 
     &-play {
       display: inline-block;
+      @include removeBtnStyle;
+
       width: 30px;
       height: 30px;
       background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
@@ -809,6 +869,8 @@
 
     &-next {
       display: inline-block;
+      @include removeBtnStyle;
+
       width: 30px;
       height: 30px;
       background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
@@ -816,6 +878,8 @@
 
     &-random {
       display: inline-block;
+      @include removeBtnStyle;
+
       width: 30px;
       height: 30px;
       background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
