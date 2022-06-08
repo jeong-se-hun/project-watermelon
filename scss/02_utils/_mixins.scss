@@ -304,3 +304,18 @@
   top: $t;
   transform: $trans;
 }
+
+// slide menu
+@mixin slideItemBefore(
+  $cont: "",
+  $pos: absolute,
+  $w: rem(20px),
+  $h: rem(20px),
+  $l: rem(15px)
+) {
+  content: $cont;
+  position: $pos;
+  width: $w;
+  height: $h;
+  left: $l;
+}
