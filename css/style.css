@@ -4,30 +4,21 @@
   font-style: normal;
   font-weight: 400;
   src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
-  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix")
-      format("embedded-opentype"),
-    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff") format("woff"),
-    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf") format("truetype");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix") format("embedded-opentype"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff") format("woff"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf") format("truetype");
 }
 @font-face {
   font-family: "NanumBarunGothic";
   font-style: normal;
   font-weight: 700;
   src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot");
-  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix")
-      format("embedded-opentype"),
-    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff") format("woff"),
-    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf") format("truetype");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix") format("embedded-opentype"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff") format("woff"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf") format("truetype");
 }
 @font-face {
   font-family: "NanumBarunGothic";
   font-style: normal;
   font-weight: 300;
   src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot");
-  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix")
-      format("embedded-opentype"),
-    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff") format("woff"),
-    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf") format("truetype");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix") format("embedded-opentype"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff") format("woff"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf") format("truetype");
 }
 * {
   font-family: "NanumBarunGothic", sans-serif;
@@ -126,7 +117,44 @@ button {
 }
 
 .skip-nav {
-  display: none;
+  height: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: #cccccc;
+  text-align: center;
+}
+
+.skip-nav a {
+  display: inline-block;
+  position: absolute;
+  padding: 6px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  outline-offset: -4px;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0, 0, 0);
+  z-index: 10;
+}
+
+.skip-nav a:focus {
+  position: relative;
+  width: initial;
+  height: initial;
+  clip: initial;
+  clip-path: initial;
+  z-index: 1000;
+}
+
+.test {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url("../../assets/images/icon-ticket.svg");
 }
 
 .notice-bar {
@@ -194,12 +222,12 @@ button {
     display: block;
   }
 }
-.notice-bar__item:nth-child(2),
-.notice-bar__item:last-child {
+.notice-bar__item:nth-child(2), .notice-bar__item:last-child {
   border-left-width: 0;
 }
 .notice-bar__item:nth-child(2) a {
   position: relative;
+  z-index: -1;
 }
 .notice-bar__item:nth-child(2) a::before {
   content: "";
@@ -457,7 +485,7 @@ button {
   .header__nav__list :nth-child(5) {
     padding-right: 0;
   }
-  .header__nav__list :nth-child(n + 6) {
+  .header__nav__list :nth-child(n+6) {
     display: none;
   }
 }
@@ -566,8 +594,8 @@ button {
     cursor: pointer;
   }
   .button--burgerBarTop,
-  .button--burgerBarMiddle,
-  .button--burgerBarBottom {
+.button--burgerBarMiddle,
+.button--burgerBarBottom {
     background: #000;
     position: absolute;
     left: 0;
@@ -696,7 +724,7 @@ button {
 .home__new__button-group {
   margin-right: 30px;
 }
-.home__new__button-group [type="button"] {
+.home__new__button-group [type=button] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -711,11 +739,10 @@ button {
   padding-right: 0.375rem;
   position: relative;
 }
-.home__new__button-group [type="button"]:nth-child(1) {
+.home__new__button-group [type=button]:nth-child(1) {
   color: #1a1a1a;
 }
-.home__new__button-group [type="button"]:nth-child(1)::after,
-.home__new__button-group [type="button"]:nth-child(2)::after {
+.home__new__button-group [type=button]:nth-child(1)::after, .home__new__button-group [type=button]:nth-child(2)::after {
   content: "";
   position: absolute;
   top: 1px;
@@ -769,7 +796,7 @@ button {
   }
 }
 @media (max-width: 479px) {
-  .home__new__inner .home__new__slide:nth-child(n + 2) {
+  .home__new__inner .home__new__slide:nth-child(n+2) {
     display: none;
   }
 }
@@ -815,12 +842,10 @@ button {
 .home__new__item--wrap {
   cursor: pointer;
 }
-.home__new__item--wrap:hover .home__new__item--detail,
-.home__new__item--wrap:focus .home__new__item--detail {
+.home__new__item--wrap:hover .home__new__item--detail, .home__new__item--wrap:focus .home__new__item--detail {
   opacity: 1;
 }
-.home__new__item--wrap:hover + .singer,
-.home__new__item--wrap:focus + .singer {
+.home__new__item--wrap:hover + .singer, .home__new__item--wrap:focus + .singer {
   display: none;
 }
 .home__new__item a:not(:nth-child(4)):hover {
@@ -1077,25 +1102,17 @@ button {
 .home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group {
   display: flex;
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__hot-issue-upper-group
-  .home__hot__hot-issue-video-area {
+.home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__hot-issue-video-area {
   min-width: 12.5rem;
   height: 100%;
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__hot-issue-upper-group
-  .home__hot__hot-issue-video-area
-  .home__hot__hot-issue-video-link {
+.home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__hot-issue-video-area .home__hot__hot-issue-video-link {
   display: block;
   width: 100%;
   height: 100%;
   position: relative;
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__hot-issue-upper-group
-  .home__hot__hot-issue-video-area
-  .home__hot__hot-issue-video-tex-area {
+.home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__hot-issue-video-area .home__hot__hot-issue-video-tex-area {
   position: absolute;
   width: 100%;
   padding: 2px 0 2px 15px;
@@ -1106,29 +1123,18 @@ button {
   font-size: 0.75rem;
   background-color: rgba(0, 0, 0, 0.7);
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__hot-issue-upper-group
-  .home__hot__hot-issue-video-area
-  .home__hot__hot-issue-video-tex-area
-  strong {
+.home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__hot-issue-video-area .home__hot__hot-issue-video-tex-area strong {
   font-size: 0.875rem;
   border-left: 1px solid #fff;
   padding-left: 8px;
   margin-left: 5px;
 }
 @media (min-width: 480px) and (max-width: 1023px) {
-  .home__hot__hot-issue-list.list1
-    .home__hot__hot-issue-upper-group
-    .home__hot__hot-issue-video-area
-    .home__hot__hot-issue-video-tex-area
-    strong {
+  .home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__hot-issue-video-area .home__hot__hot-issue-video-tex-area strong {
     font-size: 0.75rem;
   }
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__hot-issue-upper-group
-  .home__hot__hot-issue-video-area
-  .home__hot__hot-issue-video-views {
+.home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__hot-issue-video-area .home__hot__hot-issue-video-views {
   position: absolute;
   top: 0;
   right: 0;
@@ -1152,78 +1158,39 @@ button {
     width: 100%;
     justify-content: space-around;
   }
-  .home__hot__hot-issue-list.list1
-    .home__hot__hot-issue-upper-group
-    .home__hot__news-list
-    .home__hot__news-item:nth-child(3) {
+  .home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list .home__hot__news-item:nth-child(3) {
     display: none;
   }
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__hot-issue-upper-group
-  .home__hot__news-list
-  .home__hot__news-item {
+.home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list .home__hot__news-item {
   display: flex;
   align-items: center;
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__hot-issue-upper-group
-  .home__hot__news-list
-  .home__hot__news-item:first-child {
+.home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list .home__hot__news-item:first-child {
   margin-top: 0;
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__hot-issue-upper-group
-  .home__hot__news-list
-  .home__hot__news-item
-  .home__hot__news-item__thumbnail {
+.home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list .home__hot__news-item .home__hot__news-item__thumbnail {
   width: 7.25rem;
   height: 4.5625rem;
   flex-shrink: 0;
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__hot-issue-upper-group
-  .home__hot__news-list
-  .home__hot__news-item
-  .home__hot__news-item__thumbnail
-  img {
+.home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list .home__hot__news-item .home__hot__news-item__thumbnail img {
   width: 100%;
   height: 100%;
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__hot-issue-upper-group
-  .home__hot__news-list
-  .home__hot__news-item
-  .home__hot__news-item-info {
+.home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list .home__hot__news-item .home__hot__news-item-info {
   display: block;
   padding-left: 12px;
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__hot-issue-upper-group
-  .home__hot__news-list
-  .home__hot__news-item
-  .home__hot__news-item-info
-  .home__hot__news-item-link:hover {
+.home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list .home__hot__news-item .home__hot__news-item-info .home__hot__news-item-link:hover {
   text-decoration: underline;
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__hot-issue-upper-group
-  .home__hot__news-list
-  .home__hot__news-item
-  .home__hot__news-item-info
-  .home__hot__news-item-link
-  .home__hot__news-item-title {
+.home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list .home__hot__news-item .home__hot__news-item-info .home__hot__news-item-link .home__hot__news-item-title {
   font-weight: bold;
   font-size: 0.75rem;
 }
 @media (min-width: 480px) and (max-width: 1023px) {
-  .home__hot__hot-issue-list.list1
-    .home__hot__hot-issue-upper-group
-    .home__hot__news-list
-    .home__hot__news-item
-    .home__hot__news-item-info
-    .home__hot__news-item-link
-    .home__hot__news-item-title {
+  .home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list .home__hot__news-item .home__hot__news-item-info .home__hot__news-item-link .home__hot__news-item-title {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
@@ -1233,26 +1200,14 @@ button {
     -webkit-box-orient: vertical;
   }
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__hot-issue-upper-group
-  .home__hot__news-list
-  .home__hot__news-item
-  .home__hot__news-item-info
-  .home__hot__news-item-link
-  .home__hot__news-item-description {
+.home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list .home__hot__news-item .home__hot__news-item-info .home__hot__news-item-link .home__hot__news-item-description {
   font-size: 0.75rem;
   margin-top: 2px;
   line-height: 1.4;
   color: #888888;
 }
 @media (min-width: 480px) and (max-width: 1023px) {
-  .home__hot__hot-issue-list.list1
-    .home__hot__hot-issue-upper-group
-    .home__hot__news-list
-    .home__hot__news-item
-    .home__hot__news-item-info
-    .home__hot__news-item-link
-    .home__hot__news-item-description {
+  .home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list .home__hot__news-item .home__hot__news-item-info .home__hot__news-item-link .home__hot__news-item-description {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
@@ -1262,33 +1217,18 @@ button {
     -webkit-box-orient: vertical;
   }
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__hot-issue-upper-group
-  .home__hot__news-list
-  .home__hot__news-item
-  .home__hot__news-item-info
-  .home__hot__news-item-ctgry {
+.home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list .home__hot__news-item .home__hot__news-item-info .home__hot__news-item-ctgry {
   font-size: 0.6875rem;
   color: #7cb710;
   flex-shrink: 0;
   cursor: pointer;
   padding-right: 2px;
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__hot-issue-upper-group
-  .home__hot__news-list
-  .home__hot__news-item
-  .home__hot__news-item-info
-  .home__hot__news-item-ctgry:hover {
+.home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list .home__hot__news-item .home__hot__news-item-info .home__hot__news-item-ctgry:hover {
   text-decoration: underline;
 }
 @media (min-width: 480px) and (max-width: 1023px) {
-  .home__hot__hot-issue-list.list1
-    .home__hot__hot-issue-upper-group
-    .home__hot__news-list
-    .home__hot__news-item
-    .home__hot__news-item-info
-    .home__hot__news-item-c-v-wrap {
+  .home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list .home__hot__news-item .home__hot__news-item-info .home__hot__news-item-c-v-wrap {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
@@ -1298,12 +1238,7 @@ button {
     -webkit-box-orient: vertical;
   }
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__hot-issue-upper-group
-  .home__hot__news-list
-  .home__hot__news-item
-  .home__hot__news-item-info
-  .home__hot__news-item-views {
+.home__hot__hot-issue-list.list1 .home__hot__hot-issue-upper-group .home__hot__news-list .home__hot__news-item .home__hot__news-item-info .home__hot__news-item-views {
   font-size: 0.6875rem;
   color: #888888;
   padding-left: 5px;
@@ -1326,17 +1261,10 @@ button {
 .home__hot__hot-issue-list.list1 .home__hot__magazine-list .home__hot__magazine-itme:first-child {
   margin-left: 0;
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__magazine-list
-  .home__hot__magazine-itme
-  .home__hot__magazine-description:hover {
+.home__hot__hot-issue-list.list1 .home__hot__magazine-list .home__hot__magazine-itme .home__hot__magazine-description:hover {
   text-decoration: underline;
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__magazine-list
-  .home__hot__magazine-itme
-  .home__hot__magazine-description
-  .home__hot__magazine-title {
+.home__hot__hot-issue-list.list1 .home__hot__magazine-list .home__hot__magazine-itme .home__hot__magazine-description .home__hot__magazine-title {
   display: block;
   font-size: 0.75rem;
   font-weight: 700;
@@ -1349,11 +1277,7 @@ button {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__magazine-list
-  .home__hot__magazine-itme
-  .home__hot__magazine-description
-  .home__hot__magazine-txt {
+.home__hot__hot-issue-list.list1 .home__hot__magazine-list .home__hot__magazine-itme .home__hot__magazine-description .home__hot__magazine-txt {
   display: block;
   margin-top: 2px;
   font-size: 0.75rem;
@@ -1368,10 +1292,7 @@ button {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__magazine-list
-  .home__hot__magazine-itme
-  .home__hot__magazine-info {
+.home__hot__hot-issue-list.list1 .home__hot__magazine-list .home__hot__magazine-itme .home__hot__magazine-info {
   margin-top: 4px;
   font-size: 0.6875rem;
   overflow: hidden;
@@ -1382,19 +1303,11 @@ button {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__magazine-list
-  .home__hot__magazine-itme
-  .home__hot__magazine-info
-  .home__hot__magazine-ctgry {
+.home__hot__hot-issue-list.list1 .home__hot__magazine-list .home__hot__magazine-itme .home__hot__magazine-info .home__hot__magazine-ctgry {
   color: #7cb710;
   padding-right: 2px;
 }
-.home__hot__hot-issue-list.list1
-  .home__hot__magazine-list
-  .home__hot__magazine-itme
-  .home__hot__magazine-info
-  .home__hot__magazine-views {
+.home__hot__hot-issue-list.list1 .home__hot__magazine-list .home__hot__magazine-itme .home__hot__magazine-info .home__hot__magazine-views {
   padding-left: 5px;
   border-left: 1px solid #cccccc;
   color: #888888;
@@ -1424,15 +1337,14 @@ button {
     text-align: center;
   }
 }
-.home__hot__melon-tv-list .home__hot__melon-tv-itme:first-child,
-.home__hot__melon-tv-list .home__hot__melon-tv-itme:nth-child(4) {
+.home__hot__melon-tv-list .home__hot__melon-tv-itme:first-child, .home__hot__melon-tv-list .home__hot__melon-tv-itme:nth-child(4) {
   margin-left: 0;
 }
-.home__hot__melon-tv-list .home__hot__melon-tv-itme:nth-child(n + 4) {
+.home__hot__melon-tv-list .home__hot__melon-tv-itme:nth-child(n+4) {
   margin-top: 16px;
 }
 @media (min-width: 480px) and (max-width: 1023px) {
-  .home__hot__melon-tv-list .home__hot__melon-tv-itme:nth-child(n + 4) {
+  .home__hot__melon-tv-list .home__hot__melon-tv-itme:nth-child(n+4) {
     margin-top: 5px;
   }
 }
@@ -1453,19 +1365,13 @@ button {
 .home__hot__melon-tv-list .home__hot__melon-tv-itme .home__hot__melon-tv-description:hover {
   text-decoration: underline;
 }
-.home__hot__melon-tv-list
-  .home__hot__melon-tv-itme
-  .home__hot__melon-tv-description
-  .home__hot__melon-tv-title {
+.home__hot__melon-tv-list .home__hot__melon-tv-itme .home__hot__melon-tv-description .home__hot__melon-tv-title {
   display: block;
   font-size: 0.75rem;
   font-weight: 700;
   margin-top: 8px;
 }
-.home__hot__melon-tv-list
-  .home__hot__melon-tv-itme
-  .home__hot__melon-tv-description
-  .home__hot__melon-tv-txt {
+.home__hot__melon-tv-list .home__hot__melon-tv-itme .home__hot__melon-tv-description .home__hot__melon-tv-txt {
   display: block;
   margin-top: 2px;
   font-size: 0.75rem;
@@ -1477,17 +1383,11 @@ button {
   margin-top: 4px;
   font-size: 0.6875rem;
 }
-.home__hot__melon-tv-list
-  .home__hot__melon-tv-itme
-  .home__hot__melon-tv-info
-  .home__hot__melon-tv-ctgry {
+.home__hot__melon-tv-list .home__hot__melon-tv-itme .home__hot__melon-tv-info .home__hot__melon-tv-ctgry {
   color: #7cb710;
   padding-right: 2px;
 }
-.home__hot__melon-tv-list
-  .home__hot__melon-tv-itme
-  .home__hot__melon-tv-info
-  .home__hot__melon-tv-views {
+.home__hot__melon-tv-list .home__hot__melon-tv-itme .home__hot__melon-tv-info .home__hot__melon-tv-views {
   padding-left: 5px;
   border-left: 1px solid #cccccc;
   color: #888888;
@@ -1672,7 +1572,7 @@ button {
 .home__hot__melon-chart__item__ranking-info__description .home__hot__melon-chart__singer:hover {
   text-decoration: underline;
 }
-.home__hot__melon-chart__item:nth-child(-n + 3) .rank {
+.home__hot__melon-chart__item:nth-child(-n+3) .rank {
   color: #7cb710;
 }
 .home__hot__melon-chart__item:nth-child(even) {
@@ -1698,49 +1598,30 @@ button {
 .home__hot__melon-chart__more:hover {
   text-decoration: underline;
 }
-.home__hot__melon-chart
-  .home__hot__melon-chart__list-area.artist
-  .home__hot__melon-chart__item.is-active
-  .home__hot__melon-chart__item__ranking-info {
+.home__hot__melon-chart .home__hot__melon-chart__list-area.artist .home__hot__melon-chart__item.is-active .home__hot__melon-chart__item__ranking-info {
   padding-left: 0.375rem;
 }
-.home__hot__melon-chart
-  .home__hot__melon-chart__list-area.artist
-  .home__hot__melon-chart__item.is-active
-  .home__hot__melon-chart__item__ranking-info__description {
+.home__hot__melon-chart .home__hot__melon-chart__list-area.artist .home__hot__melon-chart__item.is-active .home__hot__melon-chart__item__ranking-info__description {
   width: 7.125rem;
 }
-.home__hot__melon-chart
-  .home__hot__melon-chart__list-area.artist
-  .home__hot__melon-chart__item.is-active
-  .home__hot__melon-chart__singer {
+.home__hot__melon-chart .home__hot__melon-chart__list-area.artist .home__hot__melon-chart__item.is-active .home__hot__melon-chart__singer {
   font-weight: 700;
 }
-.home__hot__melon-chart
-  .home__hot__melon-chart__list-area.artist
-  .home__hot__melon-chart__item__ranking-info {
+.home__hot__melon-chart .home__hot__melon-chart__list-area.artist .home__hot__melon-chart__item__ranking-info {
   position: relative;
   justify-content: flex-start;
   padding-left: 0.75rem;
   align-items: center;
 }
-.home__hot__melon-chart
-  .home__hot__melon-chart__list-area.artist
-  .home__hot__melon-chart__item__ranking-info__description {
+.home__hot__melon-chart .home__hot__melon-chart__list-area.artist .home__hot__melon-chart__item__ranking-info__description {
   width: 10.3125rem;
   flex-direction: row;
   align-items: center;
 }
-.home__hot__melon-chart
-  .home__hot__melon-chart__list-area.artist
-  .home__hot__melon-chart__item
-  .home__hot__melon-chart__singer {
+.home__hot__melon-chart .home__hot__melon-chart__list-area.artist .home__hot__melon-chart__item .home__hot__melon-chart__singer {
   color: #1a1a1a;
 }
-.home__hot__melon-chart
-  .home__hot__melon-chart__list-area.artist
-  .home__hot__melon-chart__item
-  .home__hot__melon-chart__favorites {
+.home__hot__melon-chart .home__hot__melon-chart__list-area.artist .home__hot__melon-chart__item .home__hot__melon-chart__favorites {
   position: absolute;
   right: 1.5625rem;
   display: block;
@@ -1748,16 +1629,10 @@ button {
   height: 1.3125rem;
   background: url(/assets/images/melonChartIcon.png) no-repeat 0 -220px;
 }
-.home__hot__melon-chart
-  .home__hot__melon-chart__list-area.artist
-  .home__hot__melon-chart__item
-  .home__hot__melon-chart__favorites:hover {
+.home__hot__melon-chart .home__hot__melon-chart__list-area.artist .home__hot__melon-chart__item .home__hot__melon-chart__favorites:hover {
   background-position: -21px -220px;
 }
-.home__hot__melon-chart
-  .home__hot__melon-chart__list-area.artist
-  .home__hot__melon-chart__item
-  .home__hot__melon-chart__favorites.is-active {
+.home__hot__melon-chart .home__hot__melon-chart__list-area.artist .home__hot__melon-chart__item .home__hot__melon-chart__favorites.is-active {
   background-position: 0 -241px;
 }
 
@@ -1959,8 +1834,7 @@ button {
   align-items: center;
   border: 1px solid #cccccc;
 }
-.login__form__input__id,
-.login__form__input__pw {
+.login__form__input__id, .login__form__input__pw {
   width: 100%;
   height: 3.0625rem;
   padding-left: 0.6875rem;
@@ -2245,8 +2119,7 @@ button {
 .today-section__card__like::before {
   content: "";
   display: inline-block;
-  background: url("https://cdnimg.melon.co.kr/resource/image/web/common/bullet_icons_sprite_20201112.png")
-    no-repeat -69px -14px;
+  background: url("https://cdnimg.melon.co.kr/resource/image/web/common/bullet_icons_sprite_20201112.png") no-repeat -69px -14px;
   width: 0.875rem;
   height: 0.75rem;
   margin-right: 0.4375rem;
@@ -2289,36 +2162,28 @@ button {
   background: url("https://cdnimg.melon.co.kr/resource/image/web/common/ic_common_verify14.png");
 }
 .today-section .profile1 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/7/60/659951_46.jpg?tm=20220510100909")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/7/60/659951_46.jpg?tm=20220510100909") 100%/contain;
 }
 .today-section .profile2 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/509/58/50857097_46.jpg?tm=20220318115222")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/509/58/50857097_46.jpg?tm=20220318115222") 100%/contain;
 }
 .today-section .profile3 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/356/95/35594080_46.jpg?tm=20211222034700")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/356/95/35594080_46.jpg?tm=20211222034700") 100%/contain;
 }
 .today-section .profile4 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/502/63/50162126_46.jpg?tm=20220524120620")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/502/63/50162126_46.jpg?tm=20220524120620") 100%/contain;
 }
 .today-section .profile5 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667293_46.jpg?tm=20220103031155")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667293_46.jpg?tm=20220103031155") 100%/contain;
 }
 .today-section .profile6 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/601/77/60076424_46.jpg?tm=20220311042250")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/601/77/60076424_46.jpg?tm=20220311042250") 100%/contain;
 }
 .today-section .profile7 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/2/53/152501_46.jpg?tm=20220517103825")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/2/53/152501_46.jpg?tm=20220517103825") 100%/contain;
 }
 .today-section .profile8 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/348/31/34730789_46.jpg?tm=20220127083334")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/348/31/34730789_46.jpg?tm=20220127083334") 100%/contain;
 }
 .today-section .list-num {
   font-size: 0.75rem;
@@ -2634,8 +2499,7 @@ button {
 .dj-list__hiphop__like::before {
   content: "";
   display: inline-block;
-  background: url("https://cdnimg.melon.co.kr/resource/image/web/common/bullet_icons_sprite_20201112.png")
-    no-repeat -69px -14px;
+  background: url("https://cdnimg.melon.co.kr/resource/image/web/common/bullet_icons_sprite_20201112.png") no-repeat -69px -14px;
   width: 0.875rem;
   height: 0.75rem;
   margin-right: 0.4375rem;
@@ -2683,20 +2547,16 @@ button {
   background: url("https://cdnimg.melon.co.kr/resource/image/web/common/ic_common_verify14.png");
 }
 .dj-list .hiphop-profile1 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667306_46.jpg?tm=20220328092727")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667306_46.jpg?tm=20220328092727") 100%/contain;
 }
 .dj-list .hiphop-profile2 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/213/71/21270688_46.jpg?tm=20220429080116")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/213/71/21270688_46.jpg?tm=20220429080116") 100%/contain;
 }
 .dj-list .hiphop-profile3 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667293_46.jpg?tm=20220103031155")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667293_46.jpg?tm=20220103031155") 100%/contain;
 }
 .dj-list .hiphop-profile4 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/214/22/21321753_46.jpg?tm=20220603074831")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/214/22/21321753_46.jpg?tm=20220603074831") 100%/contain;
 }
 .dj-list .list-num {
   font-size: 0.75rem;
@@ -2856,8 +2716,7 @@ button {
 .dj-list__rock__like::before {
   content: "";
   display: inline-block;
-  background: url("https://cdnimg.melon.co.kr/resource/image/web/common/bullet_icons_sprite_20201112.png")
-    no-repeat -69px -14px;
+  background: url("https://cdnimg.melon.co.kr/resource/image/web/common/bullet_icons_sprite_20201112.png") no-repeat -69px -14px;
   width: 0.875rem;
   height: 0.75rem;
   margin-right: 0.4375rem;
@@ -2905,20 +2764,16 @@ button {
   background: url("https://cdnimg.melon.co.kr/resource/image/web/common/ic_common_verify14.png");
 }
 .dj-list .rock-profile1 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667310_46.jpg?tm=20220216013257")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667310_46.jpg?tm=20220216013257") 100%/contain;
 }
 .dj-list .rock-profile2 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667310_46.jpg?tm=20220216013257")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667310_46.jpg?tm=20220216013257") 100%/contain;
 }
 .dj-list .rock-profile3 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667310_46.jpg?tm=20220216013257")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667310_46.jpg?tm=20220216013257") 100%/contain;
 }
 .dj-list .rock-profile4 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667310_46.jpg?tm=20220216013257")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667310_46.jpg?tm=20220216013257") 100%/contain;
 }
 .dj-list .list-num {
   font-size: 0.75rem;
@@ -3078,8 +2933,7 @@ button {
 .dj-list__boring__like::before {
   content: "";
   display: inline-block;
-  background: url("https://cdnimg.melon.co.kr/resource/image/web/common/bullet_icons_sprite_20201112.png")
-    no-repeat -69px -14px;
+  background: url("https://cdnimg.melon.co.kr/resource/image/web/common/bullet_icons_sprite_20201112.png") no-repeat -69px -14px;
   width: 0.875rem;
   height: 0.75rem;
   margin-right: 0.4375rem;
@@ -3127,20 +2981,16 @@ button {
   background: url("https://cdnimg.melon.co.kr/resource/image/web/common/ic_common_verify14.png");
 }
 .dj-list .boring-profile1 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667325_46.jpg?tm=20211229032624")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/377/68/37667325_46.jpg?tm=20211229032624") 100%/contain;
 }
 .dj-list .boring-profile2 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/407/56/40655407_46.jpg?tm=20220426063431")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/407/56/40655407_46.jpg?tm=20220426063431") 100%/contain;
 }
 .dj-list .boring-profile3 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/208/94/20793038_46.jpg?tm=20220320104517")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/208/94/20793038_46.jpg?tm=20220320104517") 100%/contain;
 }
 .dj-list .boring-profile4 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/509/58/50857096_46.jpg?tm=20201104063751")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/509/58/50857096_46.jpg?tm=20201104063751") 100%/contain;
 }
 .dj-list .list-num {
   font-size: 0.75rem;
@@ -3284,8 +3134,7 @@ button {
 .dj-list__summer__like::before {
   content: "";
   display: inline-block;
-  background: url("https://cdnimg.melon.co.kr/resource/image/web/common/bullet_icons_sprite_20201112.png")
-    no-repeat -69px -14px;
+  background: url("https://cdnimg.melon.co.kr/resource/image/web/common/bullet_icons_sprite_20201112.png") no-repeat -69px -14px;
   width: 0.875rem;
   height: 0.75rem;
   margin-right: 0.4375rem;
@@ -3328,20 +3177,16 @@ button {
   background: url("https://cdnimg.melon.co.kr/resource/image/web/common/ic_common_verify14.png");
 }
 .dj-list .summer-profile1 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/351/77/35076857_46.jpg?tm=20220524101826")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/351/77/35076857_46.jpg?tm=20220524101826") 100%/contain;
 }
 .dj-list .summer-profile2 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/208/94/20793038_46.jpg?tm=20220320104517")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/208/94/20793038_46.jpg?tm=20220320104517") 100%/contain;
 }
 .dj-list .summer-profile3 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/369/61/36860740_46.jpg?tm=20220528034934")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/369/61/36860740_46.jpg?tm=20220528034934") 100%/contain;
 }
 .dj-list .summer-profile4 {
-  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/400/70/39969337_46.jpg?tm=20220325061206")
-    100% / contain;
+  background: url("https://cdnimg.melon.co.kr/svc/user_images/user/400/70/39969337_46.jpg?tm=20220325061206") 100%/contain;
 }
 .dj-list .list-num {
   font-size: 0.75rem;
@@ -4168,11 +4013,11 @@ button {
     height: 3.75rem;
   }
 }
-.chart__main .chart__main__top100__tbody tr td[headers="rank"] {
+.chart__main .chart__main__top100__tbody tr td[headers=rank] {
   padding: 0 1.125rem 0 0.75rem;
   text-align: center;
 }
-.chart__main .chart__main__top100__tbody tr td[headers="sing-album-cover"] img {
+.chart__main .chart__main__top100__tbody tr td[headers=sing-album-cover] img {
   width: 3.75rem;
   height: 3.75rem;
   min-width: 60px;
@@ -4181,7 +4026,7 @@ button {
   margin-right: 0.625rem;
 }
 @media (max-width: 479px) {
-  .chart__main .chart__main__top100__tbody tr td[headers="sing-album-cover"] img {
+  .chart__main .chart__main__top100__tbody tr td[headers=sing-album-cover] img {
     min-width: 40px;
     height: 40px;
   }
@@ -4212,9 +4057,7 @@ button {
   white-space: nowrap;
   overflow: hidden;
 }
-.chart__main .chart__main__top100__tbody .song__info__title:hover,
-.chart__main .chart__main__top100__tbody .song__info__singer:hover,
-.chart__main .chart__main__top100__tbody .song__album__title:hover {
+.chart__main .chart__main__top100__tbody .song__info__title:hover, .chart__main .chart__main__top100__tbody .song__info__singer:hover, .chart__main .chart__main__top100__tbody .song__album__title:hover {
   text-decoration: underline;
 }
 .chart__main .chart__main__top100__tbody .sing__like__button {
@@ -4243,11 +4086,7 @@ button {
   width: 1.875rem;
   height: 2rem;
 }
-.chart__main .chart__main__top100__tbody .sing__like__button,
-.chart__main .chart__main__top100__tbody .sing__listen__button,
-.chart__main .chart__main__top100__tbody .sing__list-add__button,
-.chart__main .chart__main__top100__tbody .sing__download__button,
-.chart__main .chart__main__top100__tbody .sing__mv__button {
+.chart__main .chart__main__top100__tbody .sing__like__button, .chart__main .chart__main__top100__tbody .sing__listen__button, .chart__main .chart__main__top100__tbody .sing__list-add__button, .chart__main .chart__main__top100__tbody .sing__download__button, .chart__main .chart__main__top100__tbody .sing__mv__button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -4319,8 +4158,7 @@ button {
   .chart__main__top100__thead tr {
     height: 48px;
   }
-  .chart__main__top100__thead tr,
-  .chart__main__top100__tbody tr {
+  .chart__main__top100__thead tr, .chart__main__top100__tbody tr {
     position: relative;
     display: flex;
     flex-flow: row wrap;
@@ -4328,63 +4166,63 @@ button {
     align-items: center;
   }
   #check,
-  td[headers="check"] {
+td[headers=check] {
     display: none;
   }
   #rank,
-  td[headers="rank"] {
+td[headers=rank] {
     width: 3%;
     min-width: 20px;
   }
   #rank-change,
-  td[headers="rank-change"] {
+td[headers=rank-change] {
     width: 6%;
     text-align: center;
   }
   #sing-album-cover,
-  td[headers="sing-album-cover"] {
+td[headers=sing-album-cover] {
     width: 70px;
     order: -1;
   }
   #sing-info-link,
-  td[headers="sing-info-link"] {
+td[headers=sing-info-link] {
     display: none;
   }
   #sing-info,
-  td[headers="sing-info"] {
+td[headers=sing-info] {
     width: 30%;
   }
   #sing-album,
-  td[headers="sing-album"] {
+td[headers=sing-album] {
     width: 19%;
   }
   #sing-like,
-  td[headers="sing-like"] {
+td[headers=sing-like] {
     width: 14%;
   }
   #sing-listen,
-  td[headers="sing-listen"] {
+td[headers=sing-listen] {
     width: 8%;
     text-align: center;
   }
   #sing-list-add,
-  td[headers="sing-list-add"] {
+td[headers=sing-list-add] {
     display: none;
   }
   #sing-download,
-  td[headers="sing-download"] {
+td[headers=sing-download] {
     display: none;
   }
   #sing-mv,
-  td[headers="sing-mv"] {
+td[headers=sing-mv] {
     display: none;
   }
 }
 @media (max-width: 479px) {
   .chart__main__title-wrapper,
-  .chart__main__time,
-  .chart__main__music-button__wrapper,
-  .chart__main__top100__thead {
+.chart__main__time,
+.chart__main__music-button__wrapper,
+.chart__main__top100__thead {
     display: none;
   }
   .chart__main__top100__tbody tr {
@@ -4396,64 +4234,64 @@ button {
     min-width: 330px;
   }
   #check,
-  td[headers="check"] {
+td[headers=check] {
     display: none;
   }
   #rank,
-  td[headers="rank"] {
+td[headers=rank] {
     width: 20px;
     padding: 0;
     text-align: center;
   }
   #rank-change,
-  td[headers="rank-change"] {
+td[headers=rank-change] {
     display: inline-block;
     width: 3%;
     text-align: center;
   }
   #rank-change .rank-up-num,
-  #rank-change .rank-down-num,
-  td[headers="rank-change"] .rank-up-num,
-  td[headers="rank-change"] .rank-down-num {
+#rank-change .rank-down-num,
+td[headers=rank-change] .rank-up-num,
+td[headers=rank-change] .rank-down-num {
     display: none;
   }
   #sing-album-cover,
-  td[headers="sing-album-cover"] {
+td[headers=sing-album-cover] {
     width: 40px;
     margin-right: 10px;
     order: -1;
   }
   #sing-info-link,
-  td[headers="sing-info-link"] {
+td[headers=sing-info-link] {
     display: none;
   }
   #sing-info,
-  td[headers="sing-info"] {
+td[headers=sing-info] {
     width: 60%;
     padding-left: 10px;
   }
   #sing-album,
-  td[headers="sing-album"] {
+td[headers=sing-album] {
     display: none;
   }
   #sing-like,
-  td[headers="sing-like"] {
+td[headers=sing-like] {
     display: none;
   }
   #sing-listen,
-  td[headers="sing-listen"] {
+td[headers=sing-listen] {
     width: 9%;
   }
   #sing-list-add,
-  td[headers="sing-list-add"] {
+td[headers=sing-list-add] {
     display: none;
   }
   #sing-download,
-  td[headers="sing-download"] {
+td[headers=sing-download] {
     display: none;
   }
   #sing-mv,
-  td[headers="sing-mv"] {
+td[headers=sing-mv] {
     display: none;
   }
 }
