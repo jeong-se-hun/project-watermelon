@@ -117,7 +117,44 @@ button {
 }
 
 .skip-nav {
-  display: none;
+  height: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: #cccccc;
+  text-align: center;
+}
+
+.skip-nav a {
+  display: inline-block;
+  position: absolute;
+  padding: 6px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  outline-offset: -4px;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0, 0, 0);
+  z-index: 10;
+}
+
+.skip-nav a:focus {
+  position: relative;
+  width: initial;
+  height: initial;
+  clip: initial;
+  clip-path: initial;
+  z-index: 1000;
+}
+
+.test {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url("../../assets/images/icon-ticket.svg");
 }
 
 .notice-bar {
@@ -190,6 +227,7 @@ button {
 }
 .notice-bar__item:nth-child(2) a {
   position: relative;
+  z-index: -1;
 }
 .notice-bar__item:nth-child(2) a::before {
   content: "";
