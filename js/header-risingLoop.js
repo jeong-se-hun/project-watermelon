@@ -1,11 +1,8 @@
-// import loop from "./carousel-loop.js";
-
 const risingLoop = () => {
   const $risingGroup = get(".header__rising__group");
   const $risingList = get(".header__rising__list");
   const $risingItem = document.querySelectorAll(".header__rising__item");
 
-  // const paddingTop = 5;
   const marginSize = 12;
   const size = $risingItem[0].clientHeight + marginSize;
   const leadPosition = 255;
@@ -57,8 +54,7 @@ const risingLoop = () => {
         $risingList.style.top = "0px";
       }, 2500);
       setTimeout(() => {
-        $risingList.style.transition =
-          "all 0.8s cubic-bezier(0.33, 1, 0.68, 1)";
+        $risingList.style.transition = "all 1.2s ease-out";
       }, 2600);
     }
 
@@ -68,19 +64,14 @@ const risingLoop = () => {
   };
 
   let loop;
-  const loopStop = () => {
-    clearInterval(loop);
-    $risingList.style.transition = "none";
-    $risingList.style.top = "0px";
-  };
 
-  const loopStart = () => {
-    // setTimeout(() => {
-    $risingList.style.transition = "none";
-    $risingList.style.top = -(currentIdx - 1) * size + "px";
-    // }, 100);
+  const loopStart = (role) => {
+    if (role === "leave") {
+      $risingList.style.transition = "none";
+      $risingList.style.top = -(currentIdx - 1) * size + "px";
+    }
     setTimeout(() => {
-      $risingList.style.transition = "all 0.8s cubic-bezier(0.33, 1, 0.68, 1)";
+      $risingList.style.transition = "all 1.2s ease-out";
     }, 300);
 
     loop = setInterval(() => {
@@ -88,8 +79,16 @@ const risingLoop = () => {
     }, 1500);
   };
 
-  $risingGroup.addEventListener("mouseenter", loopStop);
-  $risingGroup.addEventListener("mouseleave", loopStart);
+  const loopStop = () => {
+    clearInterval(loop);
+    $risingList.style.transition = "none";
+    $risingList.style.top = "" + -leadPosition + "px";
+  };
+
+  $risingGroup.addEventListener("mouseenter", () => loopStop());
+  $risingGroup.addEventListener("mouseleave", () => {
+    loopStart("leave");
+  });
 
   makeClone($risingList, $risingItem);
   updateHeight();
@@ -97,11 +96,12 @@ const risingLoop = () => {
 
   // 초기 트랜지션 추가
   setTimeout(() => {
-    $risingList.style.top = "0px";
-    $risingList.style.transition = "all 0.8s cubic-bezier(0.33, 1, 0.68, 1)";
-  }, 300);
+    $risingList.style.transition = "none";
+    // $risingList.style.top = -currentIdx * size + "px";
+    $risingList.style.transition = "all 1.2s ease-out";
+  }, 100);
 
-  loopStart();
+  loopStart("init");
 };
 
 risingLoop();
