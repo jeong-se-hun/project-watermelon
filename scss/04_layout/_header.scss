@@ -504,6 +504,8 @@
       @include autoMargin;
       @include paddingY(10px);
       border-bottom: 1px solid $borderLightGray;
+      display: flex;
+      align-items: center;
 
       &__profile {
         width: rem(60px);
@@ -515,16 +517,15 @@
       &__text {
         margin-left: rem(10px);
         font-size: rem(18px);
+        flex-grow: 1;
       }
 
       &__close {
         @include removeBtnStyle;
         width: rem(50px);
-        float: right;
         margin-right: rem(5px);
         height: rem(50px);
         opacity: 0.8;
-        display: inline-block;
 
         &::before,
         &::after {
@@ -607,21 +608,27 @@
 }
 
 .slide.is-show {
-  display: block;
-  position: absolute;
-  z-index: 1;
-  background: $white;
-  top: rem(38px);
-  left: 0;
-  right: 0;
-  bottom: 0;
+  @include mobile {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    background: $white;
+    top: rem(38px);
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .mobile-nav__list.is-active {
-  justify-content: center;
+  @include mobile {
+    justify-content: center;
+  }
 }
 
 .left.is-active,
 .right.is-active {
-  display: none;
+  @include mobile {
+    display: none;
+  }
 }

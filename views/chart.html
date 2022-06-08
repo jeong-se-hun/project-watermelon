@@ -13,8 +13,7 @@
       id="favicon"
     />
     <script src="/js/music-volumn-control.js" defer></script>
-    <script src="/js/music-bar.js" defer></script>
-    <script src="/js/music-bar-hide.js" defer></script>
+    <script src="/js/music-bar-controls.js" defer></script>
   </head>
   <body>
     <div class="container-chart">
@@ -45,8 +44,8 @@
         <!-- Header -->
         <div class="header">
           <h1 class="header__logo">
-            <a href="#">
-              <img src="../assets/images/melon-01.svg" alt="melon" />
+            <a href="/index.html">
+              <img src="/assets/images/melon-01.svg" alt="melon" />
             </a>
           </h1>
           <!-- main form -->
@@ -311,9 +310,10 @@
                 </button>
               </td>
               <td headers="sing-listen">
-                <button class="sing__listen__button play-button">
+                <button class="sing__listen__button play-button" id="playBtn">
                   <span class="chart-play-icon"></span>
                 </button>
+                <audio src="/assets/sound/thatthat.mp3" id="audio1"></audio>
               </td>
               <td headers="sing-list-add">
                 <button class="sing__list-add__button">
@@ -969,7 +969,7 @@
           </li>
           <li class="audio-bar__item">
             <p class="audio-bar__start-time">00:00</p>
-            <p class="audio-bar__end-time">03:20</p>
+            <p class="audio-bar__end-time">02:55</p>
           </li>
           <li class="audio-bar__item slider-container">
             <input
@@ -983,7 +983,6 @@
           </li>
         </ul>
         <div class="audio-bar__progress">
-
         </div>
       </div>
     </div>

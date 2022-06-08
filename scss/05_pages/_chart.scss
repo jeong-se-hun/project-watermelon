@@ -720,6 +720,7 @@
   &__list {
     display: flex;
     align-items: center;
+    position: relative;
   }
 
   &__item {
@@ -828,7 +829,7 @@
       height: 30px;
       top: -6px;
       left: -27px;
-      background: url("/assets/images/musicbar-sprite.svg") no-repeat 0 0;
+      background: url("/assets/images/music-sprite.svg") no-repeat 0 0;
 
       @include mobile {
         display: none;
@@ -868,7 +869,7 @@
       display: inline-block;
       width: 30px;
       height: 30px;
-      background: url("/assets/images/musicbar-sprite.svg") no-repeat -30px 0;
+      background: url("/assets/images/music-sprite.svg") no-repeat -30px 0;
     }
 
     &-prev {
@@ -877,7 +878,7 @@
 
       width: 30px;
       height: 30px;
-      background: url("/assets/images/musicbar-sprite.svg") no-repeat 0 -30px;
+      background: url("/assets/images/music-sprite.svg") no-repeat 0 -30px;
     }
 
     &-play {
@@ -886,7 +887,7 @@
 
       width: 30px;
       height: 30px;
-      background: url("/assets/images/musicbar-sprite.svg") no-repeat -90px -30px;
+      background: url("/assets/images/music-sprite.svg") no-repeat -120px 0;
 
       &:focus {
         outline: none;
@@ -899,7 +900,7 @@
 
       width: 30px;
       height: 30px;
-      background: url("/assets/images/musicbar-sprite.svg") no-repeat -30px -30px;
+      background: url("/assets/images/music-sprite.svg") no-repeat -30px -30px;
     }
 
     &-random {
@@ -908,7 +909,7 @@
 
       width: 30px;
       height: 30px;
-      background: url("/assets/images/musicbar-sprite.svg") no-repeat -60px -30px;
+      background: url("/assets/images/music-sprite.svg") no-repeat -60px -30px;
     }
   }
 
@@ -916,7 +917,7 @@
     display: block;
     width: 30px;
     height: 30px;
-    background: url("/assets/images/musicbar-sprite.svg") no-repeat -60px 0;
+    background: url("/assets/images/music-sprite.svg") no-repeat -60px 0;
     @include autoMargin;
   }
 
@@ -933,6 +934,25 @@
   }
 
   &__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: $primary-color;
+    transition: width 1750ms linear;
+
+    &::after {
+      display: inline-block;
+      content: "";
+      width: rem(12px);
+      height: rem(12px);
+      border-radius: 50%;
+      background: $white;
+      border: 1px solid $borderGray;
+      position: absolute;
+      top: rem(-4px);
+      right: rem(-5px);
+    }
   }
 }
 
@@ -972,4 +992,12 @@
 
 .audio-bar.is-show {
   transform: translateY(0);
+}
+
+// .audio-bar__progress.is-active {
+//   width: 100%;
+// }
+
+.audio-bar__control-play.is-pause {
+  background: url("/assets/images/music-sprite.svg") no-repeat -90px -30px;
 }
