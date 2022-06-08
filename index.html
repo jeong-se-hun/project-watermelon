@@ -16,11 +16,25 @@
     <script src="./js/carousel-loop.js" defer></script>
     <script src="./js/header-risingLoop.js" defer></script>
     <script src="./js/home__hot__event.js" defer></script>
+    <script src="./js/mobile-hamburger-click.js" defer></script>
   </head>
   <body>
     <div class="container">
       <div class="skip-nav">
-        <a href="">본문</a>
+        <ul class="skip-nav__list">
+          <li class="skip-nav__item">
+            <a href="#skip-nav-login">로그인</a>
+          </li>
+          <li class="skip-nav__item">
+            <a href="#skip-nav-menu">메뉴</a>
+          </li>
+          <li class="skip-nav__item">
+            <a href="#skip-nav-main">본문</a>
+          </li>
+          <li class="skip-nav__item">
+            <a href="#skip-nav-footer">하단</a>
+          </li>
+        </ul>
       </div>
 
       <!-- notice-bar -->
@@ -31,7 +45,7 @@
           </li>
 
           <li class="notice-bar__item">
-            <a href="#" class="notice-bar__link">이용권구매</a>
+            <a href="#" class="notice-bar__link"> 이용권구매 </a>
           </li>
 
           <li class="notice-bar__item">
@@ -144,22 +158,59 @@
                 <img src="./assets/images/melon-01.svg" alt="melon" />
               </a>
             </h1>
-          </li class="mobile-nav__list__item center">
+          </li>
           <li class="mobile-nav__list__item right">
             <a href="#" aria-label="검색페이지 이동"></a>
           </li>
         </ul>
       </nav>
-      
-      <!-- side menu -->
-      <div class="mobile-nav__side">
 
-      </div>
+      <!-- side menu -->
+      <div class="mobile-nav__side"></div>
       <!-- mobile menu -->
+
+      <!-- side menu -->
+      <div class="slide">
+        <div class="slide__header">
+          <img
+            class="slide__header__profile"
+            src="assets/images/artist1.jpg"
+            alt=""
+          />
+          <span class="slide__header__text">로그인하세요</span>
+          <button class="slide__header__close"></button>
+        </div>
+
+        <ul class="slide__list">
+          <li class="slide__item">
+            <a href="/index.html" class="slide__link">멜론홈</a>
+          </li>
+          <li class="slide__item">
+            <a href="/index.html" class="slide__link">최신음악</a>
+          </li>
+          <li class="slide__item">
+            <a href="/views/chart.html" class="slide__link">멜론차트</a>
+          </li>
+          <li class="slide__item">
+            <a href="/views/genre.html" class="slide__link">장르음악</a>
+          </li>
+          <li class="slide__item">
+            <a href="/views/melonDj.html" class="slide__link">멜론DJ</a>
+          </li>
+          <li class="slide__item">
+            <a href="/index.html" class="slide__link">멜론뮤직어워드</a>
+          </li>
+          <li class="slide__item">
+            <a href="/index.html" class="slide__link">이벤트</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- side menu -->
 
       <!-- header-nav -->
       <nav class="header__nav">
-        <ul class="header__nav__list">
+        <ul class="header__nav__list" id="skip-nav-menu">
           <li class="header__nav__item mobileHome">
             <a href="#" class="header__nav__link">홈</a>
           </li>
@@ -199,20 +250,29 @@
 
       <!-- 메인 -->
       <!-- 최신음악 -->
-      <section class="home__new__section">
+      <section class="home__new__section" id="skip-nav-main">
         <div class="home__new__section__wrap">
           <section class="home__new">
             <div class="home__new__wrap">
               <div class="home__new__tab">
                 <h2 class="home__new__title"><a href="/">최신 앨범</a></h2>
                 <div class="home__new__button-group">
-                  <button type="button" class="home__new__button--all home__new__slide__button on">
+                  <button
+                    type="button"
+                    class="home__new__button--all home__new__slide__button on"
+                  >
                     전체
                   </button>
-                  <button type="button" class="home__new__button--kpop home__new__slide__button">
+                  <button
+                    type="button"
+                    class="home__new__button--kpop home__new__slide__button"
+                  >
                     가요
                   </button>
-                  <button type="button" class="home__new__button--pop home__new__slide__button">
+                  <button
+                    type="button"
+                    class="home__new__button--pop home__new__slide__button"
+                  >
                     POP
                   </button>
                 </div>
@@ -307,7 +367,9 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a href="/" aria-hidden="true">SECRET NUMBER (시크릿 넘버)</a>
+                        <a href="/" aria-hidden="true"
+                          >SECRET NUMBER (시크릿 넘버)</a
+                        >
                       </span>
                     </li>
                     <!-- slide1 item4 -->
@@ -332,7 +394,9 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a href="/" aria-hidden="true">SECRET NUMBER (시크릿 넘버)</a>
+                        <a href="/" aria-hidden="true"
+                          >SECRET NUMBER (시크릿 넘버)</a
+                        >
                       </span>
                     </li>
                     <!-- slide1 item5 -->
@@ -382,11 +446,7 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a
-                          href="/"
-                          aria-hidden="true"
-                          >WSG워너비</a
-                        >
+                        <a href="/" aria-hidden="true">WSG워너비</a>
                       </span>
                     </li>
                   </ul>
@@ -415,11 +475,7 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a
-                          href="/"
-                          aria-hidden="true"
-                          >TRENDZ (트렌드지)</a
-                        >
+                        <a href="/" aria-hidden="true">TRENDZ (트렌드지)</a>
                       </span>
                     </li>
                     <!-- slide2 item2 -->
@@ -444,11 +500,7 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a
-                          href="/"
-                          aria-hidden="true"
-                          >노브레인</a
-                        >
+                        <a href="/" aria-hidden="true">노브레인</a>
                       </span>
                     </li>
                     <!-- slide2 item3 -->
@@ -473,11 +525,7 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a
-                          href="/"
-                          aria-hidden="true"
-                          >김예지</a
-                        >
+                        <a href="/" aria-hidden="true">김예지</a>
                       </span>
                     </li>
                     <!-- slide2 item4 -->
@@ -491,7 +539,8 @@
                         </div>
                         <div class="home__new__item--detail">
                           <a href="/" aria-label="앨범정보 바로가기"
-                            >Here you are (너에게 가는 속도 493km OST Part.13)</a
+                            >Here you are (너에게 가는 속도 493km OST
+                            Part.13)</a
                           >
                           <a href="" aria-label="아티스트 페이지 바로가기"
                             >릴리안</a
@@ -502,11 +551,7 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a
-                          href="/"
-                          aria-hidden="true"
-                          >릴리안</a
-                        >
+                        <a href="/" aria-hidden="true">릴리안</a>
                       </span>
                     </li>
                     <!-- slide2 item5 -->
@@ -531,11 +576,7 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a
-                          href="/"
-                          aria-hidden="true"
-                          >슬릭 (SLEEQ)</a
-                        >
+                        <a href="/" aria-hidden="true">슬릭 (SLEEQ)</a>
                       </span>
                     </li>
                     <!-- slide2 item6 -->
@@ -548,9 +589,7 @@
                           />
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >Orange</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">Orange</a>
                           <a href="" aria-label="아티스트 페이지 바로가기"
                             >박지우</a
                           >
@@ -560,11 +599,7 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a
-                          href="/"
-                          aria-hidden="true"
-                          >박지우</a
-                        >
+                        <a href="/" aria-hidden="true">박지우</a>
                       </span>
                     </li>
                   </ul>
@@ -860,7 +895,7 @@
         </div>
         <!-- //아티스트 -->
         <!-- 로그인 -->
-        <section class="home__login">
+        <section class="home__login" id="skip-nav-login">
           <div class="home__login--login">
             <h2 class="sr-only">로그인</h2>
             <div class="login--top">
@@ -2263,7 +2298,7 @@
       </section>
 
       <!-- footer -->
-      <footer class="footer">
+      <footer class="footer" id="skip-nav-footer">
         <div class="footer__group">
           <div class="footer__extra">
             <ul class="footer__extra__list">

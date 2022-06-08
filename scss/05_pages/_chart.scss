@@ -197,11 +197,14 @@
         }
 
         td[headers="rank"] {
+          padding: 0 rem(18px) 0 rem(12px);
           // padding: 0 rem(18px) 0 rem(12px);
           text-align: center;
         }
 
         td[headers="sing-album-cover"] img {
+          width: rem(60px);
+          height: rem(60px);
           min-width: 60px;
           height: 60px;
           @include marginX(10px);
@@ -712,6 +715,8 @@
   bottom: 0;
   background: $playerBackground;
   @include paddingY(10px);
+  transition: all 0.5s;
+  transform: translateY(rem(60px));
   &__list {
     display: flex;
     align-items: center;
@@ -721,6 +726,15 @@
     &:first-child {
       flex-grow: 1.5;
       padding-left: rem(30px);
+
+      @include tab {
+        flex-grow: 1;
+        padding-left: rem(40px);
+      }
+
+      @include mobile {
+        padding-left: rem(2px);
+      }
     }
 
     &:nth-child(2) {
@@ -728,16 +742,38 @@
       display: flex;
       justify-content: center;
       gap: rem(15px);
+
+      @include tab {
+        flex-grow: 0;
+        justify-content: flex-start;
+        gap: rem(4px);
+      }
+
+      @include mobile {
+        gap: rem(2px);
+        margin-left: rem(2px);
+      }
     }
     &:nth-child(3) {
       flex-grow: 1.5;
       display: flex;
+
+      @include tab {
+        flex-grow: 0;
+        margin-left: rem(6px);
+      }
     }
+
     &:nth-child(4) {
       flex-grow: 0.3;
 
       @include tab {
-        flex-grow: 1;
+        flex-grow: 0;
+        margin-left: rem(10px);
+      }
+
+      @include mobile {
+        display: none;
       }
     }
     &:nth-child(5) {
@@ -747,11 +783,19 @@
       @include tab {
         display: none;
       }
+
+      @include mobile {
+        display: none;
+      }
     }
     &:nth-child(6) {
       flex-grow: 1;
       text-align: end;
       margin-right: rem(10px);
+
+      @include tab {
+        margin-left: rem(5px);
+      }
     }
   }
 
@@ -763,12 +807,37 @@
       width: rem(20px);
       height: rem(20px);
     }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__playlist {
     color: $secondary-font;
     margin-left: rem(5px);
     font-size: rem(14px);
+    white-space: nowrap;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: -6px;
+      left: -27px;
+      background: url("/assets/images/musicbar-sprite.svg") no-repeat 0 0;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    @include tab {
+      margin-left: rem(0px);
+    }
   }
 
   &__album {
@@ -780,6 +849,14 @@
     color: $white;
     font-size: rem(14px);
 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @include tab {
+      display: none;
+    }
+
     @include mobile {
       display: none;
     }
@@ -787,38 +864,51 @@
 
   &__control {
     &-loop {
+      @include removeBtnStyle;
       display: inline-block;
       width: 30px;
       height: 30px;
-      background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+      background: url("/assets/images/musicbar-sprite.svg") no-repeat -30px 0;
     }
 
     &-prev {
       display: inline-block;
+      @include removeBtnStyle;
+
       width: 30px;
       height: 30px;
-      background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+      background: url("/assets/images/musicbar-sprite.svg") no-repeat 0 -30px;
     }
 
     &-play {
       display: inline-block;
+      @include removeBtnStyle;
+
       width: 30px;
       height: 30px;
-      background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+      background: url("/assets/images/musicbar-sprite.svg") no-repeat -90px -30px;
+
+      &:focus {
+        outline: none;
+      }
     }
 
     &-next {
       display: inline-block;
+      @include removeBtnStyle;
+
       width: 30px;
       height: 30px;
-      background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+      background: url("/assets/images/musicbar-sprite.svg") no-repeat -30px -30px;
     }
 
     &-random {
       display: inline-block;
+      @include removeBtnStyle;
+
       width: 30px;
       height: 30px;
-      background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+      background: url("/assets/images/musicbar-sprite.svg") no-repeat -60px -30px;
     }
   }
 
@@ -826,7 +916,7 @@
     display: block;
     width: 30px;
     height: 30px;
-    background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+    background: url("/assets/images/musicbar-sprite.svg") no-repeat -60px 0;
     @include autoMargin;
   }
 
@@ -841,6 +931,9 @@
     color: $secondary-font;
     font-size: rem(14px);
   }
+
+  &__progress {
+  }
 }
 
 .slider {
@@ -852,6 +945,18 @@
   border-radius: 25px;
   box-shadow: 2px 8px 13px -3px rgba(116, 114, 114, 0.75);
   margin-bottom: rem(10px);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: rem(-13px);
+    left: rem(-26px);
+    width: 30px;
+    height: 30px;
+    background: url("/assets/images/musicbar-sprite.svg") no-repeat -90px 0;
+  }
 }
 
 .slider::-webkit-slider-thumb {
@@ -863,4 +968,8 @@
   border-radius: 50%;
   border: 1px solid $borderDarkGray;
   box-shadow: 2px 8px 13px -3px rgba(116, 114, 114, 0.75);
+}
+
+.audio-bar.is-show {
+  transform: translateY(0);
 }
