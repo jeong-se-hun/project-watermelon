@@ -1,14 +1,22 @@
 .home__new__section {
   width: rem(1010px);
-  @include paddingY(30px);
+  padding-top: rem(30px);
   @include autoMargin;
   color: $white;
-  display: flow-root;
+  display: flex;
+  flex-flow: row wrap;
+
+  @include tab {
+    max-width: rem(734px);
+  }
+
+  &__wrap {
+    display: flex;
+  }
 }
 
 /* 최신음악 영역 */
 .home__new {
-  float: left;
   &__wrap {
     width: 474px;
     height: 100%;
@@ -20,17 +28,92 @@
     margin-bottom: 5px;
   }
 
-  &__title a {
-    font-size: 15px;
-    font-weight: 700;
-    color: #000;
+  &__title {
+    font-family: "NanumBarunGothic", sans-serif;
+    flex-grow: 1;
+
+    & a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #000;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-top: 1px solid $light-gray;
+        border-right: 1px solid $light-gray;
+        display: inline-block;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 5px;
+        right: -8px;
+      }
+    }
+  }
+
+  &__button-group {
+    margin-right: 30px;
+    [type="button"] {
+      @include removeBtnStyle;
+      color: $light-gray;
+      font-size: rem(12px);
+      font-weight: 700;
+      margin-left: -2px;
+      @include paddingX(6px);
+      position: relative;
+
+      &:nth-child(1) {
+        color: $primary-header;
+      }
+
+      &:nth-child(1)::after,
+      &:nth-child(2)::after {
+        content: "";
+        position: absolute;
+        top: 1px;
+        right: 0px;
+        width: 1px;
+        height: rem(11px);
+        background: $light-gray;
+      }
+    }
+  }
+
+  &__control {
+    @include flexbox($items: center);
+    color: $secondary-font;
+    font-size: rem(12px);
+
+    &__button-box {
+      transform: translateY(1px);
+      margin-left: 5px;
+
+      button {
+        appearance: none;
+        border: 0;
+        width: 20px;
+        height: 17px;
+        background: url(/assets/images/bg_btn.png) no-repeat;
+
+        &:nth-child(1) {
+          background-position: 0px -202px;
+          margin-right: -5px;
+        }
+
+        &:nth-child(2) {
+          background-position: right -220px;
+        }
+      }
+    }
   }
 
   &__inner {
     @include flexbox;
     position: relative;
     left: 0;
-    transition: all 0.7s;
+    transition: all 0.8s cubic-bezier(0.33, 1, 0.68, 1);
   }
 
   &__list {
@@ -64,7 +147,6 @@
 
     &--thumb img {
       width: 100%;
-      height: 100%;
       @include pos;
       top: 0;
       left: 0;
@@ -80,7 +162,7 @@
       background-color: rgba(0, 0, 0, 0.7);
       text-align: center;
       font-size: 12px;
-      transition: all 0.3s;
+      transition: all 0.4s;
       opacity: 0;
 
       & a {
@@ -115,12 +197,11 @@
   display: block;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  border: 2px solid #00cd3c;
   @include pos;
   right: 10px;
   bottom: 10px;
   z-index: 1;
+  background: url("/assets/images/bg_btn.png") no-repeat 0px 200px;
   @include flexbox($justify: center, $items: center);
 }
 
@@ -128,7 +209,6 @@
 .home__artist {
   margin-left: 8px;
   width: 236px;
-  float: left;
 
   &__wrap {
     width: 100%;
@@ -146,10 +226,15 @@
       height: 10px;
       border: 1px solid $borderDarkGray;
       border-radius: 50%;
+    }
 
-      &:hover {
-        border: 1px solid $medium-gray;
-      }
+    .button-pause {
+      @include removeBtnStyle;
+      width: 16px;
+      height: 16px;
+      background: url("/assets/images/bg_btn.png") no-repeat left -171px;
+      transform: translateY(3px);
+      margin-left: 5px;
     }
   }
 
@@ -161,18 +246,21 @@
   &__list {
     @include flexbox;
     border: 1px solid $borderLightGray;
-    // transition: all 0.7s;
     position: relative;
-    left: 0;
   }
 }
 
 /* 로그인 & 광고 영역 */
 .home__login {
-  float: left;
   width: 280px;
   margin-left: 8px;
   margin-top: 27px;
+
+  @include tab {
+    width: calc(100% - 15px);
+    margin-left: 0;
+    margin-top: 16px;
+  }
 
   &--login {
     @include paddingX(17px);
@@ -181,10 +269,35 @@
     border: 1px solid $borderLightGray;
     color: $secondary-font;
     margin-bottom: 8px;
+
+    @include tab {
+      display: none;
+    }
+  }
+
+  &--ad {
+    width: 280px;
+    height: 190px;
+
+    @include tab {
+      width: 100%;
+      height: 70px;
+    }
+
+    & > a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url("/assets/images/login-ad-image.png") no-repeat 0 0;
+
+      @include tab {
+        background: $borderDarkGray;
+      }
+    }
   }
 }
 
-.login-top {
+.login--top {
   @include flexbox($justify: space-between);
   font-size: rem(11px);
   margin-bottom: 10px;

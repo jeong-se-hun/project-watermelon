@@ -11,7 +11,7 @@
 }
 
 .header__nav {
-  &__item:nth-child(4) {
+  &__item:nth-child(4).is-selected {
     &::after {
       content: "";
       display: block;
@@ -30,8 +30,14 @@
       display: flex;
       top: rem(58px);
       left: rem(-200px);
-      width: 380px;
+      width: rem(380px);
       justify-content: space-around;
+
+      @include mobile {
+        left: rem(-235px);
+        width: rem(400px);
+        justify-content: space-between;
+      }
     }
     &__item {
       color: $secondary-font;
@@ -56,9 +62,14 @@
 .today-section {
   width: rem(1010px);
   @include autoMargin;
+  position: relative;
+
+  @include tab {
+    width: 95%;
+  }
 
   h3 {
-    margin-top: 20px;
+    @include marginY(20px);
   }
 
   &__form {
@@ -66,6 +77,10 @@
 
     fieldset {
       display: flex;
+
+      @include mobile {
+        display: none;
+      }
     }
   }
 
@@ -81,6 +96,10 @@
     border-bottom: 1px solid $borderDarkGray;
     padding-left: rem(10px);
     color: $primary-font;
+
+    @include tab {
+      width: rem(70px);
+    }
   }
 
   &__input {
@@ -96,6 +115,35 @@
 
     &::placeholder {
       color: $borderGray;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    @include tab {
+      width: rem(200px);
+      &::placeholder {
+        color: $borderGray;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__search {
+    display: none;
+
+    @include mobile {
+      display: block;
+      font-size: rem(12px);
+      @include paddingY(5px);
+      @include paddingX(2px);
+      margin-left: rem(20px);
+      border: 1px solid $borderDarkGray;
+      border-radius: 30px;
+      width: rem(80px);
+      text-align: center;
     }
   }
 
@@ -107,13 +155,34 @@
     border-radius: 30px;
     width: 140px;
     text-align: center;
+
+    @include tab {
+      width: 100px;
+      font-size: rem(12px);
+      @include paddingY(5px);
+      @include paddingX(5px);
+      margin-left: rem(20px);
+    }
+
+    @include mobile {
+      margin-left: rem(10px);
+    }
   }
 
   // card-section
   &__card {
+    &__wrap {
+      position: relative;
+      width: 100%;
+      height: 425px;
+      overflow: hidden;
+    }
     &__list {
       @include djCardList($g: rem(14px));
-      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
     }
 
     &__item {
@@ -131,7 +200,9 @@
     }
 
     &__title {
-      @include djCardTitle;
+      @include djCardTitle($mb: 0, $h: auto);
+      min-height: 36px;
+      margin-bottom: rem(34px);
 
       &:hover {
         text-decoration: underline;
@@ -140,6 +211,7 @@
 
     &__dj {
       @include djCardDj;
+      margin-top: 20px;
 
       &:hover {
         text-decoration: underline;
@@ -240,9 +312,19 @@
     @include autoMargin;
     display: flex;
     @include paddingY(40px);
+
+    @include tab {
+      text-align: center;
+      width: 100%;
+    }
+
     &__logo {
       margin-left: rem(50px);
       position: relative;
+
+      @include tab {
+        display: none;
+      }
     }
 
     &__img {
@@ -257,6 +339,15 @@
 
     &__right {
       margin-left: rem(50px);
+      @include paddingX(15px);
+      @include tab {
+        @include autoMargin;
+      }
+
+      @include tab {
+        text-align: center;
+      }
+
       &__title {
         margin-top: rem(15px);
         font-size: rem(18px);
@@ -268,6 +359,9 @@
         font-size: rem(20px);
         font-weight: 500;
         color: $primary-font;
+
+        @include tab {
+        }
       }
 
       &__list {
@@ -315,6 +409,11 @@
       display: flex;
       gap: rem(10px);
       align-items: center;
+      flex-flow: row wrap;
+
+      @include tab {
+        justify-content: center;
+      }
     }
   }
 }
@@ -349,6 +448,27 @@
         border: 1px solid $medium-gray;
       }
     }
+
+    @include tab {
+      width: 100%;
+
+      &__title {
+        margin-top: rem(20px);
+        margin-right: rem(10px);
+        padding-left: rem(20px);
+        white-space: nowrap;
+      }
+
+      &__list {
+        margin-left: 0;
+        flex-wrap: wrap;
+      }
+      &__item {
+        margin-top: rem(20px);
+      }
+      &__link {
+      }
+    }
   }
 
   // 힙합
@@ -359,28 +479,63 @@
     font-size: rem(18px);
     font-weight: 400;
 
+    @include tab {
+      padding-left: rem(20px);
+    }
+
+    @include mobile {
+      font-size: rem(16px);
+    }
+
     &__group {
       width: rem(1010px);
       @include autoMargin;
       margin-top: rem(20px);
+
+      @include tab {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: rem(20px);
+      }
     }
 
     &__list {
       @include djCardList;
+
+      @include tab {
+        flex-flow: wrap;
+      }
     }
 
     &__item {
       border: 1px solid $borderLightGray;
+
+      @include tab {
+        width: calc(50% - rem(10px));
+      }
     }
 
     &__img {
       @include djCardImg;
+
+      @include tab {
+        height: auto;
+      }
     }
 
     &__desc {
       @include djCardDesc;
       @include paddingX(20px);
       @include paddingY(25px);
+
+      @include tab {
+        text-align: center;
+      }
+
+      @include mobile {
+        @include paddingX(10px);
+      }
     }
 
     &__title {
@@ -389,6 +544,21 @@
       &:hover {
         text-decoration: underline;
       }
+
+      @include tab {
+        width: 100%;
+        font-size: rem(16px);
+      }
+
+      @include mobile {
+        height: rem(40px);
+        font-size: rem(14px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
     }
 
     &__dj {
@@ -396,6 +566,14 @@
 
       &:hover {
         text-decoration: underline;
+      }
+
+      @include tab {
+        font-size: rem(14px);
+      }
+
+      @include mobile {
+        font-size: rem(13px);
       }
     }
 
@@ -419,6 +597,10 @@
 
       &:hover {
         border: 1px solid $medium-gray;
+      }
+
+      @include mobile {
+        font-size: rem(10px);
       }
     }
 
@@ -476,28 +658,63 @@
     font-weight: 400;
     margin-top: rem(40px);
 
+    @include tab {
+      padding-left: rem(20px);
+    }
+
+    @include mobile {
+      font-size: rem(16px);
+    }
+
     &__group {
       width: rem(1010px);
       @include autoMargin;
       margin-top: rem(20px);
+
+      @include tab {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: rem(20px);
+      }
     }
 
     &__list {
       @include djCardList;
+
+      @include tab {
+        flex-flow: wrap;
+      }
     }
 
     &__item {
       border: 1px solid $borderLightGray;
+
+      @include tab {
+        width: calc(50% - rem(10px));
+      }
     }
 
     &__img {
       @include djCardImg;
+
+      @include tab {
+        height: auto;
+      }
     }
 
     &__desc {
       @include djCardDesc;
       @include paddingX(20px);
       @include paddingY(25px);
+
+      @include tab {
+        text-align: center;
+      }
+
+      @include mobile {
+        @include paddingX(10px);
+      }
     }
 
     &__title {
@@ -506,6 +723,21 @@
       &:hover {
         text-decoration: underline;
       }
+
+      @include tab {
+        width: 100%;
+        font-size: rem(16px);
+      }
+
+      @include mobile {
+        height: rem(40px);
+        font-size: rem(14px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
     }
 
     &__dj {
@@ -513,6 +745,14 @@
 
       &:hover {
         text-decoration: underline;
+      }
+
+      @include tab {
+        font-size: rem(14px);
+      }
+
+      @include mobile {
+        font-size: rem(13px);
       }
     }
 
@@ -536,6 +776,10 @@
 
       &:hover {
         border: 1px solid $medium-gray;
+      }
+
+      @include mobile {
+        font-size: rem(10px);
       }
     }
 
@@ -593,28 +837,63 @@
     font-weight: 400;
     margin-top: rem(40px);
 
+    @include tab {
+      padding-left: rem(20px);
+    }
+
+    @include mobile {
+      font-size: rem(16px);
+    }
+
     &__group {
       width: rem(1010px);
       @include autoMargin;
       margin-top: rem(20px);
+
+      @include tab {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: rem(20px);
+      }
     }
 
     &__list {
       @include djCardList;
+
+      @include tab {
+        flex-flow: wrap;
+      }
     }
 
     &__item {
       border: 1px solid $borderLightGray;
+
+      @include tab {
+        width: calc(50% - rem(10px));
+      }
     }
 
     &__img {
       @include djCardImg;
+
+      @include tab {
+        height: auto;
+      }
     }
 
     &__desc {
       @include djCardDesc;
       @include paddingX(20px);
       @include paddingY(25px);
+
+      @include tab {
+        text-align: center;
+      }
+
+      @include mobile {
+        @include paddingX(10px);
+      }
     }
 
     &__title {
@@ -623,6 +902,21 @@
       &:hover {
         text-decoration: underline;
       }
+
+      @include tab {
+        width: 100%;
+        font-size: rem(16px);
+      }
+
+      @include mobile {
+        height: rem(40px);
+        font-size: rem(14px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
     }
 
     &__dj {
@@ -630,6 +924,14 @@
 
       &:hover {
         text-decoration: underline;
+      }
+
+      @include tab {
+        font-size: rem(14px);
+      }
+
+      @include mobile {
+        font-size: rem(12px);
       }
     }
 
@@ -653,6 +955,10 @@
 
       &:hover {
         border: 1px solid $medium-gray;
+      }
+
+      @include mobile {
+        font-size: rem(10px);
       }
     }
 
@@ -709,29 +1015,69 @@
     font-weight: 400;
     margin-top: rem(40px);
 
+    @include tab {
+      padding-left: rem(20px);
+    }
+
+    @include mobile {
+      // font-size: rem(16px);
+      display: none;
+    }
+
     &__group {
       width: rem(1010px);
       @include autoMargin;
       margin-top: rem(20px);
       margin-bottom: rem(130px);
+
+      @include tab {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: rem(20px);
+      }
+
+      @include mobile {
+        display: none;
+      }
     }
 
     &__list {
       @include djCardList;
+
+      @include tab {
+        flex-flow: wrap;
+      }
     }
 
     &__item {
       border: 1px solid $borderLightGray;
+
+      @include tab {
+        width: calc(50% - rem(10px));
+      }
     }
 
     &__img {
       @include djCardImg;
+
+      @include tab {
+        height: auto;
+      }
     }
 
     &__desc {
       @include djCardDesc;
       @include paddingX(20px);
       @include paddingY(25px);
+
+      @include tab {
+        text-align: center;
+      }
+
+      // @include mobile {
+      //   @include paddingX(10px);
+      // }
     }
 
     &__title {
@@ -740,6 +1086,21 @@
       &:hover {
         text-decoration: underline;
       }
+
+      @include tab {
+        width: 100%;
+        font-size: rem(16px);
+      }
+
+      // @include mobile {
+      //   height: rem(40px);
+      //   font-size: rem(14px);
+      //   overflow: hidden;
+      //   text-overflow: ellipsis;
+      //   display: -webkit-box;
+      //   -webkit-line-clamp: 2;
+      //   -webkit-box-orient: vertical;
+      // }
     }
 
     &__dj {
@@ -748,6 +1109,14 @@
       &:hover {
         text-decoration: underline;
       }
+
+      @include tab {
+        font-size: rem(14px);
+      }
+
+      // @include mobile {
+      //   font-size: rem(13px);
+      // }
     }
 
     &__info {
@@ -771,6 +1140,10 @@
       &:hover {
         border: 1px solid $medium-gray;
       }
+
+      // @include mobile {
+      //   font-size: rem(10px);
+      // }
     }
 
     &__profile {
@@ -816,5 +1189,33 @@
   .green-dj {
     color: $primary-logo-color;
     font-size: rem(12px);
+  }
+
+  .more-btn {
+    display: none;
+
+    @include mobile {
+      @include removeBtnStyle;
+      margin-bottom: rem(20px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $primary-color;
+      border-radius: rem(30px);
+      font-weight: 400;
+      color: $primary-logo-color;
+      width: rem(100px);
+      font-size: rem(14px);
+      @include autoMargin;
+      padding-left: rem(6px);
+
+      &::after {
+        content: "+";
+        display: flex;
+        margin-left: rem(4px);
+        height: 40px;
+        align-items: center;
+      }
+    }
   }
 }
