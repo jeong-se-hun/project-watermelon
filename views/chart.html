@@ -14,6 +14,7 @@
     />
     <script src="/js/music-volumn-control.js" defer></script>
     <script src="/js/music-bar.js" defer></script>
+    <script src="/js/music-bar-hide.js" defer></script>
   </head>
   <body>
     <div class="container-chart">
@@ -310,7 +311,7 @@
                 </button>
               </td>
               <td headers="sing-listen">
-                <button class="sing__listen__button">
+                <button class="sing__listen__button play-button">
                   <span class="chart-play-icon"></span>
                 </button>
               </td>
@@ -840,6 +841,7 @@
             <!-- 복사 붙어넣기 영역 -->
           </tbody>
         </table>
+        
       </main>
       <!-- footer -->
       <footer class="footer">
@@ -940,27 +942,27 @@
       <div class="audio-bar">
         <ul class="audio-bar__list">
           <li class="audio-bar__item">
-            <img
-              src="/assets/images/playlist-icon.png"
+            <!-- <img
+              src="/assets/images/musicbar-sprite.svg"
               alt=""
               class="audio-bar__icon"
-            />
+            /> -->
             <a href="#" class="audio-bar__playlist">재생목록</a>
           </li>
           <li class="audio-bar__item">
-            <button href="#" class="audio-bar__control-play">루프</ㅠ>
-            <button href="#" class="audio-bar__control-play">이전</ㅠ>
-            <button href="#" class="audio-bar__control-play">재생</ㅠ>
-            <button href="#" class="audio-bar__control-play">다음</ㅠ>
-            <button href="#" class="audio-bar__control-play">랜덤</ㅠ>
+            <button href="#" class="audio-bar__control-loop"></ㅠ>
+            <button href="#" class="audio-bar__control-prev"></ㅠ>
+            <button href="#" class="audio-bar__control-play"></ㅠ>
+            <button href="#" class="audio-bar__control-next"></ㅠ>
+            <button href="#" class="audio-bar__control-random"></ㅠ>
           </li>
           <li class="audio-bar__item">
             <img
-              src="/assets/images/melonChart10.jpg"
+              src="/assets/images/melonChart1.jpg"
               alt=""
               class="audio-bar__album"
             />
-            <p class="audio-bar__title">나나나나나나</p>
+            <p class="audio-bar__title">싸이 - That That (prod. & feat. SUGA of BTS)</p>
           </li>
           <li class="audio-bar__item">
             <a href="#" class="audio-bar__lyrics"></a>
@@ -980,6 +982,9 @@
             />
           </li>
         </ul>
+        <div class="audio-bar__progress">
+
+        </div>
       </div>
     </div>
   </body>
