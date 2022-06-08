@@ -123,9 +123,42 @@
         <div class="header__ad__image"></div>
       </header>
 
+      <!-- mobile nav -->
+      <nav class="mobile-nav">
+        <ul class="mobile-nav__list">
+          <li class="mobile-nav__list__item left">
+            <button
+              class="mobile-nav__btn-area buttonNone button--burger"
+              aria-label="메뉴 열기"
+            >
+              <span class="mobile-nav__btn button--burgerBarTop"></span>
+              <span class="mobile-nav__btn button--burgerBarMiddle"></span>
+              <span class="mobile-nav__btn button--burgerBarBottom"></span>
+            </button>
+            <a href="" class="mobile-nav__ticket">
+              <img src="./assets/images/mobileTickt.png" alt="이용권 아이콘"
+            /></a>
+          </li>
+          <li class="mobile-nav__list__item center">
+            <h1 class="mobile-nav__logo">
+              <a href="#">
+                <img src="./assets/images/melon-01.svg" alt="melon" />
+              </a>
+            </h1>
+          </li class="mobile-nav__list__item center">
+          <li class="mobile-nav__list__item right">
+            <a href="#" aria-label="검색페이지 이동"></a>
+          </li>
+        </ul>
+      </nav>
+      <!-- mobile menu -->
+
       <!-- header-nav -->
       <nav class="header__nav">
         <ul class="header__nav__list">
+          <li class="header__nav__item mobileHome">
+            <a href="#" class="header__nav__link">홈</a>
+          </li>
           <li class="header__nav__item">
             <a href="/views/chart.html" class="header__nav__link">멜론차트</a>
           </li>
@@ -138,6 +171,7 @@
           <li class="header__nav__item">
             <a href="views/melonDj.html" class="header__nav__link">멜론DJ</a>
           </li>
+
           <li class="header__nav__item">
             <a href="#" class="header__nav__link">멜론TV</a>
           </li>

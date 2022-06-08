@@ -7,6 +7,10 @@
   border-bottom: 1px solid $borderLightGray;
   border-top: 3px solid $primary-logo-color;
 
+  @include mobile {
+    display: none;
+  }
+
   &__list {
     display: flex;
     align-items: center;
@@ -20,6 +24,10 @@
       max-width: rem(734px);
       padding: rem(10px) rem(15px);
     }
+    @include mobile {
+      max-width: rem(734px);
+      padding: rem(10px) rem(15px);
+    }
   }
 
   &__item {
@@ -27,6 +35,10 @@
     border-left: 1px solid $borderLightGray;
 
     @include tab {
+      padding: 0 rem(8px);
+    }
+
+    @include mobile {
       padding: 0 rem(8px);
     }
 
@@ -107,8 +119,11 @@
   margin-top: rem(10px);
 
   @include tab {
+    justify-content: center;
   }
-  justify-content: center;
+  @include mobile {
+    display: none;
+  }
 
   &__logo {
     display: flex;
@@ -188,6 +203,13 @@
       margin: rem(36px) 0 0 rem(10px);
       height: 20px;
       line-height: 1.7;
+
+      @include tab {
+        display: none;
+      }
+      @include mobile {
+        display: none;
+      }
     }
 
     &__group {
@@ -200,6 +222,14 @@
       height: 25px;
       margin-top: 28px;
       overflow: hidden;
+
+      @include tab {
+        display: none;
+      }
+
+      @include mobile {
+        display: none;
+      }
 
       &:hover {
         overflow: visible;
@@ -262,6 +292,9 @@
     @include tab {
       display: none;
     }
+    @include mobile {
+      display: none;
+    }
   }
 
   &__nav {
@@ -281,12 +314,26 @@
         padding: 0 rem(15px);
         font-size: clamp(0.7rem, 1.4vw, 1rem);
       }
+      @include mobile {
+        max-width: rem(734px);
+        padding: 0 rem(24px);
+        font-size: clamp(0.8rem, 4vw, 1rem);
+        font-weight: 600;
+        color: $primary-font;
+
+        :nth-child(5) {
+          padding-right: 0;
+        }
+        :nth-child(n + 6) {
+          display: none;
+        }
+      }
 
       :first-child {
         padding-left: 0;
       }
 
-      :nth-child(10) {
+      :nth-child(11) {
         justify-content: flex-end;
         width: rem(280px);
         text-align: end;
@@ -314,6 +361,13 @@
       @include tab {
         padding: rem(5px) 0;
       }
+
+      &.mobileHome {
+        display: none;
+        @include mobile {
+          display: block;
+        }
+      }
     }
 
     &__link {
@@ -325,12 +379,109 @@
       }
     }
   }
+}
 
-  @include tab {
-    // background: yellow;
+// mobile nav
+
+/* 메인 메뉴 제어버튼 */
+
+.mobile-nav {
+  display: none;
+}
+
+@include mobile {
+  .mobile-nav {
+    display: block;
+    padding: rem(16px) rem(20px);
+
+    &__list {
+      display: flex;
+      align-items: center;
+
+      &__item {
+        flex-basis: 33.333%;
+        &.left {
+          display: flex;
+          align-items: center;
+
+          a {
+            width: rem(53px);
+            margin-left: rem(18px);
+          }
+        }
+
+        &.center {
+          justify-self: center;
+
+          a {
+            display: block;
+            max-width: rem(77px);
+            margin: 0 auto;
+          }
+        }
+
+        &.right {
+          a {
+            display: block;
+            width: rem(28px);
+            height: rem(28px);
+            background-image: url(/assets/images/icon_area.png);
+            background-position: -152px -288px;
+            float: right;
+          }
+        }
+      }
+    }
   }
 
-  @include mobile {
-    background: red;
+  // 메뉴 버튼
+  .buttonNone {
+    appearance: none;
+    border: 0;
+    padding: 0;
+    background: none;
+  }
+
+  .button--burger {
+    display: block;
+    width: rem(20px);
+    height: rem(16px);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+  .button--burgerBarTop,
+  .button--burgerBarMiddle,
+  .button--burgerBarBottom {
+    background: $black;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    border-radius: 0.25rem;
+  }
+  .button--burgerBarTop {
+    top: 0;
+  }
+  .button--burgerBarMiddle {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .button--burgerBarBottom {
+    top: 100%;
+    transform: translateY(-100%);
+  }
+
+  //
+  .button--burger.is-active .button--burgerBarTop {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .button--burger.is-active .button--burgerBarMiddle {
+    transform: translate(-100%, -50%);
+  }
+  .button--burger.is-active .button--burgerBarBottom {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
   }
 }
