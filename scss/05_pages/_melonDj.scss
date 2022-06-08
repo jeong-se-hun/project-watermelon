@@ -30,8 +30,14 @@
       display: flex;
       top: rem(58px);
       left: rem(-200px);
-      width: 380px;
+      width: rem(380px);
       justify-content: space-around;
+
+      @include mobile {
+        left: rem(-235px);
+        width: rem(400px);
+        justify-content: space-between;
+      }
     }
     &__item {
       color: $secondary-font;
@@ -59,7 +65,7 @@
   position: relative;
 
   @include tab {
-    width: 90%;
+    width: 95%;
   }
 
   h3 {
@@ -71,6 +77,10 @@
 
     fieldset {
       display: flex;
+
+      @include mobile {
+        display: none;
+      }
     }
   }
 
@@ -86,6 +96,10 @@
     border-bottom: 1px solid $borderDarkGray;
     padding-left: rem(10px);
     color: $primary-font;
+
+    @include tab {
+      width: rem(70px);
+    }
   }
 
   &__input {
@@ -101,10 +115,35 @@
 
     &::placeholder {
       color: $borderGray;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     @include tab {
-      width: 100%;
+      width: rem(200px);
+      &::placeholder {
+        color: $borderGray;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__search {
+    display: none;
+
+    @include mobile {
+      display: block;
+      font-size: rem(12px);
+      @include paddingY(5px);
+      @include paddingX(2px);
+      margin-left: rem(20px);
+      border: 1px solid $borderDarkGray;
+      border-radius: 30px;
+      width: rem(80px);
+      text-align: center;
     }
   }
 
@@ -116,6 +155,18 @@
     border-radius: 30px;
     width: 140px;
     text-align: center;
+
+    @include tab {
+      width: 100px;
+      font-size: rem(12px);
+      @include paddingY(5px);
+      @include paddingX(5px);
+      margin-left: rem(20px);
+    }
+
+    @include mobile {
+      margin-left: rem(10px);
+    }
   }
 
   // card-section
@@ -131,7 +182,6 @@
       position: absolute;
       top: 0;
       left: 0;
-      // width: 200%;
       height: 100%;
     }
 
@@ -289,7 +339,7 @@
 
     &__right {
       margin-left: rem(50px);
-
+      @include paddingX(15px);
       @include tab {
         @include autoMargin;
       }
@@ -359,6 +409,7 @@
       display: flex;
       gap: rem(10px);
       align-items: center;
+      flex-flow: row wrap;
 
       @include tab {
         justify-content: center;
@@ -432,6 +483,10 @@
       padding-left: rem(20px);
     }
 
+    @include mobile {
+      font-size: rem(16px);
+    }
+
     &__group {
       width: rem(1010px);
       @include autoMargin;
@@ -477,6 +532,10 @@
       @include tab {
         text-align: center;
       }
+
+      @include mobile {
+        @include paddingX(10px);
+      }
     }
 
     &__title {
@@ -490,6 +549,16 @@
         width: 100%;
         font-size: rem(16px);
       }
+
+      @include mobile {
+        height: rem(40px);
+        font-size: rem(14px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
     }
 
     &__dj {
@@ -501,6 +570,10 @@
 
       @include tab {
         font-size: rem(14px);
+      }
+
+      @include mobile {
+        font-size: rem(13px);
       }
     }
 
@@ -524,6 +597,10 @@
 
       &:hover {
         border: 1px solid $medium-gray;
+      }
+
+      @include mobile {
+        font-size: rem(10px);
       }
     }
 
@@ -585,6 +662,10 @@
       padding-left: rem(20px);
     }
 
+    @include mobile {
+      font-size: rem(16px);
+    }
+
     &__group {
       width: rem(1010px);
       @include autoMargin;
@@ -630,6 +711,10 @@
       @include tab {
         text-align: center;
       }
+
+      @include mobile {
+        @include paddingX(10px);
+      }
     }
 
     &__title {
@@ -643,6 +728,16 @@
         width: 100%;
         font-size: rem(16px);
       }
+
+      @include mobile {
+        height: rem(40px);
+        font-size: rem(14px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
     }
 
     &__dj {
@@ -654,6 +749,10 @@
 
       @include tab {
         font-size: rem(14px);
+      }
+
+      @include mobile {
+        font-size: rem(13px);
       }
     }
 
@@ -677,6 +776,10 @@
 
       &:hover {
         border: 1px solid $medium-gray;
+      }
+
+      @include mobile {
+        font-size: rem(10px);
       }
     }
 
@@ -738,6 +841,10 @@
       padding-left: rem(20px);
     }
 
+    @include mobile {
+      font-size: rem(16px);
+    }
+
     &__group {
       width: rem(1010px);
       @include autoMargin;
@@ -783,6 +890,10 @@
       @include tab {
         text-align: center;
       }
+
+      @include mobile {
+        @include paddingX(10px);
+      }
     }
 
     &__title {
@@ -796,6 +907,16 @@
         width: 100%;
         font-size: rem(16px);
       }
+
+      @include mobile {
+        height: rem(40px);
+        font-size: rem(14px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
     }
 
     &__dj {
@@ -807,6 +928,10 @@
 
       @include tab {
         font-size: rem(14px);
+      }
+
+      @include mobile {
+        font-size: rem(12px);
       }
     }
 
@@ -830,6 +955,10 @@
 
       &:hover {
         border: 1px solid $medium-gray;
+      }
+
+      @include mobile {
+        font-size: rem(10px);
       }
     }
 
@@ -890,6 +1019,11 @@
       padding-left: rem(20px);
     }
 
+    @include mobile {
+      // font-size: rem(16px);
+      display: none;
+    }
+
     &__group {
       width: rem(1010px);
       @include autoMargin;
@@ -901,6 +1035,10 @@
         display: flex;
         justify-content: center;
         padding: rem(20px);
+      }
+
+      @include mobile {
+        display: none;
       }
     }
 
@@ -936,6 +1074,10 @@
       @include tab {
         text-align: center;
       }
+
+      // @include mobile {
+      //   @include paddingX(10px);
+      // }
     }
 
     &__title {
@@ -949,6 +1091,16 @@
         width: 100%;
         font-size: rem(16px);
       }
+
+      // @include mobile {
+      //   height: rem(40px);
+      //   font-size: rem(14px);
+      //   overflow: hidden;
+      //   text-overflow: ellipsis;
+      //   display: -webkit-box;
+      //   -webkit-line-clamp: 2;
+      //   -webkit-box-orient: vertical;
+      // }
     }
 
     &__dj {
@@ -961,6 +1113,10 @@
       @include tab {
         font-size: rem(14px);
       }
+
+      // @include mobile {
+      //   font-size: rem(13px);
+      // }
     }
 
     &__info {
@@ -984,6 +1140,10 @@
       &:hover {
         border: 1px solid $medium-gray;
       }
+
+      // @include mobile {
+      //   font-size: rem(10px);
+      // }
     }
 
     &__profile {
@@ -1029,5 +1189,33 @@
   .green-dj {
     color: $primary-logo-color;
     font-size: rem(12px);
+  }
+
+  .more-btn {
+    display: none;
+
+    @include mobile {
+      @include removeBtnStyle;
+      margin-bottom: rem(20px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $primary-color;
+      border-radius: rem(30px);
+      font-weight: 400;
+      color: $primary-logo-color;
+      width: rem(100px);
+      font-size: rem(14px);
+      @include autoMargin;
+      padding-left: rem(6px);
+
+      &::after {
+        content: "+";
+        display: flex;
+        margin-left: rem(4px);
+        height: 40px;
+        align-items: center;
+      }
+    }
   }
 }

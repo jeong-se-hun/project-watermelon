@@ -48,18 +48,18 @@ const risingLoop = () => {
     $risingList.style.top = -currentIdx * size + "px";
     currentIdx = currentIdx % slideCount;
     currentIdx++;
-    console.log(currentIdx, slideCount);
+    // console.log(currentIdx, slideCount);
 
     // 루프
     if (currentIdx === slideCount) {
       setTimeout(() => {
         $risingList.style.transition = "none";
         $risingList.style.top = "0px";
-      }, 1800);
+      }, 2500);
       setTimeout(() => {
         $risingList.style.transition =
           "all 0.8s cubic-bezier(0.33, 1, 0.68, 1)";
-      }, 2000);
+      }, 2600);
     }
 
     // curSlide.classList.remove("slide-active");
@@ -85,7 +85,7 @@ const risingLoop = () => {
 
     loop = setInterval(() => {
       moveSlide();
-    }, 1000);
+    }, 1500);
   };
 
   $risingGroup.addEventListener("mouseenter", loopStop);

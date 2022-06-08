@@ -3,12 +3,20 @@
   padding-top: rem(30px);
   @include autoMargin;
   color: $white;
-  display: flow-root;
+  display: flex;
+  flex-flow: row wrap;
+
+  @include tab {
+    max-width: rem(734px);
+  }
+
+  &__wrap {
+    display: flex;
+  }
 }
 
 /* 최신음악 영역 */
 .home__new {
-  float: left;
   &__wrap {
     width: 474px;
     height: 100%;
@@ -201,7 +209,6 @@
 .home__artist {
   margin-left: 8px;
   width: 236px;
-  float: left;
 
   &__wrap {
     width: 100%;
@@ -245,10 +252,15 @@
 
 /* 로그인 & 광고 영역 */
 .home__login {
-  float: left;
   width: 280px;
   margin-left: 8px;
   margin-top: 27px;
+
+  @include tab {
+    width: calc(100% - 15px);
+    margin-left: 0;
+    margin-top: 16px;
+  }
 
   &--login {
     @include paddingX(17px);
@@ -257,10 +269,35 @@
     border: 1px solid $borderLightGray;
     color: $secondary-font;
     margin-bottom: 8px;
+
+    @include tab {
+      display: none;
+    }
+  }
+
+  &--ad {
+    width: 280px;
+    height: 190px;
+
+    @include tab {
+      width: 100%;
+      height: 70px;
+    }
+
+    & > a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url("/assets/images/login-ad-image.png") no-repeat 0 0;
+
+      @include tab {
+        background: $borderDarkGray;
+      }
+    }
   }
 }
 
-.login-top {
+.login--top {
   @include flexbox($justify: space-between);
   font-size: rem(11px);
   margin-bottom: 10px;

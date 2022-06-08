@@ -585,13 +585,19 @@ button {
   margin-left: auto;
   margin-right: auto;
   color: #fff;
-  display: flow-root;
+  display: flex;
+  flex-flow: row wrap;
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .home__new__section {
+    max-width: 45.875rem;
+  }
+}
+.home__new__section__wrap {
+  display: flex;
 }
 
 /* 최신음악 영역 */
-.home__new {
-  float: left;
-}
 .home__new__wrap {
   width: 474px;
   height: 100%;
@@ -779,7 +785,6 @@ button {
 .home__artist {
   margin-left: 8px;
   width: 236px;
-  float: left;
 }
 .home__artist__wrap {
   width: 100%;
@@ -830,10 +835,16 @@ button {
 
 /* 로그인 & 광고 영역 */
 .home__login {
-  float: left;
   width: 280px;
   margin-left: 8px;
   margin-top: 27px;
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .home__login {
+    width: calc(100% - 15px);
+    margin-left: 0;
+    margin-top: 16px;
+  }
 }
 .home__login--login {
   padding-left: 1.0625rem;
@@ -845,8 +856,34 @@ button {
   color: #888888;
   margin-bottom: 8px;
 }
+@media (min-width: 480px) and (max-width: 1023px) {
+  .home__login--login {
+    display: none;
+  }
+}
+.home__login--ad {
+  width: 280px;
+  height: 190px;
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .home__login--ad {
+    width: 100%;
+    height: 70px;
+  }
+}
+.home__login--ad > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("/assets/images/login-ad-image.png") no-repeat 0 0;
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .home__login--ad > a {
+    background: #b4b4b4;
+  }
+}
 
-.login-top {
+.login--top {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -854,7 +891,7 @@ button {
   font-size: 0.6875rem;
   margin-bottom: 10px;
 }
-.login-top > a:hover {
+.login--top > a:hover {
   text-decoration: underline;
 }
 
@@ -1737,8 +1774,15 @@ button {
   display: flex;
   top: 3.625rem;
   left: -12.5rem;
-  width: 380px;
+  width: 23.75rem;
   justify-content: space-around;
+}
+@media (max-width: 479px) {
+  .header__nav__item .header__dj__list {
+    left: -14.6875rem;
+    width: 25rem;
+    justify-content: space-between;
+  }
 }
 .header__nav__item .header__dj__item {
   color: #888888;
@@ -1763,7 +1807,7 @@ button {
 }
 @media (min-width: 480px) and (max-width: 1023px) {
   .today-section {
-    width: 90%;
+    width: 95%;
   }
 }
 .today-section h3 {
@@ -1775,6 +1819,11 @@ button {
 }
 .today-section__form fieldset {
   display: flex;
+}
+@media (max-width: 479px) {
+  .today-section__form fieldset {
+    display: none;
+  }
 }
 .today-section__title {
   font-weight: 400;
@@ -1788,6 +1837,11 @@ button {
   padding-left: 0.625rem;
   color: #333333;
 }
+@media (min-width: 480px) and (max-width: 1023px) {
+  .today-section__select {
+    width: 4.375rem;
+  }
+}
 .today-section__input {
   margin-left: 0.3125rem;
   width: 18.75rem;
@@ -1800,10 +1854,37 @@ button {
 }
 .today-section__input::placeholder {
   color: #cccccc;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 @media (min-width: 480px) and (max-width: 1023px) {
   .today-section__input {
-    width: 100%;
+    width: 12.5rem;
+  }
+  .today-section__input::placeholder {
+    color: #cccccc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+.today-section__search {
+  display: none;
+}
+@media (max-width: 479px) {
+  .today-section__search {
+    display: block;
+    font-size: 0.75rem;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    padding-left: 0.125rem;
+    padding-right: 0.125rem;
+    margin-left: 1.25rem;
+    border: 1px solid #b4b4b4;
+    border-radius: 30px;
+    width: 5rem;
+    text-align: center;
   }
 }
 .today-section__button {
@@ -1815,6 +1896,22 @@ button {
   border-radius: 30px;
   width: 140px;
   text-align: center;
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .today-section__button {
+    width: 100px;
+    font-size: 0.75rem;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    padding-left: 0.3125rem;
+    padding-right: 0.3125rem;
+    margin-left: 1.25rem;
+  }
+}
+@media (max-width: 479px) {
+  .today-section__button {
+    margin-left: 0.625rem;
+  }
 }
 .today-section__card__wrap {
   position: relative;
@@ -1915,7 +2012,7 @@ button {
   width: 0.9375rem;
   height: 0.9375rem;
   position: absolute;
-  right: -1.25rem;
+  right: -1.125rem;
   top: 50%;
   transform: translateY(-50%);
   background: url("https://cdnimg.melon.co.kr/resource/image/web/common/ic_common_verify14.png");
@@ -2006,6 +2103,8 @@ button {
 }
 .recommend-wrapper .recommend__right {
   margin-left: 3.125rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
 }
 @media (min-width: 480px) and (max-width: 1023px) {
   .recommend-wrapper .recommend__right {
@@ -2067,6 +2166,7 @@ button {
   display: flex;
   gap: 0.625rem;
   align-items: center;
+  flex-flow: row wrap;
 }
 @media (min-width: 480px) and (max-width: 1023px) {
   .recommend-wrapper .recommend__people {
@@ -2134,6 +2234,11 @@ button {
     padding-left: 1.25rem;
   }
 }
+@media (max-width: 479px) {
+  .dj-list__hiphop {
+    font-size: 1rem;
+  }
+}
 .dj-list__hiphop__group {
   width: 63.125rem;
   margin-left: auto;
@@ -2187,6 +2292,12 @@ button {
     text-align: center;
   }
 }
+@media (max-width: 479px) {
+  .dj-list__hiphop__desc {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+}
 .dj-list__hiphop__title {
   display: block;
   font-size: 0.875rem;
@@ -2205,6 +2316,17 @@ button {
     font-size: 1rem;
   }
 }
+@media (max-width: 479px) {
+  .dj-list__hiphop__title {
+    height: 2.5rem;
+    font-size: 0.875rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
 .dj-list__hiphop__dj {
   font-size: 0.75rem;
   color: #333333;
@@ -2216,6 +2338,11 @@ button {
 @media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__hiphop__dj {
     font-size: 0.875rem;
+  }
+}
+@media (max-width: 479px) {
+  .dj-list__hiphop__dj {
+    font-size: 0.8125rem;
   }
 }
 .dj-list__hiphop__info {
@@ -2249,6 +2376,11 @@ button {
 .dj-list__hiphop__hash:hover {
   border: 1px solid #666666;
 }
+@media (max-width: 479px) {
+  .dj-list__hiphop__hash {
+    font-size: 0.625rem;
+  }
+}
 .dj-list__hiphop__profile {
   display: block;
   width: 2.8125rem;
@@ -2265,7 +2397,7 @@ button {
   width: 0.9375rem;
   height: 0.9375rem;
   position: absolute;
-  right: -1.25rem;
+  right: -1.125rem;
   top: 50%;
   transform: translateY(-50%);
   background: url("https://cdnimg.melon.co.kr/resource/image/web/common/ic_common_verify14.png");
@@ -2317,6 +2449,11 @@ button {
 @media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__rock {
     padding-left: 1.25rem;
+  }
+}
+@media (max-width: 479px) {
+  .dj-list__rock {
+    font-size: 1rem;
   }
 }
 .dj-list__rock__group {
@@ -2372,6 +2509,12 @@ button {
     text-align: center;
   }
 }
+@media (max-width: 479px) {
+  .dj-list__rock__desc {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+}
 .dj-list__rock__title {
   display: block;
   font-size: 0.875rem;
@@ -2390,6 +2533,17 @@ button {
     font-size: 1rem;
   }
 }
+@media (max-width: 479px) {
+  .dj-list__rock__title {
+    height: 2.5rem;
+    font-size: 0.875rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
 .dj-list__rock__dj {
   font-size: 0.75rem;
   color: #333333;
@@ -2401,6 +2555,11 @@ button {
 @media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__rock__dj {
     font-size: 0.875rem;
+  }
+}
+@media (max-width: 479px) {
+  .dj-list__rock__dj {
+    font-size: 0.8125rem;
   }
 }
 .dj-list__rock__info {
@@ -2434,6 +2593,11 @@ button {
 .dj-list__rock__hash:hover {
   border: 1px solid #666666;
 }
+@media (max-width: 479px) {
+  .dj-list__rock__hash {
+    font-size: 0.625rem;
+  }
+}
 .dj-list__rock__profile {
   display: block;
   width: 2.8125rem;
@@ -2450,7 +2614,7 @@ button {
   width: 0.9375rem;
   height: 0.9375rem;
   position: absolute;
-  right: -1.25rem;
+  right: -1.125rem;
   top: 50%;
   transform: translateY(-50%);
   background: url("https://cdnimg.melon.co.kr/resource/image/web/common/ic_common_verify14.png");
@@ -2502,6 +2666,11 @@ button {
 @media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__boring {
     padding-left: 1.25rem;
+  }
+}
+@media (max-width: 479px) {
+  .dj-list__boring {
+    font-size: 1rem;
   }
 }
 .dj-list__boring__group {
@@ -2557,6 +2726,12 @@ button {
     text-align: center;
   }
 }
+@media (max-width: 479px) {
+  .dj-list__boring__desc {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+}
 .dj-list__boring__title {
   display: block;
   font-size: 0.875rem;
@@ -2575,6 +2750,17 @@ button {
     font-size: 1rem;
   }
 }
+@media (max-width: 479px) {
+  .dj-list__boring__title {
+    height: 2.5rem;
+    font-size: 0.875rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
 .dj-list__boring__dj {
   font-size: 0.75rem;
   color: #333333;
@@ -2586,6 +2772,11 @@ button {
 @media (min-width: 480px) and (max-width: 1023px) {
   .dj-list__boring__dj {
     font-size: 0.875rem;
+  }
+}
+@media (max-width: 479px) {
+  .dj-list__boring__dj {
+    font-size: 0.75rem;
   }
 }
 .dj-list__boring__info {
@@ -2619,6 +2810,11 @@ button {
 .dj-list__boring__hash:hover {
   border: 1px solid #666666;
 }
+@media (max-width: 479px) {
+  .dj-list__boring__hash {
+    font-size: 0.625rem;
+  }
+}
 .dj-list__boring__profile {
   display: block;
   width: 2.8125rem;
@@ -2635,7 +2831,7 @@ button {
   width: 0.9375rem;
   height: 0.9375rem;
   position: absolute;
-  right: -1.25rem;
+  right: -1.125rem;
   top: 50%;
   transform: translateY(-50%);
   background: url("https://cdnimg.melon.co.kr/resource/image/web/common/ic_common_verify14.png");
@@ -2689,6 +2885,11 @@ button {
     padding-left: 1.25rem;
   }
 }
+@media (max-width: 479px) {
+  .dj-list__summer {
+    display: none;
+  }
+}
 .dj-list__summer__group {
   width: 63.125rem;
   margin-left: auto;
@@ -2702,6 +2903,11 @@ button {
     display: flex;
     justify-content: center;
     padding: 1.25rem;
+  }
+}
+@media (max-width: 479px) {
+  .dj-list__summer__group {
+    display: none;
   }
 }
 .dj-list__summer__list {
@@ -2821,7 +3027,7 @@ button {
   width: 0.9375rem;
   height: 0.9375rem;
   position: absolute;
-  right: -1.25rem;
+  right: -1.125rem;
   top: 50%;
   transform: translateY(-50%);
   background: url("https://cdnimg.melon.co.kr/resource/image/web/common/ic_common_verify14.png");
@@ -2861,6 +3067,39 @@ button {
 .dj-list .green-dj {
   color: #00cd3c;
   font-size: 0.75rem;
+}
+.dj-list .more-btn {
+  display: none;
+}
+@media (max-width: 479px) {
+  .dj-list .more-btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin-bottom: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #01b925;
+    border-radius: 1.875rem;
+    font-weight: 400;
+    color: #00cd3c;
+    width: 6.25rem;
+    font-size: 0.875rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.375rem;
+  }
+  .dj-list .more-btn::after {
+    content: "+";
+    display: flex;
+    margin-left: 0.25rem;
+    height: 40px;
+    align-items: center;
+  }
 }
 
 .genre {
@@ -3082,6 +3321,11 @@ button {
 .music__category__item:nth-child(2n) {
   border-right: none;
   border-left: none;
+}
+
+.container-chart {
+  position: relative;
+  height: 100%;
 }
 
 .header-wrapper::after {
@@ -3682,6 +3926,153 @@ td[headers=sing-mv] {
   width: 1.875rem;
   height: 1.75rem;
   background: url(../../assets/images/button_icons_sprite2.png) no-repeat -152px -26px;
+}
+
+.audio-bar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #222222;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+.audio-bar__list {
+  display: flex;
+  align-items: center;
+}
+.audio-bar__item:first-child {
+  flex-grow: 1.5;
+  padding-left: 1.875rem;
+}
+.audio-bar__item:nth-child(2) {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  gap: 0.9375rem;
+}
+.audio-bar__item:nth-child(3) {
+  flex-grow: 1.5;
+  display: flex;
+}
+.audio-bar__item:nth-child(4) {
+  flex-grow: 0.3;
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .audio-bar__item:nth-child(4) {
+    flex-grow: 1;
+  }
+}
+.audio-bar__item:nth-child(5) {
+  flex-grow: 1.5;
+  display: flex;
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .audio-bar__item:nth-child(5) {
+    display: none;
+  }
+}
+.audio-bar__item:nth-child(6) {
+  flex-grow: 1;
+  text-align: end;
+  margin-right: 0.625rem;
+}
+.audio-bar__icon {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+@media (min-width: 480px) and (max-width: 1023px) {
+  .audio-bar__icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+.audio-bar__playlist {
+  color: #888888;
+  margin-left: 0.3125rem;
+  font-size: 0.875rem;
+}
+.audio-bar__album {
+  width: 2.5rem;
+}
+.audio-bar__title {
+  margin-left: 0.625rem;
+  color: #fff;
+  font-size: 0.875rem;
+}
+@media (max-width: 479px) {
+  .audio-bar__title {
+    display: none;
+  }
+}
+.audio-bar__control-loop {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+}
+.audio-bar__control-prev {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+}
+.audio-bar__control-play {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+}
+.audio-bar__control-next {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+}
+.audio-bar__control-random {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+}
+.audio-bar__lyrics {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.audio-bar__start-time {
+  margin-left: 1.875rem;
+  color: #fff;
+  font-size: 0.875rem;
+}
+.audio-bar__end-time {
+  margin-left: 1.875rem;
+  color: #888888;
+  font-size: 0.875rem;
+}
+
+.slider {
+  width: 40%;
+  min-width: 7.5rem;
+  height: 0.125rem;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+  border-radius: 25px;
+  box-shadow: 2px 8px 13px -3px rgba(116, 114, 114, 0.75);
+  margin-bottom: 0.625rem;
+}
+
+.slider::-webkit-slider-thumb {
+  cursor: pointer;
+  appearance: none;
+  height: 0.625rem;
+  width: 0.625rem;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid #b4b4b4;
+  box-shadow: 2px 8px 13px -3px rgba(116, 114, 114, 0.75);
 }
 
 /*# sourceMappingURL=style.css.map */
