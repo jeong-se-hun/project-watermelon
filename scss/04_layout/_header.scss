@@ -398,6 +398,10 @@
       display: flex;
       align-items: center;
 
+      @include mobile {
+        justify-content: flex-end;
+      }
+
       &__item {
         flex-basis: 33.333%;
         &.left {
@@ -484,4 +488,136 @@
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
   }
+}
+
+// Slide menu
+.slide {
+  display: none;
+  @include mobile {
+    width: 100%;
+    &__header {
+      width: 95%;
+      @include autoMargin;
+      @include paddingY(10px);
+      border-bottom: 1px solid $borderLightGray;
+
+      &__profile {
+        width: rem(60px);
+        height: rem(60px);
+        border-radius: 50%;
+        border: 2px solid $primary-logo-color;
+      }
+
+      &__text {
+        margin-left: rem(10px);
+        font-size: rem(18px);
+      }
+
+      &__close {
+        @include removeBtnStyle;
+        width: rem(50px);
+        float: right;
+        margin-right: rem(5px);
+        height: rem(50px);
+        opacity: 0.8;
+        display: inline-block;
+
+        &::before,
+        &::after {
+          position: absolute;
+          right: rem(40px);
+          top: rem(25px);
+          content: "";
+          height: rem(30px);
+          width: 2px;
+          background-color: $medium-gray;
+        }
+
+        &::before {
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    &__item {
+      @include paddingY(20px);
+      border-bottom: 1px solid $accent-background;
+      font-weight: 300;
+      padding-left: rem(45px);
+      position: relative;
+
+      &:first-child {
+        &::before {
+          @include slideItemBefore;
+          background: red;
+        }
+      }
+
+      &:nth-child(2) {
+        &::before {
+          @include slideItemBefore;
+          background: red;
+        }
+      }
+
+      &:nth-child(3) {
+        &::before {
+          @include slideItemBefore;
+          background: red;
+        }
+      }
+
+      &:nth-child(4) {
+        &::before {
+          @include slideItemBefore;
+          background: red;
+        }
+      }
+
+      &:nth-child(5) {
+        &::before {
+          @include slideItemBefore;
+          background: red;
+        }
+      }
+
+      &:nth-child(6) {
+        &::before {
+          @include slideItemBefore;
+          background: red;
+        }
+      }
+
+      &:nth-child(7) {
+        &::before {
+          @include slideItemBefore;
+          background: red;
+        }
+      }
+    }
+  }
+}
+
+.slide.is-show {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  background: $white;
+  top: rem(38px);
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.mobile-nav__list.is-active {
+  justify-content: center;
+}
+
+.left.is-active,
+.right.is-active {
+  display: none;
 }

@@ -712,6 +712,8 @@
   bottom: 0;
   background: $playerBackground;
   @include paddingY(10px);
+  transition: all 0.5s;
+  transform: translateY(rem(60px));
   &__list {
     display: flex;
     align-items: center;
@@ -724,7 +726,7 @@
 
       @include tab {
         flex-grow: 1;
-        padding-left: rem(10px);
+        padding-left: rem(40px);
       }
 
       @include mobile {
@@ -813,6 +815,22 @@
     margin-left: rem(5px);
     font-size: rem(14px);
     white-space: nowrap;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: -6px;
+      left: -27px;
+      background: url("/assets/images/musicbar-sprite.svg") no-repeat 0 0;
+
+      @include mobile {
+        display: none;
+      }
+    }
 
     @include tab {
       margin-left: rem(0px);
@@ -827,6 +845,10 @@
     margin-left: rem(10px);
     color: $white;
     font-size: rem(14px);
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     @include tab {
       display: none;
@@ -843,7 +865,7 @@
       display: inline-block;
       width: 30px;
       height: 30px;
-      background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+      background: url("/assets/images/musicbar-sprite.svg") no-repeat -30px 0;
     }
 
     &-prev {
@@ -852,7 +874,7 @@
 
       width: 30px;
       height: 30px;
-      background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+      background: url("/assets/images/musicbar-sprite.svg") no-repeat 0 -30px;
     }
 
     &-play {
@@ -861,7 +883,11 @@
 
       width: 30px;
       height: 30px;
-      background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+      background: url("/assets/images/musicbar-sprite.svg") no-repeat -90px -30px;
+
+      &:focus {
+        outline: none;
+      }
     }
 
     &-next {
@@ -870,7 +896,7 @@
 
       width: 30px;
       height: 30px;
-      background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+      background: url("/assets/images/musicbar-sprite.svg") no-repeat -30px -30px;
     }
 
     &-random {
@@ -879,7 +905,7 @@
 
       width: 30px;
       height: 30px;
-      background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+      background: url("/assets/images/musicbar-sprite.svg") no-repeat -60px -30px;
     }
   }
 
@@ -887,7 +913,7 @@
     display: block;
     width: 30px;
     height: 30px;
-    background: url("/assets/images/playlist-icon.png") no-repeat 0 0;
+    background: url("/assets/images/musicbar-sprite.svg") no-repeat -60px 0;
     @include autoMargin;
   }
 
@@ -902,6 +928,9 @@
     color: $secondary-font;
     font-size: rem(14px);
   }
+
+  &__progress {
+  }
 }
 
 .slider {
@@ -913,6 +942,18 @@
   border-radius: 25px;
   box-shadow: 2px 8px 13px -3px rgba(116, 114, 114, 0.75);
   margin-bottom: rem(10px);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: rem(-13px);
+    left: rem(-26px);
+    width: 30px;
+    height: 30px;
+    background: url("/assets/images/musicbar-sprite.svg") no-repeat -90px 0;
+  }
 }
 
 .slider::-webkit-slider-thumb {
@@ -924,4 +965,8 @@
   border-radius: 50%;
   border: 1px solid $borderDarkGray;
   box-shadow: 2px 8px 13px -3px rgba(116, 114, 114, 0.75);
+}
+
+.audio-bar.is-show {
+  transform: translateY(0);
 }
