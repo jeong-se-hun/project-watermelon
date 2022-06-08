@@ -21,18 +21,32 @@
   <body>
     <div class="container">
       <div class="skip-nav">
-        <a href="">본문</a>
+        <ul class="skip-nav__list">
+          <li class="skip-nav__item">
+            <a href="#skip-nav-login">로그인</a>
+          </li>
+          <li class="skip-nav__item">
+            <a href="#skip-nav-menu">메뉴</a>
+          </li>
+          <li class="skip-nav__item">
+            <a href="#skip-nav-main">본문</a>
+          </li>
+          <li class="skip-nav__item">
+            <a href="#skip-nav-footer">하단</a>
+          </li>
+        </ul>
       </div>
 
+      <!-- 공통 헤더 -->
       <!-- notice-bar -->
       <div class="notice-bar">
         <ul class="notice-bar__list">
           <li class="notice-bar__item login">
-            <a href="#" class="notice-bar__link">로그인</a>
+            <a href="/views/login.html" class="notice-bar__link">로그인</a>
           </li>
 
           <li class="notice-bar__item">
-            <a href="#" class="notice-bar__link">이용권구매</a>
+            <a href="#" class="notice-bar__link"> 이용권구매 </a>
           </li>
 
           <li class="notice-bar__item">
@@ -53,8 +67,8 @@
       <!-- Header -->
       <header class="header">
         <h1 class="header__logo">
-          <a href="#">
-            <img src="./assets/images/melon-01.svg" alt="melon" />
+          <a href="/index.html">
+            <img src="/assets/images/melon-01.svg" alt="melon" />
           </a>
         </h1>
 
@@ -136,28 +150,37 @@
               <span class="mobile-nav__btn button--burgerBarBottom"></span>
             </button>
             <a href="" class="mobile-nav__ticket">
-              <img src="./assets/images/mobileTickt.png" alt="이용권 아이콘"
+              <img src="/assets/images/mobileTickt.png" alt="이용권 아이콘"
             /></a>
           </li>
           <li class="mobile-nav__list__item center">
             <h1 class="mobile-nav__logo">
-              <a href="#">
-                <img src="./assets/images/melon-01.svg" alt="melon" />
+              <a href="/index.html">
+                <img src="/assets/images/melon-01.svg" alt="melon" />
               </a>
             </h1>
-          </li class="mobile-nav__list__item center">
+          </li>
           <li class="mobile-nav__list__item right">
             <a href="#" aria-label="검색페이지 이동"></a>
           </li>
         </ul>
       </nav>
+
+      <!-- side menu -->
+      <div class="mobile-nav__side"></div>
       <!-- mobile menu -->
 
       <!-- side menu -->
       <div class="slide">
         <div class="slide__header">
-          <img class="slide__header__profile" src="assets/images/artist1.jpg" alt="">
-          <span class="slide__header__text">로그인하세요</span>
+          <img
+            class="slide__header__profile"
+            src="/assets/images/artist1.jpg"
+            alt=""
+          />
+          <a href="/views/login.html" class="slide__header__text"
+            >로그인하세요</a
+          >
           <button class="slide__header__close"></button>
         </div>
 
@@ -188,12 +211,11 @@
 
       <!-- side menu -->
 
-
       <!-- header-nav -->
       <nav class="header__nav">
-        <ul class="header__nav__list">
+        <ul class="header__nav__list" id="skip-nav-menu">
           <li class="header__nav__item mobileHome">
-            <a href="#" class="header__nav__link">홈</a>
+            <a href="/index.html" class="header__nav__link">홈</a>
           </li>
           <li class="header__nav__item">
             <a href="/views/chart.html" class="header__nav__link">멜론차트</a>
@@ -202,10 +224,10 @@
             <a href="#" class="header__nav__link">최신음악</a>
           </li>
           <li class="header__nav__item">
-            <a href="views/genre.html" class="header__nav__link">장르음악</a>
+            <a href="/views/genre.html" class="header__nav__link">장르음악</a>
           </li>
           <li class="header__nav__item">
-            <a href="views/melonDj.html" class="header__nav__link">멜론DJ</a>
+            <a href="/views/melonDj.html" class="header__nav__link">멜론DJ</a>
           </li>
 
           <li class="header__nav__item">
@@ -228,23 +250,32 @@
           </li>
         </ul>
       </nav>
-
+      <!-- 공통 헤더 end-->
       <!-- 메인 -->
       <!-- 최신음악 -->
-      <section class="home__new__section">
+      <section class="home__new__section" id="skip-nav-main">
         <div class="home__new__section__wrap">
           <section class="home__new">
             <div class="home__new__wrap">
               <div class="home__new__tab">
                 <h2 class="home__new__title"><a href="/">최신 앨범</a></h2>
                 <div class="home__new__button-group">
-                  <button type="button" class="home__new__button--all">
+                  <button
+                    type="button"
+                    class="home__new__button--all home__new__slide__button on"
+                  >
                     전체
                   </button>
-                  <button type="button" class="home__new__button--kpop">
+                  <button
+                    type="button"
+                    class="home__new__button--kpop home__new__slide__button"
+                  >
                     가요
                   </button>
-                  <button type="button" class="home__new__button--pop">
+                  <button
+                    type="button"
+                    class="home__new__button--pop home__new__slide__button"
+                  >
                     POP
                   </button>
                 </div>
@@ -277,11 +308,11 @@
                           />
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="WSG워너비 전체앨범 바로가기"
-                            >WSG워너비 12</a
+                          <a href="/" aria-label="앨범정보 바로가기"
+                            >사계 (四季)</a
                           >
                           <a href="" aria-label="아티스트 페이지 바로가기"
-                            >WDG워너비</a
+                            >신용재 2F</a
                           >
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
@@ -289,7 +320,7 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a href="/" aria-hidden="true">WSG워너비</a>
+                        <a href="/" aria-hidden="true">신용재 2F</a>
                       </span>
                     </li>
                     <!-- slide1 item2 -->
@@ -302,11 +333,11 @@
                           />
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="WSG워너비 전체앨범 바로가기"
-                            >WSG워너비 12</a
+                          <a href="/" aria-label="앨범정보 바로가기"
+                            >Break The Line</a
                           >
                           <a href="" aria-label="아티스트 페이지 바로가기"
-                            >WDG워너비</a
+                            >조광일</a
                           >
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
@@ -314,7 +345,7 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a href="/" aria-hidden="true">WSG워너비</a>
+                        <a href="/" aria-hidden="true">조광일</a>
                       </span>
                     </li>
                     <!-- slide1 item3 -->
@@ -322,16 +353,16 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <img
-                            src="/assets/images/carousel/slide1-item1.jpeg"
+                            src="/assets/images/carousel/slide1-item3.jpeg"
                             alt=""
                           />
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="WSG워너비 전체앨범 바로가기"
-                            >WSG워너비 12</a
+                          <a href="/" aria-label="앨범정보 바로가기"
+                            >DOOMCHITA</a
                           >
                           <a href="" aria-label="아티스트 페이지 바로가기"
-                            >WDG워너비</a
+                            >SECRET NUMBER (시크릿 넘버)</a
                           >
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
@@ -339,7 +370,9 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a href="/" aria-hidden="true">WSG워너비</a>
+                        <a href="/" aria-hidden="true"
+                          >SECRET NUMBER (시크릿 넘버)</a
+                        >
                       </span>
                     </li>
                     <!-- slide1 item4 -->
@@ -347,16 +380,16 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <img
-                            src="/assets/images/carousel/slide1-item2.jpeg"
+                            src="/assets/images/carousel/slide1-item4.jpeg"
                             alt=""
                           />
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="WSG워너비 전체앨범 바로가기"
-                            >WSG워너비 12</a
+                          <a href="/" aria-label="앨범정보 바로가기"
+                            >DOOMCHITA</a
                           >
                           <a href="" aria-label="아티스트 페이지 바로가기"
-                            >WDG워너비</a
+                            >SECRET NUMBER (시크릿 넘버)</a
                           >
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
@@ -364,7 +397,9 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a href="/" aria-hidden="true">WSG워너비</a>
+                        <a href="/" aria-hidden="true"
+                          >SECRET NUMBER (시크릿 넘버)</a
+                        >
                       </span>
                     </li>
                     <!-- slide1 item5 -->
@@ -372,16 +407,16 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <img
-                            src="/assets/images/carousel/artist01.jpeg"
+                            src="/assets/images/carousel/slide1-item5.jpeg"
                             alt=""
                           />
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="WSG워너비 전체앨범 바로가기"
-                            >WSG워너비 12</a
+                          <a href="/" aria-label="앨범정보 바로가기"
+                            >키스 식스센스 OST Part.4</a
                           >
                           <a href="" aria-label="아티스트 페이지 바로가기"
-                            >WDG워너비</a
+                            >SURAN(수란)</a
                           >
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
@@ -389,7 +424,7 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a href="/" aria-hidden="true">WSG워너비</a>
+                        <a href="/" aria-hidden="true">SURAN(수란)</a>
                       </span>
                     </li>
                     <!-- slide1 item6 -->
@@ -402,7 +437,7 @@
                           />
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="WSG워너비 전체앨범 바로가기"
+                          <a href="/" aria-label="앨범정보 바로가기"
                             >WSG워너비 12</a
                           >
                           <a href="" aria-label="아티스트 페이지 바로가기"
@@ -414,12 +449,7 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a
-                          href="/"
-                          title="WSG워너비 - 페이지이동"
-                          aria-hidden="true"
-                          >WSG워너비</a
-                        >
+                        <a href="/" aria-hidden="true">WSG워너비</a>
                       </span>
                     </li>
                   </ul>
@@ -431,16 +461,16 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <img
-                            src="./assets/images/carousel/slide-image2.jpeg"
+                            src="./assets/images/carousel/slide2-item1.jpeg"
                             alt=""
                           />
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="WSG워너비 전체앨범 바로가기"
-                            >WSG워너비 12</a
+                          <a href="/" aria-label="앨범정보 바로가기"
+                            >BLUE SET Chapter2. CHOICE</a
                           >
                           <a href="" aria-label="아티스트 페이지 바로가기"
-                            >WDG워너비</a
+                            >TRENDZ (트렌드지)</a
                           >
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
@@ -448,12 +478,7 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a
-                          href="/"
-                          title="WSG워너비 - 페이지이동"
-                          aria-hidden="true"
-                          >WSG워너비</a
-                        >
+                        <a href="/" aria-hidden="true">TRENDZ (트렌드지)</a>
                       </span>
                     </li>
                     <!-- slide2 item2 -->
@@ -461,16 +486,16 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <img
-                            src="./assets/images/carousel/slide-image2.jpeg"
+                            src="./assets/images/carousel/slide2-item2.jpeg"
                             alt=""
                           />
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="WSG워너비 전체앨범 바로가기"
-                            >WSG워너비 12</a
+                          <a href="/" aria-label="앨범정보 바로가기"
+                            >BIGMISTAKE</a
                           >
                           <a href="" aria-label="아티스트 페이지 바로가기"
-                            >WDG워너비</a
+                            >노브레인</a
                           >
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
@@ -478,12 +503,7 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a
-                          href="/"
-                          title="WSG워너비 - 페이지이동"
-                          aria-hidden="true"
-                          >WSG워너비</a
-                        >
+                        <a href="/" aria-hidden="true">노브레인</a>
                       </span>
                     </li>
                     <!-- slide2 item3 -->
@@ -491,16 +511,16 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <img
-                            src="./assets/images/carousel/slide-image2.jpeg"
+                            src="./assets/images/carousel/slide2-item3.jpeg"
                             alt=""
                           />
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="WSG워너비 전체앨범 바로가기"
-                            >WSG워너비 12</a
+                          <a href="/" aria-label="앨범정보 바로가기"
+                            >이브 OST Part1</a
                           >
                           <a href="" aria-label="아티스트 페이지 바로가기"
-                            >WDG워너비</a
+                            >김예지</a
                           >
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
@@ -508,12 +528,7 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a
-                          href="/"
-                          title="WSG워너비 - 페이지이동"
-                          aria-hidden="true"
-                          >WSG워너비</a
-                        >
+                        <a href="/" aria-hidden="true">김예지</a>
                       </span>
                     </li>
                     <!-- slide2 item4 -->
@@ -521,16 +536,17 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <img
-                            src="./assets/images/carousel/slide-image2.jpeg"
+                            src="./assets/images/carousel/slide2-item4.jpeg"
                             alt=""
                           />
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="WSG워너비 전체앨범 바로가기"
-                            >WSG워너비 12</a
+                          <a href="/" aria-label="앨범정보 바로가기"
+                            >Here you are (너에게 가는 속도 493km OST
+                            Part.13)</a
                           >
                           <a href="" aria-label="아티스트 페이지 바로가기"
-                            >WDG워너비</a
+                            >릴리안</a
                           >
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
@@ -538,12 +554,7 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a
-                          href="/"
-                          title="WSG워너비 - 페이지이동"
-                          aria-hidden="true"
-                          >WSG워너비</a
-                        >
+                        <a href="/" aria-hidden="true">릴리안</a>
                       </span>
                     </li>
                     <!-- slide2 item5 -->
@@ -551,16 +562,16 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <img
-                            src="./assets/images/carousel/slide-image2.jpeg"
+                            src="./assets/images/carousel/slide2-item5.jpeg"
                             alt=""
                           />
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="WSG워너비 전체앨범 바로가기"
-                            >WSG워너비 12</a
+                          <a href="/" aria-label="앨범정보 바로가기"
+                            >푸른바다 위에서 칵테일 한잔 줘 (Feat.NaOH)</a
                           >
                           <a href="" aria-label="아티스트 페이지 바로가기"
-                            >WDG워너비</a
+                            >슬릭 (SLEEQ)</a
                           >
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
@@ -568,12 +579,7 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a
-                          href="/"
-                          title="WSG워너비 - 페이지이동"
-                          aria-hidden="true"
-                          >WSG워너비</a
-                        >
+                        <a href="/" aria-hidden="true">슬릭 (SLEEQ)</a>
                       </span>
                     </li>
                     <!-- slide2 item6 -->
@@ -581,16 +587,14 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <img
-                            src="./assets/images/carousel/slide-image2.jpeg"
+                            src="./assets/images/carousel/slide2-item6.jpeg"
                             alt=""
                           />
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="WSG워너비 전체앨범 바로가기"
-                            >WSG워너비 12</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">Orange</a>
                           <a href="" aria-label="아티스트 페이지 바로가기"
-                            >WDG워너비</a
+                            >박지우</a
                           >
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
@@ -598,12 +602,7 @@
                         </div>
                       </div>
                       <span class="singer">
-                        <a
-                          href="/"
-                          title="WSG워너비 - 페이지이동"
-                          aria-hidden="true"
-                          >WSG워너비</a
-                        >
+                        <a href="/" aria-hidden="true">박지우</a>
                       </span>
                     </li>
                   </ul>
@@ -615,7 +614,7 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <img
-                            src="./assets/images/carousel/slide-image3.jpeg"
+                            src="./assets/images/carousel/slide3-item1.jpeg"
                             alt=""
                           />
                         </div>
@@ -645,7 +644,7 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <img
-                            src="./assets/images/carousel/slide-image3.jpeg"
+                            src="./assets/images/carousel/slide3-item2.jpeg"
                             alt=""
                           />
                         </div>
@@ -675,7 +674,7 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <img
-                            src="./assets/images/carousel/slide-image3.jpeg"
+                            src="./assets/images/carousel/slide3-item3.jpeg"
                             alt=""
                           />
                         </div>
@@ -705,7 +704,7 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <img
-                            src="./assets/images/carousel/slide-image3.jpeg"
+                            src="./assets/images/carousel/slide3-item4.jpeg"
                             alt=""
                           />
                         </div>
@@ -735,7 +734,7 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <img
-                            src="./assets/images/carousel/slide-image3.jpeg"
+                            src="./assets/images/carousel/slide3-item5.jpeg"
                             alt=""
                           />
                         </div>
@@ -765,7 +764,7 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <img
-                            src="./assets/images/carousel/slide-image3.jpeg"
+                            src="./assets/images/carousel/slide3-item6.jpeg"
                             alt=""
                           />
                         </div>
@@ -793,6 +792,7 @@
                   </ul>
                 </div>
               </div>
+              <a href="/" class="new__section__more">더보기</a>
             </div>
           </section>
           <!-- //최신음악 -->
@@ -899,14 +899,16 @@
         </div>
         <!-- //아티스트 -->
         <!-- 로그인 -->
-        <section class="home__login">
+        <section class="home__login" id="skip-nav-login">
           <div class="home__login--login">
             <h2 class="sr-only">로그인</h2>
             <div class="login--top">
               <p>멜론을 더 안전하게 이용하세요</p>
               <a href="/">회원가입</a>
             </div>
-            <a href="/" role="button" class="login-button">로그인</a>
+            <a href="/views/login.html" role="button" class="login-button"
+              >로그인</a
+            >
           </div>
           <div class="home__login--ad">
             <a href="/" aria-label="소각소각 단독 콘서트 멜론티켓 예매하기"></a>
@@ -2302,7 +2304,7 @@
       </section>
 
       <!-- footer -->
-      <footer class="footer">
+      <footer class="footer" id="skip-nav-footer">
         <div class="footer__group">
           <div class="footer__extra">
             <ul class="footer__extra__list">

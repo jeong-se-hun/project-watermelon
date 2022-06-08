@@ -1,5 +1,52 @@
+// .skip-nav {
+//   text-align: center;
+//   background: $grayscaleGray3;
+//   color: $white;
+//   height: 30px;
+//   overflow: hidden;
+
+//   &__item {
+//     padding: 10px;
+//   }
+// }
+
 .skip-nav {
-  display: none;
+  height: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: $borderGray;
+  text-align: center;
+}
+.skip-nav a {
+  display: inline-block;
+  position: absolute;
+  padding: 6px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  outline-offset: -4px;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(00, 00, 00);
+  z-index: 10;
+}
+.skip-nav a:focus {
+  position: relative;
+  width: initial;
+  height: initial;
+  clip: initial;
+  clip-path: initial;
+  z-index: 1000;
+}
+
+.test {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url("../../assets/images/icon-ticket.svg");
 }
 
 .notice-bar {
@@ -67,6 +114,7 @@
 
     &:nth-child(2) a {
       position: relative;
+      z-index: -1;
       &::before {
         content: "";
         position: absolute;
@@ -220,7 +268,7 @@
       position: relative;
       width: rem(175px);
       height: 25px;
-      margin-top: 28px;
+      margin-top: 33px;
       overflow: hidden;
 
       @include tab {
@@ -255,7 +303,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      // background: #fff;
+      opacity: 0;
     }
 
     &__item {
