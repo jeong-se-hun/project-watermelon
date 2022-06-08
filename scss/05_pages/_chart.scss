@@ -197,11 +197,14 @@
         }
 
         td[headers="rank"] {
+          padding: 0 rem(18px) 0 rem(12px);
           // padding: 0 rem(18px) 0 rem(12px);
           text-align: center;
         }
 
         td[headers="sing-album-cover"] img {
+          width: rem(60px);
+          height: rem(60px);
           min-width: 60px;
           height: 60px;
           @include marginX(10px);

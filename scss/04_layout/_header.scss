@@ -301,6 +301,10 @@
     margin-top: rem(10px);
     padding-bottom: rem(10px);
     border-bottom: 1px solid $borderDarkGray;
+
+    @include mobile {
+      border-bottom: 0;
+    }
     &__list {
       @include autoMargin;
 
