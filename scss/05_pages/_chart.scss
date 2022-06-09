@@ -995,7 +995,7 @@
     left: rem(-26px);
     width: 30px;
     height: 30px;
-    background: url("/assets/images/musicbar-sprite.svg") no-repeat -90px 0;
+    background: url("/assets/images/music-sprite.svg") no-repeat -90px 0;
   }
 }
 
@@ -1013,10 +1013,6 @@
 .audio-bar.is-show {
   transform: translateY(0);
 }
-
-// .audio-bar__progress.is-active {
-//   width: 100%;
-// }
 
 .audio-bar__control-play.is-pause {
   background: url("/assets/images/music-sprite.svg") no-repeat -90px -30px;

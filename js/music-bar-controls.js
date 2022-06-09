@@ -1,11 +1,3 @@
-const get = (target) => {
-  return document.querySelector(target);
-};
-
-const getAll = function (target) {
-  return document.querySelectorAll(target);
-};
-
 const $audioBar = get(".audio-bar");
 const $playButton = get(".play-button");
 const $audio = get("#audio1");
@@ -84,5 +76,13 @@ function startTimer() {
 
   if (minutes > 9) {
     $appendMinutes.innerHTML = minutes;
+  }
+
+  if (minutes === 2 && seconds === 56) {
+    clearInterval(playInterval);
+    minutes = "00";
+    seconds = "00";
+    $appendMinutes.innerHTML = minutes;
+    $appendSeconds.innerHTML = seconds;
   }
 }

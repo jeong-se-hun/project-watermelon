@@ -60,17 +60,12 @@
 }
 
 .today-section {
-  width: rem(1010px);
   @include autoMargin;
+  width: rem(1010px);
   position: relative;
 
   @include tab {
     width: 95%;
-  }
-
-  @include mobile {
-    width: 100%;
-    @include paddingX(5px);
   }
 
   h3 {
@@ -79,7 +74,6 @@
 
   &__form {
     display: flex;
-    align-items: center;
 
     fieldset {
       display: flex;
@@ -120,19 +114,15 @@
     background-position: 98% 80%;
 
     &::placeholder {
+      @include ellipsis;
       color: $borderGray;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
     }
 
     @include tab {
       width: rem(200px);
       &::placeholder {
+        @include ellipsis;
         color: $borderGray;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
       }
     }
   }
@@ -141,21 +131,21 @@
     display: none;
 
     @include mobile {
-      display: flex;
+      @include paddingY(5px);
+      @include paddingX(2px);
+      display: block;
       font-size: rem(12px);
       margin-left: rem(20px);
       border: 1px solid $borderDarkGray;
       border-radius: 30px;
       width: rem(80px);
-      justify-content: center;
-      align-items: center;
-      @include paddingY(10px);
+      text-align: center;
     }
   }
 
   &__button {
-    font-size: rem(14px);
     @include paddingY(10px);
+    font-size: rem(14px);
     margin-left: rem(40px);
     border: 1px solid $borderDarkGray;
     border-radius: 30px;
@@ -163,16 +153,14 @@
     text-align: center;
 
     @include tab {
-      width: 100px;
-      font-size: rem(12px);
       @include paddingY(5px);
       @include paddingX(5px);
+      width: 100px;
+      font-size: rem(12px);
       margin-left: rem(20px);
     }
 
     @include mobile {
-      width: rem(95px);
-      font-size: rem(12px);
       margin-left: rem(10px);
     }
   }
@@ -184,32 +172,21 @@
       width: 100%;
       height: 425px;
       overflow: hidden;
-
-      @include mobile {
-        height: rem(385px);
-      }
     }
     &__list {
       @include djCardList($g: rem(14px));
       position: absolute;
       top: 0;
+      left: 0;
       height: 100%;
     }
 
     &__item {
       border: 1px solid $borderLightGray;
-
-      @include mobile {
-        width: 100%;
-      }
     }
 
     &__img {
       @include djCardImg;
-
-      @include mobile {
-        height: 60%;
-      }
     }
 
     &__desc {
@@ -219,9 +196,9 @@
     }
 
     &__title {
-      @include djCardTitle($h: auto);
+      @include djCardTitle($mb: 0, $h: auto);
       min-height: 36px;
-      // margin-bottom: rem(34px);
+      margin-bottom: rem(34px);
 
       &:hover {
         text-decoration: underline;
@@ -326,12 +303,11 @@
 .recommend-wrapper {
   background: $accent-background;
   margin-top: rem(50px);
-
   .recommend {
-    width: rem(1010px);
     @include autoMargin;
-    display: flex;
     @include paddingY(40px);
+    width: rem(1010px);
+    display: flex;
 
     @include tab {
       text-align: center;
@@ -358,8 +334,8 @@
     }
 
     &__right {
-      margin-left: rem(50px);
       @include paddingX(15px);
+      margin-left: rem(50px);
       @include tab {
         @include autoMargin;
       }
@@ -414,9 +390,9 @@
       }
 
       &__button {
-        margin-top: rem(30px);
         @include paddingX(18px);
         @include paddingY(8px);
+        margin-top: rem(30px);
         font-weight: 300;
         color: $primary-color;
         border: 1px solid $primary-color;
@@ -436,18 +412,14 @@
       }
     }
   }
-
-  @include mobile {
-    display: none;
-  }
 }
 
 .dj-list {
   &__tag {
-    width: rem(1010px);
     @include autoMargin;
-    display: flex;
     @include paddingY(50px);
+    width: rem(1010px);
+    display: flex;
 
     &__title {
       font-size: rem(18px);
@@ -490,9 +462,8 @@
       &__item {
         margin-top: rem(20px);
       }
-    }
-    @include mobile {
-      display: none;
+      &__link {
+      }
     }
   }
 
@@ -503,17 +474,13 @@
     @include autoMargin;
     font-size: rem(18px);
     font-weight: 400;
-    margin-top: rem(40px);
 
     @include tab {
       padding-left: rem(20px);
-      width: 100%;
     }
 
     @include mobile {
       font-size: rem(16px);
-      width: 100%;
-      margin-left: rem(5px);
     }
 
     &__group {
@@ -527,10 +494,6 @@
         justify-content: center;
         padding: rem(20px);
       }
-
-      @include mobile {
-        width: 100%;
-      }
     }
 
     &__list {
@@ -538,12 +501,6 @@
 
       @include tab {
         flex-flow: wrap;
-      }
-
-      @include mobile {
-        flex-flow: wrap;
-        gap: rem(10px);
-        @include paddingX(5px);
       }
     }
 
@@ -553,11 +510,6 @@
       @include tab {
         width: calc(50% - rem(10px));
       }
-
-      @include mobile {
-        width: calc(50% - rem(5px));
-        height: 100%;
-      }
     }
 
     &__img {
@@ -566,17 +518,12 @@
       @include tab {
         height: auto;
       }
-
-      @include mobile {
-        height: 50%;
-      }
     }
 
     &__desc {
       @include djCardDesc;
       @include paddingX(20px);
       @include paddingY(25px);
-      color: $primary-font;
 
       @include tab {
         text-align: center;
@@ -584,6 +531,7 @@
 
       @include mobile {
         @include paddingX(10px);
+        padding-bottom: rem(12px);
       }
     }
 
@@ -600,14 +548,9 @@
       }
 
       @include mobile {
+        @include ellipsisTwoLine;
         height: rem(40px);
         font-size: rem(14px);
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        width: 100%;
       }
     }
 
@@ -623,7 +566,7 @@
       }
 
       @include mobile {
-        font-size: rem(11px);
+        font-size: rem(13px);
       }
     }
 
@@ -702,26 +645,23 @@
   // ROCK
 
   &__rock {
-    width: rem(1010px);
     @include autoMargin;
+    width: rem(1010px);
     font-size: rem(18px);
     font-weight: 400;
     margin-top: rem(40px);
 
     @include tab {
       padding-left: rem(20px);
-      width: 100%;
     }
 
     @include mobile {
       font-size: rem(16px);
-      width: 100%;
-      margin-left: rem(5px);
     }
 
     &__group {
-      width: rem(1010px);
       @include autoMargin;
+      width: rem(1010px);
       margin-top: rem(20px);
 
       @include tab {
@@ -729,10 +669,6 @@
         display: flex;
         justify-content: center;
         padding: rem(20px);
-      }
-
-      @include mobile {
-        width: 100%;
       }
     }
 
@@ -742,12 +678,6 @@
       @include tab {
         flex-flow: wrap;
       }
-
-      @include mobile {
-        flex-flow: wrap;
-        gap: rem(10px);
-        @include paddingX(5px);
-      }
     }
 
     &__item {
@@ -756,11 +686,6 @@
       @include tab {
         width: calc(50% - rem(10px));
       }
-
-      @include mobile {
-        width: calc(50% - rem(5px));
-        height: 100%;
-      }
     }
 
     &__img {
@@ -768,10 +693,6 @@
 
       @include tab {
         height: auto;
-      }
-
-      @include mobile {
-        height: 50%;
       }
     }
 
@@ -786,6 +707,7 @@
 
       @include mobile {
         @include paddingX(10px);
+        padding-bottom: rem(12px);
       }
     }
 
@@ -802,14 +724,9 @@
       }
 
       @include mobile {
+        @include ellipsisTwoLine;
         height: rem(40px);
         font-size: rem(14px);
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        width: 100%;
       }
     }
 
@@ -825,7 +742,7 @@
       }
 
       @include mobile {
-        font-size: rem(11px);
+        font-size: rem(13px);
       }
     }
 
@@ -904,26 +821,23 @@
   // boring
 
   &__boring {
-    width: rem(1010px);
     @include autoMargin;
+    width: rem(1010px);
     font-size: rem(18px);
     font-weight: 400;
     margin-top: rem(40px);
 
     @include tab {
       padding-left: rem(20px);
-      width: 100%;
     }
 
     @include mobile {
       font-size: rem(16px);
-      width: 100%;
-      margin-left: rem(5px);
     }
 
     &__group {
-      width: rem(1010px);
       @include autoMargin;
+      width: rem(1010px);
       margin-top: rem(20px);
 
       @include tab {
@@ -931,10 +845,6 @@
         display: flex;
         justify-content: center;
         padding: rem(20px);
-      }
-
-      @include mobile {
-        width: 100%;
       }
     }
 
@@ -944,12 +854,6 @@
       @include tab {
         flex-flow: wrap;
       }
-
-      @include mobile {
-        flex-flow: wrap;
-        gap: rem(10px);
-        @include paddingX(5px);
-      }
     }
 
     &__item {
@@ -958,11 +862,6 @@
       @include tab {
         width: calc(50% - rem(10px));
       }
-
-      @include mobile {
-        width: calc(50% - rem(5px));
-        height: 100%;
-      }
     }
 
     &__img {
@@ -970,10 +869,6 @@
 
       @include tab {
         height: auto;
-      }
-
-      @include mobile {
-        height: 50%;
       }
     }
 
@@ -988,6 +883,7 @@
 
       @include mobile {
         @include paddingX(10px);
+        padding-bottom: rem(12px);
       }
     }
 
@@ -1004,14 +900,9 @@
       }
 
       @include mobile {
+        @include ellipsisTwoLine;
         height: rem(40px);
         font-size: rem(14px);
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        width: 100px;
       }
     }
 
@@ -1027,7 +918,7 @@
       }
 
       @include mobile {
-        font-size: rem(11px);
+        font-size: rem(12px);
       }
     }
 
@@ -1105,32 +996,30 @@
 
   // summer
   &__summer {
-    width: rem(1010px);
     @include autoMargin;
+    width: rem(1010px);
     font-size: rem(18px);
     font-weight: 400;
     margin-top: rem(40px);
 
     @include tab {
       padding-left: rem(20px);
-      width: 100%;
     }
 
     @include mobile {
-      display: none;
       font-size: rem(16px);
-      margin-left: rem(5px);
+      display: none;
+    }
 
-      &.is-active {
-        display: block;
-        width: 100%;
-      }
+    &.is-active {
+      display: block;
     }
 
     &__group {
-      width: rem(1010px);
       @include autoMargin;
+      width: rem(1010px);
       margin-top: rem(20px);
+      margin-bottom: rem(50px);
 
       @include tab {
         width: 100%;
@@ -1141,12 +1030,10 @@
 
       @include mobile {
         display: none;
+      }
 
-        &.is-active {
-          width: 100%;
-          display: block;
-          margin-bottom: rem(20px);
-        }
+      &.is-active {
+        display: block;
       }
     }
 
@@ -1156,12 +1043,6 @@
       @include tab {
         flex-flow: wrap;
       }
-
-      @include mobile {
-        flex-flow: wrap;
-        gap: rem(10px);
-        @include paddingX(5px);
-      }
     }
 
     &__item {
@@ -1169,11 +1050,6 @@
 
       @include tab {
         width: calc(50% - rem(10px));
-      }
-
-      @include mobile {
-        width: calc(50% - rem(5px));
-        height: 100%;
       }
     }
 
@@ -1183,17 +1059,12 @@
       @include tab {
         height: auto;
       }
-
-      @include mobile {
-        height: 50%;
-      }
     }
 
     &__desc {
       @include djCardDesc;
       @include paddingX(20px);
       @include paddingY(25px);
-      color: $primary-font;
 
       @include tab {
         text-align: center;
@@ -1201,6 +1072,7 @@
 
       @include mobile {
         @include paddingX(10px);
+        padding-bottom: rem(12px);
       }
     }
 
@@ -1217,14 +1089,9 @@
       }
 
       @include mobile {
+        @include ellipsisTwoLine;
         height: rem(40px);
         font-size: rem(14px);
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        width: 100%;
       }
     }
 
@@ -1240,7 +1107,7 @@
       }
 
       @include mobile {
-        font-size: rem(11px);
+        font-size: rem(13px);
       }
     }
 
@@ -1321,17 +1188,15 @@
 
     @include mobile {
       @include removeBtnStyle;
-      margin: rem(20px) 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flexCenter;
+      @include autoMargin;
+      margin-bottom: rem(20px);
       border: 1px solid $primary-color;
       border-radius: rem(30px);
       font-weight: 400;
       color: $primary-logo-color;
       width: rem(100px);
       font-size: rem(14px);
-      @include autoMargin;
       padding-left: rem(6px);
 
       &::after {
