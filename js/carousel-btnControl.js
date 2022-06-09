@@ -1,7 +1,3 @@
-const get = (target) => {
-  return document.querySelector(target);
-};
-
 // get
 const $slideBtns = document.querySelectorAll(".home__new__slide__button");
 const $allBtn = get(".home__new__button--all");

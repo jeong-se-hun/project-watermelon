@@ -2155,12 +2155,20 @@ button {
     width: 95%;
   }
 }
+@media (max-width: 479px) {
+  .today-section {
+    width: 100%;
+    padding-left: 0.3125rem;
+    padding-right: 0.3125rem;
+  }
+}
 .today-section h3 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
 }
 .today-section__form {
   display: flex;
+  align-items: center;
 }
 .today-section__form fieldset {
   display: flex;
@@ -2219,17 +2227,16 @@ button {
 }
 @media (max-width: 479px) {
   .today-section__search {
-    display: block;
+    display: flex;
     font-size: 0.75rem;
-    padding-top: 0.3125rem;
-    padding-bottom: 0.3125rem;
-    padding-left: 0.125rem;
-    padding-right: 0.125rem;
     margin-left: 1.25rem;
     border: 1px solid #b4b4b4;
     border-radius: 30px;
     width: 5rem;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
   }
 }
 .today-section__button {
@@ -2255,6 +2262,8 @@ button {
 }
 @media (max-width: 479px) {
   .today-section__button {
+    width: 5.9375rem;
+    font-size: 0.75rem;
     margin-left: 0.625rem;
   }
 }
@@ -2264,20 +2273,34 @@ button {
   height: 425px;
   overflow: hidden;
 }
+@media (max-width: 479px) {
+  .today-section__card__wrap {
+    height: 24.0625rem;
+  }
+}
 .today-section__card__list {
   display: flex;
   gap: 0.875rem;
   position: absolute;
   top: 0;
-  left: 0;
   height: 100%;
 }
 .today-section__card__item {
   border: 1px solid #dfe6e8;
 }
+@media (max-width: 479px) {
+  .today-section__card__item {
+    width: 100%;
+  }
+}
 .today-section__card__img {
   width: 100%;
   height: 15rem;
+}
+@media (max-width: 479px) {
+  .today-section__card__img {
+    height: 60%;
+  }
 }
 .today-section__card__desc {
   border-top: 1px solid #dfe6e8;
@@ -2291,12 +2314,11 @@ button {
   display: block;
   font-size: 0.875rem;
   color: #333333;
-  margin-bottom: 0;
+  margin-bottom: 0.625rem;
   height: auto;
   width: 12.5rem;
   line-height: 1.25rem;
   min-height: 36px;
-  margin-bottom: 2.125rem;
 }
 .today-section__card__title:hover {
   text-decoration: underline;
@@ -2518,6 +2540,11 @@ button {
     justify-content: center;
   }
 }
+@media (max-width: 479px) {
+  .recommend-wrapper {
+    display: none;
+  }
+}
 
 .dj-list__tag {
   width: 63.125rem;
@@ -2567,21 +2594,30 @@ button {
     margin-top: 1.25rem;
   }
 }
+@media (max-width: 479px) {
+  .dj-list__tag {
+    display: none;
+  }
+}
 .dj-list__hiphop {
   width: 63.125rem;
   margin-left: auto;
   margin-right: auto;
   font-size: 1.125rem;
   font-weight: 400;
+  margin-top: 2.5rem;
 }
 @media (min-width: 641px) and (max-width: 1023px) {
   .dj-list__hiphop {
     padding-left: 1.25rem;
+    width: 100%;
   }
 }
 @media (max-width: 479px) {
   .dj-list__hiphop {
     font-size: 1rem;
+    width: 100%;
+    margin-left: 0.3125rem;
   }
 }
 .dj-list__hiphop__group {
@@ -2598,6 +2634,11 @@ button {
     padding: 1.25rem;
   }
 }
+@media (max-width: 479px) {
+  .dj-list__hiphop__group {
+    width: 100%;
+  }
+}
 .dj-list__hiphop__list {
   display: flex;
   gap: 1.25rem;
@@ -2607,12 +2648,26 @@ button {
     flex-flow: wrap;
   }
 }
+@media (max-width: 479px) {
+  .dj-list__hiphop__list {
+    flex-flow: wrap;
+    gap: 0.625rem;
+    padding-left: 0.3125rem;
+    padding-right: 0.3125rem;
+  }
+}
 .dj-list__hiphop__item {
   border: 1px solid #dfe6e8;
 }
 @media (min-width: 641px) and (max-width: 1023px) {
   .dj-list__hiphop__item {
     width: calc(50% - 0.625rem);
+  }
+}
+@media (max-width: 479px) {
+  .dj-list__hiphop__item {
+    width: calc(50% - 0.3125rem);
+    height: 100%;
   }
 }
 .dj-list__hiphop__img {
@@ -2624,6 +2679,11 @@ button {
     height: auto;
   }
 }
+@media (max-width: 479px) {
+  .dj-list__hiphop__img {
+    height: 50%;
+  }
+}
 .dj-list__hiphop__desc {
   border-top: 1px solid #dfe6e8;
   position: relative;
@@ -2631,6 +2691,7 @@ button {
   padding-right: 1.25rem;
   padding-top: 1.5625rem;
   padding-bottom: 1.5625rem;
+  color: #333333;
 }
 @media (min-width: 641px) and (max-width: 1023px) {
   .dj-list__hiphop__desc {
@@ -2670,6 +2731,7 @@ button {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    width: 100%;
   }
 }
 .dj-list__hiphop__dj {
@@ -2687,7 +2749,7 @@ button {
 }
 @media (max-width: 479px) {
   .dj-list__hiphop__dj {
-    font-size: 0.8125rem;
+    font-size: 0.6875rem;
   }
 }
 .dj-list__hiphop__info {
@@ -2794,11 +2856,14 @@ button {
 @media (min-width: 641px) and (max-width: 1023px) {
   .dj-list__rock {
     padding-left: 1.25rem;
+    width: 100%;
   }
 }
 @media (max-width: 479px) {
   .dj-list__rock {
     font-size: 1rem;
+    width: 100%;
+    margin-left: 0.3125rem;
   }
 }
 .dj-list__rock__group {
@@ -2815,6 +2880,11 @@ button {
     padding: 1.25rem;
   }
 }
+@media (max-width: 479px) {
+  .dj-list__rock__group {
+    width: 100%;
+  }
+}
 .dj-list__rock__list {
   display: flex;
   gap: 1.25rem;
@@ -2822,6 +2892,14 @@ button {
 @media (min-width: 641px) and (max-width: 1023px) {
   .dj-list__rock__list {
     flex-flow: wrap;
+  }
+}
+@media (max-width: 479px) {
+  .dj-list__rock__list {
+    flex-flow: wrap;
+    gap: 0.625rem;
+    padding-left: 0.3125rem;
+    padding-right: 0.3125rem;
   }
 }
 .dj-list__rock__item {
@@ -2832,6 +2910,12 @@ button {
     width: calc(50% - 0.625rem);
   }
 }
+@media (max-width: 479px) {
+  .dj-list__rock__item {
+    width: calc(50% - 0.3125rem);
+    height: 100%;
+  }
+}
 .dj-list__rock__img {
   width: 100%;
   height: 15rem;
@@ -2839,6 +2923,11 @@ button {
 @media (min-width: 641px) and (max-width: 1023px) {
   .dj-list__rock__img {
     height: auto;
+  }
+}
+@media (max-width: 479px) {
+  .dj-list__rock__img {
+    height: 50%;
   }
 }
 .dj-list__rock__desc {
@@ -2887,6 +2976,7 @@ button {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    width: 100%;
   }
 }
 .dj-list__rock__dj {
@@ -2904,7 +2994,7 @@ button {
 }
 @media (max-width: 479px) {
   .dj-list__rock__dj {
-    font-size: 0.8125rem;
+    font-size: 0.6875rem;
   }
 }
 .dj-list__rock__info {
@@ -3011,11 +3101,14 @@ button {
 @media (min-width: 641px) and (max-width: 1023px) {
   .dj-list__boring {
     padding-left: 1.25rem;
+    width: 100%;
   }
 }
 @media (max-width: 479px) {
   .dj-list__boring {
     font-size: 1rem;
+    width: 100%;
+    margin-left: 0.3125rem;
   }
 }
 .dj-list__boring__group {
@@ -3032,6 +3125,11 @@ button {
     padding: 1.25rem;
   }
 }
+@media (max-width: 479px) {
+  .dj-list__boring__group {
+    width: 100%;
+  }
+}
 .dj-list__boring__list {
   display: flex;
   gap: 1.25rem;
@@ -3039,6 +3137,14 @@ button {
 @media (min-width: 641px) and (max-width: 1023px) {
   .dj-list__boring__list {
     flex-flow: wrap;
+  }
+}
+@media (max-width: 479px) {
+  .dj-list__boring__list {
+    flex-flow: wrap;
+    gap: 0.625rem;
+    padding-left: 0.3125rem;
+    padding-right: 0.3125rem;
   }
 }
 .dj-list__boring__item {
@@ -3049,6 +3155,12 @@ button {
     width: calc(50% - 0.625rem);
   }
 }
+@media (max-width: 479px) {
+  .dj-list__boring__item {
+    width: calc(50% - 0.3125rem);
+    height: 100%;
+  }
+}
 .dj-list__boring__img {
   width: 100%;
   height: 15rem;
@@ -3056,6 +3168,11 @@ button {
 @media (min-width: 641px) and (max-width: 1023px) {
   .dj-list__boring__img {
     height: auto;
+  }
+}
+@media (max-width: 479px) {
+  .dj-list__boring__img {
+    height: 50%;
   }
 }
 .dj-list__boring__desc {
@@ -3104,6 +3221,7 @@ button {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    width: 100px;
   }
 }
 .dj-list__boring__dj {
@@ -3121,7 +3239,7 @@ button {
 }
 @media (max-width: 479px) {
   .dj-list__boring__dj {
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
   }
 }
 .dj-list__boring__info {
@@ -3228,11 +3346,18 @@ button {
 @media (min-width: 641px) and (max-width: 1023px) {
   .dj-list__summer {
     padding-left: 1.25rem;
+    width: 100%;
   }
 }
 @media (max-width: 479px) {
   .dj-list__summer {
     display: none;
+    font-size: 1rem;
+    margin-left: 0.3125rem;
+  }
+  .dj-list__summer.is-active {
+    display: block;
+    width: 100%;
   }
 }
 .dj-list__summer__group {
@@ -3240,7 +3365,6 @@ button {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.25rem;
-  margin-bottom: 8.125rem;
 }
 @media (min-width: 641px) and (max-width: 1023px) {
   .dj-list__summer__group {
@@ -3254,6 +3378,11 @@ button {
   .dj-list__summer__group {
     display: none;
   }
+  .dj-list__summer__group.is-active {
+    width: 100%;
+    display: block;
+    margin-bottom: 1.25rem;
+  }
 }
 .dj-list__summer__list {
   display: flex;
@@ -3264,12 +3393,26 @@ button {
     flex-flow: wrap;
   }
 }
+@media (max-width: 479px) {
+  .dj-list__summer__list {
+    flex-flow: wrap;
+    gap: 0.625rem;
+    padding-left: 0.3125rem;
+    padding-right: 0.3125rem;
+  }
+}
 .dj-list__summer__item {
   border: 1px solid #dfe6e8;
 }
 @media (min-width: 641px) and (max-width: 1023px) {
   .dj-list__summer__item {
     width: calc(50% - 0.625rem);
+  }
+}
+@media (max-width: 479px) {
+  .dj-list__summer__item {
+    width: calc(50% - 0.3125rem);
+    height: 100%;
   }
 }
 .dj-list__summer__img {
@@ -3281,6 +3424,11 @@ button {
     height: auto;
   }
 }
+@media (max-width: 479px) {
+  .dj-list__summer__img {
+    height: 50%;
+  }
+}
 .dj-list__summer__desc {
   border-top: 1px solid #dfe6e8;
   position: relative;
@@ -3288,10 +3436,17 @@ button {
   padding-right: 1.25rem;
   padding-top: 1.5625rem;
   padding-bottom: 1.5625rem;
+  color: #333333;
 }
 @media (min-width: 641px) and (max-width: 1023px) {
   .dj-list__summer__desc {
     text-align: center;
+  }
+}
+@media (max-width: 479px) {
+  .dj-list__summer__desc {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
   }
 }
 .dj-list__summer__title {
@@ -3312,6 +3467,18 @@ button {
     font-size: 1rem;
   }
 }
+@media (max-width: 479px) {
+  .dj-list__summer__title {
+    height: 2.5rem;
+    font-size: 0.875rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    width: 100%;
+  }
+}
 .dj-list__summer__dj {
   font-size: 0.75rem;
   color: #333333;
@@ -3323,6 +3490,11 @@ button {
 @media (min-width: 641px) and (max-width: 1023px) {
   .dj-list__summer__dj {
     font-size: 0.875rem;
+  }
+}
+@media (max-width: 479px) {
+  .dj-list__summer__dj {
+    font-size: 0.6875rem;
   }
 }
 .dj-list__summer__info {
@@ -3355,6 +3527,11 @@ button {
 }
 .dj-list__summer__hash:hover {
   border: 1px solid #666666;
+}
+@media (max-width: 479px) {
+  .dj-list__summer__hash {
+    font-size: 0.625rem;
+  }
 }
 .dj-list__summer__profile {
   display: block;
@@ -3424,7 +3601,7 @@ button {
     border: none;
     background: transparent;
     padding: 0;
-    margin-bottom: 1.25rem;
+    margin: 1.25rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3445,6 +3622,9 @@ button {
     height: 40px;
     align-items: center;
   }
+}
+.dj-list .more-btn.hide {
+  display: none;
 }
 
 .genre {
@@ -3732,11 +3912,7 @@ button {
     width: 100%;
     height: 100%;
     margin: 0 10px;
-  }
-}
-@media (max-width: 479px) {
-  .genre .new__playlist-img {
-    width: 100%;
+    object-fit: cover;
   }
 }
 @media (min-width: 641px) and (max-width: 1023px) {
@@ -3925,6 +4101,16 @@ button {
   border: 1px solid #b4b4b4;
 }
 @media (min-width: 641px) and (max-width: 1023px) {
+  .genre .new__playlist__links-hash1 {
+    color: #909090;
+    border: 1px solid #909090;
+  }
+  .genre .new__playlist__links-hash1:hover {
+    color: #666666;
+    border: 1px solid #666666;
+  }
+}
+@media (max-width: 479px) {
   .genre .new__playlist__links-hash1 {
     color: #909090;
     border: 1px solid #909090;

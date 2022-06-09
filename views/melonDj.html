@@ -12,154 +12,223 @@
       id="favicon"
     />
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="/js/mobile-hamburger-click.js" defer></script>
     <script src="/js/melondj-scroller.js" defer></script>
+    <script src="/js/melondj-more-btn.js" defer></script>
   </head>
   <body>
-    <!-- Header Wrapper -->
-    <header class="dj__wrapper">
-      <!-- notice-bar -->
-      <div class="notice-bar">
-        <ul class="notice-bar__list">
-          <li class="notice-bar__item">
-            <a href="#" class="notice-bar__link">이용권구매</a>
-          </li>
-          <li class="notice-bar__item">
-            <a href="#" class="notice-bar__link">멜론라운지</a>
-          </li>
-          <li class="notice-bar__item">
-            <a href="#" class="notice-bar__link">이벤트</a>
-          </li>
-          <li class="notice-bar__item">
-            <a href="#" class="notice-bar__link">공지사항</a>
-          </li>
-          <li class="notice-bar__item order">
-            <a href="#" class="notice-bar__link">멜론 티켓</a>
-          </li>
-        </ul>
-      </div>
+    <!-- 공통 헤더 -->
+    <!-- notice-bar -->
+    <div class="notice-bar">
+      <ul class="notice-bar__list">
+        <li class="notice-bar__item login">
+          <a href="/views/login.html" class="notice-bar__link">로그인</a>
+        </li>
 
-      <!-- Header -->
-      <div class="header">
-        <h1 class="header__logo">
-          <a href="/index.html">
-            <img src="/assets/images/melon-01.svg" alt="melon" />
-          </a>
-        </h1>
-        <!-- main form -->
-        <form action="" class="header__search">
-          <fieldset>
-            <legend>검색폼</legend>
-            <label for="" class="header__search-label sr-only"></label>
-            <input
-              type="text"
-              class="header__search__input"
-              placeholder="WSG워너비 12명의 첫 하모니 `어마어마해`"
-            />
-            <a href="#" role="button" class="header__search__button"></a>
-          </fieldset>
-        </form>
-        <!-- rising-group -->
-        <div class="header__rising__group">
-          <span class="header__rising__text">급상승</span>
+        <li class="notice-bar__item">
+          <a href="#" class="notice-bar__link"> 이용권구매 </a>
+        </li>
+
+        <li class="notice-bar__item">
+          <a href="#" class="notice-bar__link">멜론라운지</a>
+        </li>
+        <li class="notice-bar__item">
+          <a href="#" class="notice-bar__link">이벤트</a>
+        </li>
+        <li class="notice-bar__item">
+          <a href="#" class="notice-bar__link">공지사항</a>
+        </li>
+        <li class="notice-bar__item order">
+          <a href="#" class="notice-bar__link">멜론 티켓</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <h1 class="header__logo">
+        <a href="/index.html">
+          <img src="/assets/images/melon-01.svg" alt="melon" />
+        </a>
+      </h1>
+
+      <!-- main form -->
+      <form action="" class="header__search">
+        <fieldset>
+          <legend>검색폼</legend>
+          <label for="" class="header__search-label sr-only"></label>
+          <input
+            type="text"
+            class="header__search__input"
+            placeholder="WSG워너비 12명의 첫 하모니 `어마어마해`"
+          />
+          <a href="#" role="button" class="header__search__button"></a>
+        </fieldset>
+      </form>
+
+      <!-- rising-group -->
+      <span class="header__rising__text">급상승</span>
+      <div class="header__rising__group">
+        <div class="header__rising__wrap">
           <ul class="header__rising__list">
             <li class="header__rising__item">
-              <span class="header__rising__number">1</span>
+              <span class="header__rising__number">1.</span>
               <a href="#" class="header__rising__info">왜 오수재인가 OST</a>
             </li>
             <li class="header__rising__item">
-              <span class="header__rising__number">2</span>
+              <span class="header__rising__number">2.</span>
               <a href="#" class="header__rising__info">Post Malone</a>
             </li>
             <li class="header__rising__item">
-              <span class="header__rising__number">3</span>
+              <span class="header__rising__number">3.</span>
               <a href="#" class="header__rising__info">세븐틴</a>
             </li>
             <li class="header__rising__item">
-              <span class="header__rising__number">4</span>
+              <span class="header__rising__number">4.</span>
               <a href="#" class="header__rising__info">별똥별 OST</a>
             </li>
             <li class="header__rising__item">
-              <span class="header__rising__number">5</span>
+              <span class="header__rising__number">5.</span>
               <a href="#" class="header__rising__info">NCT DREAM</a>
             </li>
             <li class="header__rising__item">
-              <span class="header__rising__number">6</span>
+              <span class="header__rising__number">6.</span>
               <a href="#" class="header__rising__info">I Like You</a>
             </li>
             <li class="header__rising__item">
-              <span class="header__rising__number">7</span>
+              <span class="header__rising__number">7.</span>
               <a href="#" class="header__rising__info">혁오 (HYUKOH)</a>
             </li>
             <li class="header__rising__item">
-              <span class="header__rising__number">8</span>
+              <span class="header__rising__number">8.</span>
               <a href="#" class="header__rising__info">먼데이 키즈</a>
             </li>
             <li class="header__rising__item">
-              <span class="header__rising__number">9</span>
+              <span class="header__rising__number">9.</span>
               <a href="#" class="header__rising__info">출국</a>
             </li>
             <li class="header__rising__item">
-              <span class="header__rising__number">10</span>
+              <span class="header__rising__number">10.</span>
               <a href="#" class="header__rising__info">브라운아이드걸스</a>
             </li>
           </ul>
         </div>
-        <div class="header__ad__image"></div>
       </div>
-      <!-- header-nav -->
-      <nav class="header__nav">
-        <ul class="header__nav__list">
-          <li class="header__nav__item">
-            <a href="#" class="header__nav__link">멜론차트</a>
-          </li>
-          <li class="header__nav__item">
-            <a href="#" class="header__nav__link">최신음악</a>
-          </li>
-          <li class="header__nav__item">
-            <a href="#" class="header__nav__link">장르음악</a>
-          </li>
-          <li class="header__nav__item is-selected">
-            <a href="#" class="header__nav__link">멜론DJ</a>
-            <!-- DJ-Nav -->
-            <ul class="header__dj__list">
-              <li class="header__dj__item">
-                <a href="#" class="header__dj__link">투데이</a>
-              </li>
-              <li class="header__dj__item">
-                <a href="#" class="header__dj__link">전문가 선곡</a>
-              </li>
-              <li class="header__dj__item">
-                <a href="#" class="header__dj__link">#테마장르</a>
-              </li>
-              <li class="header__dj__item">
-                <a href="#" class="header__dj__link">파워DJ</a>
-              </li>
-              <li class="header__dj__item">
-                <a href="#" class="header__dj__link">인기</a>
-              </li>
-            </ul>
-          </li>
-          <li class="header__nav__item">
-            <a href="#" class="header__nav__link">멜론TV</a>
-          </li>
-          <li class="header__nav__item">
-            <a href="#" class="header__nav__link">스타포스트</a>
-          </li>
-          <li class="header__nav__item">
-            <a href="#" class="header__nav__link">매거진</a>
-          </li>
-          <li class="header__nav__item">
-            <a href="#" class="header__nav__link">뮤직어워드</a>
-          </li>
-          <li class="header__nav__item">
-            <a href="#" class="header__nav__link">어학</a>
-          </li>
-          <li class="header__nav__item">
-            <a href="#" class="header__nav__link">마이뮤직</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="header__ad__image"></div>
     </header>
+
+    <!-- mobile nav -->
+    <nav class="mobile-nav">
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__list__item left">
+          <button
+            class="mobile-nav__btn-area buttonNone button--burger"
+            aria-label="메뉴 열기"
+          >
+            <span class="mobile-nav__btn button--burgerBarTop"></span>
+            <span class="mobile-nav__btn button--burgerBarMiddle"></span>
+            <span class="mobile-nav__btn button--burgerBarBottom"></span>
+          </button>
+          <a href="" class="mobile-nav__ticket">
+            <img src="/assets/images/mobileTickt.png" alt="이용권 아이콘"
+          /></a>
+        </li>
+        <li class="mobile-nav__list__item center">
+          <h1 class="mobile-nav__logo">
+            <a href="/index.html">
+              <img src="/assets/images/melon-01.svg" alt="melon" />
+            </a>
+          </h1>
+        </li>
+        <li class="mobile-nav__list__item right">
+          <a href="#" aria-label="검색페이지 이동"></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- side menu -->
+    <div class="mobile-nav__side"></div>
+    <!-- mobile menu -->
+
+    <!-- side menu -->
+    <div class="slide">
+      <div class="slide__header">
+        <img
+          class="slide__header__profile"
+          src="/assets/images/artist1.jpg"
+          alt=""
+        />
+        <a href="/views/login.html" class="slide__header__text">로그인하세요</a>
+        <button class="slide__header__close"></button>
+      </div>
+
+      <ul class="slide__list">
+        <li class="slide__item">
+          <a href="/index.html" class="slide__link">멜론홈</a>
+        </li>
+        <li class="slide__item">
+          <a href="/index.html" class="slide__link">최신음악</a>
+        </li>
+        <li class="slide__item">
+          <a href="/views/chart.html" class="slide__link">멜론차트</a>
+        </li>
+        <li class="slide__item">
+          <a href="/views/genre.html" class="slide__link">장르음악</a>
+        </li>
+        <li class="slide__item">
+          <a href="/views/melonDj.html" class="slide__link">멜론DJ</a>
+        </li>
+        <li class="slide__item">
+          <a href="/index.html" class="slide__link">멜론뮤직어워드</a>
+        </li>
+        <li class="slide__item">
+          <a href="/index.html" class="slide__link">이벤트</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- side menu -->
+
+    <!-- header-nav -->
+    <nav class="header__nav">
+      <ul class="header__nav__list" id="skip-nav-menu">
+        <li class="header__nav__item mobileHome">
+          <a href="/index.html" class="header__nav__link">홈</a>
+        </li>
+        <li class="header__nav__item">
+          <a href="/views/chart.html" class="header__nav__link">멜론차트</a>
+        </li>
+        <li class="header__nav__item">
+          <a href="#" class="header__nav__link">최신음악</a>
+        </li>
+        <li class="header__nav__item">
+          <a href="/views/genre.html" class="header__nav__link">장르음악</a>
+        </li>
+        <li class="header__nav__item">
+          <a href="/views/melonDj.html" class="header__nav__link">멜론DJ</a>
+        </li>
+
+        <li class="header__nav__item">
+          <a href="#" class="header__nav__link">멜론TV</a>
+        </li>
+        <li class="header__nav__item">
+          <a href="#" class="header__nav__link">스타포스트</a>
+        </li>
+        <li class="header__nav__item">
+          <a href="#" class="header__nav__link">매거진</a>
+        </li>
+        <li class="header__nav__item">
+          <a href="#" class="header__nav__link">뮤직어워드</a>
+        </li>
+        <li class="header__nav__item">
+          <a href="#" class="header__nav__link">어학</a>
+        </li>
+        <li class="header__nav__item">
+          <a href="#" class="header__nav__link">마이뮤직</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- 공통 헤더 end-->
 
     <!-- main -->
     <main class="main__wrapper">
@@ -186,10 +255,6 @@
           <a href="#" class="today-section__button">DJ 신청하기</a>
         </form>
         <h3>6월 8일 오늘은 뭘 듣지?</h3>
-        <!-- <div class="today-section__radio">
-          <button class="today-section__radio1"></button>
-          <button class="today-section__radio2"></button>
-        </div> -->
         <div class="today-section__card__wrap">
           <ul class="today-section__card__list">
             <li class="today-section__card__item">
@@ -712,7 +777,7 @@
         </div>
 
         <!-- boring -->
-        <p class="dj-list__boring">뒹굴뒹굴~ 이불 속은 극락이지!</p>
+        <p class="dj-list__boring" id="hide">뒹굴뒹굴~ 이불 속은 극락이지!</p>
 
         <div class="dj-list__boring__group">
           <ul class="dj-list__boring__list">
@@ -936,7 +1001,7 @@
             </li>
           </ul>
         </div>
-        <a href="#" class="more-btn">더보기</a>
+        <a href="#hide" role="button" class="more-btn">더보기</a>
       </section>
     </main>
 
