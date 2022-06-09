@@ -12,7 +12,9 @@
       id="favicon"
     />
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="/js/mobile-hamburger-click.js" defer></script>
     <script src="/js/melondj-scroller.js" defer></script>
+    <script src="/js/melondj-more-btn.js" defer></script>
   </head>
   <body>
     <!-- 공통 헤더 -->
@@ -253,10 +255,6 @@
           <a href="#" class="today-section__button">DJ 신청하기</a>
         </form>
         <h3>6월 8일 오늘은 뭘 듣지?</h3>
-        <!-- <div class="today-section__radio">
-          <button class="today-section__radio1"></button>
-          <button class="today-section__radio2"></button>
-        </div> -->
         <div class="today-section__card__wrap">
           <ul class="today-section__card__list">
             <li class="today-section__card__item">
@@ -779,7 +777,7 @@
         </div>
 
         <!-- boring -->
-        <p class="dj-list__boring">뒹굴뒹굴~ 이불 속은 극락이지!</p>
+        <p class="dj-list__boring" id="hide">뒹굴뒹굴~ 이불 속은 극락이지!</p>
 
         <div class="dj-list__boring__group">
           <ul class="dj-list__boring__list">
@@ -1003,7 +1001,7 @@
             </li>
           </ul>
         </div>
-        <a href="#" class="more-btn">더보기</a>
+        <a href="#hide" role="button" class="more-btn">더보기</a>
       </section>
     </main>
 
