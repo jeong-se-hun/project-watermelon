@@ -11,7 +11,6 @@
   display: inline-block;
   position: absolute;
   padding: 6px;
-  color: white;
   font-weight: bold;
   border-radius: 5px;
   outline-offset: -4px;
@@ -453,8 +452,7 @@
 
   &__ad__image {
     flex-grow: 1;
-    background: url("../../assets/images/header-ad-image.png") no-repeat 100%
-      100% / 90%;
+    background: url("../../assets/images/header-ad-image.png") no-repeat 100% 100% / 90%;
 
     @include tab {
       display: none;
