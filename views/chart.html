@@ -114,10 +114,10 @@
           <ul class="header__nav__list">
             <li class="header__nav__item is-active">
               <a href="./chart.html" role="button" class="header__nav__link"
-                >멜론차트</a
+              aria-selected="true">멜론차트</a
               >
               <ul class="header__nav__list__detail">
-                <li class="header__nav__item__detail">
+                <li class="header__nav__item__detail" aria-selected="true">
                   <a href="" class="font-green">TOP100</a>
                 </li>
                 <li class="header__nav__item__detail"><a href="">일간</a></li>
@@ -166,7 +166,7 @@
       <main class="chart__main">
         <!-- top100 및 top100 설명 모달창 -->
         <div class="chart__main__title-wrapper">
-          <h2 class="chart__main__title">TOP100</h2>
+          <h2 class="chart__main__title" tabindex="0" aria-label="탑백 차트">TOP100</h2>
           <button class="chart__main__modal__open-button">
             <span class="question-icon"></span>
           </button>
