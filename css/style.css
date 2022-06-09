@@ -472,7 +472,7 @@ button {
   .header__nav__list {
     max-width: 45.875rem;
     padding: 0 0.9375rem;
-    font-size: clamp(0.7rem, 1.4vw, 1rem);
+    font-size: clamp(0.8rem, 3vw, 1.2rem);
   }
 }
 @media (max-width: 479px) {
@@ -498,14 +498,6 @@ button {
   width: 17.5rem;
   text-align: end;
 }
-@media (min-width: 480px) and (max-width: 1023px) {
-  .header__nav__list :nth-child(11) {
-    width: initial;
-  }
-  .header__nav__list :nth-child(11) a {
-    color: inherit;
-  }
-}
 .header__nav__list :nth-child(11) a {
   color: #909090;
 }
@@ -520,6 +512,9 @@ button {
 @media (min-width: 480px) and (max-width: 1023px) {
   .header__nav__item {
     padding: 0.3125rem 0;
+  }
+  .header__nav__item:nth-child(n+8) {
+    display: none;
   }
 }
 .header__nav__item.mobileHome {
