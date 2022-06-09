@@ -3,6 +3,11 @@
     @content;
   }
 }
+@mixin minTab {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
 
 @mixin tab {
   @media (max-width: 1023px) {
