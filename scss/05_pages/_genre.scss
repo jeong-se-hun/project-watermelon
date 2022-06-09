@@ -1,21 +1,33 @@
 .genre {
   padding-top: rem(29px);
+
+  @include tab {
+    @include paddingX(20px);
+  }
+
+  @include mobile {
+    @include paddingX(5px);
+  }
+
   &__kpop {
+    @include autoMargin;
+    width: rem(1010px);
     font-size: rem(26px);
-    margin: 0 auto;
-    padding-bottom: 10px;
-    margin-left: 10px;
+    padding-bottom: rem(10px);
+
     @include tab {
       width: 100%;
+      margin-left: rem(20px);
     }
   }
   &__sub {
     &__list {
       @include flexbox;
+      @include autoMargin;
       width: rem(1010px);
       height: rem(50px);
-      margin: 0 auto;
       border-top: 1px solid $borderLightGray;
+
       & > .is-active {
         border-right: 1px solid $borderLightGray;
         background: $white;
@@ -23,39 +35,41 @@
         color: $primary-logo-color;
         font-weight: 500;
       }
+
       @include tab {
         width: 100%;
-        font-size: 12px;
+        font-size: rem(12px);
       }
+
       @include mobile {
         width: 100%;
-        font-size: 10px;
+        font-size: rem(10px);
       }
     }
     &__item {
+      @include paddingY($paddingY: 13px);
+      @include paddingX($paddingX: 4px);
       width: rem(126.25px);
       height: rem(48px);
       text-align: center;
-      @include paddingY($paddingY: 13px);
-      @include paddingX($paddingX: 4px);
       border-bottom: 1px solid $borderLightGray;
       background: $accent-background;
+
       &:hover {
         text-decoration: underline;
       }
+
       @include mobile {
-        // white-space: wrap;
         word-break: break-all;
       }
     }
+
     &__item-link {
       @include tab {
-        font-size: 12px;
+        font-size: rem(12px);
       }
-      // @include mobile {
-      //   white-space: wrap;
-      // }
     }
+
     &__item-link-slash {
       @include mobile {
         white-space: nowrap;
@@ -65,8 +79,9 @@
 
   .new {
     @include flexbox($justify: space-between);
-    width: 1010px;
-    margin: 32px auto 0;
+    width: rem(1010px);
+    margin: rem(32px) auto 0;
+
     // 최신앨범
     @include tab {
       @include flexbox($direction: column);
@@ -78,68 +93,80 @@
     }
     &__album {
       &__list {
-        width: 671px;
+        width: rem(671px);
         @include flexbox($justify: space-between);
+
         @include tab {
           width: 100%;
         }
+
         @include mobile {
           width: 100%;
         }
       }
       &__item {
         position: relative;
+
         @include tab {
-          width: 33.3%;
           @include marginY(10px);
-          margin-left: 10px;
+          width: 33.3%;
+          margin-left: rem(10px);
         }
+
         @include mobile {
           &:nth-child(3) {
             display: none;
           }
+
           width: 50%;
         }
       }
+
       &__item-img > img {
         width: rem(217px);
         height: rem(217px);
+
         @include tab {
           width: 100%;
           height: auto;
-          // padding: 10px;
         }
       }
+
       &__item-group {
+        @include flexbox($direction: column);
         position: absolute;
         bottom: rem(10px);
         left: rem(10px);
-        @include flexbox($direction: column);
         color: $accent-background;
         width: 100%;
+
         @include tab {
           position: absolute;
           left: 0;
           bottom: 0;
           width: 80%;
-          padding: 13px;
+          padding: rem(13px);
         }
+
         @include mobile {
-          padding: 14px;
+          padding: rem(14px);
           left: 0;
           bottom: 0;
         }
       }
+
       &__item-title {
         margin-bottom: rem(7px);
         font-size: rem(16px);
+        display: block;
+        width: 90%;
+
         @include tab {
           font-size: rem(20px);
           width: 80%;
         }
-        display: block;
-        width: 90%;
       }
+
       &__item-link {
         position: absolute;
         top: rem(20px);
@@ -149,6 +176,7 @@
         height: rem(43px);
         background: url(../../assets/images/button_icons_sprite2.png) no-repeat
           55% 40%;
+
         @include tab {
           background: url(../../assets/images/button_icons_sprite2.png)
             no-repeat 87% 0%;
@@ -160,6 +188,7 @@
           text-decoration: underline;
         }
       }
+
       &__item-singer {
         font-size: rem(13px);
         width: 90%;
@@ -167,8 +196,10 @@
           font-size: rem(16px);
         }
       }
+
       &__item-opacity {
-        width: rem(217px);
+        @include flexbox($direction: column);
+        width: rem(215px);
         height: rem(60px);
         background: rgba(0, 0, 0, 0.5);
         bottom: rem(10px);
@@ -176,7 +207,7 @@
         position: absolute;
         left: 0;
         bottom: 0;
-        @include flexbox($direction: column);
+
         @include tab {
           height: rem(80px);
           width: 100%;
@@ -189,12 +220,15 @@
       font-size: rem(20px);
       margin-bottom: rem(10px);
       color: $primary-font;
+
       @include tab {
-        margin-left: 10px;
+        margin-left: rem(10px);
       }
     }
+
     &__album-header-more {
       display: inline-block;
+
       @include mobile {
         display: block;
         color: black;
@@ -205,10 +239,11 @@
     &__palylist-wrapper {
       position: relative;
     }
+
     &__playlist-link-group {
       @include tab {
         position: relative;
-        width: 1010px;
+        width: rem(1010px);
         min-width: 66.6%;
       }
     }
@@ -217,54 +252,56 @@
       position: relative;
       width: 100%;
     }
+
     &__playlist-header {
       font-size: rem(20px);
-      margin-bottom: 10px;
+      margin-bottom: rem(10px);
       color: $primary-font;
+
       @include tab {
-        margin-left: 10px;
-        margin-top: 10px;
+        margin-left: rem(10px);
+        margin-top: rem(10px);
       }
     }
+
     &__playlist-img {
       width: rem(319px);
       max-height: rem(217px);
       overflow: hidden;
+
       @include tab {
         width: 100%;
         height: 100%;
-        margin: 0 10px;
+        padding: 0 rem(10px);
+        object-fit: cover;
       }
-      @include mobile {
-        width: 100%;
-      }
+
       & > img {
         @include tab {
-          width: 64%;
+          width: 66%;
         }
+
         @include mobile {
           width: 100%;
         }
       }
     }
+
     &__playlist-context-des {
       display: none;
+
       @include tab {
+        @include ellipsisLine($webClamp: 4);
         position: absolute;
         font-size: rem(14px);
         width: 30%;
-        top: 75px;
+        top: rem(75px);
         right: 2%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: normal;
         line-height: 1.7;
         word-wrap: break-word;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
         color: $light-gray;
       }
+
       @include mobile {
         display: none;
       }
@@ -278,33 +315,38 @@
       left: 0;
       bottom: 0;
       position: absolute;
+
       @include tab {
         position: absolute;
         top: 0;
         width: 64%;
         height: 100%;
-        margin: 0 10px;
+        margin: 0 rem(10px);
       }
+
       @include mobile {
-        width: 100%;
+        width: 95%;
       }
     }
 
     &__playlist {
       position: relative;
+
       @include tab {
-        margin-top: 10px;
+        margin-top: rem(10px);
       }
+
       @include mobile {
-        margin-top: 10px;
+        margin-top: rem(10px);
       }
+
       &__links {
         @include tab {
           position: absolute;
           right: 0;
           top: 0;
           width: 100%;
-          margin: 0 5px;
+          margin: 0 rem(5px);
         }
       }
       &__links-dj {
@@ -313,81 +355,85 @@
         left: rem(15px);
         font-weight: 400;
         color: $accent-background;
+
         @include tab {
-          top: 30px;
+          top: rem(30px);
           left: 5%;
         }
+
         @include mobile {
-          left: 10px;
+          left: rem(10px);
           top: 0;
-          padding: 13px;
+          padding: rem(13px);
         }
       }
+
       &__links-dj-name {
         &:hover {
           border-bottom: 2px solid $accent-background;
         }
       }
+
       &__links-dj-em {
         color: #00cd3c;
         margin-right: rem(4px);
       }
+
       &__links-title {
         position: absolute;
         top: rem(135px);
         color: $accent-background;
         font-size: rem(16px);
         font-weight: 400;
-        margin: 0 8px;
+        margin: 0 rem(8px);
+
         &:hover {
           text-decoration: underline;
         }
+
         @include tab {
-          padding-right: 15px;
-          display: block;
-          // top: rem(40px);
+          @include ellipsisLine;
+          width: 30%;
           color: $medium-gray;
-          display: inline-block;
           left: 67%;
           top: 10px;
-          overflow: hidden;
-          text-overflow: ellipsis;
           white-space: normal;
           line-height: 1.7;
           word-wrap: break-word;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
         }
+
         @include mobile {
+          @include ellipsisLine($webClamp: 1);
           position: absolute;
+          width: 62%;
           top: 150px;
-          left: 10%;
+          left: 0;
           color: $accent-background;
           font-size: rem(13px);
           font-weight: 300;
-          margin: 0 10px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: normal;
           line-height: 1.7;
-          word-wrap: break-word;
-          display: -webkit-box;
-          -webkit-line-clamp: 1;
-          -webkit-box-orient: vertical;
+          // @include ellipsis;
+          // position: absolute;
+          // width: 62%;
+          // bottom: 0;
+          // left: 0;
+          // height: 20px;
         }
       }
+
       &__links__hash-group {
         @include tab {
           position: absolute;
-          top: 220px;
+          top: rem(220px);
           left: 66%;
         }
+
         @include mobile {
           left: 8%;
-          top: 215px;
+          top: rem(215px);
         }
       }
+
       &__links-hash1 {
         position: absolute;
         bottom: rem(10px);
@@ -399,11 +445,23 @@
         height: rem(28px);
         padding: 7px 9px;
         font-size: rem(12px);
+
         &:hover {
           color: $borderDarkGray;
           border: 1px solid $borderDarkGray;
         }
+
         @include tab {
+          color: $light-gray;
+          border: 1px solid $light-gray;
+
+          &:hover {
+            color: $medium-gray;
+            border: 1px solid $medium-gray;
+          }
+        }
+
+        @include mobile {
           color: $light-gray;
           border: 1px solid $light-gray;
           &:hover {
@@ -411,16 +469,8 @@
             border: 1px solid $medium-gray;
           }
         }
-        // @include mobile {
-        //   color: $light-gray;
-        //   border: 1px solid $light-gray;
-        //   &:hover {
-        //     color: $medium-gray;
-        //     border: 1px solid $medium-gray;
-        //     // background: pink;
-        //   }
-        // }
       }
+
       &__links-hash2 {
         position: absolute;
         bottom: rem(10px);
@@ -432,10 +482,12 @@
         height: rem(28px);
         padding: 7px 9px;
         font-size: rem(12px);
+
         &:hover {
           color: $borderDarkGray;
           border: 1px solid $borderDarkGray;
         }
+
         @include tab {
           color: $light-gray;
           border: 1px solid $light-gray;
@@ -453,9 +505,10 @@
   &__category {
     &__list {
       @include flexbox;
+      @include autoMargin;
       width: rem(1010px);
-      margin: 0 auto;
-      margin-top: 50px;
+      margin-top: rem(50px);
+
       & > .is-active {
         border-bottom: none;
         background: $white;
@@ -463,15 +516,13 @@
       @include tab {
         width: 100%;
       }
-      @include mobile {
-        width: 100%;
-      }
     }
+
     &__item {
       width: 20%;
       height: rem(48px);
       text-align: center;
-      padding: 14px 4px;
+      padding: rem(14px) rem(4px);
       border: 1px solid $borderLightGray;
       background: $accent-background;
 
@@ -479,11 +530,13 @@
         border-right: none;
         border-left: none;
       }
+
       @include tab {
-        font-size: 12px;
+        font-size: rem(12px);
       }
+
       @include mobile {
-        font-size: 10px;
+        font-size: rem(10px);
       }
     }
   }
@@ -497,7 +550,7 @@
   &__list {
     @include flexbox($justify: space-between);
     width: 30%;
-    font-size: 14px;
+    font-size: rem(14px);
     color: $medium-gray;
     transform: translateX(10px);
 
@@ -511,7 +564,7 @@
   }
 
   &__button {
-    margin-left: 30px;
+    margin-left: rem(30px);
     background-color: transparent;
     border: none;
     color: $light-gray;

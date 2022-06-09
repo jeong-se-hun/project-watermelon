@@ -1,7 +1,3 @@
-const getAll = (target) => {
-  return document.querySelectorAll(target);
-};
-
 const prevButton = get(".home__hot__hot-issue-prev");
 const nextButton = get(".home__hot__hot-issue-next");
 const hotIssuePageNum = get(".home__hot__hot-issue-page-num-current-page");

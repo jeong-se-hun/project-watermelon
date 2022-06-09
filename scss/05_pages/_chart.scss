@@ -12,6 +12,9 @@
   height: rem(45px);
   background: $accent-background;
   border-bottom: 1px solid $borderLightGray;
+  @include tab {
+    display: none;
+  }
 }
 
 .is-active .header__nav__link::after {
@@ -29,7 +32,7 @@
     position: absolute;
     top: rem(40px);
     left: rem(-10px);
-    width: rem(1100px);
+    width: rem(1010px);
     height: rem(45px);
 
     &__chart-finder {
@@ -49,9 +52,15 @@
 
       &:nth-child(6) {
         position: absolute;
-        right: rem(70px);
+        right: rem(0px);
         padding-top: rem(4px);
+        padding-right: 0;
+        margin-right: 0;
       }
+    }
+
+    @include tab {
+      display: none;
     }
   }
 }
@@ -59,10 +68,17 @@
 // 메인 영역
 
 .chart__main {
-  max-width: rem(1010px);
   @include autoMargin;
-  padding-top: rem(40px);
-  width: 100%;
+  padding: rem(40px) rem(20px) 0;
+  width: rem(1010px);
+
+  @include tab {
+    width: 100%;
+  }
+
+  @include mobile {
+    padding: rem(40px) rem(10px) 0;
+  }
 
   // 차트 탑100 부분 및 모달창
   &__title-wrapper {
@@ -111,7 +127,7 @@
     font-size: rem(26px);
     text-align: center;
 
-    time {
+    .time {
       color: #575757;
     }
 
@@ -198,7 +214,6 @@
 
         td[headers="rank"] {
           padding: 0 rem(18px) 0 rem(12px);
-          // padding: 0 rem(18px) 0 rem(12px);
           text-align: center;
         }
 
@@ -223,12 +238,10 @@
           }
 
           &__title {
+            @include ellipsis;
             display: inline-block;
             width: 90%;
             font-size: rem(14px);
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
             margin-bottom: rem(4px);
           }
 
@@ -239,13 +252,11 @@
         }
 
         &__album__title {
+          @include ellipsis;
           display: inline-block;
           width: 80%;
           font-size: rem(14px);
           color: #969696;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          overflow: hidden;
         }
 
         &__info__title:hover,
@@ -453,7 +464,7 @@
   .chart__main__top100__tbody tr {
     @include flexbox(row, space-between, center, wrap);
     position: relative;
-    min-width: 330px;
+    min-width: rem(288px);
   }
 
   #check,
@@ -463,7 +474,7 @@
 
   #rank,
   td[headers="rank"] {
-    width: 20px;
+    width: rem(20px);
     padding: 0;
     text-align: center;
   }
@@ -482,8 +493,8 @@
 
   #sing-album-cover,
   td[headers="sing-album-cover"] {
-    width: 40px;
-    margin-right: 10px;
+    width: rem(40px);
+    margin-right: rem(10px);
     order: -1;
   }
 
@@ -710,16 +721,17 @@
 }
 
 .audio-bar {
+  @include paddingY(10px);
   width: 100%;
   position: fixed;
   bottom: 0;
   background: $playerBackground;
-  @include paddingY(10px);
   transition: all 0.5s;
   transform: translateY(rem(60px));
   &__list {
     display: flex;
     align-items: center;
+    position: relative;
   }
 
   &__item {
@@ -828,7 +840,7 @@
       height: 30px;
       top: -6px;
       left: -27px;
-      background: url("/assets/images/musicbar-sprite.svg") no-repeat 0 0;
+      background: url("/assets/images/music-sprite.svg") no-repeat 0 0;
 
       @include mobile {
         display: none;
@@ -845,19 +857,12 @@
   }
 
   &__title {
+    @include ellipsis;
     margin-left: rem(10px);
     color: $white;
     font-size: rem(14px);
 
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
     @include tab {
-      display: none;
-    }
-
-    @include mobile {
       display: none;
     }
   }
@@ -868,25 +873,25 @@
       display: inline-block;
       width: 30px;
       height: 30px;
-      background: url("/assets/images/musicbar-sprite.svg") no-repeat -30px 0;
+      background: url("/assets/images/music-sprite.svg") no-repeat -30px 0;
     }
 
     &-prev {
-      display: inline-block;
       @include removeBtnStyle;
+      display: inline-block;
 
       width: 30px;
       height: 30px;
-      background: url("/assets/images/musicbar-sprite.svg") no-repeat 0 -30px;
+      background: url("/assets/images/music-sprite.svg") no-repeat 0 -30px;
     }
 
     &-play {
-      display: inline-block;
       @include removeBtnStyle;
+      display: inline-block;
 
       width: 30px;
       height: 30px;
-      background: url("/assets/images/musicbar-sprite.svg") no-repeat -90px -30px;
+      background: url("/assets/images/music-sprite.svg") no-repeat -120px 0;
 
       &:focus {
         outline: none;
@@ -894,21 +899,21 @@
     }
 
     &-next {
-      display: inline-block;
       @include removeBtnStyle;
+      display: inline-block;
 
       width: 30px;
       height: 30px;
-      background: url("/assets/images/musicbar-sprite.svg") no-repeat -30px -30px;
+      background: url("/assets/images/music-sprite.svg") no-repeat -30px -30px;
     }
 
     &-random {
-      display: inline-block;
       @include removeBtnStyle;
+      display: inline-block;
 
       width: 30px;
       height: 30px;
-      background: url("/assets/images/musicbar-sprite.svg") no-repeat -60px -30px;
+      background: url("/assets/images/music-sprite.svg") no-repeat -60px -30px;
     }
   }
 
@@ -916,7 +921,7 @@
     display: block;
     width: 30px;
     height: 30px;
-    background: url("/assets/images/musicbar-sprite.svg") no-repeat -60px 0;
+    background: url("/assets/images/music-sprite.svg") no-repeat -60px 0;
     @include autoMargin;
   }
 
@@ -933,6 +938,25 @@
   }
 
   &__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: $primary-color;
+    transition: width 1750ms linear;
+
+    &::after {
+      display: inline-block;
+      content: "";
+      width: rem(12px);
+      height: rem(12px);
+      border-radius: 50%;
+      background: $white;
+      border: 1px solid $borderGray;
+      position: absolute;
+      top: rem(-4px);
+      right: rem(-5px);
+    }
   }
 }
 
@@ -955,7 +979,7 @@
     left: rem(-26px);
     width: 30px;
     height: 30px;
-    background: url("/assets/images/musicbar-sprite.svg") no-repeat -90px 0;
+    background: url("/assets/images/music-sprite.svg") no-repeat -90px 0;
   }
 }
 
@@ -972,4 +996,8 @@
 
 .audio-bar.is-show {
   transform: translateY(0);
+}
+
+.audio-bar__control-play.is-pause {
+  background: url("/assets/images/music-sprite.svg") no-repeat -90px -30px;
 }

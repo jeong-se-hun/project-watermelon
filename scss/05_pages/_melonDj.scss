@@ -57,11 +57,15 @@
 // Today section
 .main__wrapper {
   margin-top: rem(30px);
+
+  &.is-hide {
+    display: none;
+  }
 }
 
 .today-section {
-  width: rem(1010px);
   @include autoMargin;
+  width: rem(1010px);
   position: relative;
 
   @include tab {
@@ -114,19 +118,15 @@
     background-position: 98% 80%;
 
     &::placeholder {
+      @include ellipsis;
       color: $borderGray;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
     }
 
     @include tab {
       width: rem(200px);
       &::placeholder {
+        @include ellipsis;
         color: $borderGray;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
       }
     }
   }
@@ -135,10 +135,10 @@
     display: none;
 
     @include mobile {
-      display: block;
-      font-size: rem(12px);
       @include paddingY(5px);
       @include paddingX(2px);
+      display: block;
+      font-size: rem(12px);
       margin-left: rem(20px);
       border: 1px solid $borderDarkGray;
       border-radius: 30px;
@@ -148,8 +148,8 @@
   }
 
   &__button {
-    font-size: rem(14px);
     @include paddingY(10px);
+    font-size: rem(14px);
     margin-left: rem(40px);
     border: 1px solid $borderDarkGray;
     border-radius: 30px;
@@ -157,10 +157,10 @@
     text-align: center;
 
     @include tab {
-      width: 100px;
-      font-size: rem(12px);
       @include paddingY(5px);
       @include paddingX(5px);
+      width: 100px;
+      font-size: rem(12px);
       margin-left: rem(20px);
     }
 
@@ -308,10 +308,10 @@
   background: $accent-background;
   margin-top: rem(50px);
   .recommend {
-    width: rem(1010px);
     @include autoMargin;
-    display: flex;
     @include paddingY(40px);
+    width: rem(1010px);
+    display: flex;
 
     @include tab {
       text-align: center;
@@ -338,8 +338,8 @@
     }
 
     &__right {
-      margin-left: rem(50px);
       @include paddingX(15px);
+      margin-left: rem(50px);
       @include tab {
         @include autoMargin;
       }
@@ -394,9 +394,9 @@
       }
 
       &__button {
-        margin-top: rem(30px);
         @include paddingX(18px);
         @include paddingY(8px);
+        margin-top: rem(30px);
         font-weight: 300;
         color: $primary-color;
         border: 1px solid $primary-color;
@@ -420,10 +420,10 @@
 
 .dj-list {
   &__tag {
-    width: rem(1010px);
     @include autoMargin;
-    display: flex;
     @include paddingY(50px);
+    width: rem(1010px);
+    display: flex;
 
     &__title {
       font-size: rem(18px);
@@ -481,6 +481,7 @@
 
     @include tab {
       padding-left: rem(20px);
+      width: 100%;
     }
 
     @include mobile {
@@ -535,6 +536,7 @@
 
       @include mobile {
         @include paddingX(10px);
+        padding-bottom: rem(12px);
       }
     }
 
@@ -551,13 +553,9 @@
       }
 
       @include mobile {
+        @include ellipsisLine;
         height: rem(40px);
         font-size: rem(14px);
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
       }
     }
 
@@ -652,14 +650,15 @@
   // ROCK
 
   &__rock {
-    width: rem(1010px);
     @include autoMargin;
+    width: rem(1010px);
     font-size: rem(18px);
     font-weight: 400;
     margin-top: rem(40px);
 
     @include tab {
       padding-left: rem(20px);
+      width: 100%;
     }
 
     @include mobile {
@@ -667,8 +666,8 @@
     }
 
     &__group {
-      width: rem(1010px);
       @include autoMargin;
+      width: rem(1010px);
       margin-top: rem(20px);
 
       @include tab {
@@ -714,6 +713,7 @@
 
       @include mobile {
         @include paddingX(10px);
+        padding-bottom: rem(12px);
       }
     }
 
@@ -730,13 +730,9 @@
       }
 
       @include mobile {
+        @include ellipsisLine;
         height: rem(40px);
         font-size: rem(14px);
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
       }
     }
 
@@ -831,14 +827,15 @@
   // boring
 
   &__boring {
-    width: rem(1010px);
     @include autoMargin;
+    width: rem(1010px);
     font-size: rem(18px);
     font-weight: 400;
     margin-top: rem(40px);
 
     @include tab {
       padding-left: rem(20px);
+      width: 100%;
     }
 
     @include mobile {
@@ -846,8 +843,8 @@
     }
 
     &__group {
-      width: rem(1010px);
       @include autoMargin;
+      width: rem(1010px);
       margin-top: rem(20px);
 
       @include tab {
@@ -893,6 +890,7 @@
 
       @include mobile {
         @include paddingX(10px);
+        padding-bottom: rem(12px);
       }
     }
 
@@ -909,13 +907,9 @@
       }
 
       @include mobile {
+        @include ellipsisLine;
         height: rem(40px);
         font-size: rem(14px);
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
       }
     }
 
@@ -1009,26 +1003,31 @@
 
   // summer
   &__summer {
-    width: rem(1010px);
     @include autoMargin;
+    width: rem(1010px);
     font-size: rem(18px);
     font-weight: 400;
     margin-top: rem(40px);
 
     @include tab {
       padding-left: rem(20px);
+      width: 100%;
     }
 
     @include mobile {
-      // font-size: rem(16px);
+      font-size: rem(16px);
       display: none;
     }
 
+    &.is-active {
+      display: block;
+    }
+
     &__group {
-      width: rem(1010px);
       @include autoMargin;
+      width: rem(1010px);
       margin-top: rem(20px);
-      margin-bottom: rem(130px);
+      margin-bottom: rem(50px);
 
       @include tab {
         width: 100%;
@@ -1039,6 +1038,10 @@
 
       @include mobile {
         display: none;
+      }
+
+      &.is-active {
+        display: block;
       }
     }
 
@@ -1075,9 +1078,10 @@
         text-align: center;
       }
 
-      // @include mobile {
-      //   @include paddingX(10px);
-      // }
+      @include mobile {
+        @include paddingX(10px);
+        padding-bottom: rem(12px);
+      }
     }
 
     &__title {
@@ -1092,15 +1096,11 @@
         font-size: rem(16px);
       }
 
-      // @include mobile {
-      //   height: rem(40px);
-      //   font-size: rem(14px);
-      //   overflow: hidden;
-      //   text-overflow: ellipsis;
-      //   display: -webkit-box;
-      //   -webkit-line-clamp: 2;
-      //   -webkit-box-orient: vertical;
-      // }
+      @include mobile {
+        @include ellipsisLine;
+        height: rem(40px);
+        font-size: rem(14px);
+      }
     }
 
     &__dj {
@@ -1114,9 +1114,9 @@
         font-size: rem(14px);
       }
 
-      // @include mobile {
-      //   font-size: rem(13px);
-      // }
+      @include mobile {
+        font-size: rem(13px);
+      }
     }
 
     &__info {
@@ -1141,9 +1141,9 @@
         border: 1px solid $medium-gray;
       }
 
-      // @include mobile {
-      //   font-size: rem(10px);
-      // }
+      @include mobile {
+        font-size: rem(10px);
+      }
     }
 
     &__profile {
@@ -1196,17 +1196,15 @@
 
     @include mobile {
       @include removeBtnStyle;
+      @include flexCenter;
+      @include autoMargin;
       margin-bottom: rem(20px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
       border: 1px solid $primary-color;
       border-radius: rem(30px);
       font-weight: 400;
       color: $primary-logo-color;
       width: rem(100px);
       font-size: rem(14px);
-      @include autoMargin;
       padding-left: rem(6px);
 
       &::after {
@@ -1216,6 +1214,10 @@
         height: 40px;
         align-items: center;
       }
+    }
+
+    &.hide {
+      display: none;
     }
   }
 }
