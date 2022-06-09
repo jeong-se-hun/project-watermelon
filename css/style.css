@@ -372,7 +372,7 @@ button {
   position: relative;
   width: 10.9375rem;
   height: 25px;
-  margin-top: 33px;
+  margin-top: 28px;
   overflow: hidden;
 }
 @media (max-width: 1023px) {
@@ -406,7 +406,6 @@ button {
   position: absolute;
   top: 0;
   right: 0;
-  opacity: 0;
 }
 .header__rising__item {
   margin: 0.75rem;
@@ -2211,6 +2210,9 @@ button {
 .main__wrapper {
   margin-top: 1.875rem;
 }
+.main__wrapper.is-hide {
+  display: none;
+}
 
 .today-section {
   margin-left: auto;
@@ -2641,6 +2643,7 @@ button {
   margin-right: auto;
   font-size: 1.125rem;
   font-weight: 400;
+  width: 100%;
 }
 @media (max-width: 1023px) {
   .dj-list__hiphop {
@@ -2859,6 +2862,7 @@ button {
   font-size: 1.125rem;
   font-weight: 400;
   margin-top: 2.5rem;
+  width: 100%;
 }
 @media (max-width: 1023px) {
   .dj-list__rock {
@@ -3073,6 +3077,7 @@ button {
 .dj-list__boring {
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
   width: 63.125rem;
   font-size: 1.125rem;
   font-weight: 400;
@@ -3295,6 +3300,7 @@ button {
   font-size: 1.125rem;
   font-weight: 400;
   margin-top: 2.5rem;
+  width: 100%;
 }
 @media (max-width: 1023px) {
   .dj-list__summer {

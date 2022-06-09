@@ -57,6 +57,10 @@
 // Today section
 .main__wrapper {
   margin-top: rem(30px);
+
+  &.is-hide {
+    display: none;
+  }
 }
 
 .today-section {
@@ -474,6 +478,7 @@
     @include autoMargin;
     font-size: rem(18px);
     font-weight: 400;
+    width: 100%;
 
     @include tab {
       padding-left: rem(20px);
@@ -650,6 +655,7 @@
     font-size: rem(18px);
     font-weight: 400;
     margin-top: rem(40px);
+    width: 100%;
 
     @include tab {
       padding-left: rem(20px);
@@ -822,6 +828,7 @@
 
   &__boring {
     @include autoMargin;
+    width: 100%;
     width: rem(1010px);
     font-size: rem(18px);
     font-weight: 400;
@@ -1001,6 +1008,7 @@
     font-size: rem(18px);
     font-weight: 400;
     margin-top: rem(40px);
+    width: 100%;
 
     @include tab {
       padding-left: rem(20px);
