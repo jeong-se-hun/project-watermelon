@@ -12,6 +12,12 @@
   height: rem(45px);
   background: $accent-background;
   border-bottom: 1px solid $borderLightGray;
+  @include tab {
+    display: none;
+  }
+  @include mobile {
+    display: none;
+  }
 }
 
 .is-active .header__nav__link::after {
@@ -29,7 +35,7 @@
     position: absolute;
     top: rem(40px);
     left: rem(-10px);
-    width: rem(1100px);
+    width: rem(1010px);
     height: rem(45px);
 
     &__chart-finder {
@@ -49,9 +55,18 @@
 
       &:nth-child(6) {
         position: absolute;
-        right: rem(70px);
+        right: rem(0px);
         padding-top: rem(4px);
+        padding-right: 0;
+        margin-right: 0;
       }
+    }
+
+    @include tab {
+      display: none;
+    }
+    @include mobile {
+      display: none;
     }
   }
 }
@@ -63,6 +78,11 @@
   @include autoMargin;
   padding-top: rem(40px);
   width: 100%;
+
+  @include tab {
+    max-width: rem(780px);
+    padding: rem(40px) rem(15px) 0;
+  }
 
   // 차트 탑100 부분 및 모달창
   &__title-wrapper {
@@ -111,7 +131,7 @@
     font-size: rem(26px);
     text-align: center;
 
-    time {
+    .time {
       color: #575757;
     }
 

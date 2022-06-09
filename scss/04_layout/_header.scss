@@ -68,12 +68,7 @@
     @include paddingY(10px);
 
     @include tab {
-      max-width: rem(734px);
-      padding: rem(10px) rem(15px);
-    }
-    @include mobile {
-      max-width: rem(734px);
-      padding: rem(10px) rem(15px);
+      padding: rem(10px) rem(20px);
     }
   }
 
@@ -362,8 +357,8 @@
       font-weight: 500;
 
       @include tab {
-        max-width: rem(734px);
-        padding: 0 rem(15px);
+        // max-width: rem(900px);
+        padding: 0 rem(20px);
         font-size: clamp(0.8rem, 3vw, 1.2rem);
       }
       @include mobile {

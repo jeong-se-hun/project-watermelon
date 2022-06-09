@@ -20,10 +20,11 @@
   </head>
   <body>
     <div class="container-chart">
-      <header class="header-wrapper">
+      <div class="header-wrapper">
         <div class="skip-nav">
           <a href="">본문</a>
         </div>
+        <!-- 공통 헤더 -->
         <!-- notice-bar -->
         <div class="notice-bar">
           <ul class="notice-bar__list">
@@ -193,7 +194,6 @@
             </li>
           </ul>
         </div>
-
         <!-- header-nav -->
         <nav class="header__nav">
           <ul class="header__nav__list" id="skip-nav-menu">
@@ -249,7 +249,7 @@
             </li>
           </ul>
         </nav>
-      </header>
+      </div>
 
       <!-- 메인 -->
       <main class="chart__main">
@@ -273,7 +273,9 @@
         </div>
         <!-- 시간 및 시간 선택 셀레트 창 -->
         <div class="chart__main__time">
-          <time>2022.06.05 <span class="font-green">13:00</span></time>
+          <span class="time"
+            >2022.06.05 <span class="font-green">13:00</span></span
+          >
           <div class="chart__main__time__modal">
             <button class="chart__main__time__modal__button">
               <span class="down-icon"></span>
@@ -1045,6 +1047,7 @@
             <button class="audio-bar__control-random"></button>
           </li>
           <li class="audio-bar__item">
+            type
             <img
               src="/assets/images/melonChart1.jpg"
               alt=""
