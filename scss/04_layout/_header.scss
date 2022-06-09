@@ -364,7 +364,7 @@
       @include tab {
         max-width: rem(734px);
         padding: 0 rem(15px);
-        font-size: clamp(0.7rem, 1.4vw, 1rem);
+        font-size: clamp(0.8rem, 3vw, 1.2rem);
       }
       @include mobile {
         max-width: rem(734px);
@@ -389,14 +389,6 @@
         justify-content: flex-end;
         width: rem(280px);
         text-align: end;
-
-        @include tab {
-          width: initial;
-
-          a {
-            color: inherit;
-          }
-        }
         a {
           color: $light-gray;
 
@@ -412,6 +404,10 @@
 
       @include tab {
         padding: rem(5px) 0;
+
+        &:nth-child(n + 8) {
+          display: none;
+        }
       }
 
       &.mobileHome {
