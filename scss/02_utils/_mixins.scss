@@ -106,7 +106,7 @@
   white-space: $ws;
 }
 
-@mixin ellipsisTwoLine(
+@mixin ellipsisLine(
   $over: hidden,
   $to: ellipsis,
   $dp: -webkit-box,
