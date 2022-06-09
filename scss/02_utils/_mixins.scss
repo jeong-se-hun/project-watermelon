@@ -346,3 +346,34 @@
   height: $h;
   left: $l;
 }
+
+// rising list
+@mixin rising(
+  $cont: "",
+  $pos: absolute,
+  $w: rem(10px),
+  $h: rem(10px),
+  $r: rem(14px)
+) {
+  content: $cont;
+  position: $pos;
+  width: $w;
+  height: $h;
+  right: $r;
+}
+
+@mixin risingBefore(
+  $cont: "",
+  $pos: absolute,
+  $w: rem(10px),
+  $h: rem(10px),
+  $r: rem(2px),
+  $t: rem(1px)
+) {
+  content: $cont;
+  position: $pos;
+  width: $w;
+  height: $h;
+  right: $r;
+  top: $t;
+}
