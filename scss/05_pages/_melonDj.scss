@@ -478,10 +478,10 @@
     @include autoMargin;
     font-size: rem(18px);
     font-weight: 400;
-    width: 100%;
 
     @include tab {
       padding-left: rem(20px);
+      width: 100%;
     }
 
     @include mobile {
@@ -655,10 +655,10 @@
     font-size: rem(18px);
     font-weight: 400;
     margin-top: rem(40px);
-    width: 100%;
 
     @include tab {
       padding-left: rem(20px);
+      width: 100%;
     }
 
     @include mobile {
@@ -828,7 +828,6 @@
 
   &__boring {
     @include autoMargin;
-    width: 100%;
     width: rem(1010px);
     font-size: rem(18px);
     font-weight: 400;
@@ -836,6 +835,7 @@
 
     @include tab {
       padding-left: rem(20px);
+      width: 100%;
     }
 
     @include mobile {
@@ -1008,10 +1008,10 @@
     font-size: rem(18px);
     font-weight: 400;
     margin-top: rem(40px);
-    width: 100%;
 
     @include tab {
       padding-left: rem(20px);
+      width: 100%;
     }
 
     @include mobile {

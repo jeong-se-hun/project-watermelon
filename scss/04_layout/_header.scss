@@ -11,7 +11,6 @@
   display: inline-block;
   position: absolute;
   padding: 6px;
-  color: white;
   font-weight: bold;
   border-radius: 5px;
   outline-offset: -4px;
@@ -212,168 +211,6 @@
   }
 
   &__rising {
-    // &__group {
-    //   display: flex;
-    //   align-items: center;
-    //   margin-left: rem(15px);
-    //   font-size: rem(12px);
-    //   color: $primary-font;
-    //   position: relative;
-    //   width: rem(220px);
-
-    //   @include tab {
-    //     display: none;
-    //   }
-    // }
-    // &__text {
-    //   color: $white;
-    //   background: $primary-logo-color;
-    //   border-radius: 10px;
-    //   padding: rem(1px) rem(6px);
-    //   font-size: rem(11);
-    //   margin: rem(36px) 0 0 rem(10px);
-    //   height: 20px;
-    //   line-height: 1.7;
-
-    //   @include tab {
-    //     display: none;
-    //   }
-    //   @include mobile {
-    //     display: none;
-    //   }
-    // }
-
-    // &__group {
-    //   display: flex;
-    //   align-items: center;
-    //   font-size: rem(12px);
-    //   color: $primary-font;
-    //   position: relative;
-    //   width: rem(175px);
-    //   height: 25px;
-    //   margin-top: 33px;
-    //   overflow: hidden;
-
-    //   @include tab {
-    //     display: none;
-    //   }
-
-    //   @include mobile {
-    //     display: none;
-    //   }
-
-    //   &:hover {
-    //     overflow: visible;
-    //     background: $white;
-    //     padding-top: 0;
-    //     z-index: 1;
-    //     border: 1px solid $borderDarkGray;
-    //     height: 265px;
-    //   }
-    // }
-
-    // &__wrap {
-    //   position: absolute;
-    //   top: 0;
-    //   right: 0;
-    //   width: 100%;
-    //   height: 265px;
-    //   overflow: hidden;
-    // }
-
-    // &__list {
-    //   display: inline-block;
-    //   position: absolute;
-    //   top: 0;
-    //   right: 0;
-    //   opacity: 0;
-    // }
-
-    // &__item {
-    //   margin: rem(12px);
-    // }
-
-    // &__number {
-    //   margin-right: rem(10px);
-    // }
-
-    // &__info {
-    //   display: inline-block;
-    //   margin-right: rem(20px);
-    //   &::after {
-    //     content: "";
-    //     position: absolute;
-    //     width: rem(10px);
-    //     height: rem(10px);
-    //     background: green;
-    //     right: rem(10px);
-    //   }
-
-    //   &:hover {
-    //     text-decoration: underline;
-    //   }
-    // }
-
-    // .....................
-
-    // &__text {
-    //   @include paddingX(7px);
-    //   @include paddingY(2px);
-    //   display: flex;
-    //   align-items: center;
-    //   margin: auto rem(10px);
-    //   font-size: rem(11px);
-    //   color: $white;
-    //   background: $primary-logo-color;
-    //   border-radius: rem(20px);
-    // }
-
-    // &__group {
-    //   height: fit-content;
-    //   margin-top: 35px;
-    //   margin-left: rem(20px);
-    //   font-size: rem(12px);
-    // }
-
-    // &__list {
-    //   display: flex;
-    //   flex-flow: column nowrap;
-    //   gap: rem(10px);
-    //   background: $white;
-    //   border: 1px solid $borderLightGray;
-    // }
-
-    &__group {
-      display: flex;
-      align-items: center;
-      margin-left: rem(15px);
-      font-size: rem(12px);
-      color: $primary-font;
-      position: relative;
-      width: rem(220px);
-
-      @include tab {
-        display: none;
-      }
-    }
-    &__text {
-      color: $white;
-      background: $primary-logo-color;
-      border-radius: 10px;
-      padding: rem(1px) rem(6px);
-      font-size: rem(11);
-      margin: rem(36px) 0 0 rem(10px);
-      height: 20px;
-      line-height: 1.7;
-
-      @include tab {
-        display: none;
-      }
-      @include mobile {
-        display: none;
-      }
-    }
-
     &__group {
       display: flex;
       align-items: center;
@@ -399,7 +236,24 @@
         padding-top: 0;
         z-index: 1;
         border: 1px solid $borderDarkGray;
-        height: 265px;
+        height: 275px;
+      }
+    }
+    &__text {
+      color: $white;
+      background: $primary-logo-color;
+      border-radius: 10px;
+      padding: rem(1px) rem(6px);
+      font-size: rem(11);
+      margin: rem(36px) 0 0 rem(10px);
+      height: 20px;
+      line-height: 1.7;
+
+      @include tab {
+        display: none;
+      }
+      @include mobile {
+        display: none;
       }
     }
 
@@ -416,12 +270,174 @@
       display: inline-block;
       position: absolute;
       top: 0;
+      left: 0;
       right: 0;
-      // background: #fff;
     }
 
     &__item {
       margin: rem(12px);
+      position: relative;
+
+      // rising list
+      &:first-child {
+        &::before {
+          @include risingBefore($cont: "4");
+          font-size: rem(10px);
+        }
+
+        &::after {
+          @include rising;
+          background: url("/assets/images/icon_area.png") no-repeat -430px -224px;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &:nth-child(2) {
+        &::before {
+          @include risingBefore($cont: "9");
+          font-size: rem(10px);
+        }
+
+        &::after {
+          @include rising;
+          background: url("/assets/images/icon_area.png") no-repeat -430px -224px;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &:nth-child(3) {
+        &::before {
+          @include risingBefore($cont: "4");
+          font-size: rem(10px);
+        }
+
+        &::after {
+          @include rising;
+          background: url("/assets/images/icon_area.png") no-repeat -430px -202px;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &:nth-child(4) {
+        &::before {
+          @include risingBefore($cont: "2");
+          font-size: rem(10px);
+        }
+
+        &::after {
+          @include rising;
+          background: url("/assets/images/icon_area.png") no-repeat -430px -202px;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &:nth-child(5) {
+        &::before {
+          @include risingBefore($cont: "1");
+          font-size: rem(10px);
+        }
+
+        &::after {
+          @include rising;
+          background: url("/assets/images/icon_area.png") no-repeat -430px -224px;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &:nth-child(6) {
+        &::before {
+          @include risingBefore($cont: "");
+          font-size: rem(10px);
+        }
+
+        &::after {
+          @include rising;
+          background: url("/assets/images/icon_area.png") no-repeat -430px -248px;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &:nth-child(7) {
+        &::before {
+          @include risingBefore($cont: "");
+          font-size: rem(10px);
+        }
+
+        &::after {
+          @include rising;
+          background: url("/assets/images/icon_area.png") no-repeat -430px -248px;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &:nth-child(8) {
+        &::before {
+          @include risingBefore($cont: "9");
+          font-size: rem(10px);
+        }
+
+        &::after {
+          @include rising;
+          background: url("/assets/images/icon_area.png") no-repeat -430px -202px;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &:nth-child(9) {
+        &::before {
+          @include risingBefore($cont: "1");
+          font-size: rem(10px);
+        }
+
+        &::after {
+          @include rising;
+          background: url("/assets/images/icon_area.png") no-repeat -430px -202px;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &:nth-child(10) {
+        &::before {
+          @include risingBefore($cont: "7");
+          font-size: rem(10px);
+        }
+
+        &::after {
+          @include rising;
+          background: url("/assets/images/icon_area.png") no-repeat -430px -224px;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
 
     &__number {
@@ -431,25 +447,12 @@
     &__info {
       display: inline-block;
       margin-right: rem(20px);
-      &::after {
-        content: "";
-        position: absolute;
-        width: rem(10px);
-        height: rem(10px);
-        background: green;
-        right: rem(10px);
-      }
-
-      &:hover {
-        text-decoration: underline;
-      }
     }
   }
 
   &__ad__image {
     flex-grow: 1;
-    background: url("../../assets/images/header-ad-image.png") no-repeat 100%
-      100% / 90%;
+    background: url("../../assets/images/header-ad-image.png") no-repeat 100% 100% / 90%;
 
     @include tab {
       display: none;
@@ -476,7 +479,6 @@
       font-weight: 500;
 
       @include tab {
-        // max-width: rem(900px);
         padding: 0 rem(20px);
         font-size: clamp(0.8rem, 3vw, 1.2rem);
       }
@@ -542,8 +544,6 @@
     }
   }
 }
-
-// mobile nav
 
 /* 메인 메뉴 제어버튼 */
 
