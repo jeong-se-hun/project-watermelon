@@ -7,8 +7,7 @@
   flex-flow: row wrap;
 
   @include tab {
-    max-width: rem(734px);
-    padding: rem(30px) rem(15px) 0;
+    padding: rem(30px) rem(20px) 0;
   }
 
   @include mobile {
@@ -174,7 +173,7 @@
 
       .home__new__slide {
         flex-shrink: 0;
-        width: clamp(25rem, 100%, 44rem);
+        width: clamp(10rem, 100%, 70rem);
       }
     }
 
@@ -194,6 +193,10 @@
     @include tab {
       width: 100%;
       justify-content: space-between;
+      height: 460px;
+    }
+    @include minTab {
+      height: 320px;
     }
     @include mobile {
       width: 100%;
@@ -209,6 +212,10 @@
 
     @include tab {
       flex-basis: 32%;
+      height: 220px;
+    }
+    @include minTab {
+      height: 150px;
     }
 
     @include mobile {
@@ -232,7 +239,7 @@
     .singer {
       @include paddingX(15px);
       text-overflow: ellipsis;
-      overflow: auto;
+      overflow: hidden;
       white-space: nowrap;
     }
 
@@ -356,14 +363,17 @@
 
 /* 로그인 & 광고 영역 */
 .home__login {
-  width: 280px;
-  margin-left: 8px;
-  margin-top: 27px;
+  width: rem(280px);
+  margin-left: rem(8px);
+  margin-top: rem(27px);
 
   @include tab {
     width: 100%;
     margin-left: 0;
-    margin-top: 16px;
+    margin-top: rem(16px);
+  }
+  @include minTab {
+    margin-top: rem(10px);
   }
   @include mobile {
     display: none;

@@ -68,12 +68,7 @@
     @include paddingY(10px);
 
     @include tab {
-      max-width: rem(734px);
-      padding: rem(10px) rem(15px);
-    }
-    @include mobile {
-      max-width: rem(734px);
-      padding: rem(10px) rem(15px);
+      padding: rem(10px) rem(20px);
     }
   }
 
@@ -362,9 +357,9 @@
       font-weight: 500;
 
       @include tab {
-        max-width: rem(734px);
-        padding: 0 rem(15px);
-        font-size: clamp(0.7rem, 1.4vw, 1rem);
+        // max-width: rem(900px);
+        padding: 0 rem(20px);
+        font-size: clamp(0.8rem, 3vw, 1.2rem);
       }
       @include mobile {
         max-width: rem(734px);
@@ -389,14 +384,6 @@
         justify-content: flex-end;
         width: rem(280px);
         text-align: end;
-
-        @include tab {
-          width: initial;
-
-          a {
-            color: inherit;
-          }
-        }
         a {
           color: $light-gray;
 
@@ -412,6 +399,10 @@
 
       @include tab {
         padding: rem(5px) 0;
+
+        &:nth-child(n + 8) {
+          display: none;
+        }
       }
 
       &.mobileHome {
@@ -661,7 +652,7 @@
     position: absolute;
     z-index: 1;
     background: $white;
-    top: rem(38px);
+    top: rem(50px);
     left: 0;
     right: 0;
     bottom: 0;
