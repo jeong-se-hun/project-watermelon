@@ -1196,7 +1196,7 @@ button {
 }
 @media (min-width: 480px) and (max-width: 1023px) {
   .home__login--ad > a {
-    background: #b4b4b4;
+    background: #b4b4b4 url("/assets/images/melon-ad-banner.png") no-repeat 0 0;
   }
 }
 
