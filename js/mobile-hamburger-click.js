@@ -2,6 +2,10 @@ const get = (target) => {
   return document.querySelector(target);
 };
 
+const getAll = function (target) {
+  return document.querySelectorAll(target);
+};
+
 const $buttonBurger = get(".mobile-nav__btn-area");
 const $mobileNavList = get(".mobile-nav__list");
 const $slide = get(".slide");

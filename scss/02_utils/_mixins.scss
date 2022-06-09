@@ -51,6 +51,12 @@
   position: $position;
 }
 
+@mixin flexCenter($dp: flex, $jc: center, $ai: center) {
+  display: $dp;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
 // 이미지 중앙 정렬 (50$)
 @mixin centerTranslateY($percent: -50%) {
   top: 50%;
@@ -91,6 +97,27 @@
   border: $border;
   background: $bg;
   padding: $pd;
+}
+
+// ellipsis
+@mixin ellipsis($over: hidden, $to: ellipsis, $ws: nowrap) {
+  overflow: $over;
+  text-overflow: $to;
+  white-space: $ws;
+}
+
+@mixin ellipsisTwoLine(
+  $over: hidden,
+  $to: ellipsis,
+  $dp: -webkit-box,
+  $webClamp: 2,
+  $webOrient: vertical
+) {
+  overflow: $over;
+  text-overflow: $to;
+  display: $dp;
+  -webkit-line-clamp: $webClamp;
+  -webkit-box-orient: $webOrient;
 }
 
 // hover transition
