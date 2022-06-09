@@ -76,6 +76,10 @@
     width: 100%;
   }
 
+  @include mobile {
+    padding: rem(40px) rem(10px) 0;
+  }
+
   // 차트 탑100 부분 및 모달창
   &__title-wrapper {
     position: relative;
@@ -460,7 +464,7 @@
   .chart__main__top100__tbody tr {
     @include flexbox(row, space-between, center, wrap);
     position: relative;
-    min-width: 330px;
+    min-width: rem(288px);
   }
 
   #check,
@@ -470,7 +474,7 @@
 
   #rank,
   td[headers="rank"] {
-    width: 20px;
+    width: rem(20px);
     padding: 0;
     text-align: center;
   }
@@ -489,8 +493,8 @@
 
   #sing-album-cover,
   td[headers="sing-album-cover"] {
-    width: 40px;
-    margin-right: 10px;
+    width: rem(40px);
+    margin-right: rem(10px);
     order: -1;
   }
 

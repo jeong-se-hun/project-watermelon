@@ -4238,6 +4238,11 @@ button {
     width: 100%;
   }
 }
+@media (max-width: 479px) {
+  .chart__main {
+    padding: 2.5rem 0.625rem 0;
+  }
+}
 .chart__main__title-wrapper {
   position: relative;
   margin-bottom: 0.5rem;
@@ -4567,7 +4572,7 @@ td[headers=sing-mv] {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    min-width: 330px;
+    min-width: 18rem;
   }
   #check,
 td[headers=check] {
@@ -4575,7 +4580,7 @@ td[headers=check] {
   }
   #rank,
 td[headers=rank] {
-    width: 20px;
+    width: 1.25rem;
     padding: 0;
     text-align: center;
   }
@@ -4593,8 +4598,8 @@ td[headers=rank-change] .rank-down-num {
   }
   #sing-album-cover,
 td[headers=sing-album-cover] {
-    width: 40px;
-    margin-right: 10px;
+    width: 2.5rem;
+    margin-right: 0.625rem;
     order: -1;
   }
   #sing-info-link,
