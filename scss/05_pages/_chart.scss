@@ -15,9 +15,6 @@
   @include tab {
     display: none;
   }
-  @include mobile {
-    display: none;
-  }
 }
 
 .is-active .header__nav__link::after {
@@ -65,23 +62,18 @@
     @include tab {
       display: none;
     }
-    @include mobile {
-      display: none;
-    }
   }
 }
 
 // 메인 영역
 
 .chart__main {
-  max-width: rem(1010px);
   @include autoMargin;
-  padding-top: rem(40px);
-  width: 100%;
+  padding: rem(40px) rem(20px) 0;
+  width: rem(1010px);
 
   @include tab {
-    max-width: rem(780px);
-    padding: rem(40px) rem(15px) 0;
+    width: 100%;
   }
 
   // 차트 탑100 부분 및 모달창
@@ -218,7 +210,6 @@
 
         td[headers="rank"] {
           padding: 0 rem(18px) 0 rem(12px);
-          // padding: 0 rem(18px) 0 rem(12px);
           text-align: center;
         }
 
@@ -243,12 +234,10 @@
           }
 
           &__title {
+            @include ellipsis;
             display: inline-block;
             width: 90%;
             font-size: rem(14px);
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
             margin-bottom: rem(4px);
           }
 
@@ -259,13 +248,11 @@
         }
 
         &__album__title {
+          @include ellipsis;
           display: inline-block;
           width: 80%;
           font-size: rem(14px);
           color: #969696;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          overflow: hidden;
         }
 
         &__info__title:hover,
@@ -730,11 +717,11 @@
 }
 
 .audio-bar {
+  @include paddingY(10px);
   width: 100%;
   position: fixed;
   bottom: 0;
   background: $playerBackground;
-  @include paddingY(10px);
   transition: all 0.5s;
   transform: translateY(rem(60px));
   &__list {
@@ -866,19 +853,12 @@
   }
 
   &__title {
+    @include ellipsis;
     margin-left: rem(10px);
     color: $white;
     font-size: rem(14px);
 
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
     @include tab {
-      display: none;
-    }
-
-    @include mobile {
       display: none;
     }
   }
@@ -893,8 +873,8 @@
     }
 
     &-prev {
-      display: inline-block;
       @include removeBtnStyle;
+      display: inline-block;
 
       width: 30px;
       height: 30px;
@@ -902,8 +882,8 @@
     }
 
     &-play {
-      display: inline-block;
       @include removeBtnStyle;
+      display: inline-block;
 
       width: 30px;
       height: 30px;
@@ -915,8 +895,8 @@
     }
 
     &-next {
-      display: inline-block;
       @include removeBtnStyle;
+      display: inline-block;
 
       width: 30px;
       height: 30px;
@@ -924,8 +904,8 @@
     }
 
     &-random {
-      display: inline-block;
       @include removeBtnStyle;
+      display: inline-block;
 
       width: 30px;
       height: 30px;

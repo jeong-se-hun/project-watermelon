@@ -548,7 +548,7 @@
       }
 
       @include mobile {
-        @include ellipsisTwoLine;
+        @include ellipsisLine;
         height: rem(40px);
         font-size: rem(14px);
       }
@@ -724,7 +724,7 @@
       }
 
       @include mobile {
-        @include ellipsisTwoLine;
+        @include ellipsisLine;
         height: rem(40px);
         font-size: rem(14px);
       }
@@ -900,7 +900,7 @@
       }
 
       @include mobile {
-        @include ellipsisTwoLine;
+        @include ellipsisLine;
         height: rem(40px);
         font-size: rem(14px);
       }
@@ -1089,7 +1089,7 @@
       }
 
       @include mobile {
-        @include ellipsisTwoLine;
+        @include ellipsisLine;
         height: rem(40px);
         font-size: rem(14px);
       }
