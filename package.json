@@ -5,7 +5,7 @@
     "watch": "npm run sass -- --watch",
     "server": "live-server",
     "clean": "rimraf -r style",
-    "build": "postcss style/index.css -o build/index.css"
+    "build": "postcss css/style.css -o build/style.css"
   },
   "dependencies": {
     "live-server": "^1.2.2",
