@@ -718,49 +718,49 @@
       &:first-child {
         &::before {
           @include slideItemBefore;
-          background: red;
+          background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 0;
         }
       }
 
       &:nth-child(2) {
         &::before {
           @include slideItemBefore;
-          background: red;
+          background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 -20px;
         }
       }
 
       &:nth-child(3) {
         &::before {
           @include slideItemBefore;
-          background: red;
+          background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 -40px;
         }
       }
 
       &:nth-child(4) {
         &::before {
           @include slideItemBefore;
-          background: red;
+          background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 -60px;
         }
       }
 
       &:nth-child(5) {
         &::before {
           @include slideItemBefore;
-          background: red;
+          background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 -80px;
         }
       }
 
       &:nth-child(6) {
         &::before {
           @include slideItemBefore;
-          background: red;
+          background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 -100px;
         }
       }
 
       &:nth-child(7) {
         &::before {
           @include slideItemBefore;
-          background: red;
+          background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 -120px;
         }
       }
     }

@@ -884,7 +884,7 @@ button {
     width: 1.25rem;
     height: 1.25rem;
     left: 0.9375rem;
-    background: red;
+    background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 0;
   }
   .slide__item:nth-child(2)::before {
     content: "";
@@ -892,7 +892,7 @@ button {
     width: 1.25rem;
     height: 1.25rem;
     left: 0.9375rem;
-    background: red;
+    background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 -20px;
   }
   .slide__item:nth-child(3)::before {
     content: "";
@@ -900,7 +900,7 @@ button {
     width: 1.25rem;
     height: 1.25rem;
     left: 0.9375rem;
-    background: red;
+    background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 -40px;
   }
   .slide__item:nth-child(4)::before {
     content: "";
@@ -908,7 +908,7 @@ button {
     width: 1.25rem;
     height: 1.25rem;
     left: 0.9375rem;
-    background: red;
+    background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 -60px;
   }
   .slide__item:nth-child(5)::before {
     content: "";
@@ -916,7 +916,7 @@ button {
     width: 1.25rem;
     height: 1.25rem;
     left: 0.9375rem;
-    background: red;
+    background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 -80px;
   }
   .slide__item:nth-child(6)::before {
     content: "";
@@ -924,7 +924,7 @@ button {
     width: 1.25rem;
     height: 1.25rem;
     left: 0.9375rem;
-    background: red;
+    background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 -100px;
   }
   .slide__item:nth-child(7)::before {
     content: "";
@@ -932,7 +932,7 @@ button {
     width: 1.25rem;
     height: 1.25rem;
     left: 0.9375rem;
-    background: red;
+    background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 -120px;
   }
 }
 
