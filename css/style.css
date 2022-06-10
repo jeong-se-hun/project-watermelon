@@ -261,7 +261,6 @@ button {
   max-width: 63.125rem;
   display: flex;
   height: 5.625rem;
-  padding: 0 2.8125rem;
   margin-top: 0.625rem;
 }
 @media (max-width: 1023px) {
