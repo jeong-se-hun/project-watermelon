@@ -18,8 +18,8 @@ pageNum = Number(pageNum);
 
 const pages = {
   all: 1,
-  kpop: 2,
-  pop: 3,
+  kpop: 4,
+  pop: 7,
 };
 
 // Function
@@ -42,6 +42,7 @@ const moveTo = (index) => {
 $allBtn.addEventListener("click", (e) => {
   $slideBtns.forEach((btn) => btn.classList.remove("on"));
   e.target.classList.add("on");
+
   $number.innerText = pages.all;
   pageNum = pages.all;
   moveTo(pages.all);
@@ -50,6 +51,7 @@ $allBtn.addEventListener("click", (e) => {
 $kpopBtn.addEventListener("click", (e) => {
   $slideBtns.forEach((btn) => btn.classList.remove("on"));
   e.target.classList.add("on");
+
   $number.innerText = pages.kpop;
   pageNum = pages.kpop;
   moveTo(pages.kpop);
