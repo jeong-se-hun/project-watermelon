@@ -158,6 +158,7 @@
   &__logo {
     display: flex;
     align-items: center;
+    margin-left: -34px;
 
     @include tab {
       min-width: rem(110px);
@@ -452,7 +453,8 @@
 
   &__ad__image {
     flex-grow: 1;
-    background: url("../../assets/images/header-ad-image.png") no-repeat 100% 100% / 90%;
+    background: url("../../assets/images/header-ad-image.png") no-repeat 100%
+      100% / 90%;
 
     @include tab {
       display: none;

@@ -277,6 +277,7 @@ button {
 .header__logo {
   display: flex;
   align-items: center;
+  margin-left: -34px;
 }
 @media (max-width: 1023px) {
   .header__logo {
@@ -1241,6 +1242,8 @@ button {
   font-size: 12px;
   transition: all 0.4s;
   opacity: 0;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 .home__new__item--detail a {
   display: block;
@@ -1274,11 +1277,14 @@ button {
   right: 10px;
   bottom: 10px;
   z-index: 1;
-  background: url("/assets/images/bg_btn.png") no-repeat 0px 200px;
+  background: url("/assets/images/bg_btn.png") no-repeat 0px -276px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+}
+.play-button a:hover {
+  background: url("/assets/images/bg_btn.png") no-repeat 0px -318px;
 }
 
 /* 아티스트 영역 */

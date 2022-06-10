@@ -268,6 +268,7 @@
       font-size: 12px;
       transition: all 0.4s;
       opacity: 0;
+      @include paddingX(12px);
 
       & a {
         display: block;
@@ -305,8 +306,12 @@
   right: 10px;
   bottom: 10px;
   z-index: 1;
-  background: url("/assets/images/bg_btn.png") no-repeat 0px 200px;
+  background: url("/assets/images/bg_btn.png") no-repeat 0px -276px;
   @include flexbox($justify: center, $items: center);
+
+  &:hover {
+    background: url("/assets/images/bg_btn.png") no-repeat 0px -318px;
+  }
 }
 
 /* 아티스트 영역 */
