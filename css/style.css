@@ -276,7 +276,6 @@ button {
 .header__logo {
   display: flex;
   align-items: center;
-  margin-left: -34px;
 }
 @media (max-width: 1023px) {
   .header__logo {

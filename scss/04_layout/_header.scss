@@ -157,7 +157,6 @@
   &__logo {
     display: flex;
     align-items: center;
-    margin-left: -34px;
 
     @include tab {
       min-width: rem(110px);
