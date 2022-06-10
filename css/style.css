@@ -1389,6 +1389,10 @@ button {
   .home__login--ad {
     width: 100%;
     height: 70px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background: #f8f8f8;
   }
 }
 .home__login--ad > a {
@@ -1399,11 +1403,53 @@ button {
 }
 @media (max-width: 1023px) {
   .home__login--ad > a {
-    background: #b4b4b4;
+    background: url("/assets/images/ad-image.png") no-repeat 0 0/cover;
   }
 }
-
-.login--top {
+.home__login--ad__ticket {
+  display: none;
+}
+@media (max-width: 1023px) {
+  .home__login--ad__ticket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    width: 8.75rem;
+    flex-flow: column;
+    font-size: 1.25rem;
+    background: #0f4916;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+  }
+}
+.home__login--ad__text {
+  display: none;
+}
+@media (max-width: 1023px) {
+  .home__login--ad__text {
+    display: flex;
+    flex-flow: row wrap;
+    color: #333333;
+    align-items: center;
+    background: #f8f8f8;
+    font-weight: 600;
+    font-size: 1.375rem;
+    width: 11.875rem;
+    position: absolute;
+    left: 9.375rem;
+    top: 0.75rem;
+  }
+  .home__login--ad__text > span {
+    color: #888888;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 0.3125rem;
+  }
+}
+.home__login .login--top {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -1411,11 +1457,10 @@ button {
   font-size: 0.6875rem;
   margin-bottom: 10px;
 }
-.login--top > a:hover {
+.home__login .login--top > a:hover {
   text-decoration: underline;
 }
-
-.login-button {
+.home__login .login-button {
   display: block;
   width: 100%;
   line-height: 42px;
@@ -1424,7 +1469,7 @@ button {
   text-align: center;
   font-size: 0.875rem;
 }
-.login-button:hover {
+.home__login .login-button:hover {
   background-color: #01b925;
 }
 
