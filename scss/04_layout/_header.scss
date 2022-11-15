@@ -33,7 +33,7 @@
   display: inline-block;
   width: 22px;
   height: 22px;
-  background: url("../../assets/images/icon-ticket.svg");
+  background: url('../../assets/images/icon-ticket.svg');
 }
 
 .notice-bar {
@@ -98,9 +98,9 @@
       position: relative;
       z-index: -1;
       &::before {
-        content: "";
+        content: '';
         position: absolute;
-        background: url("../../assets/images/icon-ticket.svg");
+        background: url('../../assets/images/icon-ticket.svg');
         width: rem(20px);
         height: rem(20px);
         left: rem(-20px);
@@ -194,7 +194,7 @@
       position: absolute;
       width: rem(20px);
       height: rem(20px);
-      background: url("../../assets/images/icon-search.svg");
+      background: url('../../assets/images/icon-search.svg');
       right: rem(20px);
       top: 50%;
       transform: translateY(-48%);
@@ -280,13 +280,13 @@
       // rising list
       &:first-child {
         &::before {
-          @include risingBefore($cont: "4");
+          @include risingBefore($cont: '4');
           font-size: rem(10px);
         }
 
         &::after {
           @include rising;
-          background: url("/assets/images/icon_area.png") no-repeat -430px -224px;
+          background: url('/assets/images/icon_area.png') no-repeat -430px -224px;
         }
 
         &:hover {
@@ -296,13 +296,13 @@
 
       &:nth-child(2) {
         &::before {
-          @include risingBefore($cont: "9");
+          @include risingBefore($cont: '9');
           font-size: rem(10px);
         }
 
         &::after {
           @include rising;
-          background: url("/assets/images/icon_area.png") no-repeat -430px -224px;
+          background: url('/assets/images/icon_area.png') no-repeat -430px -224px;
         }
 
         &:hover {
@@ -312,13 +312,13 @@
 
       &:nth-child(3) {
         &::before {
-          @include risingBefore($cont: "4");
+          @include risingBefore($cont: '4');
           font-size: rem(10px);
         }
 
         &::after {
           @include rising;
-          background: url("/assets/images/icon_area.png") no-repeat -430px -202px;
+          background: url('/assets/images/icon_area.png') no-repeat -430px -202px;
         }
 
         &:hover {
@@ -328,13 +328,13 @@
 
       &:nth-child(4) {
         &::before {
-          @include risingBefore($cont: "2");
+          @include risingBefore($cont: '2');
           font-size: rem(10px);
         }
 
         &::after {
           @include rising;
-          background: url("/assets/images/icon_area.png") no-repeat -430px -202px;
+          background: url('/assets/images/icon_area.png') no-repeat -430px -202px;
         }
 
         &:hover {
@@ -344,13 +344,13 @@
 
       &:nth-child(5) {
         &::before {
-          @include risingBefore($cont: "1");
+          @include risingBefore($cont: '1');
           font-size: rem(10px);
         }
 
         &::after {
           @include rising;
-          background: url("/assets/images/icon_area.png") no-repeat -430px -224px;
+          background: url('/assets/images/icon_area.png') no-repeat -430px -224px;
         }
 
         &:hover {
@@ -366,7 +366,7 @@
 
         &::after {
           @include rising;
-          background: url("/assets/images/icon_area.png") no-repeat -430px -248px;
+          background: url('/assets/images/icon_area.png') no-repeat -430px -248px;
         }
 
         &:hover {
@@ -382,7 +382,7 @@
 
         &::after {
           @include rising;
-          background: url("/assets/images/icon_area.png") no-repeat -430px -248px;
+          background: url('/assets/images/icon_area.png') no-repeat -430px -248px;
         }
 
         &:hover {
@@ -392,13 +392,13 @@
 
       &:nth-child(8) {
         &::before {
-          @include risingBefore($cont: "9");
+          @include risingBefore($cont: '9');
           font-size: rem(10px);
         }
 
         &::after {
           @include rising;
-          background: url("/assets/images/icon_area.png") no-repeat -430px -202px;
+          background: url('/assets/images/icon_area.png') no-repeat -430px -202px;
         }
 
         &:hover {
@@ -408,13 +408,13 @@
 
       &:nth-child(9) {
         &::before {
-          @include risingBefore($cont: "1");
+          @include risingBefore($cont: '1');
           font-size: rem(10px);
         }
 
         &::after {
           @include rising;
-          background: url("/assets/images/icon_area.png") no-repeat -430px -202px;
+          background: url('/assets/images/icon_area.png') no-repeat -430px -202px;
         }
 
         &:hover {
@@ -424,13 +424,13 @@
 
       &:nth-child(10) {
         &::before {
-          @include risingBefore($cont: "7");
+          @include risingBefore($cont: '7');
           font-size: rem(10px);
         }
 
         &::after {
           @include rising;
-          background: url("/assets/images/icon_area.png") no-repeat -430px -224px;
+          background: url('/assets/images/icon_area.png') no-repeat -430px -224px;
         }
 
         &:hover {
@@ -451,8 +451,7 @@
 
   &__ad__image {
     flex-grow: 1;
-    background: url("../../assets/images/header-ad-image.png") no-repeat 100%
-      100% / 90%;
+    background: url('../../assets/images/header-ad-image.png') no-repeat 100% 100% / 90%;
 
     @include tab {
       display: none;
@@ -547,12 +546,12 @@
 
 /* 메인 메뉴 제어버튼 */
 
-.mobile-nav {
+.mobile-header {
   display: none;
 }
 
 @include mobile {
-  .mobile-nav {
+  .mobile-header {
     display: block;
     padding: rem(16px) rem(20px);
 
@@ -653,7 +652,7 @@
 }
 
 // Slide menu
-.slide {
+.mobile-nav {
   display: none;
   @include mobile {
     width: 100%;
@@ -690,7 +689,7 @@
           position: absolute;
           right: rem(40px);
           top: rem(25px);
-          content: "";
+          content: '';
           height: rem(30px);
           width: 2px;
           background-color: $medium-gray;
@@ -716,56 +715,56 @@
       &:first-child {
         &::before {
           @include slideItemBefore;
-          background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 0;
+          background: url('/assets/images/mobile-icons-08.svg') no-repeat 0 0;
         }
       }
 
       &:nth-child(2) {
         &::before {
           @include slideItemBefore;
-          background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 -20px;
+          background: url('/assets/images/mobile-icons-08.svg') no-repeat 0 -20px;
         }
       }
 
       &:nth-child(3) {
         &::before {
           @include slideItemBefore;
-          background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 -40px;
+          background: url('/assets/images/mobile-icons-08.svg') no-repeat 0 -40px;
         }
       }
 
       &:nth-child(4) {
         &::before {
           @include slideItemBefore;
-          background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 -60px;
+          background: url('/assets/images/mobile-icons-08.svg') no-repeat 0 -60px;
         }
       }
 
       &:nth-child(5) {
         &::before {
           @include slideItemBefore;
-          background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 -80px;
+          background: url('/assets/images/mobile-icons-08.svg') no-repeat 0 -80px;
         }
       }
 
       &:nth-child(6) {
         &::before {
           @include slideItemBefore;
-          background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 -100px;
+          background: url('/assets/images/mobile-icons-08.svg') no-repeat 0 -100px;
         }
       }
 
       &:nth-child(7) {
         &::before {
           @include slideItemBefore;
-          background: url("/assets/images/mobile-icons-08.svg") no-repeat 0 -120px;
+          background: url('/assets/images/mobile-icons-08.svg') no-repeat 0 -120px;
         }
       }
     }
   }
 }
 
-.slide.is-show {
+.mobile-nav.is-show {
   @include mobile {
     display: block;
     position: absolute;
@@ -778,7 +777,7 @@
   }
 }
 
-.mobile-nav__list.is-active {
+.mobile-header__list.is-active {
   @include mobile {
     justify-content: center;
   }

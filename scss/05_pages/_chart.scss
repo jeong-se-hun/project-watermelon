@@ -1,12 +1,13 @@
 .container-chart {
   position: relative;
   height: 100%;
+  min-width: rem(320px);
 }
 
 // 헤더 이단 네비게이션
 
 .header-wrapper::after {
-  content: "";
+  content: '';
   display: block;
   width: 100%;
   height: rem(45px);
@@ -18,7 +19,7 @@
 }
 
 .is-active .header__nav__link::after {
-  content: "";
+  content: '';
   display: block;
   height: rem(4px);
   transform: translateY(15px);
@@ -212,12 +213,12 @@
           height: rem(60px);
         }
 
-        td[headers="rank"] {
+        td[headers='rank'] {
           padding: 0 rem(18px) 0 rem(12px);
           text-align: center;
         }
 
-        td[headers="sing-album-cover"] img {
+        td[headers='sing-album-cover'] img {
           width: rem(60px);
           height: rem(60px);
           min-width: 60px;
@@ -387,66 +388,66 @@
   }
 
   #check,
-  td[headers="check"] {
+  td[headers='check'] {
     display: none;
   }
 
   #rank,
-  td[headers="rank"] {
+  td[headers='rank'] {
     width: 3%;
     min-width: 20px;
   }
 
   #rank-change,
-  td[headers="rank-change"] {
+  td[headers='rank-change'] {
     width: 6%;
     text-align: center;
   }
 
   #sing-album-cover,
-  td[headers="sing-album-cover"] {
+  td[headers='sing-album-cover'] {
     width: 70px;
     order: -1;
   }
 
   #sing-info-link,
-  td[headers="sing-info-link"] {
+  td[headers='sing-info-link'] {
     display: none;
   }
 
   #sing-info,
-  td[headers="sing-info"] {
+  td[headers='sing-info'] {
     width: 30%;
   }
 
   #sing-album,
-  td[headers="sing-album"] {
+  td[headers='sing-album'] {
     width: 19%;
   }
 
   #sing-like,
-  td[headers="sing-like"] {
+  td[headers='sing-like'] {
     width: 14%;
   }
 
   #sing-listen,
-  td[headers="sing-listen"] {
+  td[headers='sing-listen'] {
     width: 8%;
     text-align: center;
   }
 
   #sing-list-add,
-  td[headers="sing-list-add"] {
+  td[headers='sing-list-add'] {
     display: none;
   }
 
   #sing-download,
-  td[headers="sing-download"] {
+  td[headers='sing-download'] {
     display: none;
   }
 
   #sing-mv,
-  td[headers="sing-mv"] {
+  td[headers='sing-mv'] {
     display: none;
   }
 }
@@ -468,19 +469,19 @@
   }
 
   #check,
-  td[headers="check"] {
+  td[headers='check'] {
     display: none;
   }
 
   #rank,
-  td[headers="rank"] {
+  td[headers='rank'] {
     width: rem(20px);
     padding: 0;
     text-align: center;
   }
 
   #rank-change,
-  td[headers="rank-change"] {
+  td[headers='rank-change'] {
     display: inline-block;
     width: 3%;
     text-align: center;
@@ -492,50 +493,50 @@
   }
 
   #sing-album-cover,
-  td[headers="sing-album-cover"] {
+  td[headers='sing-album-cover'] {
     width: rem(40px);
     margin-right: rem(10px);
     order: -1;
   }
 
   #sing-info-link,
-  td[headers="sing-info-link"] {
+  td[headers='sing-info-link'] {
     display: none;
   }
 
   #sing-info,
-  td[headers="sing-info"] {
+  td[headers='sing-info'] {
     width: 60%;
     padding-left: 10px;
   }
 
   #sing-album,
-  td[headers="sing-album"] {
+  td[headers='sing-album'] {
     display: none;
   }
 
   #sing-like,
-  td[headers="sing-like"] {
+  td[headers='sing-like'] {
     display: none;
   }
 
   #sing-listen,
-  td[headers="sing-listen"] {
+  td[headers='sing-listen'] {
     width: 9%;
   }
 
   #sing-list-add,
-  td[headers="sing-list-add"] {
+  td[headers='sing-list-add'] {
     display: none;
   }
 
   #sing-download,
-  td[headers="sing-download"] {
+  td[headers='sing-download'] {
     display: none;
   }
 
   #sing-mv,
-  td[headers="sing-mv"] {
+  td[headers='sing-mv'] {
     display: none;
   }
 }
@@ -585,8 +586,7 @@
   width: rem(13px);
   height: rem(11px);
   margin-right: rem(4px);
-  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -203px
-    0px;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat -203px 0px;
   transform: translateY(1px);
 }
 
@@ -596,8 +596,7 @@
   width: rem(11px);
   height: rem(13px);
   margin-right: rem(4px);
-  background: url(../../assets/images/button_icons_sprite2.png) no-repeat 0px
-    0px;
+  background: url(../../assets/images/button_icons_sprite2.png) no-repeat 0px 0px;
   transform: translateY(2px);
 }
 
@@ -833,14 +832,14 @@
     position: relative;
 
     &::before {
-      content: "";
+      content: '';
       display: inline-block;
       position: absolute;
       width: 30px;
       height: 30px;
       top: -6px;
       left: -27px;
-      background: url("/assets/images/music-sprite.svg") no-repeat 0 0;
+      background: url('/assets/images/music-sprite.svg') no-repeat 0 0;
 
       @include mobile {
         display: none;
@@ -873,7 +872,7 @@
       display: inline-block;
       width: 30px;
       height: 30px;
-      background: url("/assets/images/music-sprite.svg") no-repeat -30px 0;
+      background: url('/assets/images/music-sprite.svg') no-repeat -30px 0;
     }
 
     &-prev {
@@ -882,7 +881,7 @@
 
       width: 30px;
       height: 30px;
-      background: url("/assets/images/music-sprite.svg") no-repeat 0 -30px;
+      background: url('/assets/images/music-sprite.svg') no-repeat 0 -30px;
     }
 
     &-play {
@@ -891,7 +890,7 @@
 
       width: 30px;
       height: 30px;
-      background: url("/assets/images/music-sprite.svg") no-repeat -120px 0;
+      background: url('/assets/images/music-sprite.svg') no-repeat -120px 0;
 
       &:focus {
         outline: none;
@@ -904,7 +903,7 @@
 
       width: 30px;
       height: 30px;
-      background: url("/assets/images/music-sprite.svg") no-repeat -30px -30px;
+      background: url('/assets/images/music-sprite.svg') no-repeat -30px -30px;
     }
 
     &-random {
@@ -913,7 +912,7 @@
 
       width: 30px;
       height: 30px;
-      background: url("/assets/images/music-sprite.svg") no-repeat -60px -30px;
+      background: url('/assets/images/music-sprite.svg') no-repeat -60px -30px;
     }
   }
 
@@ -921,7 +920,7 @@
     display: block;
     width: 30px;
     height: 30px;
-    background: url("/assets/images/music-sprite.svg") no-repeat -60px 0;
+    background: url('/assets/images/music-sprite.svg') no-repeat -60px 0;
     @include autoMargin;
   }
 
@@ -947,7 +946,7 @@
 
     &::after {
       display: inline-block;
-      content: "";
+      content: '';
       width: rem(12px);
       height: rem(12px);
       border-radius: 50%;
@@ -972,14 +971,14 @@
   position: relative;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     display: inline-block;
     top: rem(-13px);
     left: rem(-26px);
     width: 30px;
     height: 30px;
-    background: url("/assets/images/music-sprite.svg") no-repeat -90px 0;
+    background: url('/assets/images/music-sprite.svg') no-repeat -90px 0;
   }
 }
 
@@ -999,5 +998,5 @@
 }
 
 .audio-bar__control-play.is-pause {
-  background: url("/assets/images/music-sprite.svg") no-repeat -90px -30px;
+  background: url('/assets/images/music-sprite.svg') no-repeat -90px -30px;
 }

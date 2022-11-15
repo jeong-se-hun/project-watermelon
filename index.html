@@ -12,12 +12,7 @@
 
     <title>WaterMelon</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="/assets/images/favicon.ico"
-      id="favicon"
-    />
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" id="favicon" />
     <script src="/js/mobile-hamburger-click.js" defer></script>
     <script src="/js/carousel-btnControl.js" defer></script>
     <script src="/js/carousel-loop.js" defer></script>
@@ -44,7 +39,7 @@
 
       <!-- 공통 헤더 -->
       <!-- notice-bar -->
-      <div class="notice-bar">
+      <nav class="notice-bar">
         <ul class="notice-bar__list">
           <li class="notice-bar__item login">
             <a href="/views/login.html" class="notice-bar__link">로그인</a>
@@ -67,7 +62,7 @@
             <a href="#" class="notice-bar__link">멜론 티켓</a>
           </li>
         </ul>
-      </div>
+      </nav>
 
       <!-- Header -->
       <header class="header">
@@ -82,11 +77,7 @@
           <fieldset>
             <legend>검색폼</legend>
             <label for="" class="header__search-label sr-only"></label>
-            <input
-              type="text"
-              class="header__search__input"
-              placeholder="WSG워너비 12명의 첫 하모니 `어마어마해`"
-            />
+            <input type="text" class="header__search__input" placeholder="WSG워너비 12명의 첫 하모니 `어마어마해`" />
             <a href="#" role="button" class="header__search__button"></a>
           </fieldset>
         </form>
@@ -142,69 +133,60 @@
       </header>
 
       <!-- mobile nav -->
-      <nav class="mobile-nav">
-        <ul class="mobile-nav__list">
-          <li class="mobile-nav__list__item left">
-            <button
-              class="mobile-nav__btn-area buttonNone button--burger"
-              aria-label="메뉴 열기"
-            >
-              <span class="mobile-nav__btn button--burgerBarTop"></span>
-              <span class="mobile-nav__btn button--burgerBarMiddle"></span>
-              <span class="mobile-nav__btn button--burgerBarBottom"></span>
+      <nav class="mobile-header">
+        <ul class="mobile-header__list">
+          <li class="mobile-header__list__item left">
+            <button class="mobile-header__btn-area buttonNone button--burger" aria-label="메뉴 열기">
+              <span class="mobile-header__btn button--burgerBarTop"></span>
+              <span class="mobile-header__btn button--burgerBarMiddle"></span>
+              <span class="mobile-header__btn button--burgerBarBottom"></span>
             </button>
-            <a href="" class="mobile-nav__ticket">
+            <a href="" class="mobile-header__ticket">
               <img src="/assets/images/mobileTickt.png" alt="이용권 아이콘"
             /></a>
           </li>
-          <li class="mobile-nav__list__item center">
-            <h1 class="mobile-nav__logo">
+          <li class="mobile-header__list__item center">
+            <h1 class="mobile-header__logo">
               <a href="/index.html">
                 <img src="/assets/images/melon-01.svg" alt="melon" />
               </a>
             </h1>
           </li>
-          <li class="mobile-nav__list__item right">
+          <li class="mobile-header__list__item right">
             <a href="#" aria-label="검색페이지 이동"></a>
           </li>
         </ul>
       </nav>
 
       <!-- side menu -->
-      <div class="slide">
-        <div class="slide__header">
-          <img
-            class="slide__header__profile"
-            src="/assets/images/artist1.jpg"
-            alt=""
-          />
-          <a href="/views/login.html" class="slide__header__text"
-            >로그인하세요</a
-          >
-          <button class="slide__header__close"></button>
+      <div class="mobile-nav">
+        <div class="mobile-nav__header">
+          <img class="mobile-nav__header__profile" src="/assets/images/artist1.jpg" alt="" />
+          <a href="/views/login.html" class="mobile-nav__header__text">로그인하세요</a>
+          <button class="mobile-nav__header__close"></button>
         </div>
 
-        <ul class="slide__list">
-          <li class="slide__item">
-            <a href="/index.html" class="slide__link">멜론홈</a>
+        <ul class="mobile-nav__list">
+          <li class="mobile-nav__item">
+            <a href="/index.html" class="mobile-nav__link">멜론홈</a>
           </li>
-          <li class="slide__item">
-            <a href="/index.html" class="slide__link">최신음악</a>
+          <li class="mobile-nav__item">
+            <a href="/index.html" class="mobile-nav__link">최신음악</a>
           </li>
-          <li class="slide__item">
-            <a href="/views/chart.html" class="slide__link">멜론차트</a>
+          <li class="mobile-nav__item">
+            <a href="/views/chart.html" class="mobile-nav__link">멜론차트</a>
           </li>
-          <li class="slide__item">
-            <a href="/views/genre.html" class="slide__link">장르음악</a>
+          <li class="mobile-nav__item">
+            <a href="/views/genre.html" class="mobile-nav__link">장르음악</a>
           </li>
-          <li class="slide__item">
-            <a href="/views/melonDj.html" class="slide__link">멜론DJ</a>
+          <li class="mobile-nav__item">
+            <a href="/views/melonDj.html" class="mobile-nav__link">멜론DJ</a>
           </li>
-          <li class="slide__item">
-            <a href="/index.html" class="slide__link">멜론뮤직어워드</a>
+          <li class="mobile-nav__item">
+            <a href="/index.html" class="mobile-nav__link">멜론뮤직어워드</a>
           </li>
-          <li class="slide__item">
-            <a href="/index.html" class="slide__link">이벤트</a>
+          <li class="mobile-nav__item">
+            <a href="/index.html" class="mobile-nav__link">이벤트</a>
           </li>
         </ul>
       </div>
@@ -258,38 +240,15 @@
               <div class="home__new__tab">
                 <h2 class="home__new__title"><a href="/">최신 앨범</a></h2>
                 <div class="home__new__button-group">
-                  <button
-                    type="button"
-                    class="home__new__button--all home__new__slide__button on"
-                  >
-                    전체
-                  </button>
-                  <button
-                    type="button"
-                    class="home__new__button--kpop home__new__slide__button"
-                  >
-                    가요
-                  </button>
-                  <button
-                    type="button"
-                    class="home__new__button--pop home__new__slide__button"
-                  >
-                    POP
-                  </button>
+                  <button type="button" class="home__new__button--all home__new__slide__button on">전체</button>
+                  <button type="button" class="home__new__button--kpop home__new__slide__button">가요</button>
+                  <button type="button" class="home__new__button--pop home__new__slide__button">POP</button>
                 </div>
                 <div class="home__new__control">
                   <span class="home__new__page-number">1</span>/9
                   <div class="home__new__control__button-box">
-                    <button
-                      type="button"
-                      class="slide-btn home__new__control--prev"
-                      aria-label="이전"
-                    ></button>
-                    <button
-                      type="button"
-                      class="slide-btn home__new__control--next"
-                      aria-label="다음"
-                    ></button>
+                    <button type="button" class="slide-btn home__new__control--prev" aria-label="이전"></button>
+                    <button type="button" class="slide-btn home__new__control--next" aria-label="다음"></button>
                   </div>
                 </div>
               </div>
@@ -301,23 +260,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide1-item1.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide1-item1.jpeg"
-                              alt="신용재 사계 앨범 커버"
-                            />
+                            <source srcset="/assets/images/carousel/slide1-item1.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide1-item1.jpeg" alt="신용재 사계 앨범 커버" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >사계 (四季)</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >신용재 2F</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">사계 (四季)</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">신용재 2F</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -332,23 +281,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide1-item2.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide1-item2.jpeg"
-                              alt="조광일 Break The Line "
-                            />
+                            <source srcset="/assets/images/carousel/slide1-item2.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide1-item2.jpeg" alt="조광일 Break The Line " />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >Break The Line</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >조광일</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">Break The Line</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">조광일</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -363,32 +302,20 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide1-item3.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide1-item3.jpeg"
-                              alt="시크릿 넘버  DOOMCHITA "
-                            />
+                            <source srcset="/assets/images/carousel/slide1-item3.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide1-item3.jpeg" alt="시크릿 넘버  DOOMCHITA " />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >DOOMCHITA</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >SECRET NUMBER (시크릿 넘버)</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">DOOMCHITA</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">SECRET NUMBER (시크릿 넘버)</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
                         </div>
                       </div>
                       <span class="singer">
-                        <a href="/" aria-hidden="true"
-                          >SECRET NUMBER (시크릿 넘버)</a
-                        >
+                        <a href="/" aria-hidden="true">SECRET NUMBER (시크릿 넘버)</a>
                       </span>
                     </li>
                     <!-- slide1 item4 -->
@@ -396,23 +323,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide1-item4.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide1-item4.jpg"
-                              alt="LUCY Trip:Tape #03"
-                            />
+                            <source srcset="/assets/images/carousel/slide1-item4.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide1-item4.jpg" alt="LUCY Trip:Tape #03" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >Trip:Tape #03</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >LUCY</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">Trip:Tape #03</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">LUCY</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -427,23 +344,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide1-item5.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide1-item5.jpeg"
-                              alt="SURAN(수란) 키스 식스센스 OS "
-                            />
+                            <source srcset="/assets/images/carousel/slide1-item5.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide1-item5.jpeg" alt="SURAN(수란) 키스 식스센스 OS " />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >키스 식스센스 OST Part.4</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >SURAN(수란)</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">키스 식스센스 OST Part.4</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">SURAN(수란)</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -458,23 +365,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide1-item6.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide1-item6.jpeg"
-                              alt="WSG워너비 WDG워너비 12"
-                            />
+                            <source srcset="/assets/images/carousel/slide1-item6.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide1-item6.jpeg" alt="WSG워너비 WDG워너비 12" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >WSG워너비 12</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >WDG워너비</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">WSG워너비 12</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">WDG워너비</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -493,10 +390,7 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide2-item1.webp"
-                              type="image/webp"
-                            />
+                            <source srcset="/assets/images/carousel/slide2-item1.webp" type="image/webp" />
                             <img
                               src="/assets/images/carousel/slide2-item1.jpeg"
                               alt="트렌드지 BLUE SET Chapter2. CHOICE"
@@ -504,12 +398,8 @@
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >BLUE SET Chapter2. CHOICE</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >TRENDZ (트렌드지)</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">BLUE SET Chapter2. CHOICE</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">TRENDZ (트렌드지)</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -524,23 +414,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide2-item2.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide2-item2.jpeg"
-                              alt=""
-                            />
+                            <source srcset="/assets/images/carousel/slide2-item2.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide2-item2.jpeg" alt="" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >BIGMISTAKE</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >노브레인</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">BIGMISTAKE</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">노브레인</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -555,23 +435,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide2-item3.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide2-item3.jpeg"
-                              alt="김예지 이브 OST Part1"
-                            />
+                            <source srcset="/assets/images/carousel/slide2-item3.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide2-item3.jpeg" alt="김예지 이브 OST Part1" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >이브 OST Part1</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >김예지</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">이브 OST Part1</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">김예지</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -586,10 +456,7 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide2-item4.webp"
-                              type="image/webp"
-                            />
+                            <source srcset="/assets/images/carousel/slide2-item4.webp" type="image/webp" />
                             <img
                               src="/assets/images/carousel/slide2-item4.jpeg"
                               alt="릴리안 HHere you are (너에게 가는 속도 493km OST)"
@@ -598,12 +465,9 @@
                         </div>
                         <div class="home__new__item--detail">
                           <a href="/" aria-label="앨범정보 바로가기"
-                            >Here you are (너에게 가는 속도 493km OST
-                            Part.13)</a
+                            >Here you are (너에게 가는 속도 493km OST Part.13)</a
                           >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >릴리안</a
-                          >
+                          <a href="" aria-label="아티스트 페이지 바로가기">릴리안</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -618,10 +482,7 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide2-item5.webp"
-                              type="image/webp"
-                            />
+                            <source srcset="/assets/images/carousel/slide2-item5.webp" type="image/webp" />
                             <img
                               src="/assets/images/carousel/slide2-item5.jpeg"
                               alt="슬릭 (SLEEQ) 푸른바다 위에서 칵테일 한잔 줘"
@@ -629,12 +490,8 @@
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >푸른바다 위에서 칵테일 한잔 줘 (Feat.NaOH)</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >슬릭 (SLEEQ)</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">푸른바다 위에서 칵테일 한잔 줘 (Feat.NaOH)</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">슬릭 (SLEEQ)</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -649,21 +506,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide2-item6.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide2-item6.jpeg"
-                              alt="박지우 Orange"
-                            />
+                            <source srcset="/assets/images/carousel/slide2-item6.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide2-item6.jpeg" alt="박지우 Orange" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
                           <a href="/" aria-label="앨범정보 바로가기">Orange</a>
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >박지우</a
-                          >
+                          <a href="" aria-label="아티스트 페이지 바로가기">박지우</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -682,23 +531,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide3-item1.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide3-item1.jpeg"
-                              alt="WSG워너비 WSG워너비 12"
-                            />
+                            <source srcset="/assets/images/carousel/slide3-item1.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide3-item1.jpeg" alt="WSG워너비 WSG워너비 12" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="WSG워너비 전체앨범 바로가기"
-                            >WSG워너비 12</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >WDG워너비</a
-                          >
+                          <a href="/" aria-label="WSG워너비 전체앨범 바로가기">WSG워너비 12</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">WDG워너비</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -713,23 +552,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide3-item2.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide3-item2.jpeg"
-                              alt="임준혁 일방통행"
-                            />
+                            <source srcset="/assets/images/carousel/slide3-item2.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide3-item2.jpeg" alt="임준혁 일방통행" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="임준혁 전체앨범 바로가기"
-                            >일방통행</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >임준혁</a
-                          >
+                          <a href="/" aria-label="임준혁 전체앨범 바로가기">일방통행</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">임준혁</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -744,21 +573,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide3-item3.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide3-item3.jpeg"
-                              alt="채윤 못"
-                            />
+                            <source srcset="/assets/images/carousel/slide3-item3.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide3-item3.jpeg" alt="채윤 못" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
                           <a href="/" aria-label="채윤 전체앨범 바로가기">못</a>
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >채윤</a
-                          >
+                          <a href="" aria-label="아티스트 페이지 바로가기">채윤</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -773,23 +594,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide3-item4.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide3-item4.jpeg"
-                              alt="채윤 aespa"
-                            />
+                            <source srcset="/assets/images/carousel/slide3-item4.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide3-item4.jpeg" alt="채윤 aespa" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="WSG워너비 전체앨범 바로가기"
-                            >aespa</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >aespa</a
-                          >
+                          <a href="/" aria-label="WSG워너비 전체앨범 바로가기">aespa</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">aespa</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -804,10 +615,7 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide3-item5.webp"
-                              type="image/webp"
-                            />
+                            <source srcset="/assets/images/carousel/slide3-item5.webp" type="image/webp" />
                             <img
                               src="/assets/images/carousel/slide3-item5.jpeg"
                               alt="정재일 his days are like a passing shadow I"
@@ -815,12 +623,8 @@
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="전체앨범 바로가기"
-                            >his days are like a passing shadow I</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >정재일</a
-                          >
+                          <a href="/" aria-label="전체앨범 바로가기">his days are like a passing shadow I</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">정재일</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -835,23 +639,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide3-item1.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide3-item1.jpeg"
-                              alt="그네 초이(CHOI) 파동"
-                            />
+                            <source srcset="/assets/images/carousel/slide3-item1.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide3-item1.jpeg" alt="그네 초이(CHOI) 파동" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="WSG워너비 전체앨범 바로가기"
-                            >파동</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >그네, 초이(CHOI)</a
-                          >
+                          <a href="/" aria-label="WSG워너비 전체앨범 바로가기">파동</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">그네, 초이(CHOI)</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -870,21 +664,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide4-item1.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide4-item1.jpeg"
-                              alt="BIG Naughty (서동현) 낭만"
-                            />
+                            <source srcset="/assets/images/carousel/slide4-item1.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide4-item1.jpeg" alt="BIG Naughty (서동현) 낭만" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
                           <a href="/" aria-label="앨범정보 바로가기">낭만</a>
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >BIG Naughty (서동현)</a
-                          >
+                          <a href="" aria-label="아티스트 페이지 바로가기">BIG Naughty (서동현)</a>
                           <span class="play-button">
                             <a href="/" aria-label="음악 재생하기"></a>
                           </span>
@@ -899,23 +685,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide4-item2.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide4-item2.jpeg"
-                              alt="Like a diamond 강혜원"
-                            />
+                            <source srcset="/assets/images/carousel/slide4-item2.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide4-item2.jpeg" alt="Like a diamond 강혜원" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >Like a diamond</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >강혜원</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">Like a diamond</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">강혜원</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -930,21 +706,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide4-item3.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide4-item3.jpeg"
-                              alt="Woo!ah! (우아!) JOY"
-                            />
+                            <source srcset="/assets/images/carousel/slide4-item3.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide4-item3.jpeg" alt="Woo!ah! (우아!) JOY" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
                           <a href="/" aria-label="앨범정보 바로가기">JOY</a>
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >Woo!ah! (우아!)</a
-                          >
+                          <a href="" aria-label="아티스트 페이지 바로가기">Woo!ah! (우아!)</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -959,10 +727,7 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide4-item4.webp"
-                              type="image/webp"
-                            />
+                            <source srcset="/assets/images/carousel/slide4-item4.webp" type="image/webp" />
                             <img
                               src="/assets/images/carousel/slide4-item4.jpg"
                               alt="페노메코 (PENPMECO) 비밀:리에 vol.6 “먹구름”"
@@ -970,12 +735,8 @@
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >비밀:리에 vol.6 “먹구름”</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >페노메코 (PENPMECO)</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">비밀:리에 vol.6 “먹구름”</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">페노메코 (PENPMECO)</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -990,10 +751,7 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide4-item5.webp"
-                              type="image/webp"
-                            />
+                            <source srcset="/assets/images/carousel/slide4-item5.webp" type="image/webp" />
                             <img
                               src="/assets/images/carousel/slide4-item5.jpeg"
                               alt="TOP 6 (홍석천) 케이탑스타 (K TOP STAR)"
@@ -1001,12 +759,8 @@
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >케이탑스타 (K TOP STAR)</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >TOP 6 (홍석천)</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">케이탑스타 (K TOP STAR)</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">TOP 6 (홍석천)</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -1021,21 +775,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide4-item6.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide4-item6.jpeg"
-                              alt="Mokyo Rehab"
-                            />
+                            <source srcset="/assets/images/carousel/slide4-item6.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide4-item6.jpeg" alt="Mokyo Rehab" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
                           <a href="/" aria-label="앨범정보 바로가기">Rehab</a>
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >Mokyo</a
-                          >
+                          <a href="" aria-label="아티스트 페이지 바로가기">Mokyo</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -1054,23 +800,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide5-item1.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide5-item1.jpeg"
-                              alt="YEGNY (최예근) Lazybones"
-                            />
+                            <source srcset="/assets/images/carousel/slide5-item1.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide5-item1.jpeg" alt="YEGNY (최예근) Lazybones" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >Lazybones</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >YEGNY (최예근)</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">Lazybones</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">YEGNY (최예근)</a>
                           <span class="play-button">
                             <a href="/" aria-label="음악 재생하기"></a>
                           </span>
@@ -1085,10 +821,7 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide5-item2.webp"
-                              type="image/webp"
-                            />
+                            <source srcset="/assets/images/carousel/slide5-item2.webp" type="image/webp" />
                             <img
                               src="/assets/images/carousel/slide5-item2.jpeg"
                               alt="브로콜리너마저 혼자살아요 (Trot ver.)"
@@ -1096,12 +829,8 @@
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >혼자살아요 (Trot ver.)</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >브로콜리너마저</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">혼자살아요 (Trot ver.)</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">브로콜리너마저</a>
                           <span class="play-button">
                             <a href="/" aria-label="음악 재생하기"></a>
                           </span>
@@ -1116,21 +845,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide4-item3.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide4-item3.jpeg"
-                              alt="림지 (LimJi) SO BAD"
-                            />
+                            <source srcset="/assets/images/carousel/slide4-item3.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide4-item3.jpeg" alt="림지 (LimJi) SO BAD" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
                           <a href="/" aria-label="앨범정보 바로가기">SO BAD</a>
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >림지 (LimJi)</a
-                          >
+                          <a href="" aria-label="아티스트 페이지 바로가기">림지 (LimJi)</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -1145,10 +866,7 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide4-item4.webp"
-                              type="image/webp"
-                            />
+                            <source srcset="/assets/images/carousel/slide4-item4.webp" type="image/webp" />
                             <img
                               src="/assets/images/carousel/slide4-item4.jpg"
                               alt="소각소각 이 계절은 우리의 색깔로”"
@@ -1156,12 +874,8 @@
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >이 계절은 우리의 색깔로</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >소각소각</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">이 계절은 우리의 색깔로</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">소각소각</a>
                           <span class="play-button">
                             <a href="/" aria-label="음악 재생하기"></a>
                           </span>
@@ -1176,23 +890,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide4-item5.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide4-item5.jpeg"
-                              alt="JERO Summer fling"
-                            />
+                            <source srcset="/assets/images/carousel/slide4-item5.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide4-item5.jpeg" alt="JERO Summer fling" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >Summer fling</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >JERO</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">Summer fling</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">JERO</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -1207,23 +911,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide4-item6.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide4-item6.jpeg"
-                              alt="모세 춘정지란 OST part.8"
-                            />
+                            <source srcset="/assets/images/carousel/slide4-item6.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide4-item6.jpeg" alt="모세 춘정지란 OST part.8" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >춘정지란 OST part.8</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >모세</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">춘정지란 OST part.8</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">모세</a>
                           <span class="play-button">
                             <a href="/" aria-label="음악 재생하기"></a>
                           </span>
@@ -1242,23 +936,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide6-item1.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide6-item1.jpeg"
-                              alt="YEGNY (최예근) Lazybones"
-                            />
+                            <source srcset="/assets/images/carousel/slide6-item1.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide6-item1.jpeg" alt="YEGNY (최예근) Lazybones" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >Lazybones</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >YEGNY (최예근)</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">Lazybones</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">YEGNY (최예근)</a>
                           <span class="play-button">
                             <a href="/" aria-label="음악 재생하기"></a>
                           </span>
@@ -1273,10 +957,7 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide6-item2.webp"
-                              type="image/webp"
-                            />
+                            <source srcset="/assets/images/carousel/slide6-item2.webp" type="image/webp" />
                             <img
                               src="/assets/images/carousel/slide6-item2.jpeg"
                               alt="브로콜리너마저 혼자살아요 (Trot ver.)"
@@ -1284,12 +965,8 @@
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >혼자살아요 (Trot ver.)</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >브로콜리너마저</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">혼자살아요 (Trot ver.)</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">브로콜리너마저</a>
                           <span class="play-button">
                             <a href="/" aria-label="음악 재생하기"></a>
                           </span>
@@ -1304,21 +981,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide6-item3.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide6-item3.jpeg"
-                              alt="림지 (LimJi) SO BAD"
-                            />
+                            <source srcset="/assets/images/carousel/slide6-item3.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide6-item3.jpeg" alt="림지 (LimJi) SO BAD" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
                           <a href="/" aria-label="앨범정보 바로가기">SO BAD</a>
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >림지 (LimJi)</a
-                          >
+                          <a href="" aria-label="아티스트 페이지 바로가기">림지 (LimJi)</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -1333,10 +1002,7 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide6-item4.webp"
-                              type="image/webp"
-                            />
+                            <source srcset="/assets/images/carousel/slide6-item4.webp" type="image/webp" />
                             <img
                               src="/assets/images/carousel/slide6-item4.jpg"
                               alt="소각소각 이 계절은 우리의 색깔로”"
@@ -1344,12 +1010,8 @@
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >이 계절은 우리의 색깔로</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >소각소각</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">이 계절은 우리의 색깔로</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">소각소각</a>
                           <span class="play-button">
                             <a href="/" aria-label="음악 재생하기"></a>
                           </span>
@@ -1364,23 +1026,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide6-item5.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide6-item5.jpeg"
-                              alt="JERO Summer fling"
-                            />
+                            <source srcset="/assets/images/carousel/slide6-item5.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide6-item5.jpeg" alt="JERO Summer fling" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >Summer fling</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >JERO</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">Summer fling</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">JERO</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -1395,23 +1047,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide6-item6.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide6-item6.jpeg"
-                              alt="모세 춘정지란 OST part.8"
-                            />
+                            <source srcset="/assets/images/carousel/slide6-item6.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide6-item6.jpeg" alt="모세 춘정지란 OST part.8" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >춘정지란 OST part.8</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >모세</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">춘정지란 OST part.8</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">모세</a>
                           <span class="play-button">
                             <a href="/" aria-label="음악 재생하기"></a>
                           </span>
@@ -1430,10 +1072,7 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide7-item1.webp"
-                              type="image/webp"
-                            />
+                            <source srcset="/assets/images/carousel/slide7-item1.webp" type="image/webp" />
                             <img
                               src="/assets/images/carousel/slide7-item1.jpeg"
                               alt="Pharrell Williams Cash In Cash Out"
@@ -1442,12 +1081,9 @@
                         </div>
                         <div class="home__new__item--detail">
                           <a href="/" aria-label="앨범정보 바로가기"
-                            >Cash In Cash Out (Feat. 21 Savage, Tyler, The
-                            Creator)</a
+                            >Cash In Cash Out (Feat. 21 Savage, Tyler, The Creator)</a
                           >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >Pharrell Williams</a
-                          >
+                          <a href="" aria-label="아티스트 페이지 바로가기">Pharrell Williams</a>
                           <span class="play-button">
                             <a href="/" aria-label="음악 재생하기"></a>
                           </span>
@@ -1462,21 +1098,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide7-item2.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide7-item2.jpeg"
-                              alt="Halsey So good"
-                            />
+                            <source srcset="/assets/images/carousel/slide7-item2.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide7-item2.jpeg" alt="Halsey So good" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
                           <a href="/" aria-label="앨범정보 바로가기">So good</a>
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >Halsey</a
-                          >
+                          <a href="" aria-label="아티스트 페이지 바로가기">Halsey</a>
                           <span class="play-button">
                             <a href="/" aria-label="음악 재생하기"></a>
                           </span>
@@ -1491,23 +1119,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide7-item3.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide7-item3.jpeg"
-                              alt="Swae Lee, Diplo Tupelo Shuffle"
-                            />
+                            <source srcset="/assets/images/carousel/slide7-item3.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide7-item3.jpeg" alt="Swae Lee, Diplo Tupelo Shuffle" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >Tupelo Shuffle</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >Swae Lee, Diplo</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">Tupelo Shuffle</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">Swae Lee, Diplo</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -1522,23 +1140,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide7-item4.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide7-item4.jpg"
-                              alt="iann dior Live Fast Die Numb"
-                            />
+                            <source srcset="/assets/images/carousel/slide7-item4.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide7-item4.jpg" alt="iann dior Live Fast Die Numb" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >Live Fast Die Numb</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >iann dior</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">Live Fast Die Numb</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">iann dior</a>
                           <span class="play-button">
                             <a href="/" aria-label="음악 재생하기"></a>
                           </span>
@@ -1553,21 +1161,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide7-item5.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide7-item5.jpeg"
-                              alt="Sub Urban HIVE"
-                            />
+                            <source srcset="/assets/images/carousel/slide7-item5.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide7-item5.jpeg" alt="Sub Urban HIVE" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
                           <a href="/" aria-label="앨범정보 바로가기">HIVE</a>
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >Sub Urban</a
-                          >
+                          <a href="" aria-label="아티스트 페이지 바로가기">Sub Urban</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -1582,10 +1182,7 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide7-item6.webp"
-                              type="image/webp"
-                            />
+                            <source srcset="/assets/images/carousel/slide7-item6.webp" type="image/webp" />
                             <img
                               src="/assets/images/carousel/slide7-item6.jpeg"
                               alt="Lost Frequencies, James Arthur Questions"
@@ -1593,21 +1190,15 @@
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >Questions</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >Lost Frequencies, James Arthur</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">Questions</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">Lost Frequencies, James Arthur</a>
                           <span class="play-button">
                             <a href="/" aria-label="음악 재생하기"></a>
                           </span>
                         </div>
                       </div>
                       <span class="singer">
-                        <a href="/" aria-hidden="true"
-                          >Lost Frequencies, James Arthur</a
-                        >
+                        <a href="/" aria-hidden="true">Lost Frequencies, James Arthur</a>
                       </span>
                     </li>
                   </ul>
@@ -1619,23 +1210,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide8-item1.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide8-item1.jpeg"
-                              alt="St. Vincent Funkytown"
-                            />
+                            <source srcset="/assets/images/carousel/slide8-item1.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide8-item1.jpeg" alt="St. Vincent Funkytown" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >Funkytown</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >St. Vincent</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">Funkytown</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">St. Vincent</a>
                           <span class="play-button">
                             <a href="/" aria-label="음악 재생하기"></a>
                           </span>
@@ -1650,10 +1231,7 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide8-item2.webp"
-                              type="image/webp"
-                            />
+                            <source srcset="/assets/images/carousel/slide8-item2.webp" type="image/webp" />
                             <img
                               src="/assets/images/carousel/slide8-item2.jpeg"
                               alt="브로콜리너마저 혼자살아요 (Trot ver.)"
@@ -1661,12 +1239,8 @@
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >New Rules Go The Distance</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >New Rules</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">New Rules Go The Distance</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">New Rules</a>
                           <span class="play-button">
                             <a href="/" aria-label="음악 재생하기"></a>
                           </span>
@@ -1681,23 +1255,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide8-item3.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide8-item3.jpeg"
-                              alt="Pale Waves"
-                            />
+                            <source srcset="/assets/images/carousel/slide8-item3.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide8-item3.jpeg" alt="Pale Waves" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >Reasons To Live</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >Pale Waves</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">Reasons To Live</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">Pale Waves</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -1712,23 +1276,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide8-item4.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide8-item4.jpg"
-                              alt="Andrew Bird Inside Problems"
-                            />
+                            <source srcset="/assets/images/carousel/slide8-item4.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide8-item4.jpg" alt="Andrew Bird Inside Problems" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >Inside Problems</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >Andrew Bird</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">Inside Problems</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">Andrew Bird</a>
                           <span class="play-button">
                             <a href="/" aria-label="음악 재생하기"></a>
                           </span>
@@ -1743,23 +1297,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide8-item5.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide8-item5.jpeg"
-                              alt="Goody Grace What Do I Do?"
-                            />
+                            <source srcset="/assets/images/carousel/slide8-item5.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide8-item5.jpeg" alt="Goody Grace What Do I Do?" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >What Do I Do?</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >Goody Grace</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">What Do I Do?</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">Goody Grace</a>
                           <span class="play-button">
                             <a href="" aria-label="음악 재생하기"></a>
                           </span>
@@ -1774,23 +1318,13 @@
                       <div class="home__new__item--wrap">
                         <div class="home__new__item--thumb">
                           <picture>
-                            <source
-                              srcset="/assets/images/carousel/slide8-item6.webp"
-                              type="image/webp"
-                            />
-                            <img
-                              src="/assets/images/carousel/slide8-item6.jpeg"
-                              alt="Jack White If I Die Tomorrow"
-                            />
+                            <source srcset="/assets/images/carousel/slide8-item6.webp" type="image/webp" />
+                            <img src="/assets/images/carousel/slide8-item6.jpeg" alt="Jack White If I Die Tomorrow" />
                           </picture>
                         </div>
                         <div class="home__new__item--detail">
-                          <a href="/" aria-label="앨범정보 바로가기"
-                            >If I Die Tomorrow</a
-                          >
-                          <a href="" aria-label="아티스트 페이지 바로가기"
-                            >Jack White</a
-                          >
+                          <a href="/" aria-label="앨범정보 바로가기">If I Die Tomorrow</a>
+                          <a href="" aria-label="아티스트 페이지 바로가기">Jack White</a>
                           <span class="play-button">
                             <a href="/" aria-label="음악 재생하기"></a>
                           </span>
@@ -1812,56 +1346,21 @@
           <section class="home__artist">
             <div class="home__artist__wrap">
               <div class="home__artist__control">
-                <button
-                  type="button"
-                  class="home__artist__control__indicator"
-                  data-btn_idx="1"
-                ></button>
-                <button
-                  type="button"
-                  class="home__artist__control__indicator"
-                  data-btn_idx="2"
-                ></button>
-                <button
-                  type="button"
-                  class="home__artist__control__indicator"
-                  data-btn_idx="3"
-                ></button>
-                <button
-                  type="button"
-                  class="home__artist__control__indicator"
-                  data-btn_idx="4"
-                ></button>
-                <button
-                  type="button"
-                  class="home__artist__control__indicator"
-                  data-btn_idx="5"
-                ></button>
-                <button
-                  type="button"
-                  class="home__artist__control__indicator"
-                  data-btn_idx="6"
-                ></button>
-                <button
-                  type="button"
-                  class="home__artist__control__indicator"
-                  data-btn_idx="7"
-                ></button>
-                <button
-                  type="button"
-                  class="button-pause"
-                  aria-label="일시정지"
-                ></button>
+                <button type="button" class="home__artist__control__indicator" data-btn_idx="1"></button>
+                <button type="button" class="home__artist__control__indicator" data-btn_idx="2"></button>
+                <button type="button" class="home__artist__control__indicator" data-btn_idx="3"></button>
+                <button type="button" class="home__artist__control__indicator" data-btn_idx="4"></button>
+                <button type="button" class="home__artist__control__indicator" data-btn_idx="5"></button>
+                <button type="button" class="home__artist__control__indicator" data-btn_idx="6"></button>
+                <button type="button" class="home__artist__control__indicator" data-btn_idx="7"></button>
+                <button type="button" class="button-pause" aria-label="일시정지"></button>
               </div>
               <div class="home__artist__inner">
                 <div class="home__artist__list">
                   <div class="home__artist__item">
                     <a href="/">
                       <picture>
-                        <source
-                          srcset="/assets/images/carousel/artist01.webp"
-                          type="image/webp"
-                        />
+                        <source srcset="/assets/images/carousel/artist01.webp" type="image/webp" />
                         <img
                           src="/assets/images/carousel/artist01.jpeg"
                           alt="손동운 뉴앨범 Happy birthday 앨범소개 바로가기"
@@ -1872,10 +1371,7 @@
                   <div class="home__artist__item">
                     <a href="/">
                       <picture>
-                        <source
-                          srcset="/assets/images/carousel/artist02.webp"
-                          type="image/webp"
-                        />
+                        <source srcset="/assets/images/carousel/artist02.webp" type="image/webp" />
                         <img
                           src="/assets/images/carousel/artist02.jpeg"
                           alt="이지영(빅마마) 싱글 기대도돼요 앨범소개 바로가기"
@@ -1886,38 +1382,23 @@
                   <div class="home__artist__item">
                     <a href="/">
                       <picture>
-                        <source
-                          srcset="/assets/images/carousel/artist03.webp"
-                          type="image/webp"
-                        />
-                        <img
-                          src="/assets/images/carousel/artist03.jpeg"
-                          alt="김재환 싱글 달팽이 앨범소개 바로가기"
-                        />
+                        <source srcset="/assets/images/carousel/artist03.webp" type="image/webp" />
+                        <img src="/assets/images/carousel/artist03.jpeg" alt="김재환 싱글 달팽이 앨범소개 바로가기" />
                       </picture>
                     </a>
                   </div>
                   <div class="home__artist__item">
                     <a href="/">
                       <picture>
-                        <source
-                          srcset="/assets/images/carousel/artist04.webp"
-                          type="image/webp"
-                        />
-                        <img
-                          src="/assets/images/carousel/artist04.jpeg"
-                          alt="오곤 싱글 그럴거야 앨범소개 바로가기"
-                        />
+                        <source srcset="/assets/images/carousel/artist04.webp" type="image/webp" />
+                        <img src="/assets/images/carousel/artist04.jpeg" alt="오곤 싱글 그럴거야 앨범소개 바로가기" />
                       </picture>
                     </a>
                   </div>
                   <div class="home__artist__item">
                     <a href="/">
                       <picture>
-                        <source
-                          srcset="/assets/images/carousel/artist05.webp"
-                          type="image/webp"
-                        />
+                        <source srcset="/assets/images/carousel/artist05.webp" type="image/webp" />
                         <img
                           src="/assets/images/carousel/artist05.jpeg"
                           alt="김준휘 새 앨범 11시59분 앨범소개 바로가기"
@@ -1928,10 +1409,7 @@
                   <div class="home__artist__item">
                     <a href="/">
                       <picture>
-                        <source
-                          srcset="/assets/images/carousel/artist06.webp"
-                          type="image/webp"
-                        />
+                        <source srcset="/assets/images/carousel/artist06.webp" type="image/webp" />
                         <img
                           src="/assets/images/carousel/artist06.jpeg"
                           alt="APR project 싱글 BOYHOOD I S#1 앨범소개 바로가기"
@@ -1942,14 +1420,8 @@
                   <div class="home__artist__item">
                     <a href="/">
                       <picture>
-                        <source
-                          srcset="/assets/images/carousel/artist07.webp"
-                          type="image/webp"
-                        />
-                        <img
-                          src="/assets/images/carousel/artist07.jpeg"
-                          alt="윤원 싱글 나는너야 앨범소개 바로가기"
-                        />
+                        <source srcset="/assets/images/carousel/artist07.webp" type="image/webp" />
+                        <img src="/assets/images/carousel/artist07.jpeg" alt="윤원 싱글 나는너야 앨범소개 바로가기" />
                       </picture>
                     </a>
                   </div>
@@ -1967,14 +1439,10 @@
               <p>멜론을 더 안전하게 이용하세요</p>
               <a href="/">회원가입</a>
             </div>
-            <a href="/views/login.html" role="button" class="login-button"
-              >로그인</a
-            >
+            <a href="/views/login.html" role="button" class="login-button">로그인</a>
           </div>
           <div class="home__login--ad">
-            <div class="home__login--ad__ticket">
-              멜론티켓<span>예매하기</span>
-            </div>
+            <div class="home__login--ad__ticket">멜론티켓<span>예매하기</span></div>
             <div class="home__login--ad__text">
               <p class="home__login--ad__title">소각소각 단독 콘서트</p>
               <span>06.19(일) 롤링홀</span>
@@ -1986,38 +1454,24 @@
       </section>
 
       <section class="home__hot__section">
-        <h2 class="home__hot__title sr-only" tabindex="0">
-          인기 컨텐츠와 멜론차트 영역입니다.
-        </h2>
+        <h2 class="home__hot__title sr-only" tabindex="0">인기 컨텐츠와 멜론차트 영역입니다.</h2>
 
         <!-- 인기있어요 영역 -->
         <div class="home__hot__hot-issue">
           <!-- 인기있어요 title -->
           <h3 class="home__hot__hot-issue__title">
             <span class="home__hot__hot-issue__title-text">인기 있어요</span>
-            <span class="home__hot__hot-issue__txt_intro"
-              >지금 이슈가 되는 아티스트의 인기 컨텐츠입니다.</span
-            >
+            <span class="home__hot__hot-issue__txt_intro">지금 이슈가 되는 아티스트의 인기 컨텐츠입니다.</span>
           </h3>
           <!-- 컨텐츠 리스트 -->
           <ul class="home__hot__hot-issue-lists" aria-label="인기 컨텐츠">
             <!-- 1페이지 -->
-            <li
-              class="home__hot__hot-issue-list list1 is-active"
-              aria-label="인기 컨텐츠 1 페이지"
-            >
+            <li class="home__hot__hot-issue-list list1 is-active" aria-label="인기 컨텐츠 1 페이지">
               <div class="home__hot__hot-issue-upper-group">
                 <div class="home__hot__hot-issue-video-area">
-                  <a
-                    href="#"
-                    class="home__hot__hot-issue-video-link"
-                    aria-label="아이유, 유희열이 안내하는 top 100 "
-                  >
+                  <a href="#" class="home__hot__hot-issue-video-link" aria-label="아이유, 유희열이 안내하는 top 100 ">
                     <picture>
-                      <source
-                        srcset="/assets/images/hotIssueThumbnail.webp"
-                        type="image/webp"
-                      />
+                      <source srcset="/assets/images/hotIssueThumbnail.webp" type="image/webp" />
                       <img
                         src="/assets/images/hotIssueThumbnail.jpg"
                         alt="핫이슈 비디오 썸네일"
@@ -2028,70 +1482,42 @@
                       멜론TV <strong>아이유, 유희열이 안내하는</strong> <br />
                       세상의 모든 TOP100 (FULL ver.)
                     </span>
-                    <span class="home__hot__hot-issue-video-views"
-                      >조회 4,008
-                    </span>
+                    <span class="home__hot__hot-issue-video-views">조회 4,008 </span>
                   </a>
                 </div>
                 <ul class="home__hot__news-list">
-                  <li
-                    class="home__hot__news-item"
-                    aria-label="인기 뉴스 소식입니다."
-                  >
+                  <li class="home__hot__news-item" aria-label="인기 뉴스 소식입니다.">
                     <a class="home__hot__news-item__thumbnail" href="#">
                       <picture>
-                        <source
-                          srcset="/assets/images/dataLap.webp"
-                          type="image/webp"
-                        />
-                        <img
-                          src="/assets/images/dataLap.jpg"
-                          alt="데이터랩 댓글이벤트 썸네일"
-                        />
+                        <source srcset="/assets/images/dataLap.webp" type="image/webp" />
+                        <img src="/assets/images/dataLap.jpg" alt="데이터랩 댓글이벤트 썸네일" />
                       </picture>
                     </a>
                     <div class="home__hot__news-item-info">
                       <a href="#" class="home__hot__news-item-link">
-                        <em class="home__hot__news-item-title">
-                          멜론 데이터랩 댓글 이벤트 #7
-                        </em>
+                        <em class="home__hot__news-item-title"> 멜론 데이터랩 댓글 이벤트 #7 </em>
                         <p class="home__hot__news-item-description">
-                          방탄소년단, 9년의 기록<br />#1,008만 6,000 #35억
-                          #113억
+                          방탄소년단, 9년의 기록<br />#1,008만 6,000 #35억 #113억
                         </p>
                       </a>
                       <div class="home__hot__news-item-c-v-wrap">
-                        <span class="home__hot__news-item-ctgry"
-                          >멜론메거진</span
-                        >
-                        <span class="home__hot__news-item-views"
-                          >조회 51,611</span
-                        >
+                        <span class="home__hot__news-item-ctgry">멜론메거진</span>
+                        <span class="home__hot__news-item-views">조회 51,611</span>
                       </div>
                     </div>
                   </li>
                   <li class="home__hot__news-item">
                     <a class="home__hot__news-item__thumbnail" href="#">
                       <picture>
-                        <source
-                          srcset="/assets/images/playyou.webp"
-                          type="image/webp"
-                        />
-                        <img
-                          src="/assets/images/playyou.jpg"
-                          alt="카카오 티비 플레이유 썸네일"
-                        />
+                        <source srcset="/assets/images/playyou.webp" type="image/webp" />
+                        <img src="/assets/images/playyou.jpg" alt="카카오 티비 플레이유 썸네일" />
                       </picture>
                       <span class="home__hot__video-time">32:35</span>
                     </a>
                     <div class="home__hot__news-item-info">
                       <a href="#" class="home__hot__news-item-link">
-                        <em class="home__hot__news-item-title">
-                          7회. 제7장 『 파티 (party) 』
-                        </em>
-                        <p class="home__hot__news-item-description">
-                          [미션] 친구와 음식을 나눠 먹고 명찰을 획득하라.
-                        </p>
+                        <em class="home__hot__news-item-title"> 7회. 제7장 『 파티 (party) 』 </em>
+                        <p class="home__hot__news-item-description">[미션] 친구와 음식을 나눠 먹고 명찰을 획득하라.</p>
                       </a>
                       <span class="home__hot__news-item-ctgry">멜론TV</span>
                       <span class="home__hot__news-item-views">조회 7,772</span>
@@ -2100,22 +1526,14 @@
                   <li class="home__hot__news-item">
                     <a class="home__hot__news-item__thumbnail" href="#">
                       <picture>
-                        <source
-                          srcset="/assets/images//honestDrinking.webp"
-                          type="image/webp"
-                        />
-                        <img
-                          src="/assets/images//honestDrinking.jpg"
-                          alt="예능 취중찐담 썸네일"
-                        />
+                        <source srcset="/assets/images//honestDrinking.webp" type="image/webp" />
+                        <img src="/assets/images//honestDrinking.jpg" alt="예능 취중찐담 썸네일" />
                       </picture>
                       <span class="home__hot__video-time">23:47</span>
                     </a>
                     <div class="home__hot__news-item-info">
                       <a href="#" class="home__hot__news-item-link">
-                        <em class="home__hot__news-item-title">
-                          21회. 취중찐담 with 장도연
-                        </em>
+                        <em class="home__hot__news-item-title"> 21회. 취중찐담 with 장도연 </em>
                         <p class="home__hot__news-item-description">
                           신사(?) 경규와 최애 후배 장도연이 함께하는 취중찐담
                         </p>
@@ -2127,20 +1545,11 @@
                 </ul>
               </div>
               <ul class="home__hot__magazine-list">
-                <li
-                  class="home__hot__magazine-itme"
-                  aria-label="멜론 매거진 백지영"
-                >
+                <li class="home__hot__magazine-itme" aria-label="멜론 매거진 백지영">
                   <a href="#" class="home__hot__magazine-Thumbnail">
                     <picture>
-                      <source
-                        srcset="/assets/images/baekJiYoung.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="/assets/images/baekJiYoung.jpg"
-                        alt="매거진 표지 모델 백지영"
-                      />
+                      <source srcset="/assets/images/baekJiYoung.webp" type="image/webp" />
+                      <img src="/assets/images/baekJiYoung.jpg" alt="매거진 표지 모델 백지영" />
                     </picture>
                   </a>
                   <a href="#" class="home__hot__magazine-description">
@@ -2152,85 +1561,48 @@
                     <span class="home__hot__magazine-views">조회 35,589</span>
                   </div>
                 </li>
-                <li
-                  class="home__hot__magazine-itme"
-                  aria-label="멜론 매거진 조유리"
-                >
+                <li class="home__hot__magazine-itme" aria-label="멜론 매거진 조유리">
                   <a href="#" class="home__hot__magazine-Thumbnail">
                     <picture>
-                      <source
-                        srcset="/assets/images/joyuri.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="/assets/images/joyuri.jpg"
-                        alt="매거진 표지 모델  조유리"
-                      />
+                      <source srcset="/assets/images/joyuri.webp" type="image/webp" />
+                      <img src="/assets/images/joyuri.jpg" alt="매거진 표지 모델  조유리" />
                     </picture>
                   </a>
                   <a href="#" class="home__hot__magazine-description">
-                    <em class="home__hot__magazine-title"
-                      >싱그럽고 청량한 매력</em
-                    >
-                    <span class="home__hot__magazine-txt"
-                      >조유리 '러브 쉿!' MV 현장</span
-                    >
+                    <em class="home__hot__magazine-title">싱그럽고 청량한 매력</em>
+                    <span class="home__hot__magazine-txt">조유리 '러브 쉿!' MV 현장</span>
                   </a>
                   <div class="home__hot__magazine-info">
                     <span class="home__hot__magazine-ctgry">멜론메거진</span>
                     <span class="home__hot__magazine-views">조회 20,847</span>
                   </div>
                 </li>
-                <li
-                  class="home__hot__magazine-itme"
-                  aria-label="멜론 매거진 ADORA"
-                >
+                <li class="home__hot__magazine-itme" aria-label="멜론 매거진 ADORA">
                   <a href="#" class="home__hot__magazine-Thumbnail">
                     <picture>
-                      <source
-                        srcset="/assets/images/adora.jpg"
-                        type="image/webp"
-                      />
-                      <img
-                        src="/assets/images/adora.jpg"
-                        alt="매거진 표지 모델 ADORA"
-                      />
+                      <source srcset="/assets/images/adora.jpg" type="image/webp" />
+                      <img src="/assets/images/adora.jpg" alt="매거진 표지 모델 ADORA" />
                     </picture>
                   </a>
                   <a href="#" class="home__hot__magazine-description">
-                    <em class="home__hot__magazine-title"
-                      >ADORA 'Trouble? TRAVEL!'</em
-                    >
-                    <span class="home__hot__magazine-txt"
-                      >MV & 자켓 촬영 현장</span
-                    >
+                    <em class="home__hot__magazine-title">ADORA 'Trouble? TRAVEL!'</em>
+                    <span class="home__hot__magazine-txt">MV & 자켓 촬영 현장</span>
                   </a>
                   <div class="home__hot__magazine-info">
                     <span class="home__hot__magazine-ctgry">멜론메거진</span>
                     <span class="home__hot__magazine-views">조회 643</span>
                   </div>
                 </li>
-                <li
-                  class="home__hot__magazine-itme"
-                  aria-label="멜론 매거진 JAEMAN"
-                >
+                <li class="home__hot__magazine-itme" aria-label="멜론 매거진 JAEMAN">
                   <a href="#" class="home__hot__magazine-Thumbnail">
                     <picture>
-                      <source
-                        srcset="/assets/images/jaeman.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="/assets/images/jaeman.jpg"
-                        alt="매거진 표지 모델 JAEMAN"
-                      />
+                      <source srcset="/assets/images/jaeman.webp" type="image/webp" />
+                      <img src="/assets/images/jaeman.jpg" alt="매거진 표지 모델 JAEMAN" />
                     </picture>
                   </a>
                   <a href="#" class="home__hot__magazine-description">
                     <em class="home__hot__magazine-title">난 이상하지 않아!</em>
-                    <span class="home__hot__magazine-txt"
-                      >재만 (JAEMAN) 'stranger'</span
-                    >
+                    <span class="home__hot__magazine-txt">재만 (JAEMAN) 'stranger'</span>
                   </a>
                   <div class="home__hot__magazine-info">
                     <span class="home__hot__magazine-ctgry">멜론메거진</span>
@@ -2240,34 +1612,18 @@
               </ul>
             </li>
             <!-- 2페이지 -->
-            <li
-              class="home__hot__hot-issue-list list2"
-              aria-label="인기 컨텐츠 2 페이지"
-            >
+            <li class="home__hot__hot-issue-list list2" aria-label="인기 컨텐츠 2 페이지">
               <ul class="home__hot__melon-tv-list">
-                <li
-                  class="home__hot__melon-tv-itme"
-                  aria-label="멜론 tv 백지영"
-                >
+                <li class="home__hot__melon-tv-itme" aria-label="멜론 tv 백지영">
                   <a href="#" class="home__hot__melon-tv-Thumbnail">
                     <picture>
-                      <source
-                        srcset="/assets/images/melonTvBaek.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="/assets/images/melonTvBaek.jpg"
-                        alt="가수 백지영"
-                      />
+                      <source srcset="/assets/images/melonTvBaek.webp" type="image/webp" />
+                      <img src="/assets/images/melonTvBaek.jpg" alt="가수 백지영" />
                     </picture>
                   </a>
                   <a href="#" class="home__hot__melon-tv-description">
-                    <em class="home__hot__melon-tv-title"
-                      >발라드 여왕 백지영 컴백</em
-                    >
-                    <span class="home__hot__melon-tv-txt"
-                      >신곡 '사랑 앞에서 난 바보가 돼'</span
-                    >
+                    <em class="home__hot__melon-tv-title">발라드 여왕 백지영 컴백</em>
+                    <span class="home__hot__melon-tv-txt">신곡 '사랑 앞에서 난 바보가 돼'</span>
                   </a>
                   <div class="home__hot__melon-tv-info">
                     <span class="home__hot__melon-tv-ctgry">멜론TV</span>
@@ -2277,81 +1633,45 @@
                 <li class="home__hot__melon-tv-itme" aria-label="멜론 tv 빅톤">
                   <a href="#" class="home__hot__melon-tv-Thumbnail">
                     <picture>
-                      <source
-                        srcset="/assets/images/melonTvVicton.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="/assets/images/melonTvVicton.jpg"
-                        alt="가수 빅톤"
-                      />
+                      <source srcset="/assets/images/melonTvVicton.webp" type="image/webp" />
+                      <img src="/assets/images/melonTvVicton.jpg" alt="가수 빅톤" />
                     </picture>
                   </a>
                   <a href="#" class="home__hot__melon-tv-description">
-                    <em class="home__hot__melon-tv-title"
-                      >빅톤이 전하는 사랑의 속삭임</em
-                    >
-                    <span class="home__hot__melon-tv-txt"
-                      >타이틀곡 'Stupid O’clock' MV</span
-                    >
+                    <em class="home__hot__melon-tv-title">빅톤이 전하는 사랑의 속삭임</em>
+                    <span class="home__hot__melon-tv-txt">타이틀곡 'Stupid O’clock' MV</span>
                   </a>
                   <div class="home__hot__melon-tv-info">
                     <span class="home__hot__melon-tv-ctgry">멜론TV</span>
                     <span class="home__hot__melon-tv-views">조회 1,183</span>
                   </div>
                 </li>
-                <li
-                  class="home__hot__melon-tv-itme"
-                  aria-label="멜론 tv 문수진"
-                >
+                <li class="home__hot__melon-tv-itme" aria-label="멜론 tv 문수진">
                   <a href="#" class="home__hot__melon-tv-Thumbnail">
                     <picture>
-                      <source
-                        srcset="/assets/images/melonTvMoon.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="/assets/images/melonTvMoon.jpg"
-                        alt="가수 문수진"
-                      />
+                      <source srcset="/assets/images/melonTvMoon.webp" type="image/webp" />
+                      <img src="/assets/images/melonTvMoon.jpg" alt="가수 문수진" />
                     </picture>
                   </a>
                   <a href="#" class="home__hot__melon-tv-description">
-                    <em class="home__hot__melon-tv-title"
-                      >행운의 부적이 되기를!</em
-                    >
-                    <span class="home__hot__melon-tv-txt"
-                      >문수진 'Right Back'
-                    </span>
+                    <em class="home__hot__melon-tv-title">행운의 부적이 되기를!</em>
+                    <span class="home__hot__melon-tv-txt">문수진 'Right Back' </span>
                   </a>
                   <div class="home__hot__melon-tv-info">
                     <span class="home__hot__melon-tv-ctgry">멜론TV</span>
                     <span class="home__hot__melon-tv-views">조회 1,180</span>
                   </div>
                 </li>
-                <li
-                  class="home__hot__melon-tv-itme"
-                  aria-label="멜론 tv 조유리"
-                >
+                <li class="home__hot__melon-tv-itme" aria-label="멜론 tv 조유리">
                   <a href="#" class="home__hot__melon-tv-Thumbnail">
                     <picture>
-                      <source
-                        srcset="/assets/images/melonTvyuri.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="/assets/images/melonTvyuri.jpg"
-                        alt="가수 조유리"
-                      />
+                      <source srcset="/assets/images/melonTvyuri.webp" type="image/webp" />
+                      <img src="/assets/images/melonTvyuri.jpg" alt="가수 조유리" />
                     </picture>
                   </a>
                   <a href="#" class="home__hot__melon-tv-description">
-                    <em class="home__hot__melon-tv-title"
-                      >조유리 “신곡 '러브 쉿!</em
-                    >
-                    <span class="home__hot__melon-tv-txt"
-                      >경쾌한 이별 변주곡
-                    </span>
+                    <em class="home__hot__melon-tv-title">조유리 “신곡 '러브 쉿!</em>
+                    <span class="home__hot__melon-tv-txt">경쾌한 이별 변주곡 </span>
                   </a>
                   <div class="home__hot__melon-tv-info">
                     <span class="home__hot__melon-tv-ctgry">멜론TV</span>
@@ -2361,49 +1681,29 @@
                 <li class="home__hot__melon-tv-itme" aria-label="멜론 tv nct">
                   <a href="#" class="home__hot__melon-tv-Thumbnail">
                     <picture>
-                      <source
-                        srcset="/assets/images/melonTvNct.webp"
-                        type="image/webp"
-                      />
+                      <source srcset="/assets/images/melonTvNct.webp" type="image/webp" />
                       <img src="/assets/images/melonTvNct.jpg" alt="가수 nct" />
                     </picture>
                   </a>
                   <a href="#" class="home__hot__melon-tv-description">
-                    <em class="home__hot__melon-tv-title"
-                      >'NCT DREAM'만이 할 수 있는</em
-                    >
-                    <span class="home__hot__melon-tv-txt"
-                      >올드스쿨+청량 에너지
-                    </span>
+                    <em class="home__hot__melon-tv-title">'NCT DREAM'만이 할 수 있는</em>
+                    <span class="home__hot__melon-tv-txt">올드스쿨+청량 에너지 </span>
                   </a>
                   <div class="home__hot__melon-tv-info">
                     <span class="home__hot__melon-tv-ctgry">멜론TV</span>
                     <span class="home__hot__melon-tv-views">조회 7,751</span>
                   </div>
                 </li>
-                <li
-                  class="home__hot__melon-tv-itme"
-                  aria-label="멜론 tv 세븐틴"
-                >
+                <li class="home__hot__melon-tv-itme" aria-label="멜론 tv 세븐틴">
                   <a href="#" class="home__hot__melon-tv-Thumbnail">
                     <picture>
-                      <source
-                        srcset="/assets/images/melonTvSeven.webp"
-                        type="image/webp"
-                      />
-                      <img
-                        src="/assets/images/melonTvSeven.jpg"
-                        alt="가수 세븐틴"
-                      />
+                      <source srcset="/assets/images/melonTvSeven.webp" type="image/webp" />
+                      <img src="/assets/images/melonTvSeven.jpg" alt="가수 세븐틴" />
                     </picture>
                   </a>
                   <a href="#" class="home__hot__melon-tv-description">
-                    <em class="home__hot__melon-tv-title"
-                      >컴백! SEVENTEEN(세븐틴)!</em
-                    >
-                    <span class="home__hot__melon-tv-txt"
-                      >‘HOT’ Official MV
-                    </span>
+                    <em class="home__hot__melon-tv-title">컴백! SEVENTEEN(세븐틴)!</em>
+                    <span class="home__hot__melon-tv-txt">‘HOT’ Official MV </span>
                   </a>
                   <div class="home__hot__melon-tv-info">
                     <span class="home__hot__melon-tv-ctgry">멜론TV</span>
@@ -2417,62 +1717,33 @@
           <!-- list 이동 버튼 -->
           <div class="home__hot__hot-issue-button-area">
             <span class="home__hot__hot-issue-page-num"
-              ><span class="home__hot__hot-issue-page-num-current-page">1</span
-              >/2</span
+              ><span class="home__hot__hot-issue-page-num-current-page">1</span>/2</span
             >
-            <div
-              class="home__hot__hot-issue-button-box"
-              role="group"
-              aria-label="인기 컨텐츠 전환 버튼입니다."
-            >
-              <button
-                type="button"
-                class="btn home__hot__hot-issue-prev"
-                aria-label="이전 "
-              ></button>
-              <button
-                type="button"
-                class="btn home__hot__hot-issue-next"
-                aria-label="다음 "
-              ></button>
+            <div class="home__hot__hot-issue-button-box" role="group" aria-label="인기 컨텐츠 전환 버튼입니다.">
+              <button type="button" class="btn home__hot__hot-issue-prev" aria-label="이전 "></button>
+              <button type="button" class="btn home__hot__hot-issue-next" aria-label="다음 "></button>
             </div>
           </div>
         </div>
         <!-- 멜론차트 -->
         <div class="home__hot__melon-chart">
           <div class="home__hot__melon-chart__headline">
-            <h3 class="home__hot__melon-chart__headline__title" tabindex="0">
-              멜론 차트
-            </h3>
-            <span class="home__hot__melon-chart__headline__time" tabindex="0"
-              >2022.06.10 기준
-            </span>
+            <h3 class="home__hot__melon-chart__headline__title" tabindex="0">멜론 차트</h3>
+            <span class="home__hot__melon-chart__headline__time" tabindex="0">2022.06.10 기준 </span>
           </div>
 
           <div class="home__hot__melon-chart__group">
             <div class="home__hot__melon-chart__tab-box">
-              <button
-                class="home__hot__melon-chart__tab-box__tab top is-active"
-              >
-                TOP100
-              </button>
-              <button class="home__hot__melon-chart__tab-box__tab pop">
-                POP
-              </button>
-              <button class="home__hot__melon-chart__tab-box__tab artist">
-                아티스트
-              </button>
+              <button class="home__hot__melon-chart__tab-box__tab top is-active">TOP100</button>
+              <button class="home__hot__melon-chart__tab-box__tab pop">POP</button>
+              <button class="home__hot__melon-chart__tab-box__tab artist">아티스트</button>
             </div>
 
             <ul class="home__hot__melon-chart__lists">
               <!-- top 100 -->
               <li class="home__hot__melon-chart__list-area top is-active">
                 <ul class="home__hot__melon-chart__list">
-                  <li
-                    class="home__hot__melon-chart__item is-active"
-                    tabindex="0"
-                    aria-label="1위곡"
-                  >
+                  <li class="home__hot__melon-chart__item is-active" tabindex="0" aria-label="1위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">1</span>
                       <span class="changesRankings">0</span>
@@ -2484,33 +1755,17 @@
                         aria-label="싸이 앨범 뎃뎃 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/melonChart1.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/melonChart1.jpg"
-                            alt="that that 앨범"
-                          />
+                          <source srcset="/assets/images/melonChart1.webp" type="image/webp" />
+                          <img src="/assets/images/melonChart1.jpg" alt="that that 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle"
-                          >That That (prod. & feat. SUGA of BTS)</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >싸이 (PSY)</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle">That That (prod. & feat. SUGA of BTS)</a>
+                        <a href="#" class="home__hot__melon-chart__singer">싸이 (PSY)</a>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="2위곡"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="2위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">2</span>
                       <span class="changesRankings">0</span>
@@ -2522,33 +1777,17 @@
                         aria-label="(여자)아이들 앨범 TOMBOY 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/melonChart2.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/melonChart2.jpg"
-                            alt="TOMBOY 앨범"
-                          />
+                          <source srcset="/assets/images/melonChart2.webp" type="image/webp" />
+                          <img src="/assets/images/melonChart2.jpg" alt="TOMBOY 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle"
-                          >TOMBOY</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >(여자)아이들</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle">TOMBOY</a>
+                        <a href="#" class="home__hot__melon-chart__singer">(여자)아이들</a>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="3위곡"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="3위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">3</span>
                       <span class="changesRankings">0</span>
@@ -2560,33 +1799,17 @@
                         aria-label="IVE (아이브) 앨범 LOVE DIVE 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/melonChart3.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/melonChart3.jpg"
-                            alt="IVE (아이브) 앨범"
-                          />
+                          <source srcset="/assets/images/melonChart3.webp" type="image/webp" />
+                          <img src="/assets/images/melonChart3.jpg" alt="IVE (아이브) 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle"
-                          >LOVE DIVE</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >IVE (아이브)</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle">LOVE DIVE</a>
+                        <a href="#" class="home__hot__melon-chart__singer">IVE (아이브)</a>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="4위곡"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="4위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">4</span>
                       <span class="changesRankings">0</span>
@@ -2598,33 +1821,17 @@
                         aria-label="멜로망스 앨범 사랑인가 봐 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/melonChart4.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/melonChart4.jpg"
-                            alt="멜로망스 앨범"
-                          />
+                          <source srcset="/assets/images/melonChart4.webp" type="image/webp" />
+                          <img src="/assets/images/melonChart4.jpg" alt="멜로망스 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle"
-                          >사랑인가 봐</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >멜로망스</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle">사랑인가 봐</a>
+                        <a href="#" class="home__hot__melon-chart__singer">멜로망스</a>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="5위곡"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="5위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">5</span>
                       <span class="changesRankings">0</span>
@@ -2636,33 +1843,17 @@
                         aria-label="BIGBANG (빅뱅) 앨범 봄여름가을겨울 (Still Life) 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/melonChart5.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/melonChart5.jpg"
-                            alt="BIGBANG (빅뱅) 앨범"
-                          />
+                          <source srcset="/assets/images/melonChart5.webp" type="image/webp" />
+                          <img src="/assets/images/melonChart5.jpg" alt="BIGBANG (빅뱅) 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle"
-                          >봄여름가을겨울 (Still Life)</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >BIGBANG (빅뱅)</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle">봄여름가을겨울 (Still Life)</a>
+                        <a href="#" class="home__hot__melon-chart__singer">BIGBANG (빅뱅)</a>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="6위곡"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="6위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">6</span>
                       <span class="changesRankings">0</span>
@@ -2674,33 +1865,17 @@
                         aria-label="BIG Naughty (서동현) 앨범 정이라고 하자 (Feat. 10CM) 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/melonChart6.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/melonChart6.jpg"
-                            alt="BIG Naughty (서동현) 앨범"
-                          />
+                          <source srcset="/assets/images/melonChart6.webp" type="image/webp" />
+                          <img src="/assets/images/melonChart6.jpg" alt="BIG Naughty (서동현) 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle"
-                          >정이라고 하자 (Feat. 10CM)</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >BIG Naughty (서동현)</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle">정이라고 하자 (Feat. 10CM)</a>
+                        <a href="#" class="home__hot__melon-chart__singer">BIG Naughty (서동현)</a>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="7위곡"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="7위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">7</span>
                       <span class="changesRankings">0</span>
@@ -2712,33 +1887,17 @@
                         aria-label="경서 앨범 나의 X에게 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/melonChart7.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/melonChart7.jpg"
-                            alt="경서 앨범"
-                          />
+                          <source srcset="/assets/images/melonChart7.webp" type="image/webp" />
+                          <img src="/assets/images/melonChart7.jpg" alt="경서 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle"
-                          >나의 X에게</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >경서</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle">나의 X에게</a>
+                        <a href="#" class="home__hot__melon-chart__singer">경서</a>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="8위곡"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="8위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">8</span>
                       <span class="changesRankings">0</span>
@@ -2750,33 +1909,17 @@
                         aria-label="BE'O (비오) 앨범 LOVE me 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/hotIssueThumbnail.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/melonChart8.jpg"
-                            alt="BE'O (비오) 앨범"
-                          />
+                          <source srcset="/assets/images/hotIssueThumbnail.webp" type="image/webp" />
+                          <img src="/assets/images/melonChart8.jpg" alt="BE'O (비오) 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle"
-                          >LOVE me</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >BE'O (비오)</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle">LOVE me</a>
+                        <a href="#" class="home__hot__melon-chart__singer">BE'O (비오)</a>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="9위곡"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="9위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">9</span>
                       <span class="changesRankings">0</span>
@@ -2788,33 +1931,17 @@
                         aria-label="LE SSERAFIM (르세라핌) 앨범 FEARLESS 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/melonChart9.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/melonChart9.jpg"
-                            alt="LE SSERAFIM (르세라핌) 앨범"
-                          />
+                          <source srcset="/assets/images/melonChart9.webp" type="image/webp" />
+                          <img src="/assets/images/melonChart9.jpg" alt="LE SSERAFIM (르세라핌) 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle"
-                          >FEARLESS</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >LE SSERAFIM (르세라핌)</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle">FEARLESS</a>
+                        <a href="#" class="home__hot__melon-chart__singer">LE SSERAFIM (르세라핌)</a>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="10위곡"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="10위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">10</span>
                       <span class="changesRankings">0</span>
@@ -2826,25 +1953,13 @@
                         aria-label="Red Velvet (레드벨벳) 앨범 Feel My Rhythm 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/melonChart10.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/melonChart10.jpg"
-                            alt="Red Velvet (레드벨벳) 앨범"
-                          />
+                          <source srcset="/assets/images/melonChart10.webp" type="image/webp" />
+                          <img src="/assets/images/melonChart10.jpg" alt="Red Velvet (레드벨벳) 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle"
-                          >Feel My Rhythm</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >Red Velvet (레드벨벳)</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle">Feel My Rhythm</a>
+                        <a href="#" class="home__hot__melon-chart__singer">Red Velvet (레드벨벳)</a>
                       </div>
                     </div>
                   </li>
@@ -2853,11 +1968,7 @@
               <!-- pop -->
               <li class="home__hot__melon-chart__list-area pop">
                 <ul class="home__hot__melon-chart__list">
-                  <li
-                    class="home__hot__melon-chart__item is-active"
-                    tabindex="0"
-                    aria-label="1위곡"
-                  >
+                  <li class="home__hot__melon-chart__item is-active" tabindex="0" aria-label="1위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">1</span>
                       <span class="changesRankings">0</span>
@@ -2869,33 +1980,17 @@
                         aria-label="The Kid LAROI 앨범 STAY 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/popChart1.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/popChart1.jpg"
-                            alt="STAY 앨범"
-                          />
+                          <source srcset="/assets/images/popChart1.webp" type="image/webp" />
+                          <img src="/assets/images/popChart1.jpg" alt="STAY 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle"
-                          >STAY</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >The Kid LAROI</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle">STAY</a>
+                        <a href="#" class="home__hot__melon-chart__singer">The Kid LAROI</a>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="2위곡"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="2위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">2</span>
                       <span class="changesRankings">0</span>
@@ -2907,33 +2002,17 @@
                         aria-label="Charlie Puth 앨범 That's Hilarious 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/popChart2.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/popChart2.jpg"
-                            alt="That's Hilarious 앨범"
-                          />
+                          <source srcset="/assets/images/popChart2.webp" type="image/webp" />
+                          <img src="/assets/images/popChart2.jpg" alt="That's Hilarious 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle"
-                          >That's Hilarious</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >Charlie Puth</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle">That's Hilarious</a>
+                        <a href="#" class="home__hot__melon-chart__singer">Charlie Puth</a>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="3위곡"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="3위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">3</span>
                       <span class="changesRankings">0</span>
@@ -2945,33 +2024,17 @@
                         aria-label="Justin Bieber 앨범 Off My Face 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/popChart3.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/popChart3.jpg"
-                            alt="Off My Face 앨범"
-                          />
+                          <source srcset="/assets/images/popChart3.webp" type="image/webp" />
+                          <img src="/assets/images/popChart3.jpg" alt="Off My Face 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle"
-                          >Off My Face</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >Justin Bieber</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle">Off My Face</a>
+                        <a href="#" class="home__hot__melon-chart__singer">Justin Bieber</a>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="4위곡"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="4위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">4</span>
                       <span class="changesRankings">0</span>
@@ -2983,33 +2046,17 @@
                         aria-label="Ed Sheeran 앨범 Bad Habits 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/popChart4.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/popChart4.jpg"
-                            alt="Bad Habits 앨범"
-                          />
+                          <source srcset="/assets/images/popChart4.webp" type="image/webp" />
+                          <img src="/assets/images/popChart4.jpg" alt="Bad Habits 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle"
-                          >Bad Habits</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >Ed Sheeran</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle">Bad Habits</a>
+                        <a href="#" class="home__hot__melon-chart__singer">Ed Sheeran</a>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="5위곡"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="5위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">5</span>
                       <span class="changesRankings">0</span>
@@ -3021,33 +2068,17 @@
                         aria-label="GAYLE 앨범 abcdefu 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/popChart5.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/popChart5.jpg"
-                            alt="abcdefu 앨범"
-                          />
+                          <source srcset="/assets/images/popChart5.webp" type="image/webp" />
+                          <img src="/assets/images/popChart5.jpg" alt="abcdefu 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle">
-                          abcdefu</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >GAYLE</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle"> abcdefu</a>
+                        <a href="#" class="home__hot__melon-chart__singer">GAYLE</a>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="6위곡"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="6위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">6</span>
                       <span class="changesRankings">0</span>
@@ -3059,33 +2090,17 @@
                         aria-label="Coldplay, 방탄소년단 앨범 My Universe 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/popChart6.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/popChart6.jpg"
-                            alt="My Universe 앨범"
-                          />
+                          <source srcset="/assets/images/popChart6.webp" type="image/webp" />
+                          <img src="/assets/images/popChart6.jpg" alt="My Universe 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle">
-                          My Universe</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >Coldplay, 방탄소년단</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle"> My Universe</a>
+                        <a href="#" class="home__hot__melon-chart__singer">Coldplay, 방탄소년단</a>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="7위곡"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="7위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">7</span>
                       <span class="changesRankings">0</span>
@@ -3097,33 +2112,17 @@
                         aria-label="Mina Okabe 앨범 Every Second 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/popChart7.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/popChart7.jpg"
-                            alt="Every Second 앨범"
-                          />
+                          <source srcset="/assets/images/popChart7.webp" type="image/webp" />
+                          <img src="/assets/images/popChart7.jpg" alt="Every Second 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle">
-                          Every Second</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >Mina Okabe</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle"> Every Second</a>
+                        <a href="#" class="home__hot__melon-chart__singer">Mina Okabe</a>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="8위곡"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="8위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">8</span>
                       <span class="changesRankings">0</span>
@@ -3135,33 +2134,17 @@
                         aria-label="Kelly Clarkson 앨범 Stronger (What Doesn't Kill You) 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/popChart8.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/popChart8.jpg"
-                            alt="Stronger (What Doesn't Kill You) 앨범"
-                          />
+                          <source srcset="/assets/images/popChart8.webp" type="image/webp" />
+                          <img src="/assets/images/popChart8.jpg" alt="Stronger (What Doesn't Kill You) 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle">
-                          Stronger (What Doesn't Kill You)</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >Kelly Clarkson</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle"> Stronger (What Doesn't Kill You)</a>
+                        <a href="#" class="home__hot__melon-chart__singer">Kelly Clarkson</a>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="9위곡"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="9위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">9</span>
                       <span class="changesRankings">0</span>
@@ -3173,33 +2156,17 @@
                         aria-label="Anne-Marie 앨범 2002 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/popChart9.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/popChart9.jpg"
-                            alt="2002 앨범"
-                          />
+                          <source srcset="/assets/images/popChart9.webp" type="image/webp" />
+                          <img src="/assets/images/popChart9.jpg" alt="2002 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle">
-                          2002</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >Anne-Marie</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle"> 2002</a>
+                        <a href="#" class="home__hot__melon-chart__singer">Anne-Marie</a>
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="10위곡"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="10위곡">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">10</span>
                       <span class="changesRankings">0</span>
@@ -3211,25 +2178,13 @@
                         aria-label="Peder Elias 앨범 Loving You Girl (Feat. Hkeem) 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/popChart10.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/popChart10.jpg"
-                            alt="Loving You Girl (Feat. Hkeem) 앨범"
-                          />
+                          <source srcset="/assets/images/popChart10.webp" type="image/webp" />
+                          <img src="/assets/images/popChart10.jpg" alt="Loving You Girl (Feat. Hkeem) 앨범" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__songTitle">
-                          Loving You Girl (Feat. Hkeem)</a
-                        >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >Peder Elias</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__songTitle"> Loving You Girl (Feat. Hkeem)</a>
+                        <a href="#" class="home__hot__melon-chart__singer">Peder Elias</a>
                       </div>
                     </div>
                   </li>
@@ -3238,11 +2193,7 @@
               <!-- artist -->
               <li class="home__hot__melon-chart__list-area artist">
                 <ul class="home__hot__melon-chart__list">
-                  <li
-                    class="home__hot__melon-chart__item is-active"
-                    tabindex="0"
-                    aria-label="아티스트 랭킹 1위"
-                  >
+                  <li class="home__hot__melon-chart__item is-active" tabindex="0" aria-label="아티스트 랭킹 1위">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">1</span>
                       <span class="changesRankings">0</span>
@@ -3254,19 +2205,12 @@
                         aria-label="아이유 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/artist1.webp"
-                            type="image/webp"
-                          />
+                          <source srcset="/assets/images/artist1.webp" type="image/webp" />
                           <img src="/assets/images/artist1.jpg" alt="아이유" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >아이유</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__singer">아이유</a>
                         <a
                           href="#"
                           aria-label="아티스트 즐겨찾기 버튼입니다."
@@ -3275,11 +2219,7 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="아티스트 랭킹 2위"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="아티스트 랭킹 2위">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">2</span>
                       <span class="changesRankings">0</span>
@@ -3291,22 +2231,12 @@
                         aria-label="방탄소년단 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/artist2.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/artist2.jpg"
-                            alt="방탄소년단"
-                          />
+                          <source srcset="/assets/images/artist2.webp" type="image/webp" />
+                          <img src="/assets/images/artist2.jpg" alt="방탄소년단" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >방탄소년단</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__singer">방탄소년단</a>
                         <a
                           href="#"
                           aria-label="아티스트 즐겨찾기 버튼입니다."
@@ -3315,11 +2245,7 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="아티스트 랭킹 3위"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="아티스트 랭킹 3위">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">3</span>
                       <span class="changesRankings">0</span>
@@ -3331,19 +2257,12 @@
                         aria-label="세븐틴 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/artist3.webp"
-                            type="image/webp"
-                          />
+                          <source srcset="/assets/images/artist3.webp" type="image/webp" />
                           <img src="/assets/images/artist3.jpg" alt="세븐틴" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >세븐틴</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__singer">세븐틴</a>
                         <a
                           href="#"
                           aria-label="아티스트 즐겨찾기 버튼입니다."
@@ -3352,11 +2271,7 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="아티스트 랭킹 4위"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="아티스트 랭킹 4위">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">4</span>
                       <span class="changesRankings">0</span>
@@ -3368,19 +2283,12 @@
                         aria-label="임영웅 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/artist4.webp"
-                            type="image/webp"
-                          />
+                          <source srcset="/assets/images/artist4.webp" type="image/webp" />
                           <img src="/assets/images/artist4.jpg" alt="임영웅" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >임영웅</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__singer">임영웅</a>
                         <a
                           href="#"
                           aria-label="아티스트 즐겨찾기 버튼입니다."
@@ -3389,11 +2297,7 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="아티스트 랭킹 5위"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="아티스트 랭킹 5위">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">5</span>
                       <span class="changesRankings">0</span>
@@ -3405,22 +2309,12 @@
                         aria-label="NCT DREAM 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/artist5.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/artist5.jpg"
-                            alt="NCT DREAM"
-                          />
+                          <source srcset="/assets/images/artist5.webp" type="image/webp" />
+                          <img src="/assets/images/artist5.jpg" alt="NCT DREAM" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >NCT DREAM</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__singer">NCT DREAM</a>
                         <a
                           href="#"
                           aria-label="아티스트 즐겨찾기 버튼입니다."
@@ -3429,11 +2323,7 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="아티스트 랭킹 6위"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="아티스트 랭킹 6위">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">6</span>
                       <span class="changesRankings">0</span>
@@ -3445,22 +2335,12 @@
                         aria-label="(여자)아이들 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/artist6.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/artist6.jpg"
-                            alt="(여자)아이들"
-                          />
+                          <source srcset="/assets/images/artist6.webp" type="image/webp" />
+                          <img src="/assets/images/artist6.jpg" alt="(여자)아이들" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >(여자)아이들</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__singer">(여자)아이들</a>
                         <a
                           href="#"
                           aria-label="아티스트 즐겨찾기 버튼입니다."
@@ -3469,11 +2349,7 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="아티스트 랭킹 7위"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="아티스트 랭킹 7위">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">7</span>
                       <span class="changesRankings">0</span>
@@ -3485,22 +2361,12 @@
                         aria-label="싸이 (PSY) 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/artist7.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/artist7.jpg"
-                            alt="싸이 (PSY)"
-                          />
+                          <source srcset="/assets/images/artist7.webp" type="image/webp" />
+                          <img src="/assets/images/artist7.jpg" alt="싸이 (PSY)" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >싸이 (PSY)</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__singer">싸이 (PSY)</a>
                         <a
                           href="#"
                           aria-label="아티스트 즐겨찾기 버튼입니다."
@@ -3509,11 +2375,7 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="아티스트 랭킹 8위"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="아티스트 랭킹 8위">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">8</span>
                       <span class="changesRankings">0</span>
@@ -3525,22 +2387,12 @@
                         aria-label="IVE (아이브) 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/artist8.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/artist8.jpg"
-                            alt="IVE (아이브)"
-                          />
+                          <source srcset="/assets/images/artist8.webp" type="image/webp" />
+                          <img src="/assets/images/artist8.jpg" alt="IVE (아이브)" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >IVE (아이브)</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__singer">IVE (아이브)</a>
                         <a
                           href="#"
                           aria-label="아티스트 즐겨찾기 버튼입니다."
@@ -3549,11 +2401,7 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="아티스트 랭킹 9위"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="아티스트 랭킹 9위">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">9</span>
                       <span class="changesRankings">0</span>
@@ -3565,22 +2413,12 @@
                         aria-label="볼빨간사춘기 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/artist9.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/artist9.jpg"
-                            alt="볼빨간사춘기"
-                          />
+                          <source srcset="/assets/images/artist9.webp" type="image/webp" />
+                          <img src="/assets/images/artist9.jpg" alt="볼빨간사춘기" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >볼빨간사춘기</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__singer">볼빨간사춘기</a>
                         <a
                           href="#"
                           aria-label="아티스트 즐겨찾기 버튼입니다."
@@ -3589,11 +2427,7 @@
                       </div>
                     </div>
                   </li>
-                  <li
-                    class="home__hot__melon-chart__item"
-                    tabindex="0"
-                    aria-label="아티스트 랭킹 10위"
-                  >
+                  <li class="home__hot__melon-chart__item" tabindex="0" aria-label="아티스트 랭킹 10위">
                     <span class="home__hot__melon-chart__item__ranking">
                       <span class="rank">10</span>
                       <span class="changesRankings">0</span>
@@ -3605,22 +2439,12 @@
                         aria-label="태연 (TAEYEON) 이미지"
                       >
                         <picture>
-                          <source
-                            srcset="/assets/images/artist10.webp"
-                            type="image/webp"
-                          />
-                          <img
-                            src="/assets/images/artist10.jpg"
-                            alt="태연 (TAEYEON)"
-                          />
+                          <source srcset="/assets/images/artist10.webp" type="image/webp" />
+                          <img src="/assets/images/artist10.jpg" alt="태연 (TAEYEON)" />
                         </picture>
                       </a>
-                      <div
-                        class="home__hot__melon-chart__item__ranking-info__description"
-                      >
-                        <a href="#" class="home__hot__melon-chart__singer"
-                          >태연 (TAEYEON)</a
-                        >
+                      <div class="home__hot__melon-chart__item__ranking-info__description">
+                        <a href="#" class="home__hot__melon-chart__singer">태연 (TAEYEON)</a>
                         <a
                           href="#"
                           aria-label="아티스트 즐겨찾기 버튼입니다."
@@ -3669,29 +2493,19 @@
                 <a href="/" class="footer__service__item-link">이용약관</a>
               </li>
               <li class="footer__service__item">
-                <a href="/" class="footer__service__item-link"
-                  >위치기반서비스 이용약관</a
-                >
+                <a href="/" class="footer__service__item-link">위치기반서비스 이용약관</a>
               </li>
               <li class="footer__service__item">
-                <a href="/" class="footer__service__item-link"
-                  >개인정보처리방침</a
-                >
+                <a href="/" class="footer__service__item-link">개인정보처리방침</a>
               </li>
               <li class="footer__service__item">
-                <a href="/" class="footer__service__item-link"
-                  >청소년보호정책</a
-                >
+                <a href="/" class="footer__service__item-link">청소년보호정책</a>
               </li>
               <li class="footer__service__item">
-                <a href="/" class="footer__service__item-link"
-                  >제휴/프로모션문의</a
-                >
+                <a href="/" class="footer__service__item-link">제휴/프로모션문의</a>
               </li>
               <li class="footer__service__item">
-                <a href="/" class="footer__service__item-link"
-                  >이메일주소무단수집거부</a
-                >
+                <a href="/" class="footer__service__item-link">이메일주소무단수집거부</a>
               </li>
               <li class="footer__service__item">
                 <a href="/" class="footer__service__item-link">파트너센터</a>
@@ -3699,36 +2513,24 @@
             </ul>
             <div class="footer__company">
               <ul class="footer__company__info__list">
+                <li class="footer__company__info__item">(주)카카오엔터테인먼트 경기도 성남시 분당구 판교역로 221</li>
+                <li class="footer__company__info__item">대표이사<span aria-hidden="true">:</span>이진수,김성수</li>
+                <li class="footer__company__info__item">사업자등록번호<span aria-hidden="true">:</span>220-88-02594</li>
                 <li class="footer__company__info__item">
-                  (주)카카오엔터테인먼트 경기도 성남시 분당구 판교역로 221
-                </li>
-                <li class="footer__company__info__item">
-                  대표이사<span aria-hidden="true">:</span>이진수,김성수
-                </li>
-                <li class="footer__company__info__item">
-                  사업자등록번호<span aria-hidden="true">:</span>220-88-02594
-                </li>
-                <li class="footer__company__info__item">
-                  통신판매업신고번호<span aria-hidden="true">:</span
-                  >2018-성남분당B-0004 사업자정보확인
+                  통신판매업신고번호<span aria-hidden="true">:</span>2018-성남분당B-0004 사업자정보확인
                 </li>
               </ul>
               <ul class="footer__company__contact">
                 <li class="footer__company__contact__item">
-                  문의전화<span aria-hidden="true">:</span>1566-7727(평일
-                  09:00-18:00, 유료)
+                  문의전화<span aria-hidden="true">:</span>1566-7727(평일 09:00-18:00, 유료)
                 </li>
                 <li class="footer__company__contact__item">
-                  이메일<span aria-hidden="true">:</span
-                  >melone_info@kakaoent.com
+                  이메일<span aria-hidden="true">:</span>melone_info@kakaoent.com
                 </li>
                 <li class="footer__company__contact__item">
-                  호스팅서비스사업자<span aria-hidden="true">:</span
-                  >(주)카카오엔터테인먼트
+                  호스팅서비스사업자<span aria-hidden="true">:</span>(주)카카오엔터테인먼트
                 </li>
-                <li class="footer__company__contact__item">
-                  ⓒKakao Entertainment Corp.
-                </li>
+                <li class="footer__company__contact__item">ⓒKakao Entertainment Corp.</li>
               </ul>
             </div>
           </div>
